@@ -1,0 +1,11 @@
+# Machine-specific state and credentials
+.DS_Store
+.env
+.env.*
+!.env.example
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/agent-memory-local/
+__pycache__/
+# Owned local verification fixtures; never project evidence intended for delivery
+.kit-work/

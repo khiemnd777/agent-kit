@@ -1,0 +1,1016 @@
+{
+  "schema_version": 1,
+  "kit_version": "0.1.0",
+  "release_status": "preview; native runtime and two-machine verification NOT_RUN",
+  "upstream": {
+    "repository": "https://github.com/addyosmani/agent-skills",
+    "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+    "unchanged_file_count": 26,
+    "license": "MIT"
+  },
+  "canonical_root": ".agents",
+  "mirror_root": ".claude",
+  "skills": [
+    {
+      "name": "api-and-interface-design",
+      "canonical": ".agents/skills/api-and-interface-design/SKILL.md",
+      "mirror": ".claude/skills/api-and-interface-design/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "code-review-and-quality",
+      "canonical": ".agents/skills/code-review-and-quality/SKILL.md",
+      "mirror": ".claude/skills/code-review-and-quality/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "code-simplification",
+      "canonical": ".agents/skills/code-simplification/SKILL.md",
+      "mirror": ".claude/skills/code-simplification/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "context-engineering",
+      "canonical": ".agents/skills/context-engineering/SKILL.md",
+      "mirror": ".claude/skills/context-engineering/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "debugging-and-error-recovery",
+      "canonical": ".agents/skills/debugging-and-error-recovery/SKILL.md",
+      "mirror": ".claude/skills/debugging-and-error-recovery/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "documentation-and-adrs",
+      "canonical": ".agents/skills/documentation-and-adrs/SKILL.md",
+      "mirror": ".claude/skills/documentation-and-adrs/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "frontend-ui-engineering",
+      "canonical": ".agents/skills/frontend-ui-engineering/SKILL.md",
+      "mirror": ".claude/skills/frontend-ui-engineering/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "incremental-implementation",
+      "canonical": ".agents/skills/incremental-implementation/SKILL.md",
+      "mirror": ".claude/skills/incremental-implementation/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "observability-and-instrumentation",
+      "canonical": ".agents/skills/observability-and-instrumentation/SKILL.md",
+      "mirror": ".claude/skills/observability-and-instrumentation/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "performance-optimization",
+      "canonical": ".agents/skills/performance-optimization/SKILL.md",
+      "mirror": ".claude/skills/performance-optimization/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "planning-and-task-breakdown",
+      "canonical": ".agents/skills/planning-and-task-breakdown/SKILL.md",
+      "mirror": ".claude/skills/planning-and-task-breakdown/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "security-and-hardening",
+      "canonical": ".agents/skills/security-and-hardening/SKILL.md",
+      "mirror": ".claude/skills/security-and-hardening/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "source-driven-development",
+      "canonical": ".agents/skills/source-driven-development/SKILL.md",
+      "mirror": ".claude/skills/source-driven-development/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "spec-driven-development",
+      "canonical": ".agents/skills/spec-driven-development/SKILL.md",
+      "mirror": ".claude/skills/spec-driven-development/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "technote",
+      "canonical": ".agents/skills/technote/SKILL.md",
+      "mirror": ".claude/skills/technote/SKILL.md",
+      "source": "agent-kit"
+    },
+    {
+      "name": "test-driven-development",
+      "canonical": ".agents/skills/test-driven-development/SKILL.md",
+      "mirror": ".claude/skills/test-driven-development/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    },
+    {
+      "name": "using-agent-skills",
+      "canonical": ".agents/skills/using-agent-skills/SKILL.md",
+      "mirror": ".claude/skills/using-agent-skills/SKILL.md",
+      "source": "addyosmani/agent-skills"
+    }
+  ],
+  "mirror_pairs": [
+    {
+      "canonical": ".agents/ADDY-AGENT-SKILLS-LICENSE",
+      "mirror": ".claude/ADDY-AGENT-SKILLS-LICENSE",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
+    },
+    {
+      "canonical": ".agents/references/accessibility-checklist.md",
+      "mirror": ".claude/references/accessibility-checklist.md",
+      "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac"
+    },
+    {
+      "canonical": ".agents/references/definition-of-done.md",
+      "mirror": ".claude/references/definition-of-done.md",
+      "sha256": "d1c75d2ae65d2c7a9cd01f93fa8de63e00e75f2fe5d08be224d576157054dcee"
+    },
+    {
+      "canonical": ".agents/references/observability-checklist.md",
+      "mirror": ".claude/references/observability-checklist.md",
+      "sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8"
+    },
+    {
+      "canonical": ".agents/references/orchestration-patterns.md",
+      "mirror": ".claude/references/orchestration-patterns.md",
+      "sha256": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a"
+    },
+    {
+      "canonical": ".agents/references/performance-checklist.md",
+      "mirror": ".claude/references/performance-checklist.md",
+      "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067"
+    },
+    {
+      "canonical": ".agents/references/security-checklist.md",
+      "mirror": ".claude/references/security-checklist.md",
+      "sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755"
+    },
+    {
+      "canonical": ".agents/references/testing-patterns.md",
+      "mirror": ".claude/references/testing-patterns.md",
+      "sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56"
+    },
+    {
+      "canonical": ".agents/skills/api-and-interface-design/SKILL.md",
+      "mirror": ".claude/skills/api-and-interface-design/SKILL.md",
+      "sha256": "e83d34f52ff12dd8a7c5134cd7e8140ea4541ec65e204f8a1e4cd366e30c4192"
+    },
+    {
+      "canonical": ".agents/skills/code-review-and-quality/SKILL.md",
+      "mirror": ".claude/skills/code-review-and-quality/SKILL.md",
+      "sha256": "2db1e850379f255fd3091ef278cde24cd6c7d2ba23e360cc52ea522c40d4396e"
+    },
+    {
+      "canonical": ".agents/skills/code-simplification/SKILL.md",
+      "mirror": ".claude/skills/code-simplification/SKILL.md",
+      "sha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d"
+    },
+    {
+      "canonical": ".agents/skills/context-engineering/SKILL.md",
+      "mirror": ".claude/skills/context-engineering/SKILL.md",
+      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63"
+    },
+    {
+      "canonical": ".agents/skills/debugging-and-error-recovery/SKILL.md",
+      "mirror": ".claude/skills/debugging-and-error-recovery/SKILL.md",
+      "sha256": "21f3960f5d7ae2cc95c40896545004dbbcbbd752ea65fc2d53962554d4174220"
+    },
+    {
+      "canonical": ".agents/skills/documentation-and-adrs/SKILL.md",
+      "mirror": ".claude/skills/documentation-and-adrs/SKILL.md",
+      "sha256": "359b22460045583b0233ec3f80223459c4096b0fa513f5c29ade9c3985207d65"
+    },
+    {
+      "canonical": ".agents/skills/frontend-ui-engineering/SKILL.md",
+      "mirror": ".claude/skills/frontend-ui-engineering/SKILL.md",
+      "sha256": "549044e9bd8d7fe993ce8e5c0d2b0f5465650676dc15805329973f936179eb1e"
+    },
+    {
+      "canonical": ".agents/skills/incremental-implementation/SKILL.md",
+      "mirror": ".claude/skills/incremental-implementation/SKILL.md",
+      "sha256": "df66536610071727feae1ca95f3c391c248ad828041750ccd3699cce763aa00b"
+    },
+    {
+      "canonical": ".agents/skills/observability-and-instrumentation/SKILL.md",
+      "mirror": ".claude/skills/observability-and-instrumentation/SKILL.md",
+      "sha256": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87"
+    },
+    {
+      "canonical": ".agents/skills/performance-optimization/SKILL.md",
+      "mirror": ".claude/skills/performance-optimization/SKILL.md",
+      "sha256": "665a83a7218d6aebd02ca329a7b2422cf28f7c55cb56f870c05e12047770245c"
+    },
+    {
+      "canonical": ".agents/skills/performance-optimization/references/optimization-patterns.md",
+      "mirror": ".claude/skills/performance-optimization/references/optimization-patterns.md",
+      "sha256": "fbf724076ffb8ac1a28e1a2773c0b550f5361090024b2dd32e5a682c69b7945f"
+    },
+    {
+      "canonical": ".agents/skills/planning-and-task-breakdown/SKILL.md",
+      "mirror": ".claude/skills/planning-and-task-breakdown/SKILL.md",
+      "sha256": "ed0f90cc5951ddd4bcab7f871f64efec93a49af9279ef93bc470da77ad8da3f7"
+    },
+    {
+      "canonical": ".agents/skills/security-and-hardening/SKILL.md",
+      "mirror": ".claude/skills/security-and-hardening/SKILL.md",
+      "sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858"
+    },
+    {
+      "canonical": ".agents/skills/security-and-hardening/references/hardening-patterns.md",
+      "mirror": ".claude/skills/security-and-hardening/references/hardening-patterns.md",
+      "sha256": "d8ba58cad151aeca4804e48fc768240af0dd6b0ecddd07fbf24a1562140ba97a"
+    },
+    {
+      "canonical": ".agents/skills/source-driven-development/SKILL.md",
+      "mirror": ".claude/skills/source-driven-development/SKILL.md",
+      "sha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9"
+    },
+    {
+      "canonical": ".agents/skills/spec-driven-development/SKILL.md",
+      "mirror": ".claude/skills/spec-driven-development/SKILL.md",
+      "sha256": "c4b97ce3d7f24be0e67fd612c7595f65504872e3a9f8d338d098b2363fdb66ef"
+    },
+    {
+      "canonical": ".agents/skills/technote/SKILL.md",
+      "mirror": ".claude/skills/technote/SKILL.md",
+      "sha256": "247699731082b9a0c7bcbdf16509df942df67337f73ed9764b679a5b4fe878e1"
+    },
+    {
+      "canonical": ".agents/skills/test-driven-development/SKILL.md",
+      "mirror": ".claude/skills/test-driven-development/SKILL.md",
+      "sha256": "7c0c6ac057c19d7f8be65d9f49c3a638703b868f4625c78b70da5439d5d74fca"
+    },
+    {
+      "canonical": ".agents/skills/using-agent-skills/SKILL.md",
+      "mirror": ".claude/skills/using-agent-skills/SKILL.md",
+      "sha256": "30787ef2c77bf1a4729fffed0f6523ba6fcbe81bdc436b36371b78c21394d3c3"
+    }
+  ],
+  "native_agents": [
+    {
+      "name": "kit-explorer",
+      "role_source": "docs/roles/explorer.md",
+      "codex": ".codex/agents/kit-explorer.toml",
+      "claude": ".claude/agents/kit-explorer.md",
+      "model_policy": "inherit developer selection; report runtime overrides"
+    },
+    {
+      "name": "kit-implementer",
+      "role_source": "docs/roles/implementer.md",
+      "codex": ".codex/agents/kit-implementer.toml",
+      "claude": ".claude/agents/kit-implementer.md",
+      "model_policy": "inherit developer selection; report runtime overrides"
+    },
+    {
+      "name": "kit-reviewer",
+      "role_source": "docs/roles/reviewer.md",
+      "codex": ".codex/agents/kit-reviewer.toml",
+      "claude": ".claude/agents/kit-reviewer.md",
+      "model_policy": "inherit developer selection; report runtime overrides"
+    }
+  ],
+  "files": [
+    {
+      "path": ".agents/ADDY-AGENT-SKILLS-LICENSE",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "LICENSE",
+        "git_blob_sha": "d67778ada6b9cda6227e9130da182c13e73c8b2e"
+      }
+    },
+    {
+      "path": ".agents/references/accessibility-checklist.md",
+      "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/accessibility-checklist.md",
+        "git_blob_sha": "c8c61e5f3d5a010a0d0ecb918bfaffe6c76fca78"
+      }
+    },
+    {
+      "path": ".agents/references/definition-of-done.md",
+      "sha256": "d1c75d2ae65d2c7a9cd01f93fa8de63e00e75f2fe5d08be224d576157054dcee",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/definition-of-done.md",
+        "git_blob_sha": "35e39f9e15f6dd0ff4725a6e5cbce7f2aa69064a"
+      }
+    },
+    {
+      "path": ".agents/references/observability-checklist.md",
+      "sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/observability-checklist.md",
+        "git_blob_sha": "ad40d7aa3fca5d2091fa45be234c14aee22c3588"
+      }
+    },
+    {
+      "path": ".agents/references/orchestration-patterns.md",
+      "sha256": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/orchestration-patterns.md",
+        "git_blob_sha": "09cddd31d52a95be1d9bca814547d184b9945e44"
+      }
+    },
+    {
+      "path": ".agents/references/performance-checklist.md",
+      "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/performance-checklist.md",
+        "git_blob_sha": "ba9744fe60dbe4f04f3f907029638d923158d7a2"
+      }
+    },
+    {
+      "path": ".agents/references/security-checklist.md",
+      "sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/security-checklist.md",
+        "git_blob_sha": "fc5e29b92c183fa69e0952b61a99761dc48b4c0b"
+      }
+    },
+    {
+      "path": ".agents/references/testing-patterns.md",
+      "sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/testing-patterns.md",
+        "git_blob_sha": "bc96e271ad241ca567f06d21c6ecc001455b80f1"
+      }
+    },
+    {
+      "path": ".agents/skills/api-and-interface-design/SKILL.md",
+      "sha256": "e83d34f52ff12dd8a7c5134cd7e8140ea4541ec65e204f8a1e4cd366e30c4192",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/api-and-interface-design/SKILL.md",
+        "git_blob_sha": "3e2e37f8f4fba2c66f9f1599eaf01a55ae3f3e33"
+      }
+    },
+    {
+      "path": ".agents/skills/code-review-and-quality/SKILL.md",
+      "sha256": "2db1e850379f255fd3091ef278cde24cd6c7d2ba23e360cc52ea522c40d4396e",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/code-review-and-quality/SKILL.md",
+        "git_blob_sha": "08209ff2208d2883d48d945f7754c428b77f8d87"
+      }
+    },
+    {
+      "path": ".agents/skills/code-simplification/SKILL.md",
+      "sha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/code-simplification/SKILL.md",
+        "git_blob_sha": "239b2848489511de30d9e63b0bd183adc4b01347"
+      }
+    },
+    {
+      "path": ".agents/skills/context-engineering/SKILL.md",
+      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/context-engineering/SKILL.md",
+        "git_blob_sha": "fb8bb5f85128302b231d301c1201da1e223f6869"
+      }
+    },
+    {
+      "path": ".agents/skills/debugging-and-error-recovery/SKILL.md",
+      "sha256": "21f3960f5d7ae2cc95c40896545004dbbcbbd752ea65fc2d53962554d4174220",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/debugging-and-error-recovery/SKILL.md",
+        "git_blob_sha": "356da20365a7cd6825b4ffad14be39280c92cdfc"
+      }
+    },
+    {
+      "path": ".agents/skills/documentation-and-adrs/SKILL.md",
+      "sha256": "359b22460045583b0233ec3f80223459c4096b0fa513f5c29ade9c3985207d65",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/documentation-and-adrs/SKILL.md",
+        "git_blob_sha": "e37c38f30d76263c77aacdb7dcbacceb1218bc80"
+      }
+    },
+    {
+      "path": ".agents/skills/frontend-ui-engineering/SKILL.md",
+      "sha256": "549044e9bd8d7fe993ce8e5c0d2b0f5465650676dc15805329973f936179eb1e",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/frontend-ui-engineering/SKILL.md",
+        "git_blob_sha": "eaf0fa163876a5274674f42ea208742c50f27119"
+      }
+    },
+    {
+      "path": ".agents/skills/incremental-implementation/SKILL.md",
+      "sha256": "df66536610071727feae1ca95f3c391c248ad828041750ccd3699cce763aa00b",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/incremental-implementation/SKILL.md",
+        "git_blob_sha": "9c4f49bc841adb3c0f98baaa9eabd435a5b64ef9"
+      }
+    },
+    {
+      "path": ".agents/skills/observability-and-instrumentation/SKILL.md",
+      "sha256": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/observability-and-instrumentation/SKILL.md",
+        "git_blob_sha": "84d9cb373467fe0e15236e190833ecc90f840c38"
+      }
+    },
+    {
+      "path": ".agents/skills/performance-optimization/SKILL.md",
+      "sha256": "665a83a7218d6aebd02ca329a7b2422cf28f7c55cb56f870c05e12047770245c",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/performance-optimization/SKILL.md",
+        "git_blob_sha": "498735724035f468737bd118f9c60676a013d544"
+      }
+    },
+    {
+      "path": ".agents/skills/performance-optimization/references/optimization-patterns.md",
+      "sha256": "fbf724076ffb8ac1a28e1a2773c0b550f5361090024b2dd32e5a682c69b7945f",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/performance-optimization/references/optimization-patterns.md",
+        "git_blob_sha": "63e27bcc7a051c3dc23c164f146f374e119874cc"
+      }
+    },
+    {
+      "path": ".agents/skills/planning-and-task-breakdown/SKILL.md",
+      "sha256": "ed0f90cc5951ddd4bcab7f871f64efec93a49af9279ef93bc470da77ad8da3f7",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/planning-and-task-breakdown/SKILL.md",
+        "git_blob_sha": "296249b64334bcfd1aeaefd27b9e3e5494e38ec0"
+      }
+    },
+    {
+      "path": ".agents/skills/security-and-hardening/SKILL.md",
+      "sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/security-and-hardening/SKILL.md",
+        "git_blob_sha": "e80e1e9a4f5b2989308c376d4ea0d333fe2c26ef"
+      }
+    },
+    {
+      "path": ".agents/skills/security-and-hardening/references/hardening-patterns.md",
+      "sha256": "d8ba58cad151aeca4804e48fc768240af0dd6b0ecddd07fbf24a1562140ba97a",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/security-and-hardening/references/hardening-patterns.md",
+        "git_blob_sha": "9af2604409af9a085bad0b14a269a89a74d34084"
+      }
+    },
+    {
+      "path": ".agents/skills/source-driven-development/SKILL.md",
+      "sha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/source-driven-development/SKILL.md",
+        "git_blob_sha": "2704f0e130bc4659951aa552373914b2d63d18c9"
+      }
+    },
+    {
+      "path": ".agents/skills/spec-driven-development/SKILL.md",
+      "sha256": "c4b97ce3d7f24be0e67fd612c7595f65504872e3a9f8d338d098b2363fdb66ef",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/spec-driven-development/SKILL.md",
+        "git_blob_sha": "f54426bec00bcda5f700ab3368eed7203306830f"
+      }
+    },
+    {
+      "path": ".agents/skills/technote/SKILL.md",
+      "sha256": "247699731082b9a0c7bcbdf16509df942df67337f73ed9764b679a5b4fe878e1",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".agents/skills/test-driven-development/SKILL.md",
+      "sha256": "7c0c6ac057c19d7f8be65d9f49c3a638703b868f4625c78b70da5439d5d74fca",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/test-driven-development/SKILL.md",
+        "git_blob_sha": "8898bcbba4c4f6acca473ece95e82105bd9cfea0"
+      }
+    },
+    {
+      "path": ".agents/skills/using-agent-skills/SKILL.md",
+      "sha256": "30787ef2c77bf1a4729fffed0f6523ba6fcbe81bdc436b36371b78c21394d3c3",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/using-agent-skills/SKILL.md",
+        "git_blob_sha": "d56ac03ab057036c1bdcc9127c88952758ee2f0d"
+      }
+    },
+    {
+      "path": ".claude/ADDY-AGENT-SKILLS-LICENSE",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "LICENSE",
+        "git_blob_sha": "d67778ada6b9cda6227e9130da182c13e73c8b2e"
+      }
+    },
+    {
+      "path": ".claude/agents/kit-explorer.md",
+      "sha256": "915c02eca56afc86ee90050c8c49d2c3c39b3b12bd605fdadfe41e2361e059c3",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".claude/agents/kit-implementer.md",
+      "sha256": "4996d99145dc19858096ee2a0f3e39d33b8178b4bf49667d7a91b0ebbf892207",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".claude/agents/kit-reviewer.md",
+      "sha256": "79c09efde5388290d4e8dcb895701c1b872b6ca02bd6b43956cb6d83ef2e0af9",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".claude/references/accessibility-checklist.md",
+      "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/accessibility-checklist.md",
+        "git_blob_sha": "c8c61e5f3d5a010a0d0ecb918bfaffe6c76fca78"
+      }
+    },
+    {
+      "path": ".claude/references/definition-of-done.md",
+      "sha256": "d1c75d2ae65d2c7a9cd01f93fa8de63e00e75f2fe5d08be224d576157054dcee",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/definition-of-done.md",
+        "git_blob_sha": "35e39f9e15f6dd0ff4725a6e5cbce7f2aa69064a"
+      }
+    },
+    {
+      "path": ".claude/references/observability-checklist.md",
+      "sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/observability-checklist.md",
+        "git_blob_sha": "ad40d7aa3fca5d2091fa45be234c14aee22c3588"
+      }
+    },
+    {
+      "path": ".claude/references/orchestration-patterns.md",
+      "sha256": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/orchestration-patterns.md",
+        "git_blob_sha": "09cddd31d52a95be1d9bca814547d184b9945e44"
+      }
+    },
+    {
+      "path": ".claude/references/performance-checklist.md",
+      "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/performance-checklist.md",
+        "git_blob_sha": "ba9744fe60dbe4f04f3f907029638d923158d7a2"
+      }
+    },
+    {
+      "path": ".claude/references/security-checklist.md",
+      "sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/security-checklist.md",
+        "git_blob_sha": "fc5e29b92c183fa69e0952b61a99761dc48b4c0b"
+      }
+    },
+    {
+      "path": ".claude/references/testing-patterns.md",
+      "sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "references/testing-patterns.md",
+        "git_blob_sha": "bc96e271ad241ca567f06d21c6ecc001455b80f1"
+      }
+    },
+    {
+      "path": ".claude/skills/api-and-interface-design/SKILL.md",
+      "sha256": "e83d34f52ff12dd8a7c5134cd7e8140ea4541ec65e204f8a1e4cd366e30c4192",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/api-and-interface-design/SKILL.md",
+        "git_blob_sha": "3e2e37f8f4fba2c66f9f1599eaf01a55ae3f3e33"
+      }
+    },
+    {
+      "path": ".claude/skills/code-review-and-quality/SKILL.md",
+      "sha256": "2db1e850379f255fd3091ef278cde24cd6c7d2ba23e360cc52ea522c40d4396e",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/code-review-and-quality/SKILL.md",
+        "git_blob_sha": "08209ff2208d2883d48d945f7754c428b77f8d87"
+      }
+    },
+    {
+      "path": ".claude/skills/code-simplification/SKILL.md",
+      "sha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/code-simplification/SKILL.md",
+        "git_blob_sha": "239b2848489511de30d9e63b0bd183adc4b01347"
+      }
+    },
+    {
+      "path": ".claude/skills/context-engineering/SKILL.md",
+      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/context-engineering/SKILL.md",
+        "git_blob_sha": "fb8bb5f85128302b231d301c1201da1e223f6869"
+      }
+    },
+    {
+      "path": ".claude/skills/debugging-and-error-recovery/SKILL.md",
+      "sha256": "21f3960f5d7ae2cc95c40896545004dbbcbbd752ea65fc2d53962554d4174220",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/debugging-and-error-recovery/SKILL.md",
+        "git_blob_sha": "356da20365a7cd6825b4ffad14be39280c92cdfc"
+      }
+    },
+    {
+      "path": ".claude/skills/documentation-and-adrs/SKILL.md",
+      "sha256": "359b22460045583b0233ec3f80223459c4096b0fa513f5c29ade9c3985207d65",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/documentation-and-adrs/SKILL.md",
+        "git_blob_sha": "e37c38f30d76263c77aacdb7dcbacceb1218bc80"
+      }
+    },
+    {
+      "path": ".claude/skills/frontend-ui-engineering/SKILL.md",
+      "sha256": "549044e9bd8d7fe993ce8e5c0d2b0f5465650676dc15805329973f936179eb1e",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/frontend-ui-engineering/SKILL.md",
+        "git_blob_sha": "eaf0fa163876a5274674f42ea208742c50f27119"
+      }
+    },
+    {
+      "path": ".claude/skills/incremental-implementation/SKILL.md",
+      "sha256": "df66536610071727feae1ca95f3c391c248ad828041750ccd3699cce763aa00b",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/incremental-implementation/SKILL.md",
+        "git_blob_sha": "9c4f49bc841adb3c0f98baaa9eabd435a5b64ef9"
+      }
+    },
+    {
+      "path": ".claude/skills/observability-and-instrumentation/SKILL.md",
+      "sha256": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/observability-and-instrumentation/SKILL.md",
+        "git_blob_sha": "84d9cb373467fe0e15236e190833ecc90f840c38"
+      }
+    },
+    {
+      "path": ".claude/skills/performance-optimization/SKILL.md",
+      "sha256": "665a83a7218d6aebd02ca329a7b2422cf28f7c55cb56f870c05e12047770245c",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/performance-optimization/SKILL.md",
+        "git_blob_sha": "498735724035f468737bd118f9c60676a013d544"
+      }
+    },
+    {
+      "path": ".claude/skills/performance-optimization/references/optimization-patterns.md",
+      "sha256": "fbf724076ffb8ac1a28e1a2773c0b550f5361090024b2dd32e5a682c69b7945f",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/performance-optimization/references/optimization-patterns.md",
+        "git_blob_sha": "63e27bcc7a051c3dc23c164f146f374e119874cc"
+      }
+    },
+    {
+      "path": ".claude/skills/planning-and-task-breakdown/SKILL.md",
+      "sha256": "ed0f90cc5951ddd4bcab7f871f64efec93a49af9279ef93bc470da77ad8da3f7",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/planning-and-task-breakdown/SKILL.md",
+        "git_blob_sha": "296249b64334bcfd1aeaefd27b9e3e5494e38ec0"
+      }
+    },
+    {
+      "path": ".claude/skills/security-and-hardening/SKILL.md",
+      "sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/security-and-hardening/SKILL.md",
+        "git_blob_sha": "e80e1e9a4f5b2989308c376d4ea0d333fe2c26ef"
+      }
+    },
+    {
+      "path": ".claude/skills/security-and-hardening/references/hardening-patterns.md",
+      "sha256": "d8ba58cad151aeca4804e48fc768240af0dd6b0ecddd07fbf24a1562140ba97a",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/security-and-hardening/references/hardening-patterns.md",
+        "git_blob_sha": "9af2604409af9a085bad0b14a269a89a74d34084"
+      }
+    },
+    {
+      "path": ".claude/skills/source-driven-development/SKILL.md",
+      "sha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/source-driven-development/SKILL.md",
+        "git_blob_sha": "2704f0e130bc4659951aa552373914b2d63d18c9"
+      }
+    },
+    {
+      "path": ".claude/skills/spec-driven-development/SKILL.md",
+      "sha256": "c4b97ce3d7f24be0e67fd612c7595f65504872e3a9f8d338d098b2363fdb66ef",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/spec-driven-development/SKILL.md",
+        "git_blob_sha": "f54426bec00bcda5f700ab3368eed7203306830f"
+      }
+    },
+    {
+      "path": ".claude/skills/technote/SKILL.md",
+      "sha256": "247699731082b9a0c7bcbdf16509df942df67337f73ed9764b679a5b4fe878e1",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".claude/skills/test-driven-development/SKILL.md",
+      "sha256": "7c0c6ac057c19d7f8be65d9f49c3a638703b868f4625c78b70da5439d5d74fca",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/test-driven-development/SKILL.md",
+        "git_blob_sha": "8898bcbba4c4f6acca473ece95e82105bd9cfea0"
+      }
+    },
+    {
+      "path": ".claude/skills/using-agent-skills/SKILL.md",
+      "sha256": "30787ef2c77bf1a4729fffed0f6523ba6fcbe81bdc436b36371b78c21394d3c3",
+      "origin": {
+        "repository": "https://github.com/addyosmani/agent-skills",
+        "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+        "upstream_path": "skills/using-agent-skills/SKILL.md",
+        "git_blob_sha": "d56ac03ab057036c1bdcc9127c88952758ee2f0d"
+      }
+    },
+    {
+      "path": ".codex/agents/kit-explorer.toml",
+      "sha256": "93e64baa6d9a090b95442b947d18cd98b9142a4417501e36192e14dbc432e063",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".codex/agents/kit-implementer.toml",
+      "sha256": "41f6b5cabda3e8abe790f8aeaaa6e5e648e20f3c232b6fe68e95a22a6fbd9ddc",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".codex/agents/kit-reviewer.toml",
+      "sha256": "c0b0ffcaae2b8a170c5333d87c2047c1c9ea25aa93686bd8b6dcb318460b7210",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "7185430f631e1b5c7393b5d8fca63e4d0cb416820fa41a5507ebc57d08f0eb7c",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "d26e6552291238849d3a5e01cdef54b82cedec6976da2d00c3506e999f0fa9c8",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "febfc98914b9434983ec004d9068e8fa0f19a33f45a626add4e97afd59b1246b",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "75a171545431065872aff744db85559cea6f3dc6d3b033298919b943269aa17e",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "README.md",
+      "sha256": "704c40551e65d791f5dc490712c3a060aa0f2d8363b30a891a8719bf561d2b11",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/agent-compatibility.md",
+      "sha256": "cff4e6f0e676bc49ac9a21855207c4e3563c062969198aa0ccbf1623b4e99191",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/agent-coordination-templates.md",
+      "sha256": "5907237a727e9d42328916efb884212efdf79ac8c96d0ec136381b80da881c97",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/model-routing.md",
+      "sha256": "1f45447a862382fed31cc58f7df9e513348390253b4b864aaa97ef6241b8b5bb",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/roles/coordinator.md",
+      "sha256": "7308f5994f5af0747962dd7d2143933f14c9739e48a2a71ee89f081c06dbfedd",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/roles/explorer.md",
+      "sha256": "97ce4c69a938698a215c738bbbc8919b1a2995beccf3fd1965bfc02bf9cd4cf0",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/roles/implementer.md",
+      "sha256": "eb2c2693aca4aebbf8b96705b60c08c23a3572d7765af778d462f903b4489018",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/roles/reviewer.md",
+      "sha256": "b1a267784fb4922666096516b1eedf21fbac06010b27cb2e665b256fdb7dd350",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/skills-catalog.md",
+      "sha256": "f096b72e2feaf97d431cd20f0441b164cd6f2dd5af506b5f60c4851e3e7cf7f1",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/team-policy.md",
+      "sha256": "fff291e5ffb739ba964838c7b0e0caa277b3ae07b7a8f231b186b5c3e5f7488e",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/team-workflow.md",
+      "sha256": "ba9ecf84d08ad10cb4cd831b670d227df7acb622a01a486d308ec7d7793fa123",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/technote.md",
+      "sha256": "98a35db5e4f526eb5b1f21f47e281e7f0e25644fe01af84b4b56c37a1db64f8d",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/verification-guide.md",
+      "sha256": "287aa348872ff2edea85fd18f0d47b8baf5ff975f759397853669a034c9015ec",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
+      }
+    }
+  ],
+  "excluded_mutable_paths": [
+    "docs/project-context.md",
+    "docs/project-plan.md",
+    "docs/project-state.md",
+    "docs/skills-manifest.json",
+    "docs/tasks/README.md",
+    "docs/verification-results.md"
+  ],
+  "integrity_note": "SHA-256 checks detect differences; hashes and parsed fields do not prove runtime behavior."
+}
