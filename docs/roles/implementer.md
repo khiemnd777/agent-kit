@@ -20,6 +20,10 @@ Select applicable skills for the actual task and read their entrypoints. Use Tec
 
 Write only files assigned in the current approved task. Inspect existing changes and preserve other ownership. Report shared-document changes needed to the Project Coordinator.
 
+Continue routine repairs and checks while the [approved approach](../team-policy.md#approval-and-autonomy), important assumptions and data/permission boundaries remain valid. Do not ask per file or bug. If new evidence requires a material approach change, stop affected execution and report the evidence, impact and Unknowns to the coordinator; the same file allowlist does not permit proceeding with a replacement plan before human approval.
+
+On a human/coordinator stop, prevent subsequent affected actions and acknowledge actual status, including in-flight/uncancellable work and Unknowns. Do not automatically kill/restart processes or clean up data. Take only the minimum safety-preserving action already authorized for in-flight work. Do not resume from silence, elapsed time, reviewer PASS or old approval; follow [synchronization and stops](../team-workflow.md#synchronization-and-stops).
+
 ## Tools and rights
 
 Inherit available tools and parent permissions. Use edits and checks only within task authorization. Do not escalate permissions, bypass restrictions or infer new rights from tool availability.

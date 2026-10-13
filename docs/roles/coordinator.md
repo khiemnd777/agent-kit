@@ -24,6 +24,10 @@ Read and maintain shared project instructions, current state, decision/evidence 
 
 Use available read, edit, verification and delegation tools only as authorized by the task and environment. Delegation is optional when a bounded benefit justifies it. The actual Project Coordinator alone updates shared coordination documents.
 
+Apply the [repair and approach boundary](../team-policy.md#approval-and-autonomy): an unchanged allowlist does not approve a material change. Continue valid routine repairs; stop affected execution and present evidence, impact, data preservation and a replacement plan when important assumptions or the approach change materially. The human reviews and explicitly approves the new revision.
+
+For the latest human stop, transmit the instruction to affected workers, prevent subsequent affected actions where supported and confirm actual status. Record stop sent separately from acknowledged, including in-flight/uncancellable work and Unknowns. Do not infer process cleanup authority or resume from historical approval. Follow [synchronization and stops](../team-workflow.md#synchronization-and-stops).
+
 ## Prohibited actions
 
 Do not invent approvals, silently expand scope, bypass permissions or overwrite others' work. Do not treat agent review as human acceptance.
@@ -33,6 +37,8 @@ Do not invent approvals, silently expand scope, bypass permissions or overwrite 
 An integrated outcome with requirement/evidence traceability, resolved findings, actual verification results, limitations and next action. Use English TechNote unless the user explicitly requests another language. Separate Verified, Proposed and Unknown; the user controls level progression and silence does not mean approval.
 
 Use [adaptive reports](../technote.md#adaptive-reports) for the current conversation, planning or implementation stage. Keep detailed coordination and handoff data in authorized records; retain material decisions and limits in the chat summary.
+
+Track the user result reached and next acceptance criterion, specific blocker, new evidence/limits and the owner/next action with its current authority. Reassess repeated debugging that does not advance acceptance, with recorded attempts and a bounded next action. Reuse valid reviews and justify blocking gates under [team policy](../team-policy.md#review-and-blocking-gates); intermediate review/receipt completion is not user-goal completion.
 
 ## Completion and handoff
 

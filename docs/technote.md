@@ -45,7 +45,8 @@ These fields are a starting point, not a length limit. Add information when it a
 - Report actual check commands and results when applicable. Mark unavailable checks NOT_RUN with the reason. Include meaningful verification limits even when local checks pass.
 - Name important components and link current outputs or evidence when useful. For larger plans, link the full plan when an authorized document exists; keep the recommendation, material decisions and acceptance summary visible in chat.
 - Omit empty fields, repeated context, unchanged plans, routine tool activity and full logs. Keep detailed acceptance evidence, approval provenance and handoff data in the authorized task record. A short chat report does not replace that record or permit a new file write.
-- During work, report a new finding, its impact and the next check, or a meaningful milestone. Follow the environment's update frequency requirements without repeating unchanged information.
+- During meaningful progress updates, state the user result reached, specific remaining failure/dependency, new evidence and limits, and owner/next action with its current approval coverage. Explain the actual problem instead of reporting only “reviewing” or “gating”. Use the current record rather than copying a long template into every message. Follow the environment's update frequency requirements without repeating unchanged information.
+- If the approved approach changes materially, explain the evidence, Unknowns and impact, identify affected execution as stopped and present the replacement plan for explicit human approval. An unchanged allowlist does not make the new approach approved. For a human stop, distinguish sent from acknowledged and disclose in-flight/uncancellable or Unknown status; reporting or reviewer PASS cannot resume it. See [approval and autonomy](team-policy.md#approval-and-autonomy).
 
 #### Conversation example
 

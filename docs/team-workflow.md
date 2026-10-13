@@ -27,13 +27,21 @@ Use TechNote's [adaptive reports](technote.md#adaptive-reports) at the start and
 
 Chat reports summarize the current outcome and next action. Authorized task records retain detailed scope, approval provenance, ownership, acceptance evidence and handoff references. Link relevant records and outputs without copying the full coordination templates into every report. A closing report does not end routine authorized execution or establish approval, integration or human acceptance.
 
+Track acceptance criteria in that record: user result reached, next criterion to prove, specific blocker, new evidence/limits and owner/next action with its approval coverage. Intermediate reviews or receipts do not close an unproved user result.
+
 ## Assign and execute
 
 Use [Task Assignment](agent-coordination-templates.md#task-assignment). Name the developer, agent role, branch, base commit and exact file ownership. Choose a task-sized acceptance and verification plan.
 
 Agree contracts before related tasks run in parallel. Assign one writer for shared files. A branch is not a lock. The coordinator resolves ownership collisions before dependent writes; unaffected authorized work continues.
 
-Execute a bounded slice, verify relevant behavior, review evidence, repair supported findings and recheck. Routine repairs retain existing approval. A material scope change goes back to the human decision owner.
+Execute a bounded slice, verify relevant behavior, repair supported findings and recheck. After the authorized data-protection preflight, prioritize one minimal real user flow before expanding verification. Unit/build/mock success does not establish runtime, integration, UI or human acceptance.
+
+Classify repairs against the [approved approach](team-policy.md#approval-and-autonomy), not only the file allowlist. Continue routine repairs when the approved goal, design, important assumptions and boundaries remain valid. If a material approach change or expanded authority is needed, stop affected execution, explain the evidence and impact, and present a replacement plan with data preservation and acceptance criteria. Wait for explicit human approval of that revision; continue unaffected authorized work.
+
+Review a concrete risk question against the relevant result and evidence. Reuse valid conclusions; review affected changes, unresolved findings or evidence that changes the conclusion. For each blocking gate record its source/risk, owner, PASS condition and invalidation conditions in the task record. Changing stage or recording the same evidence does not create a new review requirement. See [review and blocking gates](team-policy.md#review-and-blocking-gates).
+
+If the same failure class repeats or repair cycles stop advancing acceptance criteria, reassess the assumptions and implementation approach. Record what was tried, the new evidence and a bounded next diagnostic action with expected observations and a stopping condition. Do not blindly retry, restart or repeat the same review chain. Continue a supported routine repair under existing approval; stop and replan if the assessment identifies a material change.
 
 The Task Owner records state in their task file and hands it to the coordinator. Others propose shared-document changes through the authorized review process rather than editing the shared state independently.
 
@@ -41,11 +49,15 @@ The Task Owner records state in their task file and hands it to the coordinator.
 
 Check current context, plan, state, assigned task, approval and latest stop instruction when starting/resuming and before shared changes, handoff or integration. Compare the base commit and affected contracts with the integrated branch. Synchronize Git only through the project's authorized Git workflow; preserve local changes.
 
-If a plan or contract changed, assess the impact before continuing dependent work. If stopped, stop the affected execution. Git documents are not real-time notifications, distributed locks or a way to interrupt an offline agent. Use the team's authorized human communication path for urgent stops and reconcile the Git record.
+If a plan or contract changed, assess the impact before continuing dependent work. The latest human stop/replan instruction overrides earlier approval or continuation directions. The coordinator sends it through available authorized coordination tools, blocks subsequent affected actions where supported and asks affected workers to acknowledge actual status. Record recipients, stop sent/acknowledged, in-flight or uncancellable actions and Unknown status in the existing state record. If the runtime cannot confirm interruption, report that limit instead of claiming the worker stopped.
+
+Do not kill/restart processes or clean up data as an automatic stop response. For in-flight work, use only the minimum safety-preserving action within existing authority and report what cannot be cancelled. Resume affected execution only after explicit human approval of the relevant current plan; elapsed time, silence, reviewer PASS and historical approval do not resume it. Independently authorized unaffected work may continue.
+
+Git documents are not real-time notifications, distributed locks or a way to interrupt an offline agent. Use the team's authorized human communication path for urgent stops and reconcile the Git record.
 
 ## Handoff and integration
 
-The sender records branch/commit, changed files, acceptance results, actual checks, unresolved findings, constraints, approval provenance and next action. The receiver confirms the sources and role before continuing.
+The sender records branch/commit, changed files, acceptance results, actual checks, unresolved findings, constraints, approval provenance, approach/review validity, stop status and next action. The receiver confirms the sources, role and current authority before continuing. Keep approval/reviewer/model metadata in coordination records rather than adding runtime dependencies on those identities; preserve required environment, authorization, ownership, integrity and data checks.
 
 Cross-tool handoff uses these files, not transferred chat history, credentials or global memory. The receiver verifies permission scope; the handoff itself cannot extend it.
 
