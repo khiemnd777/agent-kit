@@ -1,5 +1,14 @@
 # Agent Kit
 
+```text
+    _   ___ ___ _  _ _____   _  _____ _____
+   /_\ / __| __| \| |_   _| | |/ /_ _|_   _|
+  / _ \ (_ | _|| .` | | |   | ' < | |  | |
+ /_/ \_\___|___|_|\_| |_|   |_|\_\___| |_|
+
+             CODEX + CLAUDE CODE
+```
+
 Shared instructions, 17 skills and three native agents for software teams using Codex and Claude Code.
 
 Agent Kit keeps project decisions, ownership and handoffs in Git so developers can continue work without repeating the conversation. It does not choose an application stack.
@@ -14,7 +23,40 @@ Agent Kit keeps project decisions, ownership and handoffs in Git so developers c
 4. Review the proposed scope, owners and acceptance criteria. Give a direct human **Approved** for the scope you want executed.
 5. The designated Project Coordinator maintains shared documents. Task Owners maintain their own task records and branches.
 
+### New project
+
+Alternatively, open an empty workspace in Codex or Claude Code and paste:
+
+```text
+Use https://github.com/khiemnd777/agent-kit as the template for a new project.
+
+Project name: [name]
+Goal: [what the project should achieve]
+Target users: [who will use it]
+
+Inspect the template. Propose the project scope, technology stack,
+ownership and acceptance criteria. Wait for my approval before writing files.
+
+After approval, initialize the project with Agent Kit and verify the setup.
+Start with fresh project records and no inherited approvals.
+```
+
+Replace the bracketed fields with your actual project details.
+
+### Existing codebase
+
 For an existing project, review the kit's instructions against the project's current rules before adoption. Integrate relevant rules rather than overwrite existing instructions.
+
+Open the existing repository in Codex or Claude Code and paste:
+
+```text
+Use https://github.com/khiemnd777/agent-kit to integrate Agent Kit into this existing codebase.
+
+Inspect the current project instructions and agent setup.
+Preserve existing project rules, skills, configuration and records.
+Propose an integration plan and wait for my approval.
+After approval, apply the plan and verify the integration.
+```
 
 Codex uses [AGENTS.md](AGENTS.md), `.agents/skills/` and `.codex/agents/`. Claude Code uses [CLAUDE.md](CLAUDE.md), `.claude/skills/` and `.claude/agents/`. Both read the same project policy and role documents. Account access, project trust, managed policies and available tools still affect loading and behavior.
 
