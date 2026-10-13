@@ -109,6 +109,9 @@ Run in separate clean checkouts of the same kit version. Prefer fresh sessions f
 | V17 | Deliberate override or runtime substitution | Reports both requested and actual model/effort; no hidden change |
 | V18 | Explorer/reviewer effective permissions | Observe read-only operation; no source/log writes or external mutations |
 | V19 | Unsupported native delegation | Sequential role fallback is explicit; independent/native checks remain NOT_RUN |
+| V20 | Adaptive reports across conversation, planning and implementation | All six formats preserve the stage's minimum fields, material evidence/limits and next decision/action; simple follow-ups stay direct |
+
+For V20, inspect each stage's opening and closing report against [adaptive reports](technote.md#adaptive-reports). Include a material unknown, a failed or unavailable check, a simple follow-up and continuation under existing approval. Confirm that reports preserve the authority boundary without redundant approval requests, empty sections or copied full logs. Detailed authorized records must remain available where the task requires them. Record actual client observations; source inspection alone does not prove reporting behavior.
 
 V05 and any fixture writes need direct approval from the authorized human in the test project. Do not use the kit's implementation approval as a fixture approval. Keep fixture state and approvals outside the reusable template.
 

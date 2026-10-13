@@ -30,8 +30,8 @@ Follow [model routing](docs/model-routing.md): inherit the developer's selected 
 
 ## Explanation and completion
 
-Use [TechNote](docs/technote.md), starting at Level 1. English is the default; explicit user language requests take precedence. Preserve exact labels and project conventions. Verified, Proposed and Unknown remain distinct.
+Use [TechNote](docs/technote.md), starting at Level 1, and its [adaptive reports](docs/technote.md#adaptive-reports) before and after meaningful conversation, planning and implementation work. Keep material blockers and verification limits visible; answer simple follow-ups directly. English is the default; explicit user language requests take precedence. Preserve exact labels and project conventions. Verified, Proposed and Unknown remain distinct.
 
 Choose checks by risk and project behavior. Do not invent commands, test results, reviewer approval or artifacts. Never weaken tests, bypass protections or expose secrets to obtain a pass.
 
-Before handing off, update the owned task record, run the coordinator checklist and report result, evidence, limits and next action. Written, Discovered, Invoked and Verified are different states. Missing checks are NOT_RUN with a reason.
+Before handing off, update the owned task record, run the coordinator checklist and use the closing report for the current stage. Keep detailed handoff data in the authorized record and link relevant evidence in chat. Written, Discovered, Invoked and Verified are different states. Missing checks are NOT_RUN with a reason.

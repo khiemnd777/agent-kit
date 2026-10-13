@@ -21,6 +21,12 @@ Do not maintain competing task checklists in a tracker and Git. An issue or PR m
 
 The integrated branch records what has landed. Working branches hold unintegrated results. Summaries identify their branch and commit so a reader does not mistake a proposed result for the current integrated behavior.
 
+## Reports and records
+
+Use TechNote's [adaptive reports](technote.md#adaptive-reports) at the start and close of meaningful conversation, planning and implementation work. Select the current stage, answer simple follow-ups directly and report new findings or meaningful progress during work. Keep material decisions, failed checks and verification limits visible.
+
+Chat reports summarize the current outcome and next action. Authorized task records retain detailed scope, approval provenance, ownership, acceptance evidence and handoff references. Link relevant records and outputs without copying the full coordination templates into every report. A closing report does not end routine authorized execution or establish approval, integration or human acceptance.
+
 ## Assign and execute
 
 Use [Task Assignment](agent-coordination-templates.md#task-assignment). Name the developer, agent role, branch, base commit and exact file ownership. Choose a task-sized acceptance and verification plan.

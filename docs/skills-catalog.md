@@ -20,7 +20,7 @@ The package contains **17 logical skills**, distributed as 17 canonical SKILL.md
 | performance-optimization | Measure and improve an evidenced performance problem |
 | observability-and-instrumentation | Make relevant runtime behavior diagnosable |
 | documentation-and-adrs | Record decisions, contracts, operations or reusable context |
-| technote | Explain investigations and solutions using the four-level TechNote method |
+| technote | Use adaptive reports for conversation, planning and implementation, and the four-level TechNote method for explanations |
 
 ## Read and route
 

@@ -4,6 +4,8 @@ The coordinator fills and maintains these three templates. Humans decide goals, 
 
 Use the same state template for the project and individual tasks. Only the Project Coordinator writes shared state; each Task Owner writes their task record. See [team workflow](team-workflow.md).
 
+These three templates are detailed coordination records. For user-facing chat, use TechNote's [adaptive reports](technote.md#adaptive-reports) for the current conversation, planning or implementation stage. Preserve required evidence and authority in the authorized record; keep material limits visible in the short report.
+
 ## Task Assignment
 
 ```text
@@ -113,7 +115,7 @@ An approval field written by an agent, or an Integrated/Verified label, does not
 BEFORE EXECUTION / ASSIGNMENT
 [ ] Read the current plan, human approval and latest stop; the action is covered.
 [ ] Preserve decisions; resolve material assumptions, ownership and contracts.
-[ ] Define acceptance, counterexamples and checks; use an early sample if useful.
+[ ] Define acceptance, counterexamples and checks; use an early sample if useful; send the stage's opening report.
 
 BEFORE HUMAN REVIEW
 [ ] Inspect the actual output and evidence limits; check roles, routing and capabilities.
@@ -122,7 +124,7 @@ BEFORE HUMAN REVIEW
 
 AT HANDOFF / MILESTONE
 [ ] Update owned state, source revisions and current-output links; reconcile old pending items.
-[ ] Report result -> evidence -> limits -> material human decision or next action.
+[ ] Use the stage's closing report; retain material evidence/limits and the decision or next action, with relevant record links.
 [ ] Continue authorized work; escalate expanded scope and stop the affected work when requested.
 ```
 

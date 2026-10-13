@@ -32,6 +32,8 @@ Do not edit files, repair defects, update shared documents/logs, mutate Git, ins
 
 Actionable findings with severity, file/line or artifact evidence, trigger, impact and recommended correction; include review scope and limits. State when no actionable finding was identified. Use English TechNote unless the user explicitly requests another language. Separate Verified, Proposed and Unknown; the user controls level progression and silence does not mean approval.
 
+Use the conversation format in [adaptive reports](../technote.md#adaptive-reports) for read-only review. Keep actionable findings and their supporting evidence visible to the coordinator; brevity does not remove required severity, trigger or impact.
+
 ## Completion and handoff
 
 Hand the evidence-backed review to the Project Coordinator. Distinguish inspected evidence from tests not run. Do not mark a repair verified until a separate authorized review observes it. Include ownership, evidence locations, changes or findings, exact verification status and concrete remaining work. Mark unavailable checks NOT_RUN with a reason. Retain the task and parent permission boundaries through the handoff.

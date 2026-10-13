@@ -4,6 +4,8 @@
 **Package verification date:** 2026-10-12
 **Claim boundary:** static package validation and independent source review. Native behavior and two-machine compatibility are **NOT_RUN**.
 
+The baseline sections below record the 2026-10-12 checks. Later maintenance has separate dated records; it does not turn an earlier observation into a new runtime result.
+
 ## Environment
 
 The package checks ran on macOS 26.6.2 with Python 3.13.3 and the existing system Ruby/Psych 3.1.0 YAML parser. No global configuration or dependencies were installed or changed for these checks.
@@ -78,3 +80,25 @@ This was an independent package source review, not an invocation of `kit-reviewe
 Application-specific builds, business-rule tests, deployment and production acceptance are outside this instruction-only package. Publishing the preview is authorized despite the explicit NOT_RUN items; it is not a verified compatibility release.
 
 These results apply to this kit version. They do not grant approval or imply completed work in projects created from the template.
+
+## Adaptive reporting update — 2026-10-13
+
+**Task:** KIT-REPORTING-001. **Owner:** main session for this bounded kit maintenance update. **Branch / base:** `main` / `22c2a20359072dcb510f3329b97161b16f947fb2`.
+
+**Approval provenance:** Khiêm gave direct human Approved in the current chat on 2026-10-13 for the six adaptive reporting formats and their consistent application to related Agent Kit instructions. That approval covers documentation, package checks and in-scope repairs. On the same date, Khiêm separately authorized committing all reporting updates and pushing them to `origin/main`. Global configuration, application changes and publication beyond the requested repository push remain outside this scope. No later stop instruction was received.
+
+**Result:** The canonical TechNote document now defines before-and-after reports and illustrative examples for conversation, planning and implementation. AGENTS.md, README, policy, workflow, all four common roles, skills catalog and the existing coordination checklist route to that source. Claude's literal AGENTS.md import and both TechNote skill routes remain intact. The three coordination templates still hold detailed records.
+
+**Acceptance:** All six minimum formats match the approved proposal. Reports retain material decisions, blockers, actual verification and limits. Simple follow-ups remain direct, and reports add no approval gate inside existing authorization. Fresh project context, plan, state and task inventory retain their unassigned, unapproved values.
+
+| Check | Result | Evidence and limit |
+| --- | --- | --- |
+| Published package-integrity recipe | PASS | Extracted the exact Python recipe from verification-guide.md and executed it from the repository root; 78 inventory hashes, 27 mirror pairs and 17 skills per root remain valid |
+| Local Markdown references | PASS | Read-only Python scan resolved 189 local links/anchors across 76 Markdown files; external URLs were not fetched |
+| Source and template preservation | PASS | SHA-1 Git blob checks preserve all 26 canonical upstream sources and their mirrors; comparison with the base commit preserves fresh project files, task inventory, native adapters and model/tool settings |
+| Coordination structure | PASS | Source inspection retains three coordination templates and nine checklist items; detailed handoff requirements remain in place |
+| Whitespace | PASS | `git diff --check` returned exit code 0 |
+| Independent source review | PASS | Bounded kit-reviewer subagent inspected the assigned guidance diff and found no actionable issue; its guidance whitespace check returned exit code 0. This was source review, not native client discovery or a V20 behavioral run |
+| V20 runtime reporting behavior | NOT_RUN | Six formats and edge scenarios are documented in the verification guide; fresh native client sessions and the two-machine matrix were not exercised |
+
+**Current state / next action:** The approved guidance update, source review and applicable package checks are complete. Delivery to `origin/main` is authorized; actual commit and remote synchronization evidence belongs to Git history and the delivery report. V20 remains the next runtime check when a client verification scope is authorized. Native discovery, runtime reporting consistency and reading-time improvement remain Unknown. The reviewer performed read-only inspection; effective runtime sandbox enforcement was not verified. This record is kit maintenance evidence, not inherited project approval or an application task record.

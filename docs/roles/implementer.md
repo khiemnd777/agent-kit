@@ -32,6 +32,8 @@ Do not alter unowned files, reverse other work, change dependencies/configuratio
 
 A bounded implementation handoff listing changes, requirements addressed, exact checks/results, findings and unverified limits. Use English TechNote unless the user explicitly requests another language. Separate Verified, Proposed and Unknown; the user controls level progression and silence does not mean approval.
 
+Use the implementation format in [adaptive reports](../technote.md#adaptive-reports). Keep detailed handoff data in the owned authorized task record; retain actual checks and material limits in the chat summary.
+
 ## Completion and handoff
 
 Review the task diff, complete authorized checks and repair within the same approved ownership. Return unresolved findings and required shared-document updates to the Project Coordinator. Include ownership, evidence locations, changes or findings, exact verification status and concrete remaining work. Mark unavailable checks NOT_RUN with a reason. Retain the task and parent permission boundaries through the handoff.

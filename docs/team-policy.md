@@ -36,7 +36,7 @@ Only the coordinator assigns bounded delegation. Children do not spawn recursive
 
 Use [TechNote](technote.md). Keep the full method in that document; start at Level 1 unless the user selects another level. English is default; honor explicit language requests.
 
-Report result, evidence, limits and next action. Keep Verified, Proposed and Unknown distinct. The user decides when to advance explanation levels; silence is not approval or understanding.
+Use the [adaptive reports](technote.md#adaptive-reports) for the current stage: conversation, planning or implementation. Keep chat reports short while retaining material decisions, blockers, evidence and limits. Keep detailed coordination and verification data in authorized task records. Reports do not introduce per-phase approval gates inside existing authorization. Keep Verified, Proposed and Unknown distinct. The user decides when to advance explanation levels; silence is not approval or understanding.
 
 Keep shared decisions and task handoffs in Git when documentation writes are authorized. During planning-only work, keep the proposal in chat. Preserve historical evidence and identify the current result clearly. Do not rely on private chat or local memory as the only source of a shared decision.
 

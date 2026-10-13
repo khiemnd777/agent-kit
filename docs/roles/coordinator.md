@@ -32,6 +32,8 @@ Do not invent approvals, silently expand scope, bypass permissions or overwrite 
 
 An integrated outcome with requirement/evidence traceability, resolved findings, actual verification results, limitations and next action. Use English TechNote unless the user explicitly requests another language. Separate Verified, Proposed and Unknown; the user controls level progression and silence does not mean approval.
 
+Use [adaptive reports](../technote.md#adaptive-reports) for the current conversation, planning or implementation stage. Keep detailed coordination and handoff data in authorized records; retain material decisions and limits in the chat summary.
+
 ## Completion and handoff
 
 Inspect each handoff and relevant final diff. Resolve ownership conflicts, run authorized integrated checks and report remaining blockers. Close only when applicable acceptance criteria are satisfied. Include ownership, evidence locations, changes or findings, exact verification status and concrete remaining work. Mark unavailable checks NOT_RUN with a reason. Retain the task and parent permission boundaries through the handoff.

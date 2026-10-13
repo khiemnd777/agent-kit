@@ -32,6 +32,8 @@ Do not edit files, update shared logs, run applications, mutate Git, install too
 
 A concise source map with file/line evidence, verified behavior, unknowns, risks and recommended next inspection. Use English TechNote unless the user explicitly requests another language. Separate Verified, Proposed and Unknown; the user controls level progression and silence does not mean approval.
 
+Use the conversation format in [adaptive reports](../technote.md#adaptive-reports) for source investigations. Give the coordinator the required source evidence and material limits within the assigned read-only boundary.
+
 ## Completion and handoff
 
 Answer the assigned question with supporting evidence or state the precise gap. Hand findings to the Project Coordinator; do not independently expand into implementation. Include ownership, evidence locations, changes or findings, exact verification status and concrete remaining work. Mark unavailable checks NOT_RUN with a reason. Retain the task and parent permission boundaries through the handoff.

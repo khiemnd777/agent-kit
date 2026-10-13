@@ -21,7 +21,7 @@ Codex uses [AGENTS.md](AGENTS.md), `.agents/skills/` and `.codex/agents/`. Claud
 ## What is included
 
 - Sixteen pinned [engineering skills](docs/skills-catalog.md) plus the new TechNote skill.
-- The [four-level TechNote method](docs/technote.md).
+- The [four-level TechNote method](docs/technote.md), including [adaptive before-and-after reports](docs/technote.md#adaptive-reports) for conversation, planning and implementation.
 - Three [coordination templates](docs/agent-coordination-templates.md): Task Assignment, Project/Task State and a nine-item Coordinator Checklist.
 - [Team workflow](docs/team-workflow.md), file ownership, shared state and cross-tool handoffs.
 - Native `kit-explorer`, `kit-implementer` and `kit-reviewer` definitions for each runtime.
