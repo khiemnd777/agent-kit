@@ -10,11 +10,11 @@
 | Repository skills | .agents/skills | .claude/skills |
 | Native custom agents | .codex/agents/*.toml | .claude/agents/*.md |
 | Default model intent | Omit model and model_reasoning_effort in native definitions | model: inherit; omit effort |
-| Read-only role intent | Read-only sandbox plus role restrictions | Explicit Read, Glob, Grep tool list plus role restrictions |
+| Explorer/reviewer responsibilities | No application code changes, implementation or deployment; omit sandbox override | No application code changes, implementation or deployment; omit tools, disallowedTools and permissionMode overrides |
 
 The literal import in CLAUDE.md is outside a code block. Claude's current AGENTS.md support has client/version and settings conditions; the import keeps one policy source without copying its body.
 
-Codex project-layer loading depends on project trust and client support. Managed settings and live parent permissions can affect the result. A read-only sandbox concerns local execution; inherited connectors and parent overrides still require an effective-permissions check. Claude's read-only agents have no shell, write/edit or connector tools in their declared allowlist.
+Codex project-layer loading depends on project trust and client support. Managed settings and live parent permissions can affect the result. Codex inherits omitted sandbox settings; Claude inherits available subagent tools and the parent permission mode when the corresponding fields are omitted. The kit does not force a permission profile by role. Runtime filtering and the approved task scope still govern tool use. Authorized checks and evidence capture do not grant application code changes, implementation or deployment. Observe effective permissions and role behavior separately.
 
 A written role playbook is not a native registered agent. Coordinator is the main session role and does not automatically become a native subagent or replace the client's main system prompt.
 
@@ -30,7 +30,7 @@ Models, tools and context are local to each runtime. Cross-tool continuation use
 
 ## Official sources
 
-Source review date: 2026-10-12. These references establish authoring mechanisms, not successful execution of this kit.
+Source review date: 2026-10-12; permission/tool inheritance rechecked on 2026-10-13. These references establish authoring mechanisms, not successful execution of this kit.
 
 - [Codex project instructions](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 - [Codex skill discovery](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)

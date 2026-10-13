@@ -93,7 +93,7 @@ Documentation and explanations default to English. An explicit user language req
 
 The coordinator is the main session, not a subagent registered by its name. Native child agents inherit model selection intent; runtime overrides can change the effective model. Report requested and observed settings separately.
 
-Reviewers and explorers remain read-only. Model selection does not grant execution, Git, publication or production permission. Planning does not write files or assign writers.
+Explorers investigate; reviewers return findings. Neither role changes application code, implements features or repairs, or deploys. Permissions follow the runtime and approved task scope; adapters do not impose a read-only sandbox or tool allowlist by role. Authorized checks and evidence capture remain within the assigned scope. Model selection does not grant execution, Git, publication or production permission. Planning does not write files or assign writers.
 
 The kit includes no application dependencies, model/provider credentials, hooks, automatic installers, MCP services or global configuration. Extra presentation tools for TechNote Levels 3 and 4 are not bundled.
 

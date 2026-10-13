@@ -133,3 +133,11 @@ These results apply to this kit version. They do not grant approval or imply com
 **Current state / handoff:** Complete for the approved documentation and static-verification scope, with Git delivery separately authorized. The resulting commit, remote SHA/divergence comparison and final worktree status are delivery evidence in Git history and the delivery report; authorization alone does not establish push success. The current record is this KIT-RETRO-001 section; prior dated records remain historical. The coordinator checklist was applied to P2 authority, ownership, acceptance, final diff, evidence limits and this handoff. No writer was delegated, no later stop instruction was received and no material decision is outstanding.
 
 **Feedback / next action:** P2 closes the planning feedback about same-allowlist material changes and stop precedence. No documentation work remains; the approved delivery covers only these ten files and requires remote/worktree confirmation in the delivery report. Native scenarios remain excluded; the next behavioral verification would require a separately identified client/fixture scope and direct human approval. Kit maintenance evidence does not grant authority to projects adopting the template or resume Pinky Lamb recovery.
+
+## Explorer and Reviewer responsibility correction — 2026-10-13
+
+Current maintenance record: [TASK-003](tasks/TASK-003.md). Khiêm directly approved correcting the adapters and docs so Explorer and Reviewer do not change application code or implement solutions, while permissions follow the runtime and task scope.
+
+This correction supersedes the earlier role-based read-only configuration and V18 expectation. Earlier rows about read-only intent or enforcement describe the previous configuration; they remain historical evidence. Current adapters omit Codex sandbox overrides and Claude tool/permission overrides. Investigation and review instructions permit authorized checks and evidence capture while prohibiting application code changes, implementation and deployment.
+
+Local verification results and handoff are maintained in TASK-003. Native discovery, invocation, effective permissions, V18 behavior and two-machine checks remain NOT_RUN. Package validation does not establish those outcomes.

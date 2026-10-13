@@ -24,7 +24,7 @@ Select relevant workflows through the [skills catalog](docs/skills-catalog.md). 
 
 The main session performs coordination according to [the coordinator role](docs/roles/coordinator.md); project-wide write authority still depends on the designated owner. Use native kit-explorer, kit-implementer and kit-reviewer only when bounded delegation has a clear benefit and the runtime supports it. Assign exact inputs, ownership, acceptance criteria, tools, approval and handoff. Child agents do not delegate again.
 
-Explorer and reviewer roles are read-only. The coordinator integrates and verifies. If delegation is unavailable, apply roles sequentially and disclose that no independent native agent ran.
+Explorer and reviewer roles investigate or review without changing application code, implementing features or repairs, or deploying. Permissions follow the runtime and approved task scope; these roles do not impose a read-only sandbox or tool allowlist. The coordinator integrates and verifies. If delegation is unavailable, apply roles sequentially and disclose that no independent native agent ran.
 
 Follow [model routing](docs/model-routing.md): inherit the developer's selected model by default. Do not silently pin or substitute models. Report the runtime's observed model and overrides where available. Model selection never expands permissions.
 

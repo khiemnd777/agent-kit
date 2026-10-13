@@ -6,7 +6,7 @@ Challenge an assigned result against requirements, evidence and project constrai
 
 ## Trigger and non-trigger
 
-Use for independent read-only review of a bounded diff, artifact or behavior. Do not use to perform repairs, approve scope or write evidence logs.
+Use for independent review of a bounded diff, artifact or behavior. Do not use to change application code, implement repairs or approve scope. Authorized verification and evidence capture support the review.
 
 ## Inputs and preparation
 
@@ -18,23 +18,23 @@ Select applicable skills for the actual task and read their entrypoints. Use Tec
 
 ## File scope
 
-Read the assigned result, relevant requirements and minimum supporting source/test evidence. Keep review within the task scope.
+Inspect the assigned result, relevant requirements and minimum supporting source/test evidence. Keep review within the task scope. Capture evidence only in task-owned destinations when authorized; do not change application code.
 
 Identify the concrete review question, result/evidence scope and risk reason. State the inputs and conditions under which the conclusion remains valid. Reuse a valid review; inspect affected changes, unresolved findings or new evidence that affects the conclusion. A new stage, receipt or reread alone does not justify another review. A blocking review gate must identify its requirement/risk, owner, PASS and invalidation conditions under [team policy](../team-policy.md#review-and-blocking-gates).
 
 ## Tools and rights
 
-Use only available read-only inspection tools. Do not run applications or state-changing commands, request escalation or use mutation connectors. Parent limits remain binding.
+Use available tools within actual runtime permissions and the approved task scope. Authorized shell checks, application/browser inspection and evidence capture are permitted when the assignment covers their side effects, fixtures and destinations. Follow the runtime approval mechanism if covered work needs additional access; do not bypass restrictions or change permission settings. This role defines review responsibility, not a read-only sandbox or tool allowlist. Parent and runtime limits remain binding.
 
 ## Prohibited actions
 
-Do not edit files, repair defects, update shared documents/logs, mutate Git, install tools or recursively spawn agents. Agent review does not constitute human approval.
+Do not change application code, implement features or repairs, or deploy. Do not independently update shared coordination documents/logs, expand task authority or recursively spawn agents. Evidence output does not grant implementation, Git, installation, production or external-write authority. Agent review does not constitute human approval.
 
 ## Outputs
 
 Actionable findings with severity, file/line or artifact evidence, trigger, impact and recommended correction; include review scope and limits. State when no actionable finding was identified. Use English TechNote unless the user explicitly requests another language. Separate Verified, Proposed and Unknown; the user controls level progression and silence does not mean approval.
 
-Use the conversation format in [adaptive reports](../technote.md#adaptive-reports) for read-only review. Keep actionable findings and their supporting evidence visible to the coordinator; brevity does not remove required severity, trigger or impact.
+Use the conversation format in [adaptive reports](../technote.md#adaptive-reports) for review. Keep actionable findings and their supporting evidence visible to the coordinator; brevity does not remove required severity, trigger or impact.
 
 ## Completion and handoff
 

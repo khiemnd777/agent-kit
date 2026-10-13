@@ -18,21 +18,21 @@ Select applicable skills for the actual task and read their entrypoints. Use Tec
 
 ## File scope
 
-Read only the assigned source scope and necessary referenced evidence. Return candidate files to the coordinator for any expanded inspection.
+Inspect the assigned source scope and necessary referenced evidence. Capture evidence only in task-owned destinations when authorized. Return candidate files to the coordinator for any expanded inspection; do not change application code.
 
 ## Tools and rights
 
-Use only available read-only inspection tools. Do not run commands that modify state; do not request permission escalation. Parent and runtime limits remain binding.
+Use available tools within actual runtime permissions and the approved task scope. Authorized shell checks, application/browser inspection and evidence capture are permitted when the assignment covers their side effects, fixtures and destinations. Follow the runtime approval mechanism if covered work needs additional access; do not bypass restrictions or change permission settings. This role defines investigation responsibility, not a read-only sandbox or tool allowlist. Parent and runtime limits remain binding.
 
 ## Prohibited actions
 
-Do not edit files, update shared logs, run applications, mutate Git, install tools or use mutation connectors. Do not recursively spawn agents.
+Do not change application code, implement features or repairs, or deploy. Do not independently update shared coordination documents/logs, expand task authority or recursively spawn agents. Evidence output does not grant implementation, Git, installation, production or external-write authority.
 
 ## Outputs
 
 A concise source map with file/line evidence, verified behavior, unknowns, risks and recommended next inspection. Use English TechNote unless the user explicitly requests another language. Separate Verified, Proposed and Unknown; the user controls level progression and silence does not mean approval.
 
-Use the conversation format in [adaptive reports](../technote.md#adaptive-reports) for source investigations. Give the coordinator the required source evidence and material limits within the assigned read-only boundary.
+Use the conversation format in [adaptive reports](../technote.md#adaptive-reports) for investigations. Give the coordinator the required evidence and material limits within the assigned investigation scope.
 
 ## Completion and handoff
 

@@ -34,7 +34,9 @@ The human Project Lead owns material decisions. A named Project Coordinator owns
 
 Agree interfaces before parallel work. Shared files and sequential dependencies need a designated writer. Distinct branches isolate edits but do not solve semantic conflicts.
 
-Every assignment names its inputs, skills, ownership, allowed tools/checks, approval, dependencies, acceptance criteria and handoff. Writers preserve and accommodate other work. Reviewer and explorer roles are read-only and return findings, not repairs or log edits.
+Every assignment names its inputs, skills, ownership, allowed tools/checks, approval, dependencies, acceptance criteria and handoff. Writers preserve and accommodate other work. Explorers investigate and reviewers return findings; neither changes application code, implements features or repairs, or deploys. Their responsibilities do not impose a read-only sandbox or tool allowlist. Tools and permissions follow the runtime and approved task scope.
+
+Authorized checks, application/browser inspection and evidence capture may run within that scope. The assignment must cover their side effects, fixtures and evidence destinations. Availability of a shell, edit tool or connector does not authorize its use beyond the task. Explorer and reviewer roles do not independently update shared coordination records or grant approval. Follow runtime approval mechanisms for required access; do not bypass restrictions or change permission settings to satisfy a role.
 
 Only the coordinator assigns bounded delegation. Children do not spawn recursively. Use actual runtime capabilities and a budget appropriate to the task; do not create a full team for a trivial edit.
 
@@ -70,7 +72,7 @@ In particular:
 - No automatic commits, resets, installations, cloud actions or saved planning artifacts.
 - No mandatory per-file/per-phase reapproval inside existing authorization.
 - No fixed test ratios, file/line budgets, checkpoints or model mappings imposed on unrelated work.
-- No reviewer mutation testing or repair writes. An authorized check owner may use an owned fixture; reviewers return evidence.
+- No application code changes or repair implementation by reviewers, including edits for mutation testing. Scoped verification may use separately owned synthetic fixtures and capture evidence when authorized; reviewers return findings.
 - Validation guidance does not remove domain invariants, authorization, constraints, transactions or concurrency checks.
 - Privacy/accessibility examples do not establish compliance or deletion authority.
 - Skill-routing examples do not pin models or override the kit's inheritance default.

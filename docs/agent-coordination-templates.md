@@ -58,7 +58,9 @@ assumptions, limits and next action>
 
 Coordination limits:
 Preserve and accommodate other developers' changes.
-Explorers and reviewers are read-only.
+Explorers and reviewers do not change application code, implement features or repairs, or deploy.
+Permissions follow the runtime and approved task scope; no sandbox/tool profile is imposed by role.
+Authorized checks and evidence capture must stay within assigned side effects, fixtures and destinations.
 Children do not delegate again.
 Escalate material missing decisions; continue unaffected authorized work.
 Continue routine repairs while the approved approach remains valid.
