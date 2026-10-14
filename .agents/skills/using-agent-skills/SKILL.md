@@ -9,6 +9,8 @@ description: Discovers and invokes agent skills. Use when starting a session, or
 
 Agent Skills is a collection of engineering workflow skills organized by development phase. Each skill encodes a specific process that senior engineers follow. This meta-skill helps you discover and apply the right skill for your current task.
 
+This entrypoint is adapted by Agent Kit. Apply the [project policy](../../../docs/team-policy.md) and approved task scope. Read only relevant available workflows; lifecycle examples do not require every skill or authorize installing missing ones.
+
 ## Skill Discovery
 
 When a task arrives, identify the development phase and apply the corresponding skill:
@@ -107,11 +109,15 @@ Do NOT:
 
 Your job is surgical precision, not unsolicited renovation.
 
-### 6. Verify, Don't Assume
+### 6. Match Verification to the Claim
 
-Every skill includes a verification step. A task is not complete until verification passes. "Seems right" is never sufficient — there must be evidence (passing tests, build output, runtime data).
+Select checks from acceptance criteria, changed behavior and actual risk. Run applicable checks at meaningful slice or handoff boundaries. Reuse evidence while relevant inputs and conclusions remain valid; recheck the affected scope after a relevant change. Runtime verification is required when the completion claim depends on runtime behavior. Do not impose a universal harness, full suite or checklist on every edit.
 
-Per-skill verification is the local check. The project-wide bar that applies to *every* change, regardless of which skill is active, is the Definition of Done: tests pass, no regressions, behavior verified at runtime, docs updated. See `../../references/definition-of-done.md`. It complements each task's acceptance criteria rather than replacing them.
+Apply the scoped [Definition of Done](../../references/definition-of-done.md) and [verification policy](../../../docs/team-policy.md#verification-scope-and-completion). Keep code integration, verified behavior and human acceptance separate. A human-requested untested handoff requires complete source/caller wiring and useful instructions; unrun tests/runtime remain NOT_RUN, not PASS.
+
+If a harness fails, identify the missing proof, affected work and a bounded next action with a stopping condition. Use equivalent evidence only within existing authority and required controls. Keep required unproved criteria open; continue independent authorized work. Do not create another admission/receipt/reviewer chain merely to keep verification running.
+
+If an API/UI/library error appears during implementation, runtime or UAT, pause the affected flow and prepare a focused repair plan before editing: evidence, cause/hypothesis, affected files/consumers and repair check. Use the existing debugging workflow and classify the repair against approval. A routine repair does not need new per-bug approval; a material approach/control/scope change does.
 
 ## Failure Modes to Avoid
 
@@ -132,7 +138,7 @@ These are the subtle errors that look like productivity but create problems:
 
 1. **Check for an applicable skill before starting work.** Skills encode processes that prevent common mistakes.
 
-2. **Skills are workflows, not suggestions.** Follow the steps in order. Don't skip verification steps.
+2. **Apply relevant workflow steps under project policy.** Preserve applicable acceptance and safety requirements. Examples do not create extra execution authority, per-edit verification gates or permission to restart stopped checks.
 
 3. **Multiple skills can apply.** A feature implementation might involve `idea-refine` → `spec-driven-development` → `planning-and-task-breakdown` → `incremental-implementation` → `test-driven-development` → `code-review-and-quality` → `code-simplification` → `shipping-and-launch` in sequence.
 

@@ -9,6 +9,8 @@ description: Delivers changes incrementally in thin, verifiable slices. Use when
 
 Build in thin vertical slices — implement one piece, test it, verify it, then expand. Avoid implementing an entire feature in one pass. Each increment should leave the system in a working, testable state. This is the execution discipline that makes large features manageable.
 
+This Agent Kit adaptation follows [verification scope and completion](../../../docs/team-policy.md#verification-scope-and-completion). Choose checks for the changed behavior and risk; the cycle below is guidance, not a mandatory full-suite/runtime/commit gate for every edit.
+
 ## When to Use
 
 - Implementing any multi-file change
@@ -21,25 +23,20 @@ Build in thin vertical slices — implement one piece, test it, verify it, then 
 ## The Increment Cycle
 
 ```
-┌──────────────────────────────────────┐
-│                                      │
-│   Implement ──→ Test ──→ Verify ──┐  │
-│       ▲                           │  │
-│       └───── Commit ◄─────────────┘  │
-│              │                       │
-│              ▼                       │
-│          Next slice                  │
-│                                      │
-└──────────────────────────────────────┘
+Implement a coherent slice
+    → Run applicable authorized checks
+    → Review the result and evidence limits
+    → Repair affected findings or hand off the stated result
+    → Continue independent authorized work
 ```
 
 For each slice:
 
 1. **Implement** the smallest complete piece of functionality
-2. **Test** — run the test suite (or write a test if none exists)
-3. **Verify** — confirm the slice works as expected (tests pass, build succeeds, manual check)
-4. **Commit** -- save your progress with a descriptive message (see `git-workflow-and-versioning` for atomic commit guidance)
-5. **Move to the next slice** — carry forward, don't restart
+2. **Select checks** for the slice's criteria, changed behavior and risk; write meaningful regression coverage where appropriate
+3. **Verify the claim** with applicable authorized checks; reuse valid evidence and state what remains unproved
+4. **Review and hand off** the actual result; commit only when Git delivery is explicitly authorized
+5. **Move to independent work** while keeping affected unmet criteria open; carry forward valid evidence
 
 ## Slicing Strategies
 
@@ -142,7 +139,7 @@ Each increment changes one logical thing. Don't mix concerns:
 
 ### Rule 2: Keep It Compilable
 
-After each increment, the project must build and existing tests must pass. Don't leave the codebase in a broken state between slices.
+Keep each slice coherent and avoid knowingly breaking dependent work. Run build/tests when the changed behavior or task criteria require them; documentation changes do not inherit application checks. If an API/UI/library error occurs, pause its affected flow and plan the specific repair before editing under the current approval boundary.
 
 ### Rule 3: Feature Flags for Incomplete Features
 
@@ -190,31 +187,30 @@ When directing an agent to implement incrementally:
 Start with just the database schema change and the API endpoint.
 Don't touch the UI yet — we'll do that in the next increment.
 
-After implementing, run the repository's test and build commands to
-verify nothing is broken."
+After implementing, run the authorized checks relevant to the schema
+and endpoint, and report the result and unverified limits."
 ```
 
 Be explicit about what's in scope and what's NOT in scope for each increment.
 
 ## Increment Checklist
 
-After each increment, verify with the repository's own commands (see the test-driven-development skill's Discover the Stack First section):
+At a meaningful slice boundary, choose applicable checks using the repository's actual commands. The following is a selection guide, not an all-items gate:
 
 - [ ] The change does one thing and does it completely
-- [ ] All existing tests still pass (the repository's test command: `npm test`, `./gradlew test`, `pytest`, ...)
-- [ ] The build succeeds (the repository's build command)
-- [ ] Type checking passes, where the stack has one (`npx tsc --noEmit`, `mypy`, ...)
-- [ ] Linting passes (the repository's lint command)
-- [ ] The new functionality works as expected
-- [ ] The change is committed with a descriptive message
+- [ ] Relevant behavior/regression checks pass where required
+- [ ] Build/type/lint checks cover the changed code where applicable
+- [ ] The claimed behavior has supporting evidence; missing runtime evidence remains explicit
+- [ ] The handoff includes actual callers and required instructions
+- [ ] Git delivery is performed only if authorized; a commit is not an implementation acceptance criterion by default
 
-**Note:** Run each verification command after a change that could affect it. After a successful run, don't repeat the same command unless the code has changed since — re-running on unchanged code adds no information.
+**Note:** Recheck when relevant code, inputs, environment or findings invalidate the evidence. A stage change or unrelated edit alone does not justify repeating checks. If verification tooling fails, identify a bounded next action; do not build another harness or block unrelated work.
 
 ## Common Rationalizations
 
 | Rationalization | Reality |
 |---|---|
-| "I'll test it all at the end" | Bugs compound. A bug in Slice 1 makes Slices 2-5 wrong. Test each slice. |
+| "I'll test it all at the end" | Select checks at meaningful boundaries so defects do not propagate into dependent work. A human-requested untested handoff must retain its evidence limits. |
 | "It's faster to do it all at once" | It *feels* faster until something breaks and you can't find which of 500 changed lines caused it. |
 | "These changes are too small to commit separately" | Small commits are free. Large commits hide bugs and make rollbacks painful. |
 | "I'll add the feature flag later" | If the feature isn't complete, it shouldn't be user-visible. Add the flag now. |
@@ -223,10 +219,10 @@ After each increment, verify with the repository's own commands (see the test-dr
 
 ## Red Flags
 
-- More than 100 lines of code written without running tests
+- Expanding dependent implementation while a known relevant failure is unresolved
 - Multiple unrelated changes in a single increment
 - "Let me just quickly add this too" scope expansion
-- Skipping the test/verify step to move faster
+- Claiming verification without the applicable evidence
 - Build or tests broken between increments
 - Large uncommitted changes accumulating
 - Building abstractions before the third use case demands it
@@ -238,12 +234,12 @@ After each increment, verify with the repository's own commands (see the test-dr
 
 After completing all increments for a task:
 
-- [ ] Each increment was individually tested and committed
-- [ ] The full test suite passes
-- [ ] The build is clean
-- [ ] The feature works end-to-end as specified
-- [ ] No uncommitted changes remain
+- [ ] Required source/callers are integrated and reviewed
+- [ ] Applicable authorized checks support the claimed completion level
+- [ ] Required unmet criteria and FAIL/NOT_RUN limits remain visible
+- [ ] Runtime behavior and human acceptance are separate from code completion
+- [ ] Full-suite/build/Git actions run only when relevant and authorized
 
 ## See Also
 
-Per-increment verification is the local check. Before declaring a task done, apply the project-wide Definition of Done as the final gate, the standing bar every increment clears regardless of the task. See `../../references/definition-of-done.md`.
+Use the [Definition of Done](../../references/definition-of-done.md) for the agreed deliverable and completion level. It does not impose every check or a commit on every increment.

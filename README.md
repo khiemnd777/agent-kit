@@ -62,7 +62,7 @@ Codex uses [AGENTS.md](AGENTS.md), `.agents/skills/` and `.codex/agents/`. Claud
 
 ## What is included
 
-- Sixteen pinned [engineering skills](docs/skills-catalog.md) plus the new TechNote skill.
+- Sixteen [engineering skills](docs/skills-catalog.md) from a pinned source, with explicit local adaptations, plus the new TechNote skill.
 - The [four-level TechNote method](docs/technote.md), including [adaptive before-and-after reports](docs/technote.md#adaptive-reports) for conversation, planning and implementation.
 - Three [coordination templates](docs/agent-coordination-templates.md): Task Assignment, Project/Task State and a nine-item Coordinator Checklist.
 - [Team workflow](docs/team-workflow.md), file ownership, shared state and cross-tool handoffs.
@@ -101,4 +101,6 @@ The kit includes no application dependencies, model/provider credentials, hooks,
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). New kit content is MIT licensed under [LICENSE](LICENSE).
 
-The sixteen engineering skills and their references come from [Addy Osmani's agent-skills](https://github.com/addyosmani/agent-skills/tree/1401c8b8030e023baeebb31781a6653fe8e93026), pinned without source edits. Their original MIT copyright and permission notice are retained in [.agents/ADDY-AGENT-SKILLS-LICENSE](.agents/ADDY-AGENT-SKILLS-LICENSE) and its Claude mirror. Original upstream examples are governed by the kit's [policy overlay](docs/team-policy.md#upstream-workflow-overlay).
+The sixteen engineering skills and their references come from [Addy Osmani's agent-skills](https://github.com/addyosmani/agent-skills/tree/1401c8b8030e023baeebb31781a6653fe8e93026). Of 26 canonical upstream files, 22 remain unchanged and four have [documented Agent Kit adaptations](docs/skills-catalog.md#local-adaptations), retaining the original pin and provenance. Their MIT copyright and permission notice remain in [.agents/ADDY-AGENT-SKILLS-LICENSE](.agents/ADDY-AGENT-SKILLS-LICENSE) and its Claude mirror. Upstream examples follow the kit's [policy overlay](docs/team-policy.md#upstream-workflow-overlay).
+
+Verification follows [the agreed claim and actual risk](docs/team-policy.md#verification-scope-and-completion). The kit does not require a universal harness for every edit. Code integration, verified behavior and human acceptance remain separate. An API/UI/library error pauses its affected flow for a focused repair plan; explicit Coordinator delegation does not add Supervisor ratification or remove real safety controls.

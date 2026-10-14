@@ -141,3 +141,22 @@ Current maintenance record: [TASK-003](tasks/TASK-003.md). Khiêm directly appro
 This correction supersedes the earlier role-based read-only configuration and V18 expectation. Earlier rows about read-only intent or enforcement describe the previous configuration; they remain historical evidence. Current adapters omit Codex sandbox overrides and Claude tool/permission overrides. Investigation and review instructions permit authorized checks and evidence capture while prohibiting application code changes, implementation and deployment.
 
 Local verification results and handoff are maintained in TASK-003. Native discovery, invocation, effective permissions, V18 behavior and two-machine checks remain NOT_RUN. Package validation does not establish those outcomes.
+
+## Proportionate verification and M3 coordination retrospective — 2026-10-14
+
+Current maintenance record: [TASK-004](tasks/TASK-004.md). Khiêm directly approved P2.1 for exactly 21 Agent Kit files and local checks, excluding Pinky Lamb writes, a new harness and commit/push. The earlier pause/planning-only instruction is superseded only within this scope.
+
+Policy, coordination templates/roles and the adapted workflows now select checks by claim, changed behavior and risk; bound failed verification without another admission/receipt chain; partition explicitly delegated Coordinator decisions; and separate code integration, verified behavior and human acceptance. An API/UI/library error during implementation/runtime/UAT pauses the affected flow for a focused repair plan before edits. Routine covered repair authority and material-change approval remain distinct. Auth, data preservation and necessary integrity controls are retained.
+
+Current provenance: 22 of the 26 canonical upstream files still match the original pin; `using-agent-skills`, `planning-and-task-breakdown`, `incremental-implementation` and `definition-of-done.md` are explicit Agent Kit adaptations with matching Claude copies and retained original origin metadata/license. Earlier rows asserting all 26 unchanged describe their original observation dates; they are not current claims.
+
+| Actual check | Result | Evidence and limit |
+| --- | --- | --- |
+| Published package recipe via inline `python3` | PASS | 78 inventory hashes, 27 content/provenance mirror pairs, 17 skills per root; 22 original/four adapted canonical upstream sources |
+| Metadata via `ruby -rpsych`, JSON and `tomllib` | PASS | 37 YAML frontmatters and three unchanged Codex adapters; six adapted entrypoints also passed equivalent name/description/scaffold checks |
+| Bundled skill-creator quick_validate.py | NOT_RUN / prerequisite failed | One attempt exited 1 because PyYAML is absent, before validation. No dependency installed; existing Ruby/Psych checks provide separate evidence |
+| Changed-source links, scope and preservation | PASS | Final inline `python3` resolved 83 local links/anchors across 20 changed Markdown files and confirmed exactly 21 owned changes, 67 protected tracked files unchanged, historical report prefix/original provenance retained, HEAD unchanged and index empty. `git diff --check` exited 0; no commit/push |
+| V26–V30 | Written / reviewed | Scenario-based self-review covers proportional checks, harness failure, delegated coordination, untested handoff and focused error repair. No behavioral PASS is inferred |
+| Native behavior, independent native review and two-machine compatibility | NOT_RUN | No client/agent/fixture/application run or new harness; effective native behavior remains Unknown |
+
+The exact approval, external retrospective evidence, file ownership, checks and final handoff live in TASK-004. No other repository or fresh-project authority is changed. Local package validation does not prove that native agents follow the new guidance or that Pinky Lamb works.

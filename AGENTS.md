@@ -34,4 +34,6 @@ Use [TechNote](docs/technote.md), starting at Level 1, and its [adaptive reports
 
 Choose checks by risk and project behavior. Do not invent commands, test results, reviewer approval or artifacts. Never weaken tests, bypass protections or expose secrets to obtain a pass.
 
+Apply [verification scope and completion](docs/team-policy.md#verification-scope-and-completion): no universal harness per edit; distinguish code integration, verified behavior and human acceptance. Pause an affected API/UI/library error flow and plan its specific repair before editing. Explicitly delegated Coordinators keep separate decision ownership; a Supervisor adds no implicit approval gate.
+
 Before handing off, update the owned task record, run the coordinator checklist and use the closing report for the current stage. Keep detailed handoff data in the authorized record and link relevant evidence in chat. Written, Discovered, Invoked and Verified are different states. Missing checks are NOT_RUN with a reason.

@@ -32,7 +32,11 @@ If names collide with personal, managed or plugin skills, identify the effective
 
 ## Provenance
 
-The sixteen engineering skills retain 26 instruction-only source files from [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills/tree/1401c8b8030e023baeebb31781a6653fe8e93026), commit `1401c8b8030e023baeebb31781a6653fe8e93026`: 16 SKILL.md files, two skill-local reference files, seven shared references and the original MIT license.
+The sixteen engineering skills derive from 26 instruction-only files in [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills/tree/1401c8b8030e023baeebb31781a6653fe8e93026), commit `1401c8b8030e023baeebb31781a6653fe8e93026`: 16 SKILL.md files, two skill-local reference files, seven shared references and the original MIT license. Twenty-two canonical upstream files remain unchanged; four are explicitly adapted below. Both runtime roots retain matching content and provenance.
+
+### Local adaptations
+
+Approved P2.1 is recorded in [TASK-004](tasks/TASK-004.md). `using-agent-skills`, `planning-and-task-breakdown`, `incremental-implementation` and the shared `definition-of-done.md` now select checks by claim/risk, bound harness failure handling and separate source handoff from runtime/human acceptance. Their manifest entries retain original upstream commit/blob metadata and identify Agent Kit adaptation and this catalog. The license and other upstream files are unchanged. An original blob identifies the source, not a claim that the adapted bytes match it.
 
 TechNote is new kit content. Its full method is maintained in [technote.md](technote.md), not copied into the skill.
 

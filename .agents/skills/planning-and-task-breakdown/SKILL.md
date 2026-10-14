@@ -9,6 +9,8 @@ description: Breaks work into ordered tasks. Use when you have a spec or clear r
 
 Decompose work into small, verifiable tasks with explicit acceptance criteria. Good task breakdown is the difference between an agent that completes work reliably and one that produces a tangled mess. Every task should be small enough to implement, test, and verify in a single focused session.
 
+This Agent Kit adaptation follows [project policy](../../../docs/team-policy.md). Plan checks for the actual deliverable and risk; task counts, file counts and examples do not create universal checkpoints or execution authority.
+
 ## When to Use
 
 - You have a spec and need to break it into implementable units
@@ -30,7 +32,7 @@ Before writing any code, operate in read-only mode:
 - Map dependencies between components
 - Note risks and unknowns
 
-**Do NOT write code during planning.** The output is a plan document saved to `tasks/plan.md` and a task list recorded in the task list target (see Output Files; default `tasks/todo.md`), not implementation.
+**Do NOT write code or saved plans during planning-only work.** Propose the plan in chat. Save the plan/task record only when documentation writes are authorized, using the project's existing source of truth (see Output Files for examples).
 
 ### Step 2: Identify the Dependency Graph
 
@@ -53,6 +55,8 @@ Database schema
 ```
 
 Implementation order follows the dependency graph bottom-up: build foundations first.
+
+Dependencies must reflect actual data, contracts, ownership or scarce resources. Name one canonical contract owner; block only incompatible consumers. Do not make all tasks sequential by default or require whole-team freeze, joint ratification or cross-chat acknowledgements. Multiple Coordinators need explicit human-delegated decision scopes and one writer per shared record; a Supervisor adds no implicit approval gate.
 
 ### Step 3: Slice Vertically
 
@@ -90,9 +94,9 @@ Each task follows this structure, whether it lands in the markdown task list or 
 - [ ] [Specific, testable condition]
 
 **Verification:**
-- [ ] Tests pass: [the repository's focused-test command]
-- [ ] Build succeeds: [the repository's build command]
-- [ ] Manual check: [description of what to verify]
+- [ ] Evidence needed for the claimed criterion: [actual check and what it proves]
+- [ ] Applicable checks: [focused test/build/rendered/manual checks selected by risk]
+- [ ] Unproved criteria and limits: [FAIL/NOT_RUN, owner and next action]
 
 **Dependencies:** [Task numbers this depends on, or "None"]
 
@@ -109,10 +113,10 @@ Arrange tasks so that:
 
 1. Dependencies are satisfied (build foundation first)
 2. Each task leaves the system in a working state
-3. Verification checkpoints occur after every 2-3 tasks
+3. Verification checkpoints cover meaningful integration seams or material risks
 4. High-risk tasks are early (fail fast)
 
-Add explicit checkpoints to the task list target:
+Add checkpoints where a concrete dependency or risk justifies them. The examples below are illustrative; they do not require a full suite/build for every task:
 
 ```markdown
 ## Checkpoint: After Tasks 1-3
@@ -142,10 +146,12 @@ If a task is L or larger, it should be broken into smaller tasks. An agent perfo
 
 ## Output Files
 
-- **Plan document:** Save the implementation plan to `tasks/plan.md`. This is always a markdown file — design decisions, risks, and open questions don't map cleanly onto individual tracker issues.
-- **Task list:** Record each task in the **task list target** (defined below).
+These destinations are examples. Use the project's existing authoritative plan/task record and writer ownership. Planning-only output stays in chat; file or external-tracker writes require the corresponding approval. Do not create competing plans or task checklists.
 
-Create the `tasks/` directory if it does not exist.
+- **Plan document:** When writes are authorized, save decisions, risks and open questions in the agreed project record. `tasks/plan.md` is a default example for a project without an established location.
+- **Task list:** When authorized, record tasks in the project's **task list target** (examples below).
+
+Create a missing task directory only within approved write scope.
 
 **Never overwrite an incomplete plan.** Before writing `tasks/plan.md` or `tasks/todo.md`, check whether they already exist and still contain unchecked tasks:
 
@@ -236,7 +242,7 @@ When multiple agents or sessions are available:
 - Tasks that say "implement the feature" without acceptance criteria
 - No verification steps in the plan
 - All tasks are XL-sized
-- No checkpoints between tasks
+- Material integration risks have no planned check or owner
 - Dependency order isn't considered
 
 ## Verification
@@ -244,14 +250,14 @@ When multiple agents or sessions are available:
 Before starting implementation, confirm:
 
 - [ ] Every task has acceptance criteria
-- [ ] Every task has a verification step
+- [ ] Every task states the evidence needed for its agreed completion level
 - [ ] Task dependencies are identified and ordered correctly
 - [ ] Tasks are recorded in the task list target (default `tasks/todo.md`)
 - [ ] No pre-existing incomplete plan was overwritten without explicit user confirmation
-- [ ] No task touches more than ~5 files
-- [ ] Checkpoints exist between major phases
+- [ ] Each task has coherent, reviewable ownership; file count is an estimate, not a universal gate
+- [ ] Checkpoints have concrete dependency/risk reasons and evidence validity conditions
 - [ ] The human has reviewed and approved the plan
 
 ## See Also
 
-Acceptance criteria are per-task and answer "did we build the right thing?". They sit on top of the project-wide Definition of Done, the standing bar every task clears before it counts as done. See `../../references/definition-of-done.md`.
+Acceptance criteria describe the required result. Apply the [Definition of Done](../../references/definition-of-done.md) to the agreed deliverable and completion level, selecting checks by actual risk. A failed harness needs a bounded diagnostic plan, not an expanding review chain. For an API/UI/library error during implementation/runtime/UAT, pause the affected flow and plan its specific repair before editing under current approval.

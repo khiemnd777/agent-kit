@@ -22,6 +22,8 @@ Inspect the assigned result, relevant requirements and minimum supporting source
 
 Identify the concrete review question, result/evidence scope and risk reason. State the inputs and conditions under which the conclusion remains valid. Reuse a valid review; inspect affected changes, unresolved findings or new evidence that affects the conclusion. A new stage, receipt or reread alone does not justify another review. A blocking review gate must identify its requirement/risk, owner, PASS and invalidation conditions under [team policy](../team-policy.md#review-and-blocking-gates).
 
+Apply [verification scope and completion](../team-policy.md#verification-scope-and-completion). Require evidence relevant to the review claim, rather than runtime/full-suite proof for every edit. Inspect real integration seams for a code handoff while keeping runtime and human acceptance separate. If an API/UI/library error appears, report its evidence, affected flow and proposed focused repair plan to the owner; do not implement it. A Supervisor or review role adds no implicit approval tier or authority to restart stopped checks.
+
 ## Tools and rights
 
 Use available tools within actual runtime permissions and the approved task scope. Authorized shell checks, application/browser inspection and evidence capture are permitted when the assignment covers their side effects, fixtures and destinations. Follow the runtime approval mechanism if covered work needs additional access; do not bypass restrictions or change permission settings. This role defines review responsibility, not a read-only sandbox or tool allowlist. Parent and runtime limits remain binding.

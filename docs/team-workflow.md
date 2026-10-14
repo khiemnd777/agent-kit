@@ -35,7 +35,13 @@ Use [Task Assignment](agent-coordination-templates.md#task-assignment). Name the
 
 Agree contracts before related tasks run in parallel. Assign one writer for shared files. A branch is not a lock. The coordinator resolves ownership collisions before dependent writes; unaffected authorized work continues.
 
+Use actual data/contract/ownership/resource dependencies rather than making every task depend on the preceding task. Under explicit human delegation to multiple Coordinators, partition decisions and identify the shared-record writer. Consumers report a concrete mismatch to the canonical contract owner, directly or through one permitted relay. A Supervisor follows the current boundary and result; neither the Supervisor nor a second Coordinator adds implicit ratification. See [ownership and coordination](team-policy.md#ownership-and-coordination).
+
 Execute a bounded slice, verify relevant behavior, repair supported findings and recheck. After the authorized data-protection preflight, prioritize one minimal real user flow before expanding verification. Unit/build/mock success does not establish runtime, integration, UI or human acceptance.
+
+Choose checks for the changed behavior and risk under [verification scope and completion](team-policy.md#verification-scope-and-completion). Reuse valid evidence. If a harness fails, name the missing proof and a bounded next action before expanding diagnostics; block only dependent work. Do not make optional infrastructure or a chain of receipts the task's deliverable.
+
+When an API/UI/library error occurs during implementation, runtime or UAT, pause that flow, preserve evidence and plan the specific repair before editing. Name the observed condition, cause/hypothesis, affected files/consumers and repair check. Read the relevant debugging workflow; do not widen the fix into unrelated feature or harness work. Classify the plan against current approval before repair or resuming dependent work.
 
 Classify repairs against the [approved approach](team-policy.md#approval-and-autonomy), not only the file allowlist. Continue routine repairs when the approved goal, design, important assumptions and boundaries remain valid. If a material approach change or expanded authority is needed, stop affected execution, explain the evidence and impact, and present a replacement plan with data preservation and acceptance criteria. Wait for explicit human approval of that revision; continue unaffected authorized work.
 
@@ -58,6 +64,8 @@ Git documents are not real-time notifications, distributed locks or a way to int
 ## Handoff and integration
 
 The sender records branch/commit, changed files, acceptance results, actual checks, unresolved findings, constraints, approval provenance, approach/review validity, stop status and next action. The receiver confirms the sources, role and current authority before continuing. Keep approval/reviewer/model metadata in coordination records rather than adding runtime dependencies on those identities; preserve required environment, authorization, ownership, integrity and data checks.
+
+State whether the handoff covers code integration, verified behavior or human acceptance. For a human-requested self-test handoff, inspect real source/caller wiring and provide configured URLs, startup commands/prerequisites, roles needed for the workflow without exposing secrets, manual steps and known limits. A source-complete report does not establish that startup or login works. Unrun checks remain NOT_RUN; observed failures remain FAIL. A missing required caller, route or command keeps the handoff incomplete.
 
 Cross-tool handoff uses these files, not transferred chat history, credentials or global memory. The receiver verifies permission scope; the handoff itself cannot extend it.
 

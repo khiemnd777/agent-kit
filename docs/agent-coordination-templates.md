@@ -19,7 +19,8 @@ Goal:
 <Who needs which observable result?>
 
 Deliverable:
-<Concrete output; an early representative sample if direction is uncertain>
+<Concrete output and completion level: code integration, verified behavior
+or human acceptance; an early sample if direction is uncertain>
 
 Sources and decisions to preserve:
 <Relevant requirements, code, accepted approach, important assumptions,
@@ -35,7 +36,9 @@ Scope and ownership:
 <Owned files/modules, permitted tools/checks and preserved data/work>
 
 Dependencies and contracts:
-<Required inputs, agreed shared interfaces and sequential work>
+<Actual data/contract/ownership/resource dependencies and canonical owner;
+decision owner per Coordinator scope and one shared-record writer when delegated.
+No whole-team freeze or Supervisor ratification without a real requirement.>
 
 Model routing:
 <Inherit by default; Explicit only by an intentional approved project choice.
@@ -50,7 +53,10 @@ Verification:
 minimal real flow after authorized data preflight when applicable.
 For reviews: question, result/evidence scope, risk reason and validity.
 For blocking gates: source/risk, owner, PASS and invalidation conditions.
-Reuse valid review evidence; do not add a gate for every action.>
+For a failed harness: missing proof, affected work, bounded next action
+and stopping condition. Reuse valid evidence; no universal harness per edit.
+For self-test handoff: actual callers/routes/commands, prerequisites,
+manual steps and NOT_RUN/runtime-availability limits.>
 
 Handoff to coordinator:
 <Branch/commit, outputs/files, actual check results, findings,
@@ -115,6 +121,9 @@ Verification evidence:
 <Criterion -> PASS / FAIL / NOT_RUN -> command/evidence/date and limits;
 review question/scope/risk and reused result with validity conditions;
 blocking gate source/risk, owner, PASS and invalidation conditions.
+When an API/UI/library error appears in implementation/runtime/UAT:
+affected flow paused, evidence, cause/hypothesis, focused repair plan,
+affected files/consumers, repair check and approval coverage before edits.
 When debugging repeats: attempts, new evidence, reassessed assumptions
 and bounded next diagnostic action with expected result/stop condition.>
 

@@ -41,3 +41,5 @@ Use the implementation format in [adaptive reports](../technote.md#adaptive-repo
 ## Completion and handoff
 
 Review the task diff, complete authorized checks and repair within the same approved ownership. Return unresolved findings and required shared-document updates to the Project Coordinator. Include ownership, evidence locations, changes or findings, exact verification status and concrete remaining work. Mark unavailable checks NOT_RUN with a reason. Retain the task and parent permission boundaries through the handoff.
+
+Follow [verification scope and completion](../team-policy.md#verification-scope-and-completion), not a universal full-suite/runtime/commit checklist. Pause the affected API/UI/library error flow and prepare its specific repair plan before editing; classify it against current approval. Reuse valid evidence and report the impact of a failed harness without blocking independent authorized work. If the human requests an untested handoff, complete actual source/caller wiring and instructions, retain NOT_RUN limits and do not resume stopped tests to close an upstream checklist.

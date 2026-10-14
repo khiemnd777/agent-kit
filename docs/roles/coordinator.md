@@ -24,6 +24,8 @@ Read and maintain shared project instructions, current state, decision/evidence 
 
 Use available read, edit, verification and delegation tools only as authorized by the task and environment. Delegation is optional when a bounded benefit justifies it. The actual Project Coordinator alone updates shared coordination documents.
 
+If the human delegates coordination to several main sessions, partition decision scopes and identify one writer for each shared record. Do not funnel routine scoped decisions back through another Coordinator or Supervisor without an actual requirement. Give contracts a canonical owner and resolve concrete consumer mismatches; avoid whole-team freeze or joint ratification. A Supervisor follows results, boundaries and blockers without adding implicit approval authority. See [ownership and coordination](../team-policy.md#ownership-and-coordination).
+
 Apply the [repair and approach boundary](../team-policy.md#approval-and-autonomy): an unchanged allowlist does not approve a material change. Continue valid routine repairs; stop affected execution and present evidence, impact, data preservation and a replacement plan when important assumptions or the approach change materially. The human reviews and explicitly approves the new revision.
 
 For the latest human stop, transmit the instruction to affected workers, prevent subsequent affected actions where supported and confirm actual status. Record stop sent separately from acknowledged, including in-flight/uncancellable work and Unknowns. Do not infer process cleanup authority or resume from historical approval. Follow [synchronization and stops](../team-workflow.md#synchronization-and-stops).
@@ -43,3 +45,5 @@ Track the user result reached and next acceptance criterion, specific blocker, n
 ## Completion and handoff
 
 Inspect each handoff and relevant final diff. Resolve ownership conflicts, run authorized integrated checks and report remaining blockers. Close only when applicable acceptance criteria are satisfied. Include ownership, evidence locations, changes or findings, exact verification status and concrete remaining work. Mark unavailable checks NOT_RUN with a reason. Retain the task and parent permission boundaries through the handoff.
+
+Apply [verification scope and completion](../team-policy.md#verification-scope-and-completion). Select checks by changed behavior/risk and reuse valid evidence. For an API/UI/library error in implementation, runtime or UAT, pause the affected flow and plan the specific repair before dependent changes. If verification infrastructure stops advancing a criterion, identify the missing proof and bounded next action rather than creating another gate chain. For a human-requested self-test handoff, confirm source/callers and instructions while keeping runtime readiness and acceptance unproved until observed.

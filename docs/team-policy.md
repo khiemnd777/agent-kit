@@ -10,6 +10,8 @@ A direct human Approved for a named current plan or task authorizes its stated s
 
 After approval, complete routine implementation, checking and repairs without asking per file, bug or phase while the scope is open and the approved goal, design, important assumptions, data/permission boundaries, operating approach and protective controls remain valid. A new bug alone does not require a new approval.
 
+Coordination approval authority may be delegated only by a direct human instruction that identifies its scope and limits. Record that instruction separately from decisions made under it. Delegation does not turn an agent decision into direct human approval or extend runtime permissions. Delegated decisions remain subject to the material-change boundary below; a role cannot grant itself additional authority.
+
 An unchanged scope or file allowlist does not prove that the approved approach remains valid. If new evidence invalidates an important assumption or requires a material change to design, recovery, data/permission boundaries, operation or risk controls, stop affected execution before dependent actions. Explain the evidence, Unknown information, where the old approach fails and the practical impact. Present a concrete replacement plan with data preservation and acceptance criteria, then wait for human review and explicit approval of that revision. A new product decision or expanded authority also needs approval. If the impact is unclear, use permitted read-only inspection to classify it; do not turn every small repair into replanning. Continue unaffected authorized work.
 
 The latest human stop or replan instruction takes precedence over earlier approval or directions to continue. The coordinator sends the stop to affected workers, prevents subsequent affected actions where supported and confirms actual status. Distinguish a stop sent from a stop acknowledged; disclose in-flight, uncancellable or Unknown work. Stop does not authorize killing/restarting processes or cleaning up data. Take only the minimum safety-preserving action allowed by existing authority for in-flight work. Do not resume stopped execution because time passed, the human was silent, a reviewer passed it or historical approval exists; obtain explicit approval to resume the relevant current plan.
@@ -28,11 +30,15 @@ After an authorized preflight protects the required data and verifies environmen
 
 Fix the supported cause. Do not weaken tests, conceal failure, manufacture success, hardcode an example as a business rule or mix unrelated cleanup into a task.
 
+If an API, UI or library error occurs during implementation, runtime operation or user acceptance testing (UAT), pause the affected flow before further dependent changes. Preserve relevant evidence and prepare a short repair plan for that specific error: observed condition, supported cause or hypothesis, affected files/consumers and the check that will confirm the repair. Use the existing debugging workflow. A plan is required before repair; it does not add per-bug reapproval for a routine repair already covered by valid authority. Material approach/control/scope changes follow the approval boundary above. Continue independent authorized work. A paused flow is not permission to kill/restart processes, change data or bypass controls.
+
 ## Ownership and coordination
 
 The human Project Lead owns material decisions. A named Project Coordinator owns shared plan, context, state and integration. A Task Owner owns the assigned branch, task record and approved files.
 
 Agree interfaces before parallel work. Shared files and sequential dependencies need a designated writer. Distinct branches isolate edits but do not solve semantic conflicts.
+
+When a human authorizes multiple Coordinators, assign one decision owner per scope and one writer for each shared record. Give each shared contract a canonical owner. Block only consumers affected by a concrete incompatible interface, ownership collision or resource constraint; do not require whole-team freeze, joint ratification or cross-chat acknowledgements for routine work. A Supervisor tracks the agreed deliverable, scope and blockers; it adds no mandatory approval layer. Additional authority must come from the human delegation, not the role name.
 
 Every assignment names its inputs, skills, ownership, allowed tools/checks, approval, dependencies, acceptance criteria and handoff. Writers preserve and accommodate other work. Explorers investigate and reviewers return findings; neither changes application code, implements features or repairs, or deploys. Their responsibilities do not impose a read-only sandbox or tool allowlist. Tools and permissions follow the runtime and approved task scope.
 
@@ -45,6 +51,14 @@ Only the coordinator assigns bounded delegation. Children do not spawn recursive
 Each review has a concrete question, a bounded result/evidence scope and a risk reason. Reuse a review while its relevant inputs and conclusions remain valid. Re-review the affected scope when a relevant change, unresolved finding or new evidence affects that conclusion. A stage change, receipt or reread of the same evidence alone is not a reason for another review.
 
 Each blocking gate identifies its requirement source or evidenced risk, owner, PASS condition and the conditions that invalidate its result. Record these within the existing authorized task record; do not make every action a gate or impose universal review counts or time limits. Preserve necessary authorization, data protection and quality gates, including review of material invariant changes.
+
+## Verification scope and completion
+
+Select checks from the task's acceptance criteria, changed behavior and actual risk. Run applicable checks at meaningful slice or handoff boundaries. A documentation edit does not inherit a runtime or full-suite requirement. Runtime evidence is required when the completion claim depends on runtime behavior. Reuse evidence while relevant code, inputs, environment and conclusions remain valid; invalidate only affected evidence and dependent claims. Do not claim that passing checks prove the absence of every regression.
+
+If a harness or verification tool fails, identify the specific missing proof, affected work, owner and a bounded diagnostic action with expected observations and a stopping condition. Do not blindly retry or build another selector/admission/receipt/reviewer chain. Use an equivalent check only when it proves the same criterion within existing authority and preserves required controls. A material replacement approach needs approval. Keep an unproved required criterion open, record NOT_RUN or FAIL accurately and continue independent authorized work. Optional tooling does not become a release gate without an actual requirement or evidenced risk.
+
+Keep code integration, verified behavior and human acceptance distinct. If the human requests a code handoff for self-testing, complete the required source and actual imports/callers/routes/UI/commands, review the source, and provide configured URLs, startup prerequisites, manual steps and known blockers. Report unrun tests/runtime as NOT_RUN and availability as Unknown. CODE_COMPLETE_UNTESTED can describe that handoff; it is not runtime readiness, release approval or human acceptance. Missing required code or wiring remains incomplete, not a limitation used to close the task. Do not restart stopped testing to satisfy an upstream checklist.
 
 ## Evidence and communication
 
@@ -72,6 +86,7 @@ In particular:
 - No automatic commits, resets, installations, cloud actions or saved planning artifacts.
 - No mandatory per-file/per-phase reapproval inside existing authorization.
 - No fixed test ratios, file/line budgets, checkpoints or model mappings imposed on unrelated work.
+- No universal full-suite, runtime, commit or clean-worktree gate for every edit. Apply [verification scope and completion](#verification-scope-and-completion) to upstream checklists; classify errors using the focused repair rule above.
 - No application code changes or repair implementation by reviewers, including edits for mutation testing. Scoped verification may use separately owned synthetic fixtures and capture evidence when authorized; reviewers return findings.
 - Validation guidance does not remove domain invariants, authorization, constraints, transactions or concurrency checks.
 - Privacy/accessibility examples do not establish compliance or deletion authority.

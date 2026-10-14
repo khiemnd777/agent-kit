@@ -1,67 +1,45 @@
 # Definition of Done
 
-A standing, project-wide bar that every change must clear before it counts as done. Unlike acceptance criteria, which vary per task and answer "did we build the right thing?", the Definition of Done is the same every time and answers "is this finished to our standard?". Use it as the final gate in `planning-and-task-breakdown`, `incremental-implementation`, and `shipping-and-launch`.
+The project has a shared quality standard. The checks needed to demonstrate that standard depend on the agreed deliverable, changed behavior and actual risk. This Agent Kit adaptation follows [verification scope and completion](../../docs/team-policy.md#verification-scope-and-completion); it does not impose runtime, full-suite, documentation or Git work on every edit.
 
-## Definition of Done vs. Acceptance Criteria
+## Acceptance criteria and completion claims
 
-| | Acceptance Criteria | Definition of Done |
-|---|---|---|
-| Scope | Specific to one task or spec | Applies to every increment |
-| Changes | Different for each item | Fixed and reused |
-| Answers | "Did we build *this thing*?" | "Is it *ready*?" |
-| Owner | Defined when planning the task | Defined once for the project |
-| Example | "User can reset password via email link" | "Tests pass, no regressions, docs updated" |
+Acceptance criteria describe the required result. The Definition of Done guides the applicable quality and evidence checks for that result. Neither creates new scope, authority or application behavior.
 
-The two are complementary. A task is done only when **its** acceptance criteria are met **and** the standing Definition of Done is satisfied. Skipping either leaves work that looks finished but is not.
+| Claimed result | Evidence needed |
+| --- | --- |
+| Documentation or instruction update | Reviewed content, relevant references and package consistency |
+| Code integration | Required implementation plus actual imports/callers/routes/UI/commands and source review |
+| Verified behavior | Relevant authorized checks, including runtime when the claim depends on runtime behavior |
+| Human acceptance | The authorized human's acceptance of the delivered result |
+| Release readiness | Applicable project release/security/data/operational gates and explicit delivery authority |
 
-## The Standing Checklist
+A passing check supports only its observed scope. Code integration is not runtime readiness. A build or mock does not prove live integration, UI behavior, production or human acceptance. Do not claim universal absence of regressions.
 
-Apply this to every change before declaring it done.
+## Select applicable checks
 
-### Correctness
-- [ ] All acceptance criteria for the task are met
-- [ ] Code runs and behaves as intended, verified at runtime, not just compiled or typechecked
-- [ ] New behavior is covered by tests that fail without the change and pass with it
-- [ ] Existing tests still pass; no regressions introduced
-- [ ] Edge cases and error paths are handled, not just the happy path
+Use the task's existing record to identify relevant checks and limits. Do not create a new checklist or gate for every edit.
 
-### Quality
-- [ ] Code reveals intent through naming and structure; no comments needed to explain *what* it does
-- [ ] No duplicated business logic
-- [ ] No dead code, debug output, or commented-out blocks left behind
-- [ ] Changes are scoped to the task; no unrelated refactors snuck in
-- [ ] Linting and formatting pass
+- **Correctness:** required criteria, invariants, edge/error paths and actual integration seams. Behavior changes or bug fixes need meaningful regression coverage where appropriate and permitted.
+- **Quality:** focused source review and relevant formatting/lint/type/build checks. Preserve other work; avoid unrelated cleanup and unsupported abstractions.
+- **Integration and data:** affected contracts, authorization, compatibility, transactions, migrations/configuration and concurrency where relevant.
+- **Documentation:** changed public behavior, contracts, decisions or operating instructions when users or maintainers need them.
+- **Release:** security, observability, recovery and deployment controls appropriate to the actual release. Merge/deploy requires explicit authority; a code handoff does not authorize release.
 
-The depth behind these items lives in `code-review-and-quality` (the five-axis review) and `code-simplification` (reducing complexity without changing behavior).
+Run relevant checks at coherent slice, integration or handoff boundaries. Reuse evidence while relevant code, inputs, environment and conclusions remain valid. Recheck only affected scope when evidence is invalidated or a finding remains unresolved. A stage, receipt or unrelated edit does not invalidate every check.
 
-### Integration
-- [ ] Change works with the rest of the system, not just in isolation
-- [ ] Database migrations, config changes, and feature flags are accounted for
-- [ ] Backward compatibility considered for any public interface or API change
+## Errors and unavailable verification
 
-### Documentation
-- [ ] Public interfaces, APIs, and user-facing behavior are documented
-- [ ] Architectural decisions worth preserving are recorded (see `documentation-and-adrs`)
-- [ ] Documentation describes the current state in timeless language, not the change history
+For an API/UI/library error in implementation, runtime or UAT, pause the affected flow, preserve evidence and plan the specific repair before editing. Name the observed condition, cause/hypothesis, affected files/consumers and repair check. Classify the repair against valid approval; material approach/control/scope changes require a revised Approved plan.
 
-### Ship-readiness
-- [ ] Security implications reviewed for any untrusted input, auth, or data handling (see `security-and-hardening`)
-- [ ] Observability in place for new critical paths (logs, metrics, traces) (see `observability-and-instrumentation`)
-- [ ] Rollback path exists for anything risky (see `shipping-and-launch`)
-- [ ] The human has reviewed and approved before merge or deploy
+If a harness fails, identify the missing proof and a bounded next action with expected observations and a stopping condition. Equivalent verification must demonstrate the same criterion within existing authority and required controls. Do not blindly retry, weaken tests, rebaseline unexplained integrity failures or create another admission/receipt/reviewer chain. Continue independent authorized work; required unproved criteria stay open.
 
-## How to Apply
+Use PASS for observed success, FAIL for observed failure and NOT_RUN for an applicable check that did not run, with its reason. A check that does not apply is not a failure or an unrun mandatory gate. Record material applicability decisions where they affect the conclusion; trivial edits need no extra ceremony.
 
-- **Per task**: confirm the Correctness and Quality sections before checking the task off.
-- **Per feature**: confirm Integration and Documentation before considering the feature complete.
-- **Per release**: the full checklist is the floor; `shipping-and-launch` adds the deploy-specific gates on top.
+## Human-requested self-test handoff
 
-Tailor the list to the project once, then reuse it unchanged. A Definition of Done that is renegotiated every sprint is not a Definition of Done.
+If the human requests code delivery and will perform testing, complete the required implementation and actual caller/route/UI/command wiring, review source and provide configured URLs, startup prerequisites, required roles without secrets, manual steps and known blockers. Missing required code or callers remains incomplete.
 
-## Red Flags
+Use CODE_COMPLETE_UNTESTED when that is the agreed handoff. Keep tests/runtime NOT_RUN and unobserved availability Unknown. Do not claim Verified, Accepted or release readiness from source completion. Do not reopen stopped tests or harnesses to satisfy an upstream checklist. Retain Auth, data protection, file validation, privacy and necessary runtime integrity controls.
 
-- "It's done, I just haven't run it yet": unverified work is not done.
-- "Tests pass" used as a synonym for done while docs, regressions, or runtime verification are skipped.
-- A different bar applied depending on deadline pressure.
-- Acceptance criteria treated as the whole bar, with no standing quality floor.
-- "Done" declared before human review on changes that need it.
+The user may later authorize startup, a focused repair or a specific check. That authority covers the identified action; it does not automatically reopen the old verification program. Keep the current boundary and record results separately from historical evidence.
