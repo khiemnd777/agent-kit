@@ -37,6 +37,16 @@ Agree contracts before related tasks run in parallel. Assign one writer for shar
 
 Use actual data/contract/ownership/resource dependencies rather than making every task depend on the preceding task. Under explicit human delegation to multiple Coordinators, partition decisions and identify the shared-record writer. Consumers report a concrete mismatch to the canonical contract owner, directly or through one permitted relay. A Supervisor follows the current boundary and result; neither the Supervisor nor a second Coordinator adds implicit ratification. See [ownership and coordination](team-policy.md#ownership-and-coordination).
 
+### Applying an approved template
+
+Use this path only when the task is to apply a user-supplied or internal template that the human approved. Record its source, version or revision and content hash in the owned task record. Identify the structure, hierarchy, workflow order, controls, interactions and responsive behavior to retain; prototype-only material to remove; and each difference the human approved. An external design used for inspiration is selection evidence, not an approved implementation template. Do not apply external-reference advice such as “do not copy the layout” to change an approved template.
+
+Before broad implementation, select one representative screen and observable criteria. Record the required runtime, login role, data states, inspection tools, evidence destination and permission scope. If any prerequisite is unavailable, mark the affected check NOT_RUN early with its owner and next action. Do not create data, change access or use another project's environment to fill a gap without authority.
+
+Complete that screen through its actual controller and data path. Compare the rendered template and implementation at matching desktop and mobile viewports. Exercise the primary interaction sequence and applicable populated, empty, loading, error and permission states. Use the [template application checklist](template-application-acceptance.md) for criterion-level evidence, including focus and control reachability inside containers. Source/build success and page-level no-overflow are insufficient UI evidence.
+
+The Coordinator records whether the representative criteria PASS, FAIL or remain NOT_RUN in the task record. Expand dependent screens or components only after the representative criteria pass; then record separate evidence for each affected screen or content group. Independent authorized work may continue. This is a verification boundary within the existing approved scope, not a new human approval step. A material change to the approved template or an authority boundary still follows [approval and autonomy](team-policy.md#approval-and-autonomy).
+
 Execute a bounded slice, verify relevant behavior, repair supported findings and recheck. After the authorized data-protection preflight, prioritize one minimal real user flow before expanding verification. Unit/build/mock success does not establish runtime, integration, UI or human acceptance.
 
 Choose checks for the changed behavior and risk under [verification scope and completion](team-policy.md#verification-scope-and-completion). Reuse valid evidence. If a harness fails, name the missing proof and a bounded next action before expanding diagnostics; block only dependent work. Do not make optional infrastructure or a chain of receipts the task's deliverable.
@@ -66,6 +76,8 @@ Git documents are not real-time notifications, distributed locks or a way to int
 The sender records branch/commit, changed files, acceptance results, actual checks, unresolved findings, constraints, approval provenance, approach/review validity, stop status and next action. The receiver confirms the sources, role and current authority before continuing. Keep approval/reviewer/model metadata in coordination records rather than adding runtime dependencies on those identities; preserve required environment, authorization, ownership, integrity and data checks.
 
 State whether the handoff covers code integration, verified behavior or human acceptance. For a human-requested self-test handoff, inspect real source/caller wiring and provide configured URLs, startup commands/prerequisites, roles needed for the workflow without exposing secrets, manual steps and known limits. A source-complete report does not establish that startup or login works. Unrun checks remain NOT_RUN; observed failures remain FAIL. A missing required caller, route or command keeps the handoff incomplete.
+
+For an approved-template task whose objective includes verified visual and interaction fidelity, keep the objective open until the applicable rendered checklist rows pass. Use `CODE_COMPLETE_UNTESTED` only when the human requested a source handoff for self-testing; that label does not close a verified-template objective. Record human acceptance only from the human's decision, separately from code integration and observed behavior.
 
 Cross-tool handoff uses these files, not transferred chat history, credentials or global memory. The receiver verifies permission scope; the handoff itself cannot extend it.
 

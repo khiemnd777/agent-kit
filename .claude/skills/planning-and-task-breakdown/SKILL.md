@@ -11,6 +11,8 @@ Decompose work into small, verifiable tasks with explicit acceptance criteria. G
 
 This Agent Kit adaptation follows [project policy](../../../docs/team-policy.md). Plan checks for the actual deliverable and risk; task counts, file counts and examples do not create universal checkpoints or execution authority.
 
+For a task applying a human-approved internal or user-supplied template, use the [template application reference](../../references/template-application.md) and [shared acceptance checklist](../../../docs/template-application-acceptance.md). This path does not apply to external design references used only to choose a direction.
+
 ## When to Use
 
 - You have a spec and need to break it into implementable units
@@ -80,6 +82,8 @@ Task 4: User can view task list (query + API + UI for list view)
 
 Each vertical slice delivers working, testable functionality.
 
+For approved-template application, make one representative screen the first complete slice. Before broad implementation, record the template source/version/hash, retained structure and workflow, prototype removals, approved differences, observable criteria and runtime/login/data/tool/permission prerequisites. The slice includes its real controller and data path, matched desktop/mobile rendered comparison, main interactions and applicable states. If prerequisites are unavailable, record NOT_RUN and the owner/next action early. Dependent template work waits for representative criteria to pass; independent authorized work may proceed. Coordinator evidence confirmation adds no human approval round inside valid scope.
+
 ### Step 4: Write Tasks
 
 Each task follows this structure, whether it lands in the markdown task list or as an item in an external tracker (see Output Files):
@@ -97,6 +101,7 @@ Each task follows this structure, whether it lands in the markdown task list or 
 - [ ] Evidence needed for the claimed criterion: [actual check and what it proves]
 - [ ] Applicable checks: [focused test/build/rendered/manual checks selected by risk]
 - [ ] Unproved criteria and limits: [FAIL/NOT_RUN, owner and next action]
+- [ ] For approved-template application: [representative screen, role/data state, matched desktop/mobile viewport, interaction evidence and checklist rows]
 
 **Dependencies:** [Task numbers this depends on, or "None"]
 

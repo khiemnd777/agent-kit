@@ -11,6 +11,8 @@ Build in thin vertical slices — implement one piece, test it, verify it, then 
 
 This Agent Kit adaptation follows [verification scope and completion](../../../docs/team-policy.md#verification-scope-and-completion). Choose checks for the changed behavior and risk; the cycle below is guidance, not a mandatory full-suite/runtime/commit gate for every edit.
 
+When the task applies a human-approved internal or user-supplied template, follow the [template application reference](../../references/template-application.md) and [shared acceptance checklist](../../../docs/template-application-acceptance.md). External design references remain evidence for design selection, not substitutes for the approved template.
+
 ## When to Use
 
 - Implementing any multi-file change
@@ -59,6 +61,8 @@ Slice 4: Delete a task (delete + API + UI + confirmation)
 ```
 
 Each slice delivers working end-to-end functionality.
+
+For approved-template application, the first slice is one representative screen wired to the real controller and data path. Compare its rendered desktop/mobile result with the approved template at matched viewports and check the primary interaction sequence and applicable data/permission states. Record PASS/FAIL/NOT_RUN for structure, hierarchy, controls, focus, responsive behavior, preview identity and clipping where relevant. The Coordinator confirms the screen against evidence before dependent implementation expands. Build/source PASS alone cannot confirm UI fidelity; a missing runtime or data prerequisite stays NOT_RUN. This checkpoint uses current approval and does not demand human approval for each step.
 
 ### Contract-First Slicing
 

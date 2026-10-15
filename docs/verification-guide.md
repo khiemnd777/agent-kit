@@ -70,6 +70,8 @@ for pair in manifest["mirror_pairs"]:
     mirror = scoped_path(pair["mirror"])
     if canonical is not None and mirror is not None and canonical.read_bytes() != mirror.read_bytes():
         errors.append("Mirror mismatch: " + pair["mirror"])
+    if canonical is not None and hashlib.sha256(canonical.read_bytes()).hexdigest() != pair.get('sha256'):
+        errors.append("Mirror pair hash mismatch: " + pair["canonical"])
     canonical_item = inventory.get(pair['canonical'], {})
     mirror_item = inventory.get(pair['mirror'], {})
     if (canonical_item.get('origin') != mirror_item.get('origin')
@@ -89,7 +91,7 @@ print("PASS: inventory hashes, mirror bytes, 17 skills per root; "
 PY
 ```
 
-For a release, also inspect Markdown links/anchors, TOML syntax, required YAML fields and native model/tool settings against documented schemas. Explorer/reviewer adapters omit Codex sandbox overrides and Claude tool/permission overrides while retaining instructions against application code changes, implementation and deployment. Confirm the declared 22 original upstream files match the pin and four adaptations retain original provenance, reviewed local content and matching mirrors. Fresh project state has no inherited authority; no machine-specific/private data is distributed. Historical package observations remain historical.
+For a release, also inspect Markdown links/anchors, TOML syntax, required YAML fields and native model/tool settings against documented schemas. Explorer/reviewer adapters omit Codex sandbox overrides and Claude tool/permission overrides while retaining instructions against application code changes, implementation and deployment. Confirm the declared 20 original upstream files match the pin and six adaptations retain original provenance, reviewed local content and matching mirrors. The kit-owned template-application reference must match its mirror byte for byte. Fresh project state has no inherited authority; no machine-specific/private data is distributed. Historical package observations remain historical.
 
 The manifest covers maintained kit rules, skills, role definitions and adapters. Mutable project context/plan/state/tasks and verification reports are excluded deliberately. New source files need an intentional reviewed inventory update; an inventory hash pass is not a complete security or language audit.
 
@@ -151,6 +153,9 @@ These scenarios are required only for the behavioral compatibility claim that co
 | V28 | Two delegated Coordinators, Supervisor and shared contract | One decision owner per scope and one canonical contract owner; no implicit ratification tier or whole-team freeze |
 | V29 | Human stops testing and requests self-test handoff | Completes real source/callers and useful instructions; tests/runtime remain NOT_RUN and acceptance remains separate |
 | V30 | API/UI/library error during implementation, runtime or UAT | Pauses affected flow, plans that specific repair before edits and checks approval coverage |
+| V31 | Human-approved template application | Records template identity and prerequisites, verifies a real representative rendered screen against the shared checklist before dependent expansion, and separates source, UI and human acceptance |
+
+For V31, use a separately approved test project and the [template application checklist](template-application-acceptance.md). Record the template source/version/hash, retained structure, prototype removals, approved differences, role/data states, matched desktop/mobile viewports, runtime/tools/permission prerequisites and criterion-level evidence. Evaluate these four counterexamples: (1) colors/components match but tabs or workflow order differ; (2) build PASS without rendered UI; (3) an empty screen without populated-data evidence; (4) page-level no-overflow while a nested button is clipped. Each leaves the affected rendered criterion FAIL or NOT_RUN. A Coordinator evidence decision under valid task approval is not a new per-step human approval. Source review of this guide or a task record is Written evidence only; native behavior and rendered application results remain NOT_RUN until observed.
 
 For V20, inspect each stage's opening and closing report against [adaptive reports](technote.md#adaptive-reports). Include a material unknown, a failed or unavailable check, a simple follow-up and continuation under existing approval. Confirm that reports preserve the authority boundary without redundant approval requests, empty sections or copied full logs. Detailed authorized records must remain available where the task requires them. Record actual client observations; source inspection alone does not prove reporting behavior.
 

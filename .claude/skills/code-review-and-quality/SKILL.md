@@ -11,6 +11,8 @@ Multi-dimensional code review with quality gates. Every change gets reviewed bef
 
 **The approval standard:** Approve a change when it definitely improves overall code health, even if it isn't perfect. Perfect code doesn't exist — the goal is continuous improvement. Don't block a change because it isn't exactly how you would have written it. If it improves the codebase and follows the project's conventions, approve it.
 
+For an approved internal or user-supplied template application, review against the [template application reference](../../references/template-application.md) and [shared acceptance checklist](../../../docs/template-application-acceptance.md). This is task-specific review guidance, not a new gate for unrelated changes. Keep source review, rendered behavior and human acceptance as separate claims.
+
 ## When to Use
 
 - Before merging any PR or change
@@ -203,6 +205,8 @@ Check the author's verification story:
 - Are there screenshots for UI changes?
 - Is there a before/after comparison?
 ```
+
+For an approved-template task, compare the recorded source/version/hash and approved differences with the implementation. Check structure and tab hierarchy, action order, controls, focus, responsive layout, preview identity and applicable data/permission states. Inspect rendered desktop/mobile evidence at matched viewports and nested clipping/occlusion. A color/component match with missing tabs, a build PASS without rendered UI, an empty screen without populated-data evidence, or a page without overflow whose nested button is clipped cannot pass the affected criteria. Record each missing criterion as FAIL or NOT_RUN with its owner; do not turn source walkthrough into native behavioral PASS. `CODE_COMPLETE_UNTESTED` is only for a human-requested self-test source handoff and cannot close a verified-template goal.
 
 ## Multi-Model Review Pattern
 

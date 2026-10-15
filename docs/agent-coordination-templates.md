@@ -24,7 +24,11 @@ or human acceptance; an early sample if direction is uncertain>
 
 Sources and decisions to preserve:
 <Relevant requirements, code, accepted approach, important assumptions,
-data/permission boundaries, protective controls, labels and selected skills>
+data/permission boundaries, protective controls, labels and selected skills.
+For an approved-template application: template source/version/hash, retained
+structure/hierarchy/workflow/interaction/responsive rules, prototype material
+to remove and human-approved differences. External references are selection
+evidence, not authority to alter the approved template.>
 
 Authorization:
 <Direct human approval source, approver, plan revision and covered actions;
@@ -51,6 +55,11 @@ Acceptance criteria:
 Verification:
 <Checks that prove the criteria, check owner and evidence location;
 minimal real flow after authorized data preflight when applicable.
+For an approved-template application: representative screen and observable
+criteria; runtime/login/data/tool/permission prerequisites; rendered desktop
+and mobile comparison at matching viewports, real controller/data path,
+interaction and applicable states. Use template-application-acceptance.md;
+record unavailable prerequisites as NOT_RUN before dependent expansion.
 For reviews: question, result/evidence scope, risk reason and validity.
 For blocking gates: source/risk, owner, PASS and invalidation conditions.
 For a failed harness: missing proof, affected work, bounded next action
@@ -104,7 +113,9 @@ Distinguish decisions, proposals and Unknowns; the same scope does not
 authorize a material approach change.>
 
 Reference sample:
-<Accepted sample and qualities to retain, or None>
+<Accepted sample and qualities to retain, or None. For approved-template
+application: source/version/hash, representative screen, required structure,
+prototype removals and approved differences.>
 
 Work:
 <Task ID -> owner -> branch/commit -> result reached / specific blocker
@@ -119,6 +130,12 @@ Unknown for unobserved values>
 
 Verification evidence:
 <Criterion -> PASS / FAIL / NOT_RUN -> command/evidence/date and limits;
+for an approved-template task, link checklist rows with screen, role, data
+state, viewport, expected result and owner. Record representative rendered
+desktop/mobile and interaction evidence before dependent expansion; source
+or build PASS does not prove UI fidelity. Distinguish Code integrated,
+verified behavior/UI and Human accepted; CODE_COMPLETE_UNTESTED is only a
+human-requested self-test source handoff, not verified-template completion.
 review question/scope/risk and reused result with validity conditions;
 blocking gate source/risk, owner, PASS and invalidation conditions.
 When an API/UI/library error appears in implementation/runtime/UAT:
@@ -145,17 +162,17 @@ An approval field written by an agent, or an Integrated/Verified label, does not
 BEFORE EXECUTION / ASSIGNMENT
 [ ] Read the current plan, human approval and latest stop; the action is covered.
 [ ] Preserve the approved approach; check important assumptions/boundaries, ownership and contracts; replan material changes even within the same allowlist.
-[ ] Define acceptance, counterexamples and checks; use an early sample if useful; send the stage's opening report.
+[ ] Define acceptance, counterexamples and checks; for approved-template application, identify the source/hash, representative screen, prerequisites and rendered criteria before broad work; send the stage's opening report.
 
 BEFORE HUMAN REVIEW
-[ ] Inspect the actual output and evidence limits; check roles, routing and capabilities.
+[ ] Inspect the actual output and evidence limits; for approved-template application, compare the representative rendered desktop/mobile screen, primary interactions and relevant states against the accepted template; check roles, routing and capabilities.
 [ ] Integrate and repair under a valid approved approach; reuse valid reviews and review relevant changes/findings/evidence by risk; use independent review where warranted; justify blocking gates.
 [ ] Close earlier feedback across affected surfaces with evidence.
 
 AT HANDOFF / MILESTONE
 [ ] Update owned state, source revisions and current-output links; reconcile old pending items.
 [ ] Use the stage's closing report; retain material evidence/limits and the decision or next action, with relevant record links.
-[ ] Continue authorized routine work; stop/replan material changes or expanded authority; transmit and confirm human stop status before explicit approved resumption.
+[ ] Continue authorized routine work; expand template-dependent work only after representative criteria pass, without a new per-step human approval; stop/replan material changes or expanded authority; transmit and confirm human stop status before explicit approved resumption.
 ```
 
 If a checklist item fails, the coordinator repairs only what existing approval covers while the approach remains valid. Stop affected execution for a material change or human stop and present the concrete issue and replacement recommendation for explicit approval. Checklist items do not create per-action gates or authorize process/data cleanup.

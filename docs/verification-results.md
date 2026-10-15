@@ -160,3 +160,23 @@ Current provenance: 22 of the 26 canonical upstream files still match the origin
 | Native behavior, independent native review and two-machine compatibility | NOT_RUN | No client/agent/fixture/application run or new harness; effective native behavior remains Unknown |
 
 The exact approval, external retrospective evidence, file ownership, checks and final handoff live in TASK-004. No other repository or fresh-project authority is changed. Local package validation does not prove that native agents follow the new guidance or that Pinky Lamb works.
+
+## Approved-template application guidance — 2026-10-15
+
+**Task:** [KIT-TEMPLATE-APPLICATION-001 v1 / TASK-005](tasks/TASK-005.md). **Source base HEAD:** `8fedcd0b08b256b08e50cfbcd12b3ccc80ed267c`. Khiêm directly approved the scoped workflow, four skills and mirrors, one reference pair, checklist and necessary package documentation in the current chat. Commit/push, application/CMS execution and native behavioral verification are excluded.
+
+The approved-template path now requires template identity and prerequisites before broad implementation, then an evidence-backed representative screen connected to real controller/data at matched desktop/mobile viewports before dependent expansion. The external design reference rule stays limited to external inspiration. The acceptance checklist uses criterion, screen, role, data state, viewport, expected result, evidence, PASS/FAIL/NOT_RUN and owner. Code integrated, verified behavior/UI and Human accepted remain separate; `CODE_COMPLETE_UNTESTED` is limited to a human-requested self-test source handoff.
+
+| Actual check | Result | Evidence and limit |
+| --- | --- | --- |
+| Published package-integrity recipe | PASS | 81 inventory hashes, 28 mirror byte/hash pairs and 17 skills per root; 20 original and six adapted canonical upstream files. The existing recipe now checks each pair's recorded hash as well as bytes. |
+| Skill metadata and manifest syntax | PASS | Ruby/Psych parsed 34 skill frontmatters with name/description; Python parsed manifest JSON. No native client discovery is implied. |
+| Changed Markdown links/anchors | PASS | Read-only scan resolved 56 local links/anchors across 17 changed Markdown files, including new files. External URLs were not fetched. |
+| Provenance and protected project files | PASS | Source comparison retained each previous inventory origin; project context, plan and state remain byte-identical to HEAD. Original upstream blob metadata remains pinned. |
+| Four counterexamples | Written / source self-review PASS | The reference, skills, workflow and checklist reject color-only structural drift, build-only UI claims, empty-only layout evidence and page-level no-overflow with a clipped nested control. This checks instruction coverage, not agent behavior. |
+| Retro cross-check | Written / source self-review PASS | Compared with the source retro in Codex thread `01a13b73-294b-7461-bd95-4de864be7f09`; added explicit template-element mapping, navigation/selection/dirty state, disabled/busy controls, approved preview-source identity and separate per-screen/group evidence after expansion. CMS-specific adoption and product verification remain separate. |
+| Whitespace and scoped diff | PASS | `git diff --check` returned 0. Final file scope and handoff patch are recorded in TASK-005. |
+| Native agent behavior and rendered application UI | NOT_RUN | No native agent, application or CMS environment was run. Source walkthrough does not establish behavioral PASS. |
+| Independent review and human product acceptance | NOT_RUN | The main session performed sequential source self-review; no independent native reviewer or product acceptance was requested or claimed. |
+
+Historical verification sections above retain their original observations. This maintenance result establishes local package and instruction consistency only; adopting projects must gather their own rendered evidence under their own approval.

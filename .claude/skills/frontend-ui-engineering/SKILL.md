@@ -115,7 +115,13 @@ Global store (Zustand, Redux)    → Complex client state shared app-wide
 
 ## Design System Adherence
 
-### Reference-led UI quality
+### Approved-template application
+
+If the human approved an internal or user-supplied template for implementation, preserve its agreed structure, hierarchy, navigation/action order, controls, interactions and responsive behavior. Record its source/version/hash, prototype material to remove and approved differences before changing broad UI. Follow the [template application reference](../../references/template-application.md) and [shared acceptance checklist](../../../docs/template-application-acceptance.md). Apply the external-reference guidance below only to external designs used as inspiration; it must not change the approved template contract.
+
+Wire one representative screen to its real controller and data. Compare rendered desktop and mobile results with the template at matching viewports, including primary interactions and applicable populated, empty, loading, error and permission states. Check each required control's visibility and focus/reachability inside its own container; page-level no-overflow does not prove that a nested button is visible. Record evidence and missing prerequisites as PASS/FAIL/NOT_RUN. Expand dependent UI only after the Coordinator confirms the representative criteria with evidence under the existing approval.
+
+### External reference-led UI quality
 
 When the product needs a distinct visual direction, collect evidence before choosing a layout:
 
@@ -124,7 +130,7 @@ When the product needs a distinct visual direction, collect evidence before choo
 3. Turn those decisions into a short design contract before implementation. Name the screen's job, primary action, required states, responsive rules, and patterns to reject.
 4. Rebuild the useful structure in the product's own components, tokens, content, and visual language. Never copy another product's branding, proprietary text, imagery, or exact layout.
 
-Use references as evidence, not as templates. If references are unavailable, document the assumptions and verify the result against the product's existing design system.
+For external designs used as inspiration, use references as evidence, not as approved templates. If external references are unavailable, document the assumptions and verify the result against the product's existing design system.
 
 ### Avoid the AI Aesthetic
 
@@ -329,6 +335,8 @@ For detailed accessibility requirements and testing tools, see `../../references
 ## Verification
 
 After building UI:
+
+- [ ] For an approved-template task, representative desktop/mobile rendered evidence and applicable checklist rows support the claimed fidelity; missing evidence remains NOT_RUN
 
 - [ ] Component renders without console errors
 - [ ] All interactive elements are keyboard accessible (Tab through the page)
