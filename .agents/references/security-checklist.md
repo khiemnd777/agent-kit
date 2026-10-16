@@ -36,7 +36,7 @@ Before reaching for controls, spend five minutes thinking like an attacker:
 ## Authentication
 
 - [ ] Passwords hashed with bcrypt (≥12 rounds), scrypt, or argon2
-- [ ] Session cookies: `httpOnly`, `secure`, `sameSite: 'lax'`
+- [ ] Session cookies: `httpOnly`, `secure`, `sameSite: 'lax'` or `'strict'`, consistent with the established project session/CSRF policy and required flows; an approved `'strict'` choice does not need conversion to `'lax'`
 - [ ] Session expiration configured (reasonable max-age)
 - [ ] Rate limiting on login endpoint (≤10 attempts per 15 minutes)
 - [ ] Password reset tokens: time-limited (≤1 hour), single-use
@@ -161,8 +161,8 @@ Never discover dependency lifecycle scripts by first executing an ordinary insta
 
 1. Bootstrap with dependency scripts disabled, or with a documented default-deny policy plus fail-closed enforcement.
 2. Inspect the exact script source and package version before approval.
-3. Record the narrowest native allow/deny policy at the installation boundary and commit it.
-4. Run a clean frozen/immutable install with that policy and verify the required packages still build.
+3. Within authorized installation scope, record the narrowest native allow/deny policy at the installation boundary in the working tree. Local verification does not require a commit; stage/commit/push only under explicit Git authority.
+4. Run an authorized clean frozen/immutable install with that policy and verify the required packages still build.
 
 **Point-in-time snapshot:** Package-manager defaults and command names change quickly. Verify this matrix against the pinned client's current official documentation before relying on it.
 
@@ -171,7 +171,7 @@ Never discover dependency lifecycle scripts by first executing an ordinary insta
 | npm without verified granular approvals | Bootstrap with `npm ci --ignore-scripts`, or persist `ignore-scripts=true` when project-wide blocking is intended. Keep scripts disabled or deliberately upgrade before allowing any reviewed dependency script. |
 | npm 11.18.x (verified on 11.18.0) | Unreviewed dependency scripts run with a warning by default. Enforce `strict-allow-scripts=true` before a normal install, then use the workspace-unaware `npm install-scripts ls` from the installation boundary; keep approvals version-pinned and denials name-wide. |
 | npm 12.x (verified on 12.0.1) | Unreviewed dependency scripts are skipped by default; `strict-allow-scripts=true` makes their presence fail the install before execution. Use the same `npm install-scripts` review and approval flow. |
-| pnpm 11+ | Use `pnpm approve-builds` and commit `allowBuilds` decisions; `strictDepBuilds` defaults to `true`, so unreviewed builds fail. |
+| pnpm 11+ | Use `pnpm approve-builds` and persist `allowBuilds` decisions in the working tree before verification; `strictDepBuilds` defaults to `true`, so unreviewed builds fail. |
 | pnpm 10.26–10.x | Configure `allowBuilds` explicitly, or use `pnpm approve-builds` with the legacy `onlyBuiltDependencies` / `ignoredBuiltDependencies` lists. Set `strictDepBuilds: true`; its v10 default is `false`. |
 | pnpm 10.1–10.25 | `pnpm approve-builds` records the legacy lists; enable `strictDepBuilds` where supported (10.3+). |
 | Older or unknown pnpm | Bootstrap with `pnpm install --frozen-lockfile --ignore-scripts`. Keep scripts disabled unless the pinned version documents an enforceable policy. |
@@ -182,7 +182,7 @@ Never discover dependency lifecycle scripts by first executing an ordinary insta
 Authoritative checks: [npm install-scripts](https://docs.npmjs.com/cli/v11/commands/npm-install-scripts/), [install policy](https://docs.npmjs.com/cli/v11/commands/npm-install/), and [CLI releases](https://github.com/npm/cli/releases); [pnpm approve-builds](https://pnpm.io/cli/approve-builds) and [build settings](https://pnpm.io/settings#allowbuilds); [Yarn security](https://yarnpkg.com/features/security) and [manifest](https://yarnpkg.com/configuration/manifest#dependenciesMeta).
 
 **Supply-chain hygiene** (advisory audits do not catch newly malicious packages):
-- [ ] Exactly one authoritative lockfile per project/workspace root is committed and CI never rewrites it
+- [ ] Exactly one authoritative lockfile per project/workspace root is maintained with the change and CI never rewrites it; committing is a separate authorized delivery action
 - [ ] Critical/high findings are triaged for reachability; deferrals have a reason and review date
 - [ ] Forced audit remediation (`npm audit fix --force` or equivalent) is never automatic; remediation diffs and changelogs are reviewed
 - [ ] Registry signatures/provenance are verified where the manager supports it

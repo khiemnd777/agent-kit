@@ -1,6 +1,6 @@
 # Observability Checklist
 
-Quick reference for instrumenting production code. Use alongside the `observability-and-instrumentation` skill.
+Select checks for the instrumentation changed and the actual operational requirements, alongside the `observability-and-instrumentation` skill. The sections are alternatives by signal type, not an all-items gate. Reuse existing telemetry; do not create a monitoring platform to complete this checklist. Unselected items are not required checks; missing actual project requirements remain open.
 
 ## Table of Contents
 
@@ -35,13 +35,13 @@ Telemetry without a question is noise. Before instrumenting anything:
 
 ## Metrics
 
-- [ ] **RED** instrumented for every endpoint and every external dependency: Rate, Errors, Duration
-- [ ] **USE** instrumented for every resource (queues, pools, hosts): Utilization, Saturation, Errors
+- [ ] Where request health needs metrics, **RED** covers the affected endpoints/dependencies: Rate, Errors, Duration
+- [ ] Where resource health needs metrics, **USE** covers the affected resources: Utilization, Saturation, Errors
 - [ ] Latency is a histogram; p50/p95/p99 queryable — never an average
 - [ ] All labels come from small, fixed sets (route template, status class, provider name)
 - [ ] No unbounded label values: no user IDs, tenant IDs, emails, raw URLs, request IDs, or error message text
 - [ ] Status codes grouped by class (`5xx`, not `503`)
-- [ ] Queue depth and processing duration tracked for every worker/queue
+- [ ] Queue depth and processing duration cover workers/queues selected by the operational requirement
 
 ## Distributed Tracing
 
@@ -59,7 +59,7 @@ Telemetry without a question is noise. Before instrumenting anything:
 - [ ] Every alert is actionable; "ignore it, it self-heals" alerts are deleted
 - [ ] Every alert links to a runbook — minimum three lines: what it means, first query to run, escalation path
 - [ ] Thresholds and durations justified by an SLO or historical data, not guesses
-- [ ] Two severities only: **page** (user-facing, act now) and **ticket** (degradation, act this week)
+- [ ] Severity names, levels and routing follow the established project scheme and the affected alert's intended urgency; **page** and **ticket** are response examples, not required field values or a limit on the number of levels
 - [ ] Each new alert test-fired once: it reached the right channel and the runbook link works
 - [ ] No alerts that fire daily and get acknowledged without action
 
@@ -72,7 +72,7 @@ Telemetry without a question is noise. Before instrumenting anything:
 
 ## Verify the Telemetry
 
-Instrumentation is code; it can be wrong:
+Verify only the instrumentation changed, in an authorized environment. The following are options, not requirements to induce failures, install tools or notify people:
 
 - [ ] Forced an error in staging → found it in the logs by correlation ID
 - [ ] Sent test traffic → metric series appear with expected labels and sane values
@@ -81,12 +81,12 @@ Instrumentation is code; it can be wrong:
 
 ## Pre-Launch Gate
 
-Before a feature ships to production, all of the following are true:
+This heading is retained for existing links. The project release criteria determine which observations below apply; this reference creates no universal pre-launch gate:
 
-- [ ] Structured logs flowing to the log aggregator
-- [ ] RED metrics visible in dashboards for every new endpoint and dependency
-- [ ] At least one symptom-based alert configured, with runbook, test-fired
-- [ ] A request can be traced across every service it touches
-- [ ] On-call knows where the runbooks are
+- [ ] If log aggregation is required, the affected structured events reach the existing sink
+- [ ] If request-health metrics are required, the affected endpoint/dependency signals are visible
+- [ ] If an alert is required or changed, it has an owner/runbook and authorized delivery evidence
+- [ ] If cross-service tracing is required or changed, the affected path preserves trace context
+- [ ] Relevant operators can find any changed runbook
 
-For launch-day monitoring sequence and rollback triggers, see the `shipping-and-launch` skill.
+Do not add an aggregator, dashboard, alert or tracing service merely to fill a row. An unmet actual release criterion stays open with an owner; source completion and release readiness remain distinct. Use the project's existing release/runbook instructions and [team workflow](../../docs/team-workflow.md#acceptance-and-release) for release sequencing and recovery decisions.

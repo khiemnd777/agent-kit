@@ -1,6 +1,6 @@
 # Project plan
 
-**Mode: Planning.** No execution has been approved. The Project Coordinator owns this task index.
+**Mode: Planning.** Optional project task index; no execution has been approved. The named shared-record owner owns this task index.
 
 | Field | Current value |
 | --- | --- |

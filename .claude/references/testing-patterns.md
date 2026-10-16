@@ -229,7 +229,9 @@ test('user can create and complete a task', async ({ page }) => {
 | Snapshot everything | No one reviews snapshot diffs | Assert specific values |
 | Shared mutable state | Tests pollute each other | Setup/teardown per test |
 | Testing third-party code | Wastes time, not your bug | Mock the boundary |
-| Skipping tests to pass CI | Hides real bugs | Fix or delete the test |
-| Using `test.skip` permanently | Dead code | Remove or fix it |
+| Skipping tests to pass CI | Hides real bugs | Diagnose the failure; repair the product when the assertion still represents confirmed behavior. A red result is not grounds to delete the test |
+| Using `test.skip` permanently | Leaves behavior unverified | Resolve the skip and restore needed coverage; retire a test only under the criteria below |
 | Overly broad assertions | Doesn't catch regressions | Be specific |
 | No async error handling | Swallowed errors, false passes | Always `await` async tests |
+
+A test may be retired only with evidence that it is obsolete or duplicates retained coverage under confirmed requirements. Preserve coverage for behavior that still applies and record the reason in the existing task/diff. Update expected results only for an approved behavior change or a demonstrated test defect. Do not delete, skip, loosen or rebaseline a valid assertion merely to make CI green.

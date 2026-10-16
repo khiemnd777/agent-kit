@@ -1,6 +1,6 @@
 # Performance Checklist
 
-Quick reference checklist for web application performance. Use alongside the `performance-optimization` skill.
+Quick reference for relevant performance techniques alongside the `performance-optimization` skill. Select checks for the measured bottleneck and project targets; listed tools/budgets are examples, not installation, RUM or CI setup requirements. A controlled local result does not establish real-user impact.
 
 ## Table of Contents
 
@@ -186,7 +186,7 @@ For a shared cache, the same idea needs a distributed lock, or `stale-while-reva
 
 ### INP field data and DevTools workflow
 
-1. **Field data first** — check [CrUX Vis](https://developer.chrome.com/docs/crux/vis) or your RUM tool for real-user INP before optimising
+1. **Use available evidence** — inspect existing [CrUX Vis](https://developer.chrome.com/docs/crux/vis) or RUM data when available. Otherwise reproduce the slow interaction with existing local tools; state that field impact is unverified rather than requiring new RUM setup or a field-data wait
 2. **Identify slow interactions** — open DevTools → Performance panel → record while interacting; look for long tasks triggered by clicks/keystrokes
 3. **Test on mid-range Android** — INP issues often only surface on slower hardware; use a real device or DevTools CPU throttling (4×–6× slowdown)
 

@@ -1,90 +1,120 @@
 # Team workflow
 
-## Begin a project
+This is Agent Kit's single delivery workflow. [Policy](team-policy.md) governs authority and safety. Skills explain techniques; roles assign responsibilities. Neither creates another lifecycle. The flow below describes the life of a coherent change, not six approval gates after every edit.
 
-Create one project repository from the template. Developers clone that repository, not separate template copies for the same product. A human identifies the Project Lead, Project Coordinator and initial objective.
+## Start and agree once
 
-The assistant reads AGENTS.md, policy and current sources without a separate setup prompt. If the sources are unspecified, propose a minimal plan in chat and request only material missing decisions. Before writes, establish task ownership and direct approval for the current scope.
+Name one delivery owner and use the existing task/issue as the source of truth. Read relevant project decisions and the minimum source/tests. Record the user outcome, scope, important design choices, observable acceptance, intended checks and current human approval. Keep planning in chat until writes are authorized.
 
-Fresh project files start unassigned, in Planning, without approval or completed work. Kit release evidence belongs to the kit, not to the project adopting it.
+A small well-understood fix needs a short explanation. A material architecture/data/permission decision needs a reviewable design. Once the current scope is approved, the owner continues routine implementation and repairs without asking at each file, bug or stage. Clarify only decisions that cannot be resolved safely from the available evidence.
 
-## Sources and writers
+## Continuous delivery flow
 
-| File | Authority | Writer |
+| Moment | Responsible role | Result / next action |
 | --- | --- | --- |
-| project-context.md | Verified goals, constraints, accepted decisions and source references | Project Coordinator |
-| project-plan.md | Ordered task index, ownership, dependencies and shared contracts | Project Coordinator |
-| project-state.md | Current integrated milestone, approvals, feedback and evidence summary | Project Coordinator |
-| tasks/TASK-ID.md | Detailed state, evidence and handoff for that task | Task Owner |
+| Requirement | Human + delivery owner | Agree observable behavior, scope, constraints and acceptance |
+| Design | Delivery owner | Identify affected layers/contracts, error/data behavior and checks; resolve material choices |
+| Development | One implementation owner | Complete a usable change through its real layers and callers; write regression tests and run focused checks while coding |
+| Review and CI | Reviewer + configured CI | Evaluate the completed coherent change and relevant checks against the same concrete source revision; owner repairs evidenced defects |
+| Acceptance | QA role or authorized human | Demonstrate a usable flow at a meaningful milestone and check actual behavior, permissions/data and important edge states |
+| Release | Authorized release owner | Release the verified candidate under project controls, then check operation and recovery readiness |
 
-Do not maintain competing task checklists in a tracker and Git. An issue or PR may link to the authoritative task file. Project-plan is an index, not a duplicate of every task's details. Project-state summarizes integration and links to task records.
+A role is a responsibility, not a mandatory extra agent. The delivery owner can design, implement, diagnose and hand off. Review should be independent when the risk/project requires it; disclose sequential self-review when independent review did not run. QA can be the human. A separate Coordinator/Supervisor is not the default.
 
-The integrated branch records what has landed. Working branches hold unintegrated results. Summaries identify their branch and commit so a reader does not mistake a proposed result for the current integrated behavior.
+Work in small, complete changes. Include actual imports, routes, callers and data paths; do not hand off an unused API or disconnected UI as complete. Keep branches short-lived when Git work is authorized. A workflow approval is not permission to commit, push, merge or deploy.
 
-## Reports and records
+## Development and local feedback
 
-Use TechNote's [adaptive reports](technote.md#adaptive-reports) at the start and close of meaningful conversation, planning and implementation work. Select the current stage, answer simple follow-ups directly and report new findings or meaningful progress during work. Keep material decisions, failed checks and verification limits visible.
+The developer owns both implementation and its tests. Use existing project commands for fast focused feedback during coding. Integration/contract checks belong close to changes that affect those seams. Do not invoke a formal reviewer, acceptance cycle or human approval after every function, file or small edit.
 
-Chat reports summarize the current outcome and next action. Authorized task records retain detailed scope, approval provenance, ownership, acceptance evidence and handoff references. Link relevant records and outputs without copying the full coordination templates into every report. A closing report does not end routine authorized execution or establish approval, integration or human acceptance.
+The owner repairs product defects and tests/configuration broken by their own change inside valid scope. Diagnose before changing code; a routine repair does not need a new plan document or approval receipt. Escalate when evidence changes a material design, data/permission boundary or required authority.
 
-Track acceptance criteria in that record: user result reached, next criterion to prove, specific blocker, new evidence/limits and owner/next action with its approval coverage. Intermediate reviews or receipts do not close an unproved user result.
+If the project cannot start or run a basic test, make minimal environment readiness an explicit setup task. Its outcome is a running application/basic check and usable documented commands. Do not retrofit a comprehensive test platform before product work begins. Retained data and real environments still need their actual protections and authority.
 
-## Assign and execute
+## Testing layers
 
-Use [Task Assignment](agent-coordination-templates.md#task-assignment). Name the developer, agent role, branch, base commit and exact file ownership. Choose a task-sized acceptance and verification plan.
+| Layer | When | Scope |
+| --- | --- | --- |
+| Focused local feedback | While coding | Fast unit/regression checks for the changed logic; relevant integration/contract checks |
+| Configured CI | When a coherent revision is submitted, and integration as configured | Project lint/type/build/unit/integration checks; fast feedback target about ten minutes, with expensive jobs separated |
+| Acceptance and release checks | Usable user-flow milestones / release candidate | Real running behavior, relevant roles/data/edge states and the project's release/security/operational requirements |
 
-Agree contracts before related tasks run in parallel. Assign one writer for shared files. A branch is not a lock. The coordinator resolves ownership collisions before dependent writes; unaffected authorized work continues.
+These are check locations, not a universal all-items checklist. A documentation edit does not need an application run; a behavior claim needs the relevant runtime evidence. Do not leave all testing to the end or run an entire suite after each edit. Use broader suites when the affected integration or actual project release rules call for them.
 
-Use actual data/contract/ownership/resource dependencies rather than making every task depend on the preceding task. Under explicit human delegation to multiple Coordinators, partition decisions and identify the shared-record writer. Consumers report a concrete mismatch to the canonical contract owner, directly or through one permitted relay. A Supervisor follows the current boundary and result; neither the Supervisor nor a second Coordinator adds implicit ratification. See [ownership and coordination](team-policy.md#ownership-and-coordination).
+Reuse valid evidence across sessions, reviewers and stages. Recheck when relevant code, inputs, environment or a finding changes the result. An unrelated edit, new chat or stale coordination receipt alone does not invalidate all checks. Tests are maintained to distinguish intended behavior from actual defects; do not weaken assertions or rebaseline unexplained integrity mismatches to obtain green results.
 
-### Applying an approved template
+## Review and CI
 
-Use this path only when the task is to apply a user-supplied or internal template that the human approved. Record its source, version or revision and content hash in the owned task record. Identify the structure, hierarchy, workflow order, controls, interactions and responsive behavior to retain; prototype-only material to remove; and each difference the human approved. An external design used for inspiration is selection evidence, not an approved implementation template. Do not apply external-reference advice such as “do not copy the layout” to change an approved template.
+Submit one coherent, reviewable result with intent, relevant diff, actual checks and known limits. Identify its source revision: use a commit/PR revision when available, or a clearly described working-tree snapshot when Git writes are excluded. Review and check results apply to those inputs; no custom receipt/approval framework is needed.
 
-Before broad implementation, select one representative screen and observable criteria. Record the required runtime, login role, data states, inspection tools, evidence destination and permission scope. If any prerequisite is unavailable, mark the affected check NOT_RUN early with its owner and next action. Do not create data, change access or use another project's environment to fill a gap without authority.
+A reviewer examines correctness, domain/contracts, maintainability and actual security/data/performance risks. Return concrete findings with location, trigger, impact and expected correction. Do not edit application code for mutation tests or repairs. Style preferences and optional polish do not block progress. Required project protections and unresolved relevant defects do.
 
-Complete that screen through its actual controller and data path. Compare the rendered template and implementation at matching desktop and mobile viewports. Exercise the primary interaction sequence and applicable populated, empty, loading, error and permission states. Use the [template application checklist](template-application-acceptance.md) for criterion-level evidence, including focus and control reachability inside containers. Source/build success and page-level no-overflow are insufficient UI evidence.
+The implementation owner fixes findings and reruns affected checks. The reviewer rechecks the affected diff/finding; unchanged conclusions remain valid. A new stage does not trigger another reviewer chain. While review/CI waits, continue independent authorized work with non-conflicting ownership. If none remains, hand off the waiting state; do not invent harness work to fill the wait.
 
-The Coordinator records whether the representative criteria PASS, FAIL or remain NOT_RUN in the task record. Expand dependent screens or components only after the representative criteria pass; then record separate evidence for each affected screen or content group. Independent authorized work may continue. This is a verification boundary within the existing approved scope, not a new human approval step. A material change to the approved template or an authority boundary still follows [approval and autonomy](team-policy.md#approval-and-autonomy).
+## Acceptance and release
 
-Execute a bounded slice, verify relevant behavior, repair supported findings and recheck. After the authorized data-protection preflight, prioritize one minimal real user flow before expanding verification. Unit/build/mock success does not establish runtime, integration, UI or human acceptance.
+Present a usable flow with prerequisites, actual URL/commands, needed roles without secrets, steps and expected results. Acceptance checks happen when the flow is usable, not after every small edit. For an internal change without a user-facing flow, use its observable technical acceptance criteria.
 
-Choose checks for the changed behavior and risk under [verification scope and completion](team-policy.md#verification-scope-and-completion). Reuse valid evidence. If a harness fails, name the missing proof and a bounded next action before expanding diagnostics; block only dependent work. Do not make optional infrastructure or a chain of receipts the task's deliverable.
+QA/human reports a defect with reproduction, actual/expected behavior and evidence. The developer repairs it and verifies the affected flow. A material product/design change returns to the human; a routine bug does not restart the whole specification/approval cycle.
 
-When an API/UI/library error occurs during implementation, runtime or UAT, pause that flow, preserve evidence and plan the specific repair before editing. Name the observed condition, cause/hypothesis, affected files/consumers and repair check. Read the relevant debugging workflow; do not widen the fix into unrelated feature or harness work. Classify the plan against current approval before repair or resuming dependent work.
+Release only under explicit scope and the project's required controls. Use the tested candidate, check application operation after release and retain an appropriate recovery path. Passing local checks or finishing code is not deployment, production verification or human acceptance.
 
-Classify repairs against the [approved approach](team-policy.md#approval-and-autonomy), not only the file allowlist. Continue routine repairs when the approved goal, design, important assumptions and boundaries remain valid. If a material approach change or expanded authority is needed, stop affected execution, explain the evidence and impact, and present a replacement plan with data preservation and acceptance criteria. Wait for explicit human approval of that revision; continue unaffected authorized work.
+## Failures and blockers
 
-Review a concrete risk question against the relevant result and evidence. Reuse valid conclusions; review affected changes, unresolved findings or evidence that changes the conclusion. For each blocking gate record its source/risk, owner, PASS condition and invalidation conditions in the task record. Changing stage or recording the same evidence does not create a new review requirement. See [review and blocking gates](team-policy.md#review-and-blocking-gates).
+Pause only affected work for these delivery reasons:
 
-If the same failure class repeats or repair cycles stop advancing acceptance criteria, reassess the assumptions and implementation approach. Record what was tried, the new evidence and a bounded next diagnostic action with expected observations and a stopping condition. Do not blindly retry, restart or repeat the same review chain. Continue a supported routine repair under existing approval; stop and replan if the assessment identifies a material change.
+1. A material decision is missing or the next action expands approved scope/authority.
+2. A concrete failure makes dependent work incorrect, unsafe or destructive to data.
+3. The next release/real-data action needs authority that has not been granted.
 
-The Task Owner records state in their task file and hands it to the coordinator. Others propose shared-document changes through the authorized review process rather than editing the shared state independently.
+Always honor a direct human stop/replan, including its resumption boundary. These rules do not authorize process termination, data cleanup or bypassing runtime controls.
+
+| Failure | Owner and response |
+| --- | --- |
+| Product code or business assertion fails | Developer diagnoses the supported cause, fixes it within scope and runs the affected checks |
+| The developer's change breaks its tests/configuration | The same developer repairs the evidenced cause within scope, then checks whether the original blocked check reaches its intended assertion or usable-flow checkpoint; apply the tooling stop below if it still cannot |
+| Shared runner/environment fails independently of the feature | Name a maintenance owner/task for that problem; keep dependent verification blocked and continue independent product work |
+| Same command fails again without changed inputs or new evidence | Stop repeating it; report the actual error, attempted change and one specific next diagnostic action or decision |
+| Review/CI/acceptance cannot run within available tools or authority | State the missing proof and owner/next action; required criteria remain open and the affected result is not releasable |
+
+A harness is tooling that launches or collects checks. Repair a supported small test/config defect within the task's authority. Building a new runner, selector/admission/receipt system or review orchestration is a separate engineering outcome, not an automatic response to a failed check. Do not start one as a side effect. A failing business assertion cannot be dismissed as a tooling issue. Never retry merely until a flaky check happens to turn green.
+
+For a tooling repair, identify the original blocked check and the assertion or usable-flow checkpoint it must reach and report a valid result for. Make a focused repair of the evidenced cause, which may require related edits, then rerun that check. If tooling still prevents reaching that checkpoint or reporting its valid result, stop tooling edits in the product task, even if the error or configuration changed. New inputs, a new error, agent or session do not reset this stopping condition. Report the original blocker, attempted repair, current evidence and a specific maintenance action/owner in the same task; further tooling repair needs explicit maintenance scope. Continue independent authorized product work and keep dependent proof open. If the check now reports a failing business assertion, the tooling is unblocked: the developer fixes that product defect under the existing scope.
+
+## Applying an approved template
+
+Preserve the human-approved template's structure, hierarchy, workflow, controls and responsive behavior. Identify its source/version and approved differences in the same task record. Use the [template reference](../.agents/references/template-application.md) and [acceptance selection guide](template-application-acceptance.md) for relevant rendered/interaction criteria.
+
+Use a representative rendered screen early when an unresolved design choice would otherwise be replicated. Check that choice before copying an unproved approach across dependent screens. This is developer feedback within the approved task, not a mandatory Coordinator/human gate for each screen or edit. Continue independent wiring and other unaffected code. At a usable-flow milestone, verify the affected desktop/mobile behavior and relevant states. Build/source alone does not prove UI fidelity.
 
 ## Synchronization and stops
 
-Check current context, plan, state, assigned task, approval and latest stop instruction when starting/resuming and before shared changes, handoff or integration. Compare the base commit and affected contracts with the integrated branch. Synchronize Git only through the project's authorized Git workflow; preserve local changes.
+Use one task record. Existing project context/plan/state are shared summaries only when useful; read/update relevant decisions at start/resume and integration, not before every action. Their named writer owns shared changes. Others send concrete proposed updates to that owner. Git records are not live messages or locks.
 
-If a plan or contract changed, assess the impact before continuing dependent work. The latest human stop/replan instruction overrides earlier approval or continuation directions. The coordinator sends it through available authorized coordination tools, blocks subsequent affected actions where supported and asks affected workers to acknowledge actual status. Record recipients, stop sent/acknowledged, in-flight or uncancellable actions and Unknown status in the existing state record. If the runtime cannot confirm interruption, report that limit instead of claiming the worker stopped.
+For authorized parallel work, agree a shared contract and separate ownership. Block only a real incompatible dependency, file collision or resource conflict. Delegation is optional, children do not delegate, and the assigning owner integrates outputs. When a human stops running work, transmit the stop with available authorized tools and report actual acknowledgement/in-flight limits; a status label cannot resume it.
 
-Do not kill/restart processes or clean up data as an automatic stop response. For in-flight work, use only the minimum safety-preserving action within existing authority and report what cannot be cancelled. Resume affected execution only after explicit human approval of the relevant current plan; elapsed time, silence, reviewer PASS and historical approval do not resume it. Independently authorized unaffected work may continue.
+## Handoff and completion
 
-Git documents are not real-time notifications, distributed locks or a way to interrupt an offline agent. Use the team's authorized human communication path for urgent stops and reconcile the Git record.
+| Claim | Required evidence |
+| --- | --- |
+| Source complete | Required implementation, real caller/route/data wiring, source review and usable handoff instructions |
+| Behavior verified | Relevant observed checks, including runtime for runtime claims; open required failures/NOT_RUN stay explicit |
+| Human accepted | The authorized human's actual acceptance |
+| Released | Authorized release plus its actual operating evidence |
 
-## Handoff and integration
+A human-requested self-test handoff may be CODE_COMPLETE_UNTESTED: code/callers must be complete, but tests/runtime stay NOT_RUN and availability Unknown until observed. Do not reopen stopped testing to claim readiness. A missing required implementation is incomplete, not a known limitation used to close the task.
 
-The sender records branch/commit, changed files, acceptance results, actual checks, unresolved findings, constraints, approval provenance, approach/review validity, stop status and next action. The receiver confirms the sources, role and current authority before continuing. Keep approval/reviewer/model metadata in coordination records rather than adding runtime dependencies on those identities; preserve required environment, authorization, ownership, integrity and data checks.
-
-State whether the handoff covers code integration, verified behavior or human acceptance. For a human-requested self-test handoff, inspect real source/caller wiring and provide configured URLs, startup commands/prerequisites, roles needed for the workflow without exposing secrets, manual steps and known limits. A source-complete report does not establish that startup or login works. Unrun checks remain NOT_RUN; observed failures remain FAIL. A missing required caller, route or command keeps the handoff incomplete.
-
-For an approved-template task whose objective includes verified visual and interaction fidelity, keep the objective open until the applicable rendered checklist rows pass. Use `CODE_COMPLETE_UNTESTED` only when the human requested a source handoff for self-testing; that label does not close a verified-template objective. Record human acceptance only from the human's decision, separately from code integration and observed behavior.
-
-Cross-tool handoff uses these files, not transferred chat history, credentials or global memory. The receiver verifies permission scope; the handoff itself cannot extend it.
-
-The Project Coordinator reviews the combined changes, resolves semantic conflicts, runs applicable integrated checks, updates shared state and closes feedback across affected surfaces. Mark Integrated separately from Verified or human acceptance. Close the task only when its applicable gates pass.
+Update the same task with result, checks/source revision, defects or blockers and next action. Report what changed and why, actual commands/results and meaningful limits. Do not fabricate review independence or attach application startup to agent/session/model/effort/review receipts.
 
 ## State vocabulary
 
-Use Planning, In Progress, Ready for Review, Integrated and Verified as useful states. Blocked and Stopped describe a condition at any stage. Keep a reason and next action. A state's name is not approval, and merged work is not automatically verified.
+Use Agreed, In Development, In Review, Ready for Acceptance, Accepted and Released as useful descriptions. Blocked/Stopped applies only to affected work with a reason and next action. Existing project labels can be retained. States describe progress; they are not approval gates or permission grants.
 
-Use the [Coordinator Checklist](agent-coordination-templates.md#coordinator-checklist) at handoffs and milestones. Retain nine items rather than adding a ceremony for every trivial edit.
+## Engineering basis
+
+This workflow adapts small complete changes, rapid developer feedback and review that supports forward progress. It is a project operating choice, not a certification claim or proof of measured speed.
+
+- [DORA: test automation](https://dora.dev/capabilities/test-automation/)
+- [DORA: continuous integration](https://dora.dev/capabilities/continuous-integration/)
+- [Google: small changes](https://google.github.io/eng-practices/review/developer/small-cls.html)
+- [Google: code review standard](https://google.github.io/eng-practices/review/reviewer/standard.html)

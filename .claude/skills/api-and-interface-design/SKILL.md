@@ -5,6 +5,9 @@ description: Guides stable API and interface design. Use when designing APIs, mo
 
 # API and Interface Design
 
+
+This skill provides technical guidance under the [single team workflow](../../../docs/team-workflow.md). Select techniques/checklist items relevant to the change. Examples add no approval rounds, required agents, per-edit reviews or universal test/release gates.
+
 ## Overview
 
 Design stable, well-documented interfaces that are hard to misuse. Good interfaces make the right thing easy and the wrong thing hard. This applies to REST APIs, GraphQL schemas, module boundaries, component props, and any surface where one piece of code talks to another.
@@ -27,7 +30,7 @@ This means: every public behavior — including undocumented quirks, error messa
 
 - **Be intentional about what you expose.** Every observable behavior is a potential commitment.
 - **Don't leak implementation details.** If users can observe it, they will depend on it.
-- **Plan for deprecation at design time.** See `deprecation-and-migration` for how to safely remove things users depend on.
+- **Plan for deprecation at design time.** Identify affected consumers, preserve compatibility during an agreed transition and define removal criteria. Follow the project migration policy when present; no additional skill is required.
 - **Tests are not enough.** Even with perfect contract tests, Hyrum's Law means "safe" changes can break real users who depend on undocumented behavior.
 
 ### The One-Version Rule
@@ -359,7 +362,7 @@ After designing an API:
 - [ ] List endpoints support pagination
 - [ ] New fields are additive and optional (backward compatible)
 - [ ] Naming follows consistent conventions across all endpoints
-- [ ] API documentation or types are committed alongside the implementation
+- [ ] API documentation or types are updated with the implementation in the working tree; commit/push is a separate action requiring explicit Git authority
 - [ ] State-changing endpoints either honour an idempotency key or are documented as unsafe to retry
 - [ ] The key is claimed in one atomic operation, guarded by a unique constraint
 - [ ] A reused key with a different payload fails loudly rather than replaying the wrong response

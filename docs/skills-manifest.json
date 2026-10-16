@@ -5,10 +5,10 @@
   "upstream": {
     "repository": "https://github.com/addyosmani/agent-skills",
     "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
-    "unchanged_file_count": 20,
+    "unchanged_file_count": 3,
     "license": "MIT",
     "file_count": 26,
-    "adapted_file_count": 6
+    "adapted_file_count": 23
   },
   "canonical_root": ".agents",
   "mirror_root": ".claude",
@@ -125,92 +125,92 @@
     {
       "canonical": ".agents/references/accessibility-checklist.md",
       "mirror": ".claude/references/accessibility-checklist.md",
-      "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac"
+      "sha256": "475e47052f3dcf44c6c23dbc7091c9391589324290164b1d344961d85a2f278b"
     },
     {
       "canonical": ".agents/references/definition-of-done.md",
       "mirror": ".claude/references/definition-of-done.md",
-      "sha256": "efb615a93227d23fa85d77af206143a7baac1895956c0447fe28a2e0c64e75c3"
+      "sha256": "0df9bdee52f4cc3d7741da6a57d34de852d3b5dcb84d0281f156c970dd0623a7"
     },
     {
       "canonical": ".agents/references/observability-checklist.md",
       "mirror": ".claude/references/observability-checklist.md",
-      "sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8"
+      "sha256": "cc941fe9dcf840e08ec7577cb5df7a9e4ac8197002db2f3edf4769d7a25d1418"
     },
     {
       "canonical": ".agents/references/orchestration-patterns.md",
       "mirror": ".claude/references/orchestration-patterns.md",
-      "sha256": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a"
+      "sha256": "15bc3c02043375a9ebfc73041edc28ba007074e79add5528e584dc3b6a67ebc5"
     },
     {
       "canonical": ".agents/references/performance-checklist.md",
       "mirror": ".claude/references/performance-checklist.md",
-      "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067"
+      "sha256": "f1a26ad9b64cad23ddb9555be5e2bcd7c073532273e40b3cd912e02cda502436"
     },
     {
       "canonical": ".agents/references/security-checklist.md",
       "mirror": ".claude/references/security-checklist.md",
-      "sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755"
+      "sha256": "435f6c29435d15bc91c7884c34836044f60b825f330ba3352461b4d0321eb542"
     },
     {
       "canonical": ".agents/references/template-application.md",
       "mirror": ".claude/references/template-application.md",
-      "sha256": "417c2f9ac2d50407e2ce438abe05ccf0730f10f27e8a0b59489b7d4ac8035b6c"
+      "sha256": "09855853e6bd170d5487ecd5c4fb7e7ed6baa3a3fd7dc8e4dc9ed09036557c97"
     },
     {
       "canonical": ".agents/references/testing-patterns.md",
       "mirror": ".claude/references/testing-patterns.md",
-      "sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56"
+      "sha256": "520090f09240faa67b955b5497c5a07e5bbf19ed6d23a7c8eb64776bef47c873"
     },
     {
       "canonical": ".agents/skills/api-and-interface-design/SKILL.md",
       "mirror": ".claude/skills/api-and-interface-design/SKILL.md",
-      "sha256": "e83d34f52ff12dd8a7c5134cd7e8140ea4541ec65e204f8a1e4cd366e30c4192"
+      "sha256": "092ae9b57b3f69eb4e5ea4df56199d7cfe9d8ed9d8c2f84044453edb568a01f2"
     },
     {
       "canonical": ".agents/skills/code-review-and-quality/SKILL.md",
       "mirror": ".claude/skills/code-review-and-quality/SKILL.md",
-      "sha256": "c4c025387b0ab6a63d822b9bc8289e2bdc23fee3fe292d29b7d3a14474c9459a"
+      "sha256": "7738fc8e0658e05c6b128c2f88a31a0e982c4a936b46ad532c3160aed21e9bdf"
     },
     {
       "canonical": ".agents/skills/code-simplification/SKILL.md",
       "mirror": ".claude/skills/code-simplification/SKILL.md",
-      "sha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d"
+      "sha256": "551a7690681f4e9672020e3ae175d482854b7d6cbd2738f5a072320f2636bb22"
     },
     {
       "canonical": ".agents/skills/context-engineering/SKILL.md",
       "mirror": ".claude/skills/context-engineering/SKILL.md",
-      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63"
+      "sha256": "ecb719fb6ed046d81847b895bc640789959d5488bded5a54a0774aa9608e7775"
     },
     {
       "canonical": ".agents/skills/debugging-and-error-recovery/SKILL.md",
       "mirror": ".claude/skills/debugging-and-error-recovery/SKILL.md",
-      "sha256": "21f3960f5d7ae2cc95c40896545004dbbcbbd752ea65fc2d53962554d4174220"
+      "sha256": "63ffb5f8e7b8a4478c21a52d517bad315752d3f9a6b4930f2032f92d64c713bc"
     },
     {
       "canonical": ".agents/skills/documentation-and-adrs/SKILL.md",
       "mirror": ".claude/skills/documentation-and-adrs/SKILL.md",
-      "sha256": "359b22460045583b0233ec3f80223459c4096b0fa513f5c29ade9c3985207d65"
+      "sha256": "c11e23621d3833a9c5fb83404bc650f4913636c411794ea68f51a9005550b419"
     },
     {
       "canonical": ".agents/skills/frontend-ui-engineering/SKILL.md",
       "mirror": ".claude/skills/frontend-ui-engineering/SKILL.md",
-      "sha256": "03e47e8cb21fa917afec3863f63dbe5bf0c3b83a52c37f83407fa7e499571cf0"
+      "sha256": "b10d0488d3866cf2a8d569bb27af9dd117364d8184c4f9aa1f0328c963ddcca4"
     },
     {
       "canonical": ".agents/skills/incremental-implementation/SKILL.md",
       "mirror": ".claude/skills/incremental-implementation/SKILL.md",
-      "sha256": "4bbdc9ad0456e01cb59ef2b6487d1ff379f99582313ef947059da4ba3538ca65"
+      "sha256": "d6b5984cb300fed45d6369f20571978e0ccd93483a680c13615027c53aca037d"
     },
     {
       "canonical": ".agents/skills/observability-and-instrumentation/SKILL.md",
       "mirror": ".claude/skills/observability-and-instrumentation/SKILL.md",
-      "sha256": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87"
+      "sha256": "8b84345583cd975e81e7d8c0375eb476af9d0d2c6d5a807760ca67b21e211a71"
     },
     {
       "canonical": ".agents/skills/performance-optimization/SKILL.md",
       "mirror": ".claude/skills/performance-optimization/SKILL.md",
-      "sha256": "665a83a7218d6aebd02ca329a7b2422cf28f7c55cb56f870c05e12047770245c"
+      "sha256": "05378b3946a685fe59a0f416dd7fd39d4f3a6c7542d377758b5ec0768fcfcb11"
     },
     {
       "canonical": ".agents/skills/performance-optimization/references/optimization-patterns.md",
@@ -220,12 +220,12 @@
     {
       "canonical": ".agents/skills/planning-and-task-breakdown/SKILL.md",
       "mirror": ".claude/skills/planning-and-task-breakdown/SKILL.md",
-      "sha256": "84cdaf07b2734e6cee079c9b509a5a15ee4e00943adbb6586edc759caf6f02e8"
+      "sha256": "46456c31126df4bab158ab5a14adf53e6ab5eb45b36315c516a6401443e876df"
     },
     {
       "canonical": ".agents/skills/security-and-hardening/SKILL.md",
       "mirror": ".claude/skills/security-and-hardening/SKILL.md",
-      "sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858"
+      "sha256": "f633474c5330f174a0a5e2e64d1360c18377067c62a3158800fb7faf31efc590"
     },
     {
       "canonical": ".agents/skills/security-and-hardening/references/hardening-patterns.md",
@@ -235,12 +235,12 @@
     {
       "canonical": ".agents/skills/source-driven-development/SKILL.md",
       "mirror": ".claude/skills/source-driven-development/SKILL.md",
-      "sha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9"
+      "sha256": "5d50edb3f48fa6745a005f6d25f3b7f2484ceda425f69dc844d152cc76cae3c9"
     },
     {
       "canonical": ".agents/skills/spec-driven-development/SKILL.md",
       "mirror": ".claude/skills/spec-driven-development/SKILL.md",
-      "sha256": "c4b97ce3d7f24be0e67fd612c7595f65504872e3a9f8d338d098b2363fdb66ef"
+      "sha256": "501f46e53092eedffcf809e27043f1e299b345368496114fffa0122bb5b25804"
     },
     {
       "canonical": ".agents/skills/technote/SKILL.md",
@@ -250,12 +250,12 @@
     {
       "canonical": ".agents/skills/test-driven-development/SKILL.md",
       "mirror": ".claude/skills/test-driven-development/SKILL.md",
-      "sha256": "7c0c6ac057c19d7f8be65d9f49c3a638703b868f4625c78b70da5439d5d74fca"
+      "sha256": "f1df83ac13430548bbc63d854c563952b91baa4e4d4a6e6da91ac03e0ca9ae3f"
     },
     {
       "canonical": ".agents/skills/using-agent-skills/SKILL.md",
       "mirror": ".claude/skills/using-agent-skills/SKILL.md",
-      "sha256": "fd309a442037a5c0bec7d966f0d35e8f413b73338a55852c3012e7ecc9b90183"
+      "sha256": "5cbb66fb8ed70e0e2b2a6d7dca1087ae1eb2a0c4c8a3040deb47f23983fdff61"
     }
   ],
   "native_agents": [
@@ -294,17 +294,22 @@
     },
     {
       "path": ".agents/references/accessibility-checklist.md",
-      "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac",
+      "sha256": "475e47052f3dcf44c6c23dbc7091c9391589324290164b1d344961d85a2f278b",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/accessibility-checklist.md",
         "git_blob_sha": "c8c61e5f3d5a010a0d0ecb918bfaffe6c76fca78"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions"
       }
     },
     {
       "path": ".agents/references/definition-of-done.md",
-      "sha256": "efb615a93227d23fa85d77af206143a7baac1895956c0447fe28a2e0c64e75c3",
+      "sha256": "0df9bdee52f4cc3d7741da6a57d34de852d3b5dcb84d0281f156c970dd0623a7",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -314,52 +319,72 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".agents/references/observability-checklist.md",
-      "sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8",
+      "sha256": "cc941fe9dcf840e08ec7577cb5df7a9e4ac8197002db2f3edf4769d7a25d1418",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/observability-checklist.md",
         "git_blob_sha": "ad40d7aa3fca5d2091fa45be234c14aee22c3588"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions"
       }
     },
     {
       "path": ".agents/references/orchestration-patterns.md",
-      "sha256": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a",
+      "sha256": "15bc3c02043375a9ebfc73041edc28ba007074e79add5528e584dc3b6a67ebc5",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/orchestration-patterns.md",
         "git_blob_sha": "09cddd31d52a95be1d9bca814547d184b9945e44"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".agents/references/performance-checklist.md",
-      "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067",
+      "sha256": "f1a26ad9b64cad23ddb9555be5e2bcd7c073532273e40b3cd912e02cda502436",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/performance-checklist.md",
         "git_blob_sha": "ba9744fe60dbe4f04f3f907029638d923158d7a2"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing"
       }
     },
     {
       "path": ".agents/references/security-checklist.md",
-      "sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755",
+      "sha256": "435f6c29435d15bc91c7884c34836044f60b825f330ba3352461b4d0321eb542",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/security-checklist.md",
         "git_blob_sha": "fc5e29b92c183fa69e0952b61a99761dc48b4c0b"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions"
       }
     },
     {
       "path": ".agents/references/template-application.md",
-      "sha256": "417c2f9ac2d50407e2ce438abe05ccf0730f10f27e8a0b59489b7d4ac8035b6c",
+      "sha256": "09855853e6bd170d5487ecd5c4fb7e7ed6baa3a3fd7dc8e4dc9ed09036557c97",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -367,27 +392,37 @@
     },
     {
       "path": ".agents/references/testing-patterns.md",
-      "sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56",
+      "sha256": "520090f09240faa67b955b5497c5a07e5bbf19ed6d23a7c8eb64776bef47c873",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/testing-patterns.md",
         "git_blob_sha": "bc96e271ad241ca567f06d21c6ecc001455b80f1"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions"
       }
     },
     {
       "path": ".agents/skills/api-and-interface-design/SKILL.md",
-      "sha256": "e83d34f52ff12dd8a7c5134cd7e8140ea4541ec65e204f8a1e4cd366e30c4192",
+      "sha256": "092ae9b57b3f69eb4e5ea4df56199d7cfe9d8ed9d8c2f84044453edb568a01f2",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/api-and-interface-design/SKILL.md",
         "git_blob_sha": "3e2e37f8f4fba2c66f9f1599eaf01a55ae3f3e33"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing"
       }
     },
     {
       "path": ".agents/skills/code-review-and-quality/SKILL.md",
-      "sha256": "c4c025387b0ab6a63d822b9bc8289e2bdc23fee3fe292d29b7d3a14474c9459a",
+      "sha256": "7738fc8e0658e05c6b128c2f88a31a0e982c4a936b46ad532c3160aed21e9bdf",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -397,52 +432,72 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary"
+        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary; Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".agents/skills/code-simplification/SKILL.md",
-      "sha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d",
+      "sha256": "551a7690681f4e9672020e3ae175d482854b7d6cbd2738f5a072320f2636bb22",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/code-simplification/SKILL.md",
         "git_blob_sha": "239b2848489511de30d9e63b0bd183adc4b01347"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".agents/skills/context-engineering/SKILL.md",
-      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63",
+      "sha256": "ecb719fb6ed046d81847b895bc640789959d5488bded5a54a0774aa9608e7775",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/context-engineering/SKILL.md",
         "git_blob_sha": "fb8bb5f85128302b231d301c1201da1e223f6869"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".agents/skills/debugging-and-error-recovery/SKILL.md",
-      "sha256": "21f3960f5d7ae2cc95c40896545004dbbcbbd752ea65fc2d53962554d4174220",
+      "sha256": "63ffb5f8e7b8a4478c21a52d517bad315752d3f9a6b4930f2032f92d64c713bc",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/debugging-and-error-recovery/SKILL.md",
         "git_blob_sha": "356da20365a7cd6825b4ffad14be39280c92cdfc"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing"
       }
     },
     {
       "path": ".agents/skills/documentation-and-adrs/SKILL.md",
-      "sha256": "359b22460045583b0233ec3f80223459c4096b0fa513f5c29ade9c3985207d65",
+      "sha256": "c11e23621d3833a9c5fb83404bc650f4913636c411794ea68f51a9005550b419",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/documentation-and-adrs/SKILL.md",
         "git_blob_sha": "e37c38f30d76263c77aacdb7dcbacceb1218bc80"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions"
       }
     },
     {
       "path": ".agents/skills/frontend-ui-engineering/SKILL.md",
-      "sha256": "03e47e8cb21fa917afec3863f63dbe5bf0c3b83a52c37f83407fa7e499571cf0",
+      "sha256": "b10d0488d3866cf2a8d569bb27af9dd117364d8184c4f9aa1f0328c963ddcca4",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -452,12 +507,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary"
+        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions"
       }
     },
     {
       "path": ".agents/skills/incremental-implementation/SKILL.md",
-      "sha256": "4bbdc9ad0456e01cb59ef2b6487d1ff379f99582313ef947059da4ba3538ca65",
+      "sha256": "d6b5984cb300fed45d6369f20571978e0ccd93483a680c13615027c53aca037d",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -467,27 +522,37 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".agents/skills/observability-and-instrumentation/SKILL.md",
-      "sha256": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87",
+      "sha256": "8b84345583cd975e81e7d8c0375eb476af9d0d2c6d5a807760ca67b21e211a71",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/observability-and-instrumentation/SKILL.md",
         "git_blob_sha": "84d9cb373467fe0e15236e190833ecc90f840c38"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions"
       }
     },
     {
       "path": ".agents/skills/performance-optimization/SKILL.md",
-      "sha256": "665a83a7218d6aebd02ca329a7b2422cf28f7c55cb56f870c05e12047770245c",
+      "sha256": "05378b3946a685fe59a0f416dd7fd39d4f3a6c7542d377758b5ec0768fcfcb11",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/performance-optimization/SKILL.md",
         "git_blob_sha": "498735724035f468737bd118f9c60676a013d544"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions"
       }
     },
     {
@@ -502,7 +567,7 @@
     },
     {
       "path": ".agents/skills/planning-and-task-breakdown/SKILL.md",
-      "sha256": "84cdaf07b2734e6cee079c9b509a5a15ee4e00943adbb6586edc759caf6f02e8",
+      "sha256": "46456c31126df4bab158ab5a14adf53e6ab5eb45b36315c516a6401443e876df",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -512,17 +577,22 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".agents/skills/security-and-hardening/SKILL.md",
-      "sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858",
+      "sha256": "f633474c5330f174a0a5e2e64d1360c18377067c62a3158800fb7faf31efc590",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/security-and-hardening/SKILL.md",
         "git_blob_sha": "e80e1e9a4f5b2989308c376d4ea0d333fe2c26ef"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions"
       }
     },
     {
@@ -537,22 +607,32 @@
     },
     {
       "path": ".agents/skills/source-driven-development/SKILL.md",
-      "sha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9",
+      "sha256": "5d50edb3f48fa6745a005f6d25f3b7f2484ceda425f69dc844d152cc76cae3c9",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/source-driven-development/SKILL.md",
         "git_blob_sha": "2704f0e130bc4659951aa552373914b2d63d18c9"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing"
       }
     },
     {
       "path": ".agents/skills/spec-driven-development/SKILL.md",
-      "sha256": "c4b97ce3d7f24be0e67fd612c7595f65504872e3a9f8d338d098b2363fdb66ef",
+      "sha256": "501f46e53092eedffcf809e27043f1e299b345368496114fffa0122bb5b25804",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/spec-driven-development/SKILL.md",
         "git_blob_sha": "f54426bec00bcda5f700ab3368eed7203306830f"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
@@ -565,17 +645,22 @@
     },
     {
       "path": ".agents/skills/test-driven-development/SKILL.md",
-      "sha256": "7c0c6ac057c19d7f8be65d9f49c3a638703b868f4625c78b70da5439d5d74fca",
+      "sha256": "f1df83ac13430548bbc63d854c563952b91baa4e4d4a6e6da91ac03e0ca9ae3f",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/test-driven-development/SKILL.md",
         "git_blob_sha": "8898bcbba4c4f6acca473ece95e82105bd9cfea0"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".agents/skills/using-agent-skills/SKILL.md",
-      "sha256": "fd309a442037a5c0bec7d966f0d35e8f413b73338a55852c3012e7ecc9b90183",
+      "sha256": "5cbb66fb8ed70e0e2b2a6d7dca1087ae1eb2a0c4c8a3040deb47f23983fdff61",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -585,7 +670,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
@@ -600,7 +685,7 @@
     },
     {
       "path": ".claude/agents/kit-explorer.md",
-      "sha256": "5e730d6658025cfaf47755cb85a9dc6981b3f262b1c528e29d08f855137ac308",
+      "sha256": "9d9418c646bf963e1934197b2ecaa4b77f2efd1eeb3038d55af9299f9cbb4431",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -608,7 +693,7 @@
     },
     {
       "path": ".claude/agents/kit-implementer.md",
-      "sha256": "4996d99145dc19858096ee2a0f3e39d33b8178b4bf49667d7a91b0ebbf892207",
+      "sha256": "cdbe550d34dd4584f8323238c444dd82cd92e1796fd8b9c230c0a8952218baae",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -616,7 +701,7 @@
     },
     {
       "path": ".claude/agents/kit-reviewer.md",
-      "sha256": "3520b42ee31bbe644ca46c9f70c78371c7f81dce3a437e6375afaacc8099162b",
+      "sha256": "6e117f688beba07500e0d967cc2861ebb6433734f21f85425c9ff6f909869c1b",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -624,17 +709,22 @@
     },
     {
       "path": ".claude/references/accessibility-checklist.md",
-      "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac",
+      "sha256": "475e47052f3dcf44c6c23dbc7091c9391589324290164b1d344961d85a2f278b",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/accessibility-checklist.md",
         "git_blob_sha": "c8c61e5f3d5a010a0d0ecb918bfaffe6c76fca78"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions"
       }
     },
     {
       "path": ".claude/references/definition-of-done.md",
-      "sha256": "efb615a93227d23fa85d77af206143a7baac1895956c0447fe28a2e0c64e75c3",
+      "sha256": "0df9bdee52f4cc3d7741da6a57d34de852d3b5dcb84d0281f156c970dd0623a7",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -644,52 +734,72 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".claude/references/observability-checklist.md",
-      "sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8",
+      "sha256": "cc941fe9dcf840e08ec7577cb5df7a9e4ac8197002db2f3edf4769d7a25d1418",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/observability-checklist.md",
         "git_blob_sha": "ad40d7aa3fca5d2091fa45be234c14aee22c3588"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions"
       }
     },
     {
       "path": ".claude/references/orchestration-patterns.md",
-      "sha256": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a",
+      "sha256": "15bc3c02043375a9ebfc73041edc28ba007074e79add5528e584dc3b6a67ebc5",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/orchestration-patterns.md",
         "git_blob_sha": "09cddd31d52a95be1d9bca814547d184b9945e44"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".claude/references/performance-checklist.md",
-      "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067",
+      "sha256": "f1a26ad9b64cad23ddb9555be5e2bcd7c073532273e40b3cd912e02cda502436",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/performance-checklist.md",
         "git_blob_sha": "ba9744fe60dbe4f04f3f907029638d923158d7a2"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing"
       }
     },
     {
       "path": ".claude/references/security-checklist.md",
-      "sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755",
+      "sha256": "435f6c29435d15bc91c7884c34836044f60b825f330ba3352461b4d0321eb542",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/security-checklist.md",
         "git_blob_sha": "fc5e29b92c183fa69e0952b61a99761dc48b4c0b"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions"
       }
     },
     {
       "path": ".claude/references/template-application.md",
-      "sha256": "417c2f9ac2d50407e2ce438abe05ccf0730f10f27e8a0b59489b7d4ac8035b6c",
+      "sha256": "09855853e6bd170d5487ecd5c4fb7e7ed6baa3a3fd7dc8e4dc9ed09036557c97",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -697,27 +807,37 @@
     },
     {
       "path": ".claude/references/testing-patterns.md",
-      "sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56",
+      "sha256": "520090f09240faa67b955b5497c5a07e5bbf19ed6d23a7c8eb64776bef47c873",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "references/testing-patterns.md",
         "git_blob_sha": "bc96e271ad241ca567f06d21c6ecc001455b80f1"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions"
       }
     },
     {
       "path": ".claude/skills/api-and-interface-design/SKILL.md",
-      "sha256": "e83d34f52ff12dd8a7c5134cd7e8140ea4541ec65e204f8a1e4cd366e30c4192",
+      "sha256": "092ae9b57b3f69eb4e5ea4df56199d7cfe9d8ed9d8c2f84044453edb568a01f2",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/api-and-interface-design/SKILL.md",
         "git_blob_sha": "3e2e37f8f4fba2c66f9f1599eaf01a55ae3f3e33"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing"
       }
     },
     {
       "path": ".claude/skills/code-review-and-quality/SKILL.md",
-      "sha256": "c4c025387b0ab6a63d822b9bc8289e2bdc23fee3fe292d29b7d3a14474c9459a",
+      "sha256": "7738fc8e0658e05c6b128c2f88a31a0e982c4a936b46ad532c3160aed21e9bdf",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -727,52 +847,72 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary"
+        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary; Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".claude/skills/code-simplification/SKILL.md",
-      "sha256": "f0c5ed754057eb0c1e027e2587f59de816651feb5e837242296c43ea21cf621d",
+      "sha256": "551a7690681f4e9672020e3ae175d482854b7d6cbd2738f5a072320f2636bb22",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/code-simplification/SKILL.md",
         "git_blob_sha": "239b2848489511de30d9e63b0bd183adc4b01347"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".claude/skills/context-engineering/SKILL.md",
-      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63",
+      "sha256": "ecb719fb6ed046d81847b895bc640789959d5488bded5a54a0774aa9608e7775",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/context-engineering/SKILL.md",
         "git_blob_sha": "fb8bb5f85128302b231d301c1201da1e223f6869"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".claude/skills/debugging-and-error-recovery/SKILL.md",
-      "sha256": "21f3960f5d7ae2cc95c40896545004dbbcbbd752ea65fc2d53962554d4174220",
+      "sha256": "63ffb5f8e7b8a4478c21a52d517bad315752d3f9a6b4930f2032f92d64c713bc",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/debugging-and-error-recovery/SKILL.md",
         "git_blob_sha": "356da20365a7cd6825b4ffad14be39280c92cdfc"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing"
       }
     },
     {
       "path": ".claude/skills/documentation-and-adrs/SKILL.md",
-      "sha256": "359b22460045583b0233ec3f80223459c4096b0fa513f5c29ade9c3985207d65",
+      "sha256": "c11e23621d3833a9c5fb83404bc650f4913636c411794ea68f51a9005550b419",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/documentation-and-adrs/SKILL.md",
         "git_blob_sha": "e37c38f30d76263c77aacdb7dcbacceb1218bc80"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions"
       }
     },
     {
       "path": ".claude/skills/frontend-ui-engineering/SKILL.md",
-      "sha256": "03e47e8cb21fa917afec3863f63dbe5bf0c3b83a52c37f83407fa7e499571cf0",
+      "sha256": "b10d0488d3866cf2a8d569bb27af9dd117364d8184c4f9aa1f0328c963ddcca4",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -782,12 +922,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary"
+        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions"
       }
     },
     {
       "path": ".claude/skills/incremental-implementation/SKILL.md",
-      "sha256": "4bbdc9ad0456e01cb59ef2b6487d1ff379f99582313ef947059da4ba3538ca65",
+      "sha256": "d6b5984cb300fed45d6369f20571978e0ccd93483a680c13615027c53aca037d",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -797,27 +937,37 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".claude/skills/observability-and-instrumentation/SKILL.md",
-      "sha256": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87",
+      "sha256": "8b84345583cd975e81e7d8c0375eb476af9d0d2c6d5a807760ca67b21e211a71",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/observability-and-instrumentation/SKILL.md",
         "git_blob_sha": "84d9cb373467fe0e15236e190833ecc90f840c38"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions"
       }
     },
     {
       "path": ".claude/skills/performance-optimization/SKILL.md",
-      "sha256": "665a83a7218d6aebd02ca329a7b2422cf28f7c55cb56f870c05e12047770245c",
+      "sha256": "05378b3946a685fe59a0f416dd7fd39d4f3a6c7542d377758b5ec0768fcfcb11",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/performance-optimization/SKILL.md",
         "git_blob_sha": "498735724035f468737bd118f9c60676a013d544"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions"
       }
     },
     {
@@ -832,7 +982,7 @@
     },
     {
       "path": ".claude/skills/planning-and-task-breakdown/SKILL.md",
-      "sha256": "84cdaf07b2734e6cee079c9b509a5a15ee4e00943adbb6586edc759caf6f02e8",
+      "sha256": "46456c31126df4bab158ab5a14adf53e6ab5eb45b36315c516a6401443e876df",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -842,17 +992,22 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".claude/skills/security-and-hardening/SKILL.md",
-      "sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858",
+      "sha256": "f633474c5330f174a0a5e2e64d1360c18377067c62a3158800fb7faf31efc590",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/security-and-hardening/SKILL.md",
         "git_blob_sha": "e80e1e9a4f5b2989308c376d4ea0d333fe2c26ef"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions"
       }
     },
     {
@@ -867,22 +1022,32 @@
     },
     {
       "path": ".claude/skills/source-driven-development/SKILL.md",
-      "sha256": "c59faf851377f0eeda45306398d16eb96d77ab1c2fd3e1a7fb58e9a0af33c1e9",
+      "sha256": "5d50edb3f48fa6745a005f6d25f3b7f2484ceda425f69dc844d152cc76cae3c9",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/source-driven-development/SKILL.md",
         "git_blob_sha": "2704f0e130bc4659951aa552373914b2d63d18c9"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing"
       }
     },
     {
       "path": ".claude/skills/spec-driven-development/SKILL.md",
-      "sha256": "c4b97ce3d7f24be0e67fd612c7595f65504872e3a9f8d338d098b2363fdb66ef",
+      "sha256": "501f46e53092eedffcf809e27043f1e299b345368496114fffa0122bb5b25804",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/spec-driven-development/SKILL.md",
         "git_blob_sha": "f54426bec00bcda5f700ab3368eed7203306830f"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
@@ -895,17 +1060,22 @@
     },
     {
       "path": ".claude/skills/test-driven-development/SKILL.md",
-      "sha256": "7c0c6ac057c19d7f8be65d9f49c3a638703b868f4625c78b70da5439d5d74fca",
+      "sha256": "f1df83ac13430548bbc63d854c563952b91baa4e4d4a6e6da91ac03e0ca9ae3f",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
         "upstream_path": "skills/test-driven-development/SKILL.md",
         "git_blob_sha": "8898bcbba4c4f6acca473ece95e82105bd9cfea0"
+      },
+      "adaptation": {
+        "source": "agent-kit contributors",
+        "record": "docs/skills-catalog.md",
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".claude/skills/using-agent-skills/SKILL.md",
-      "sha256": "fd309a442037a5c0bec7d966f0d35e8f413b73338a55852c3012e7ecc9b90183",
+      "sha256": "5cbb66fb8ed70e0e2b2a6d7dca1087ae1eb2a0c4c8a3040deb47f23983fdff61",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -915,12 +1085,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-catalog.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids"
       }
     },
     {
       "path": ".codex/agents/kit-explorer.toml",
-      "sha256": "029bb3067023a52f6e6b8b7a282dc740b6c3ffb10290d23296f1681978508a92",
+      "sha256": "7df91781fcb49377c6465eebc0c18052d9e52105f7ad78660f50ffa7fc06db43",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -928,7 +1098,7 @@
     },
     {
       "path": ".codex/agents/kit-implementer.toml",
-      "sha256": "41f6b5cabda3e8abe790f8aeaaa6e5e648e20f3c232b6fe68e95a22a6fbd9ddc",
+      "sha256": "e5482968b5f495ee443cdf36853303fcedf672cef878c089bf06d4f87f23e131",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -936,7 +1106,7 @@
     },
     {
       "path": ".codex/agents/kit-reviewer.toml",
-      "sha256": "deabc935e33f879a5a136c41178dd45e9b46eaecfd13a058e060e58cbd298873",
+      "sha256": "58f7ecc114a12f53cc6cf0d698ebdb773c07090f0ba5bd0721c5f6c3c946e80c",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -952,7 +1122,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "33a055c8a7fe372c9cfe9babc4338c4de643e48a0a39f00696bd392c0502d3e8",
+      "sha256": "3649a18a8791a9e959b548e4aeff64467ae2a0ba0d47735d0c72ff7979b42e4b",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -968,7 +1138,7 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "febfc98914b9434983ec004d9068e8fa0f19a33f45a626add4e97afd59b1246b",
+      "sha256": "17f993a7a8cdb44fd40900cc76bcf25cc814234b5f768472383284dce5862b62",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -984,7 +1154,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "1ae43e7d041fd78b1240fa800e8f21764779365e2fb51fe5868c6b1920eb61a3",
+      "sha256": "8026c54d52c95f7a3020608b6f1405c8e690ee2ab46a3c0a56d1c771c2f0ffe4",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -992,7 +1162,7 @@
     },
     {
       "path": "docs/agent-compatibility.md",
-      "sha256": "c92514826b98a19118bbf275f9cc9b98269e8ae71263c775639c5417604e643c",
+      "sha256": "9d1a860e2d1393de898282109b1e69c70d7dd6b15d26b6f79a9c88422679f2a6",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1000,7 +1170,7 @@
     },
     {
       "path": "docs/agent-coordination-templates.md",
-      "sha256": "3c53a7b26b6d5d4bd2c1a0322dd61bd53d44d0859282527e724fb612298c4c6a",
+      "sha256": "fb689ac7b09d86e05ab23cec7a7ccb801652960b5c9e0c235df21542ff5ecedf",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1008,7 +1178,7 @@
     },
     {
       "path": "docs/model-routing.md",
-      "sha256": "2f1ba8e4b5122c9ddf835c7abcff8274f99e6561bc088a5b88e6ea33667a812e",
+      "sha256": "0fc65cfc895cb58a6e8501f60956a0445e0080aa580a8929f2771476744a5d67",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1016,7 +1186,7 @@
     },
     {
       "path": "docs/roles/coordinator.md",
-      "sha256": "8f406eac3aaadaa173fe6c89131f4c5dbb9cfc66eaef06f65cfa929c6114f6d4",
+      "sha256": "a4f450aaaa774d027d8619c012639bc5394995695532cea0bb025156ef10cbc9",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1024,7 +1194,7 @@
     },
     {
       "path": "docs/roles/explorer.md",
-      "sha256": "904314740059decec76d09c7ac43e593f05c68c3dd0398bd5de2c6122b6545c4",
+      "sha256": "7ce93a9451d5f8334d214d383a8d63ce2f42b7339167640dfea8296deea1d3d9",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1032,7 +1202,7 @@
     },
     {
       "path": "docs/roles/implementer.md",
-      "sha256": "614723bc3e02240d1ae8d2e70abf7864802710a626e5dbcde4dc2a76acd14d95",
+      "sha256": "3b61a8bd9aa8d4ab81039b836641ab0d4b04f48a45df99e264ec045d0422e453",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1040,7 +1210,7 @@
     },
     {
       "path": "docs/roles/reviewer.md",
-      "sha256": "0e265282a62bd2a789d93f98827d36c8b82f77ceb3ce79db2bece0280675ad6e",
+      "sha256": "d547d177cc8bab8a5e8ae454c8b2f566810f1c0b42783e02bd2b7cdc34e9794b",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1048,7 +1218,7 @@
     },
     {
       "path": "docs/skills-catalog.md",
-      "sha256": "c4aeedb0c5d5b6ca3b7cf302bb8e4f29da12157a92e185d511bf27db743c2545",
+      "sha256": "d91be2c36717fe0b2c5bfc85b8a97f8b69643402e109700bacf71ecc5bf84eda",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1056,7 +1226,7 @@
     },
     {
       "path": "docs/team-policy.md",
-      "sha256": "16607323712c0103ce25f2dedaa6431bfccf02145646bbbc42c6475644d2b9be",
+      "sha256": "b49d672aafbbbf316776dfd92d3923007749db2089be890743ace3f1087779cc",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1064,7 +1234,7 @@
     },
     {
       "path": "docs/team-workflow.md",
-      "sha256": "55b5e851751db91ed46314f9c41a1260bc59f4fbeb7ccf352ff9f8f15708cff7",
+      "sha256": "ba1bc7d20b5a773d38df00ac997fbec9eec20952dfdafce469eb36da22fc2188",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1072,7 +1242,7 @@
     },
     {
       "path": "docs/technote.md",
-      "sha256": "9355f5fc4fa48517d19505d816573c3b3dfd76a94bf72382593c2d0c72f8f823",
+      "sha256": "088c0e2ac5f5285367d380721530e9ddae61d4c2c5a7d5c3f3a105515445c732",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1080,7 +1250,7 @@
     },
     {
       "path": "docs/template-application-acceptance.md",
-      "sha256": "e11d640c7b9150120c10098d7c97f18a2d055b0d8ff9f9cf1b211435885069c4",
+      "sha256": "f6d9cc248ce69ab4a0adf9e187ebed3491371840e5cb07ca42d601adb001bf63",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1088,7 +1258,7 @@
     },
     {
       "path": "docs/verification-guide.md",
-      "sha256": "02f9a80234caf7bfa6d6e77e2dcf194ca39829451b8fc35bb1a699427c68c1e5",
+      "sha256": "86d4aafc7052eae744c035a1edb221588ad516eb0745d4b16c1c66308fc1c82f",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"

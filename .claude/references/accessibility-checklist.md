@@ -122,20 +122,9 @@ Quick reference for WCAG 2.1 AA compliance. Use alongside the `frontend-ui-engin
 
 ## Testing Tools
 
-```bash
-# Automated audit
-npx axe-core          # Programmatic accessibility testing
-npx pa11y             # CLI accessibility checker
+Use existing project accessibility scripts or integrations when available. `axe-core` is a testing engine/library; `npx axe-core` is not a standalone audit command. Do not invent a wrapper, install a CLI or add a runner to satisfy this reference.
 
-# In browser
-# Chrome DevTools → Lighthouse → Accessibility
-# Chrome DevTools → Elements → Accessibility tree
-
-# Screen reader testing
-# macOS: VoiceOver (Cmd + F5)
-# Windows: NVDA (free) or JAWS
-# Linux: Orca
-```
+For a relevant manual check, use available browser accessibility tools or an already available screen reader, such as Chrome DevTools' Accessibility tree or macOS VoiceOver. Record the actual tool, affected surface and observation. A missing required automated check remains NOT_RUN with its reason; manual evidence supports only what was observed.
 
 ## Quick Reference: ARIA Live Regions
 

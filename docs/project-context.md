@@ -1,12 +1,12 @@
 # Project context
 
-This is a fresh project context template. It contains no approved product, stack or execution authority. The Project Coordinator updates it when documentation writes are authorized.
+This is an optional fresh project context summary; the task/issue remains the delivery source of truth. It contains no approved product, stack or execution authority. The named shared-record owner updates it when documentation writes are authorized.
 
 | Field | Current value |
 | --- | --- |
 | Project | Unspecified |
 | Project Lead | Unassigned |
-| Project Coordinator | Unassigned |
+| shared-record owner | Unassigned |
 | Goal and users | Unspecified |
 | Business capabilities and rules | Unspecified |
 | Stack and architecture | Unspecified |

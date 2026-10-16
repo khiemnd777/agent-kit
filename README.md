@@ -9,98 +9,80 @@
              CODEX + CLAUDE CODE
 ```
 
-Shared instructions, 17 skills and three native agents for software teams using Codex and Claude Code.
+Shared project instructions, 17 technical skills and three optional native agents for Codex and Claude Code. One owner carries a coherent change through development and handoff. The kit does not choose your application stack.
 
-Agent Kit keeps project decisions, ownership and handoffs in Git so developers can continue work without repeating the conversation. It does not choose an application stack.
+**Version:** 0.1.0 preview. Package evidence is recorded in [verification results](docs/verification-results.md). Native discovery, effective model/permissions, workflow behavior and two-machine compatibility remain NOT_RUN unless a specific observation is recorded.
 
-**Version:** 0.1.0 preview. Static package checks are recorded in [verification results](docs/verification-results.md). Native discovery, effective model/permission behavior and two-machine collaboration are **NOT_RUN**. The package is designed for both tools; runtime compatibility is not yet verified.
+## How work flows
+
+[Team workflow](docs/team-workflow.md) is the single delivery process:
+
+**Agree scope once -> implement with focused tests -> review/CI a complete change -> accept a usable flow -> release when authorized.**
+
+These are moments in delivery, not approval gates after every file. Developer tests are part of coding. Review evaluates a concrete completed change. QA/human acceptance checks usable flows at milestones. Continue independent authorized work during review/CI waits, or hand off the waiting state without inventing work.
+
+Pause only affected work for material missing decisions/expanded authority, incorrect or unsafe dependencies, or an action requiring release/real-data authority. Always honor human stops. See [policy](docs/team-policy.md) for permission/data boundaries.
 
 ## Quick start
 
-1. Select **Use this template** on GitHub and create **one repository for your project**.
-2. Each developer clones that repository and opens its root in Codex or Claude Code.
-3. Give the assistant your actual project goal or task. No separate setup prompt is required by the kit. The intended startup behavior must still be verified on your client.
-4. Review the proposed scope, owners and acceptance criteria. Give a direct human **Approved** for the scope you want executed.
-5. The designated Project Coordinator maintains shared documents. Task Owners maintain their own task records and branches.
+1. Create one project repository from this template, or integrate its relevant parts into an existing codebase after review.
+2. Open the root in Codex or Claude Code and give the actual task/outcome.
+3. Agree scope, material choices and acceptance. Direct human approval covers its routine implementation/checks/repairs.
+4. Name one delivery owner and use one task/issue. Shared project summaries are optional and have one assigned writer.
+5. Deliver a usable coherent change, then review/CI and acceptance. Git writes and release require their actual scope.
 
 ### New project
-
-Alternatively, open an empty workspace in Codex or Claude Code and paste:
 
 ```text
 Use https://github.com/khiemnd777/agent-kit as the template for a new project.
 
 Project name: [name]
-Goal: [what the project should achieve]
-Target users: [who will use it]
+Goal: [observable outcome]
+Target users: [users]
 
-Inspect the template. Propose the project scope, technology stack,
-ownership and acceptance criteria. Wait for my approval before writing files.
-
-After approval, initialize the project with Agent Kit and verify the setup.
-Start with fresh project records and no inherited approvals.
+Inspect the template. Propose scope, stack, ownership and acceptance in chat.
+Wait for my approval before writing files or executing the setup.
+After approval, initialize the project with fresh records and the single
+team workflow. Establish a running app and basic check before broadening.
+Do not import approvals from the template or build a comprehensive harness.
 ```
 
-Replace the bracketed fields with your actual project details.
+Replace bracketed inputs with project details.
 
 ### Existing codebase
-
-For an existing project, review the kit's instructions against the project's current rules before adoption. Integrate relevant rules rather than overwrite existing instructions.
-
-Open the existing repository in Codex or Claude Code and paste:
 
 ```text
 Use https://github.com/khiemnd777/agent-kit to integrate Agent Kit into this existing codebase.
 
-Inspect the current project instructions and agent setup.
-Preserve existing project rules, skills, configuration and records.
-Propose an integration plan and wait for my approval.
-After approval, apply the plan and verify the integration.
+Inspect current project instructions, skills, code and verified commands.
+Preserve actual business rules, existing records and other developers' work.
+Propose a bounded integration plan in chat and wait for my approval.
+After approval, apply one delivery workflow and verify relevant package/
+content consistency. Do not duplicate trackers or change global settings.
 ```
 
-Codex uses [AGENTS.md](AGENTS.md), `.agents/skills/` and `.codex/agents/`. Claude Code uses [CLAUDE.md](CLAUDE.md), `.claude/skills/` and `.claude/agents/`. Both read the same project policy and role documents. Account access, project trust, managed policies and available tools still affect loading and behavior.
+## Included sources
 
-## What is included
+- [AGENTS.md](AGENTS.md) routes Codex; [CLAUDE.md](CLAUDE.md) imports the same instructions.
+- [Team policy](docs/team-policy.md) defines authority and safety; [team workflow](docs/team-workflow.md) owns the delivery flow.
+- [17 skills](docs/skills-catalog.md) provide selected technical guidance, mirrored byte for byte in `.claude/skills/`.
+- [Task field guides](docs/agent-coordination-templates.md) support one record rather than a required document for each phase.
+- [Role responsibilities](docs/roles/coordinator.md) support one owner and optional exploration/implementation/review delegation. No separate Coordinator or Supervisor is required.
+- [TechNote](docs/technote.md) explains results and limits in the requested language.
+- [Verification guide](docs/verification-guide.md), manifest and [compatibility notes](docs/agent-compatibility.md) distinguish source/package checks from native behavior.
 
-- Sixteen [engineering skills](docs/skills-catalog.md) from a pinned source, with explicit local adaptations, plus the new TechNote skill.
-- The [four-level TechNote method](docs/technote.md), including [adaptive before-and-after reports](docs/technote.md#adaptive-reports) for conversation, planning and implementation.
-- Three [coordination templates](docs/agent-coordination-templates.md): Task Assignment, Project/Task State and a nine-item Coordinator Checklist.
-- [Team workflow](docs/team-workflow.md), file ownership, shared state and cross-tool handoffs.
-- Native `kit-explorer`, `kit-implementer` and `kit-reviewer` definitions for each runtime.
-- [Model routing](docs/model-routing.md) that defaults to the developer's selected model.
-- A [verification guide](docs/verification-guide.md), manifest and explicit evidence limits.
+## Project records
 
-## Project sources
+Use an existing issue/task tracker when available. Otherwise use [task records](docs/tasks/README.md) with authorized writes. [Context](docs/project-context.md), [plan](docs/project-plan.md) and [state](docs/project-state.md) are fresh optional shared summaries; keep one writer and link tasks instead of duplicating their checklists. They contain no inherited authority or completed product evidence.
 
-| Source | Purpose | Writer |
-| --- | --- | --- |
-| [Project context](docs/project-context.md) | Goals, constraints, decisions and sources | Project Coordinator |
-| [Project plan](docs/project-plan.md) | Task index, ownership, dependencies and contracts | Project Coordinator |
-| [Project state](docs/project-state.md) | Current integrated status, approval references, feedback and evidence | Project Coordinator |
-| [Task records](docs/tasks/README.md) | Task-specific state and handoff | Assigned Task Owner |
+For multiple developers, agree actual contracts and separate ownership. The assigning owner integrates results. Codex and Claude do not share live chat or locks; continuation uses the project record/source and the authorized team communication path.
 
-The initial documents are intentionally unassigned and in Planning mode. They contain no approval, completed project work or copied test results. Replace unspecified fields only with verified project information or clearly identified proposals.
+## Runtime and delivery limits
 
-## Two-developer example
+[Model routing](docs/model-routing.md) inherits the developer's selection by default. Optional children retain parent/runtime and task limits; model selection adds no rights. Explorer/reviewer do not change application code, implement repairs or deploy, but their roles do not force sandbox/tool profiles. Disclose self-review if independent review did not run.
 
-**Example, not an approved project:** Developer A uses Codex on a bounded documentation task. Developer B uses Claude Code on a separate task. The Project Coordinator agrees ownership and a shared interface first. Each owner records the branch, base commit, acceptance evidence and next action. The coordinator reviews and verifies the combined result before marking it integrated.
-
-The tools do not share chat history or automatically control each other. Cross-developer coordination uses Git documents and the team's authorized review process. Git state is not a real-time message or distributed lock.
-
-## Defaults and limits
-
-Documentation and explanations default to English. An explicit user language request takes precedence for that request. Preserve exact project labels and identifiers.
-
-The coordinator is the main session, not a subagent registered by its name. Native child agents inherit model selection intent; runtime overrides can change the effective model. Report requested and observed settings separately.
-
-Explorers investigate; reviewers return findings. Neither role changes application code, implements features or repairs, or deploys. Permissions follow the runtime and approved task scope; adapters do not impose a read-only sandbox or tool allowlist by role. Authorized checks and evidence capture remain within the assigned scope. Model selection does not grant execution, Git, publication or production permission. Planning does not write files or assign writers.
-
-The kit includes no application dependencies, model/provider credentials, hooks, automatic installers, MCP services or global configuration. Extra presentation tools for TechNote Levels 3 and 4 are not bundled.
+No application dependencies, credentials, hooks, automatic installers, services, global settings or test harness are bundled. TechNote presentation tools are separate capabilities. A completed source change is not verified runtime, human acceptance or release.
 
 ## Contributing and license
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). New kit content is MIT licensed under [LICENSE](LICENSE).
-
-The sixteen engineering skills and their references come from [Addy Osmani's agent-skills](https://github.com/addyosmani/agent-skills/tree/1401c8b8030e023baeebb31781a6653fe8e93026). Of 26 canonical upstream files, 22 remain unchanged and four have [documented Agent Kit adaptations](docs/skills-catalog.md#local-adaptations), retaining the original pin and provenance. Their MIT copyright and permission notice remain in [.agents/ADDY-AGENT-SKILLS-LICENSE](.agents/ADDY-AGENT-SKILLS-LICENSE) and its Claude mirror. Upstream examples follow the kit's [policy overlay](docs/team-policy.md#upstream-workflow-overlay).
-
-Verification follows [the agreed claim and actual risk](docs/team-policy.md#verification-scope-and-completion). The kit does not require a universal harness for every edit. Code integration, verified behavior and human acceptance remain separate. An API/UI/library error pauses its affected flow for a focused repair plan; explicit Coordinator delegation does not add Supervisor ratification or remove real safety controls.
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [LICENSE](LICENSE). Sixteen engineering skills and selected references derive from the pinned [Addy Osmani source](https://github.com/addyosmani/agent-skills/tree/1401c8b8030e023baeebb31781a6653fe8e93026); approved adaptations retain origin metadata and the upstream MIT notice in [.agents/ADDY-AGENT-SKILLS-LICENSE](.agents/ADDY-AGENT-SKILLS-LICENSE) and its Claude mirror. See [catalog provenance](docs/skills-catalog.md#provenance) for current counts.

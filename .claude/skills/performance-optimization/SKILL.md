@@ -5,6 +5,9 @@ description: Optimizes application performance across frontend, backend, queries
 
 # Performance Optimization
 
+
+This skill provides technical guidance under the [single team workflow](../../../docs/team-workflow.md). Select techniques/checklist items relevant to the change. Examples add no approval rounds, required agents, per-edit reviews or universal test/release gates.
+
 ## Overview
 
 Measure before optimizing. Performance work without measurement is guessing — and guessing leads to premature optimization that adds complexity without improving what matters. Profile first, identify the actual bottleneck, fix it, measure again. Optimize only what measurements prove matters.
@@ -34,15 +37,17 @@ Measure before optimizing. Performance work without measurement is guessing — 
 2. IDENTIFY → Find the actual bottleneck (not assumed)
 3. FIX      → Address the specific bottleneck
 4. VERIFY   → Measure again; keep or revert
-5. GUARD    → Add monitoring or tests to prevent regression
+5. GUARD    → Reuse an appropriate regression check within scope
 ```
 
 ### Step 1: Measure
 
-Two complementary approaches — use both:
+Choose evidence for the performance claim using available authorized tools:
 
-- **Synthetic (Lighthouse, DevTools Performance tab):** Controlled conditions, reproducible. Best for CI regression detection and isolating specific issues.
-- **RUM (web-vitals library, CrUX):** Real user data in real conditions. Required to validate that a fix actually improved user experience.
+- **Controlled measurement (for example, an existing profiler, query plan or benchmark):** Compare the affected operation before/after under representative repeatable conditions. This can verify a local improvement within those conditions.
+- **RUM (real user monitoring, such as existing web-vitals or CrUX data):** Use available field evidence to assess actual user impact. Without it, do not claim a measured real-user improvement; a locally verified fix can still be handed off.
+
+Both are useful when available, but a local optimization does not require installing RUM, adding a CI platform or waiting for a field-data window. A project-defined field acceptance criterion remains open until its evidence exists.
 
 **Frontend:**
 ```bash
@@ -150,14 +155,16 @@ Then decide, strictly:
 
 | Result vs. baseline | Action |
 |---|---|
-| Past the threshold, tests green | **Keep.** Commit with the before/after numbers in the message. |
+| Past the threshold, tests green | **Keep.** Record before/after numbers in the existing task or handoff. Commit only when separately authorized. |
 | Within noise (no measurable change) | **Revert.** |
 | Worse | **Revert.** |
-| Improved, but a test went red | **Revert.** A regression wearing a win's clothing. |
+| Improved, but a check is red or unavailable | **Classify the failure first.** Repair a regression caused by the change within valid scope. For a pre-existing defect or unrelated runner/environment failure, retain the source and measured result with explicit verification limits; follow workflow failure ownership rather than automatically reverting. |
 
 **"Neutral" is a revert, not a keep.** This is the step teams skip: the change is already written, throwing it away feels wasteful, so it lands unmeasured, and the codebase accretes complexity that never bought anything. Code you keep, you maintain forever. Make it pay for itself.
 
-**Correctness gates the metric.** The suite stays green *and* the number moves. An "optimization" that wins by dropping work the product needed (skipping a validation, caching something that must be fresh, removing an `await` that was load-bearing) is a regression, not a win.
+A red check alone does not justify undoing a measured fix. Identify whether it reports a business assertion, a product regression or a tooling failure. Recheck only affected evidence and apply the [tooling stop](../../../docs/team-workflow.md#failures-and-blockers); do not enter a revert/reimplement/full-suite loop. If an experiment is removed, remove only the task-owned change and preserve other work; no Git mutation is authorized by this table.
+
+**Correctness gates the metric.** A performance-verification claim needs a comparable improvement and relevant passing correctness/regression checks. Required failed or unavailable proof keeps that claim open. An "optimization" that wins by dropping work the product needed (skipping a validation, caching something that must be fresh, removing an `await` that was load-bearing) is a regression, not a win.
 
 #### Log every attempt, including the reverted ones
 
@@ -176,19 +183,13 @@ A section in the PR description or a `PERF.md` in the repo both work. What matte
 Guard the metric the user actually feels, not every available number. Use the
 same LCP, INP, p95 latency, or other primary metric that justified the fix.
 
-Use two complementary layers when the surface is user-facing:
+Use the existing regression mechanism that fits the measured bottleneck: a focused check, repeatable profiling command or already configured performance budget. Record the command and measurement limits in the same task.
 
-- **Synthetic CI gate:** Catch reproducible regressions before merge with a
-  performance budget. Repeat noisy measurements or compare a median/trend so
-  normal run-to-run variance does not turn the gate into a flaky check.
-- **Field monitoring:** Alert on a meaningful p75 movement in RUM data. Use
-  attributed `web-vitals` data to locate the cause; treat CrUX's rolling window
-  as confirmation rather than an immediate alert.
+A synthetic CI budget and field monitoring are complementary options when the project already uses them or explicitly includes their setup. Neither is a universal prerequisite for local completion. Do not add a new runner, RUM service or alert pipeline to satisfy this skill. If a required guard is missing, report the affected acceptance/release criterion and owner rather than starting infrastructure work.
 
-When either guard fires, return to Step 1 and establish a fresh baseline before
-proposing another fix.
+When an existing relevant guard fires, diagnose the observed regression using a comparable baseline.
 
-**Set budgets and enforce them:**
+**Example budgets, only when selected for the project's workload and acceptance:**
 
 ```
 JavaScript bundle: < 200KB gzipped (initial load)
@@ -200,7 +201,7 @@ Time to Interactive: < 3.5s on 4G
 Lighthouse Performance score: ≥ 90
 ```
 
-**Enforce in CI:**
+**Examples for an already authorized/configured CI budget; these commands do not authorize installation or a new gate:**
 ```bash
 # Bundle size check
 npx bundlesize --config bundlesize.config.json
@@ -241,7 +242,7 @@ For detailed performance checklists, optimization commands, and anti-pattern ref
 - List endpoints without pagination
 - Images without dimensions, lazy loading, or responsive sizes
 - Bundle size growing without review
-- No performance monitoring in production
+- A required production performance criterion lacks its agreed evidence
 - `React.memo` and `useMemo` everywhere (overusing is as bad as underusing)
 - Optimizations kept without a re-measurement that justifies them
 - Several optimizations bundled into one measurement, so no single change can be attributed
@@ -258,10 +259,10 @@ After any performance-related change:
 - [ ] Changes that didn't beat the baseline were reverted, not kept as neutral
 - [ ] Attempts are logged, kept and reverted alike, so a dead idea isn't re-run
 - [ ] The specific bottleneck is identified and addressed
-- [ ] Core Web Vitals are within "Good" thresholds
+- [ ] Applicable project performance targets are checked; a local result is not presented as field-proven Core Web Vitals
 - [ ] Bundle size hasn't increased significantly
 - [ ] No N+1 queries in new data fetching code
 - [ ] Any new index is justified by a query plan before and after, and its write cost was considered
 - [ ] Any new cache states what it keys on and how it goes stale
-- [ ] The measured user-facing metric has a synthetic budget or field monitor that can detect regression
+- [ ] The relevant existing regression check or repeatable measurement command is recorded; missing required field/CI evidence stays explicit without adding infrastructure
 - [ ] Existing tests still pass (optimization didn't break behavior)

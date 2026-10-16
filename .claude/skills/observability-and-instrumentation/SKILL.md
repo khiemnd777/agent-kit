@@ -1,18 +1,21 @@
 ---
 name: observability-and-instrumentation
-description: Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you need evidence it works. Use when production issues are reported but you can't tell what happened from the available data.
+description: Add or review logging, metrics, tracing or alerts needed for a specific operational question or approved reliability requirement. Use when existing telemetry cannot diagnose relevant behavior; ordinary production changes do not require a new observability platform or every signal type.
 ---
 
 # Observability and Instrumentation
 
+
+This skill provides technical guidance under the [single team workflow](../../../docs/team-workflow.md). Select techniques/checklist items relevant to the change. Examples add no approval rounds, required agents, per-edit reviews or universal test/release gates.
+
 ## Overview
 
-Code you can't observe is code you can't operate. Observability is the ability to answer "what is the system doing and why?" from the outside, using the telemetry the code emits. Instrumentation is not a post-launch add-on — it's written alongside the feature, the same way tests are. If a feature ships without telemetry, the first user-reported bug becomes archaeology instead of a query.
+Observability helps operators answer specific questions from emitted telemetry. First inspect the project's existing signals and operational requirements. Reuse signals that already answer the changed behavior's questions; add only the missing instrumentation justified by risk and approved scope. A feature does not automatically need new logs, metrics, tracing, dashboards and alerts together. New platforms/services and unapproved staging or production experiments remain separate work.
 
 ## When to Use
 
-- Building any feature that will run in production
-- Adding a new service, endpoint, background job, or external integration
+- An approved feature has an operational requirement that existing telemetry does not cover
+- A new service, endpoint, job or integration introduces a concrete diagnostic gap
 - A production incident took too long to diagnose ("we couldn't tell what happened")
 - Setting up or reviewing alerting rules
 - Reviewing a PR that adds I/O, retries, queues, or cross-service calls
@@ -20,7 +23,7 @@ Code you can't observe is code you can't operate. Observability is the ability t
 **NOT for:**
 - Diagnosing a failure happening right now — use the `debugging-and-error-recovery` skill (observability is what makes that skill fast next time)
 - Profiling and optimizing measured slowness — use the `performance-optimization` skill
-- Launch-day monitoring checklists and rollback triggers — see the `shipping-and-launch` skill; this skill covers the instrumentation that feeds them
+- Release execution and rollback decisions — use the project release/runbook instructions and [team workflow](../../../docs/team-workflow.md#acceptance-and-release); no additional skill is required
 
 ## Process
 
@@ -107,7 +110,7 @@ Both fields have to cross the same boundaries as the correlation ID — queue me
 
 ### 4. Metrics
 
-For request-driven services, instrument **RED** on every endpoint and every external dependency: **R**ate (requests/sec), **E**rrors (failure rate), **D**uration (latency histogram, not average). For resources (queues, pools, hosts), use **USE**: **U**tilization, **S**aturation, **E**rrors.
+When request health is the question, use existing or scoped **RED** signals for the affected endpoints/dependencies: **R**ate, **E**rrors and **D**uration. When resource saturation is the question, consider **USE**: **U**tilization, **S**aturation and **E**rrors. Do not instrument every endpoint/resource merely to complete this list.
 
 As with tracing, the vendor-neutral path is the OpenTelemetry metrics API (same SDK and context as step 5). The example below uses Prometheus' `prom-client` — one common backend choice, not the only one; the RED/USE and cardinality rules are identical either way.
 
@@ -133,7 +136,7 @@ Track averages never, percentiles always: an average hides the 1% of users havin
 
 ### 5. Distributed tracing
 
-Use OpenTelemetry — it's the vendor-neutral standard, and auto-instrumentation covers HTTP, gRPC, and common DB clients with near-zero code:
+When an approved cross-service diagnostic question needs tracing, reuse the project's tracing stack. OpenTelemetry is one option if its setup is within scope; this example is not a requirement to add a tracing platform:
 
 ```typescript
 // tracing.ts — must be imported before anything else
@@ -167,7 +170,7 @@ Rules for every alert you create:
 1. **It must be actionable.** If the response is "ignore it, it self-heals", delete the alert.
 2. **It links to a runbook** — even three lines: what it means, first query to run, escalation path.
 3. **It has a threshold and duration** justified by the SLO or by historical data, not by a guess.
-4. Use two severities only: **page** (user-facing, act now) and **ticket** (degradation, act this week). A third tier becomes noise that trains people to ignore everything.
+4. Use the project's established severity names, levels and routing. Match the alert's intended urgency to that scheme. **Page** (immediate response) and **ticket** (deferred follow-up) illustrate response urgency; they are not mandatory severity-field values or a two-level limit. A local alert addition/change does not require migrating the existing schema, routing or runbooks to match these examples. If no convention exists, choose a minimal useful scheme for the actual operational needs within the approved scope.
 
 #### Writing Runbooks
 
@@ -189,7 +192,7 @@ Rule 2 above requires every alert to link to a runbook. A runbook's job is to an
 
 ### 7. Verify the telemetry itself
 
-Instrumentation is code; it can be wrong. Before calling the work done, trigger the paths and look at the actual output:
+Verify the instrumentation actually changed, using available authorized environments. Select only applicable observations below; do not induce staging/production failures, send alert notifications or provision platforms without authority. Missing required evidence remains explicit:
 
 - Force an error in staging → find it in the logs by `requestId`, confirm fields are structured (not `[object Object]`)
 - Send test traffic → confirm metric series appear with the expected labels and sane values
@@ -206,11 +209,11 @@ Instrumentation is code; it can be wrong. Before calling the work done, trigger 
 | "We can just look at the dashboards when something breaks" | Dashboards built without defined questions show you everything except the answer. Start from on-call questions. |
 | "Alert on everything important, we'll tune later" | A noisy pager trains people to ignore it. The tuning never happens; the missed real page does. |
 | "User ID as a metric label makes debugging easier" | It also makes your metrics backend fall over. High-cardinality lookups belong in logs and traces. |
-| "Tracing is overkill for our two services" | Two services already means cross-service latency questions logs can't answer. Auto-instrumentation makes the cost trivial. |
+| "Every feature needs tracing" | Add tracing for a concrete cross-service question that existing signals cannot answer, within approved scope. Service count alone does not require a new platform. |
 
 ## Red Flags
 
-- A feature PR with retries, queues, or external calls and zero new telemetry
+- Retries, queues or external calls introduce a diagnostic gap that existing telemetry does not cover
 - Log lines built by string interpolation instead of structured fields
 - No correlation/request ID — each log line is an orphan
 - One log stream fed by a scheduler, a webhook, and manual runs, with no field naming which one produced the line
@@ -223,16 +226,14 @@ Instrumentation is code; it can be wrong. Before calling the work done, trigger 
 
 ## Verification
 
-After instrumenting a feature, confirm:
+For the instrumentation changed in this task:
 
-- [ ] The on-call questions for this feature are written down, and each signal maps to one
-- [ ] All log output is structured (JSON), with stable event names and a correlation ID on every line
-- [ ] Every log sink written by more than one entry point carries an entry-point field, set where the run starts and propagated with the correlation ID rather than inferred downstream
-- [ ] No secrets, tokens, or unredacted PII in any log line (spot-check actual output)
-- [ ] RED metrics exist for every new endpoint and every external dependency, with bounded label sets
-- [ ] Latency is a histogram; p95/p99 are queryable
-- [ ] A single request can be followed end-to-end in the tracing UI without broken spans
-- [ ] Every new alert is symptom-based, has a runbook link, and was test-fired once
-- [ ] An induced failure in staging was located via telemetry alone, without reading the source
+- [ ] Each added/changed signal answers a concrete operational question or project requirement
+- [ ] Changed logs use structured fields and relevant correlation/entry-point context
+- [ ] Changed telemetry does not expose secrets, tokens or unredacted personal data
+- [ ] Selected metrics use bounded labels and an appropriate latency distribution
+- [ ] If tracing changed, the affected path preserves trace context
+- [ ] If an alert changed, it is actionable, has an owner/runbook and was checked within authorized scope
+- [ ] Actual output was observed where tools/authority allow; required unavailable observations remain NOT_RUN
 
-For the at-a-glance version of this list, including the pre-launch instrumentation gate, see `../../references/observability-checklist.md`.
+The [checklist](../../references/observability-checklist.md) is a menu of applicable checks. Only the project's actual release requirements can make a telemetry item a release gate; this skill adds none.

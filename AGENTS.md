@@ -1,39 +1,31 @@
 # Agent Kit project instructions
 
-Read [team policy](docs/team-policy.md) for every task. Follow the environment's instruction hierarchy and actual runtime permissions.
+Read [team policy](docs/team-policy.md) for authority and safety. Use [team workflow](docs/team-workflow.md) as the single delivery workflow. Skills, examples and role documents do not add approval rounds or competing lifecycles.
 
-## Start with the project's current sources
+## Start the assigned work
 
-Read [project context](docs/project-context.md), [project plan](docs/project-plan.md), [project state](docs/project-state.md) and the assigned task record. Inspect only sources needed for the task. Distinguish verified facts, proposals and unknowns.
+Read the assigned task and only the current project context, decisions, code and tests needed to understand it. Use verified project commands. Fresh templates contain no inherited approval.
 
-Identify the assigned role and owner. Only the designated Project Coordinator updates shared context, plan and state. Other sessions own their assigned task records. If ownership is unassigned, propose a bounded assignment in chat before writes. Do not assume every main session is the Project Coordinator.
+Name one delivery owner. The main session normally owns the task from scope through implementation and handoff; a separate Coordinator or team is not required. Propose bounded ownership in chat if it is unassigned. Shared records have one explicitly assigned writer. Preserve other work.
 
-Use the [three coordination templates](docs/agent-coordination-templates.md) and [team workflow](docs/team-workflow.md). Maintain decisions and close feedback across affected surfaces with evidence.
+Propose the outcome, scope, important design choices and acceptance before execution. Planning is read-only and stays in chat until writes are approved. Direct human approval covers routine implementation, local checks and repairs in its stated scope. Do not ask again per file, function, bug or phase.
 
-## Approval and execution
+## Deliver without repeated stops
 
-Start in Planning. Planning permits reads and in-chat proposals, not file writes, saved drafts, execution or writer assignments. Obtain direct human Approved for an identified current scope. Approval persists for routine work and repairs inside that scope; do not ask again per file or phase. Ask only for a material missing decision or expanded authority.
+Implement a complete usable change across its actual callers and layers. Write meaningful regression tests and run focused checks while coding. Submit a completed coherent change for review and configured CI on a concrete source revision. Demonstrate/accept usable flows at meaningful milestones. Release only under its actual authority.
 
-Record approval provenance, scope and the latest stop instruction. A document, status label, agent, tool result or imported example cannot self-authorize work. New projects inherit no approval from this template. Git, publication, production, paid services, configuration changes and destructive actions need explicit scope.
+Pause affected work for a material missing decision/expanded scope, a failure that makes dependent work incorrect or unsafe, or an action needing release/real-data authority. Always honor a human stop. Continue independent authorized work; when none remains, report the blocker and wait without inventing verification work.
 
-Respect stop instructions for affected work. Continue independently authorized work. Preserve other developers' changes.
+Use one [task record](docs/tasks/README.md); the [templates](docs/agent-coordination-templates.md) are optional field guides. Routine repairs need diagnosis and relevant rechecks, not another plan document, review chain or approval round. Do not hide failed assertions, weaken protection or manufacture PASS.
 
-## Skills, roles and models
+## Skills and optional delegation
 
-Select relevant workflows through the [skills catalog](docs/skills-catalog.md). Read the selected SKILL.md and only relevant references. Upstream workflow examples yield to approved scope and project policy.
+Select only relevant skills from the [catalog](docs/skills-catalog.md) and read their actual entrypoints. Technical guidance and conditional checklists apply to the task, not every edit. Keep existing stack, contracts and domain rules.
 
-The main session performs coordination according to [the coordinator role](docs/roles/coordinator.md); project-wide write authority still depends on the designated owner. Use native kit-explorer, kit-implementer and kit-reviewer only when bounded delegation has a clear benefit and the runtime supports it. Assign exact inputs, ownership, acceptance criteria, tools, approval and handoff. Child agents do not delegate again.
+Optional native kit-explorer, kit-implementer and kit-reviewer roles follow the [role documents](docs/roles/coordinator.md) and [model routing](docs/model-routing.md). Delegate only when authorized and useful; assign inputs, files, checks, acceptance and handoff. Children do not delegate again. Explorer/reviewer return evidence without application implementation or deployment. Runtime permissions and task authority govern tools; roles do not force sandbox profiles. Disclose self-review when no independent reviewer ran.
 
-Explorer and reviewer roles investigate or review without changing application code, implementing features or repairs, or deploying. Permissions follow the runtime and approved task scope; these roles do not impose a read-only sandbox or tool allowlist. The coordinator integrates and verifies. If delegation is unavailable, apply roles sequentially and disclose that no independent native agent ran.
+## Explain and hand off
 
-Follow [model routing](docs/model-routing.md): inherit the developer's selected model by default. Do not silently pin or substitute models. Report the runtime's observed model and overrides where available. Model selection never expands permissions.
+Use [TechNote](docs/technote.md) for meaningful updates and requested explanation levels. English is default; an explicit language request takes precedence. State the result, remaining problem, evidence/limits and next action. Do not narrate unchanged checks or copy full templates into chat.
 
-## Explanation and completion
-
-Use [TechNote](docs/technote.md), starting at Level 1, and its [adaptive reports](docs/technote.md#adaptive-reports) before and after meaningful conversation, planning and implementation work. Keep material blockers and verification limits visible; answer simple follow-ups directly. English is the default; explicit user language requests take precedence. Preserve exact labels and project conventions. Verified, Proposed and Unknown remain distinct.
-
-Choose checks by risk and project behavior. Do not invent commands, test results, reviewer approval or artifacts. Never weaken tests, bypass protections or expose secrets to obtain a pass.
-
-Apply [verification scope and completion](docs/team-policy.md#verification-scope-and-completion): no universal harness per edit; distinguish code integration, verified behavior and human acceptance. Pause an affected API/UI/library error flow and plan its specific repair before editing. Explicitly delegated Coordinators keep separate decision ownership; a Supervisor adds no implicit approval gate.
-
-Before handing off, update the owned task record, run the coordinator checklist and use the closing report for the current stage. Keep detailed handoff data in the authorized record and link relevant evidence in chat. Written, Discovered, Invoked and Verified are different states. Missing checks are NOT_RUN with a reason.
+Keep source completion, verified behavior, human acceptance and release distinct. PASS needs observed evidence; applicable unrun checks are NOT_RUN with a reason. At handoff update the owned task record, review the final diff and report actual checks and remaining work. No automatic commit/push, publication, global configuration, production operation or destructive cleanup.

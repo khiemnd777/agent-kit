@@ -5,6 +5,9 @@ description: Hardens code against vulnerabilities. Use when auditing an input ha
 
 # Security and Hardening
 
+
+This skill provides technical guidance under the [single team workflow](../../../docs/team-workflow.md). Select techniques/checklist items relevant to the change. Examples add no approval rounds, required agents, per-edit reviews or universal test/release gates.
+
 ## Overview
 
 Security-first development practices for web applications. Treat every external input as hostile, every secret as sacred, and every authorization check as mandatory. Security isn't a phase — it's a constraint on every line of code that touches user data, authentication, or external systems.
@@ -50,9 +53,11 @@ If you can't name the trust boundaries for a feature, you're not ready to secure
 - **Hash passwords** with bcrypt/scrypt/argon2 (never store plaintext)
 - **Set security headers** (CSP, HSTS, X-Frame-Options, X-Content-Type-Options)
 - **Use httpOnly, secure, sameSite cookies** for sessions
-- **Run the detected package manager's native audit** against the committed lockfile before every release
+- **Run the detected package manager's native audit** against the authoritative lockfile for the release candidate before every release
 
-### Ask First (Requires Human Approval)
+### Apply existing approval; ask only for a missing security decision
+
+The changes below need a confirmed security/data boundary. If the current human-approved scope already covers that boundary, implement and verify without asking again per handler, file or phase. Ask only for an unapproved material change, such as new sensitive-data use, external sharing, elevated access or weaker protection. Continue unaffected authorized work.
 
 - Adding new authentication flows or changing auth logic
 - Storing new categories of sensitive data (PII, payment info)
@@ -87,7 +92,7 @@ Patterns: [Injection](references/hardening-patterns.md#injection), [XSS](referen
 ### Authentication and sessions
 
 - Hash passwords with bcrypt (≥12 rounds), scrypt, or argon2. The session secret comes from the environment, never from code.
-- Session cookies are `httpOnly`, `secure`, and `sameSite: 'lax'` or `'strict'` (the CSRF defense; `'none'` sends the cookie on cross-site requests), with a bounded `maxAge`.
+- Session cookies are `httpOnly`, `secure`, and `sameSite: 'lax'` or `'strict'` (the CSRF defense; `'none'` sends the cookie on cross-site requests), with a bounded `maxAge`. Select between those values using the established project session/CSRF policy and required flows. An approved `'strict'` configuration does not fail this check merely because a worked example uses `'lax'`; do not change that configuration just to match the example.
 
 Pattern: [Authentication](references/hardening-patterns.md#broken-authentication).
 
@@ -126,15 +131,15 @@ Pattern: [Rate limiting](references/hardening-patterns.md#rate-limiting).
 
 ### Secrets
 
-Secrets come from the environment. `.env.example` is committed with placeholders; real `.env*` files and key material are gitignored; grep the staged diff before committing. **A secret that reaches a remote is compromised the moment it lands: rotate it first, then purge history.**
+Secrets come from the environment. Prepare `.env.example` with placeholders and keep real `.env*` files and key material gitignored. Inspect the relevant diff for secrets; inspect the staged diff again if committing is separately authorized. **A secret that reaches a remote is compromised the moment it lands: rotate it first, then purge history.**
 
 Pattern: [Secrets management](references/hardening-patterns.md#secrets-management).
 
 ### Dependencies and supply chain
 
 1. **Find the installation boundary and manager.** Use the workspace root that owns the lockfile, or an independent nested project only when it is outside that workspace. Corroborate `packageManager` (when present), the lockfile, and CI; stop on disagreement or competing lockfiles. Pin the manager version.
-2. **Block dependency scripts before first execution.** Bootstrap with scripts disabled or a documented fail-closed policy, inspect the pending script source, approve only the minimum, commit the policy, then verify with a clean frozen/immutable install. Never blanket-approve.
-3. **Run the native audit against the committed lockfile before every release.** Triage critical/high by **reachability** (runtime, build, test, deploy paths) and fix availability. Never apply forced remediation (`npm audit fix --force` or equivalent) automatically, since forced fixes may cross declared dependency ranges; preview, read changelogs, test each upgrade. Document every deferral with a reason and a review date.
+2. **Block dependency scripts before first execution.** Within authorized installation scope, bootstrap with scripts disabled or a documented fail-closed policy, inspect the pending script source, allow only the minimum and persist the policy in the working tree before a clean frozen/immutable verification. A commit is not a prerequisite for local verification; stage/commit/push only with explicit Git authority. Never blanket-approve.
+3. **Run the native audit against the authoritative lockfile for the release candidate before every release.** Triage critical/high by **reachability** (runtime, build, test, deploy paths) and fix availability. Never apply forced remediation (`npm audit fix --force` or equivalent) automatically, since forced fixes may cross declared dependency ranges; preview, read changelogs, test each upgrade. Document every deferral with a reason and a review date.
 4. **Audits only match known advisories.** They do not catch a newly malicious or typosquatted package (`cross-env` vs `crossenv`). Review new dependencies, lockfile diffs, and script-policy changes together: ownership, maintenance, release age, provenance, transitive graph. Verify registry signatures where supported (`npm audit signatures`, `pnpm audit signatures`) and treat their absence as a signal to investigate, not automatic proof of compromise (A06, LLM03).
 
 Triage decision tree: [Dependency audit triage](references/hardening-patterns.md#dependency-audit-triage). Manager matrix and install-script gate: `../../references/security-checklist.md`.
@@ -163,7 +168,7 @@ Pattern: [LLM output handling](references/hardening-patterns.md#llm-output-handl
 
 ## Review Checklist
 
-Before sign-off, walk `../../references/security-checklist.md`: it covers authentication, authorization, input, data protection and privacy, headers and CORS, dependencies and supply chain, AI/LLM, and error handling, plus the OWASP quick-reference tables.
+Before sign-off, select the affected trust boundaries and controls from `../../references/security-checklist.md`. Review the changed behavior and any evidenced security impact on its callers; this is not a full-project audit for every local change. Dependency audit/install-policy checks apply when dependencies or that policy change, or when actual release requirements call for them. Missing unrelated CI/audit infrastructure does not create setup work or block source completion; an unmet required release criterion stays open with its owner.
 
 ## Common Rationalizations
 
@@ -200,17 +205,15 @@ Before sign-off, walk `../../references/security-checklist.md`: it covers authen
 
 ## Verification
 
-After implementing security-relevant code:
+Select checks for the changed behavior and actual task/release criteria. Reuse valid evidence for untouched controls:
 
-- [ ] The native audit has no unmitigated reachable critical/high findings; CI preserves the authoritative lockfile and blocks unreviewed dependency scripts
-- [ ] No secrets in source code or git history
-- [ ] All user input validated at system boundaries
-- [ ] Destructive filesystem operations resolve symlinks, then verify allowlisted root, minimum depth, and ownership before running
-- [ ] Authentication and authorization checked on every protected endpoint
-- [ ] Security headers present in response (check with browser DevTools)
-- [ ] Error responses don't expose internal details
-- [ ] Rate limiting active on auth endpoints, backed by a shared store when more than one instance serves traffic
-- [ ] Server-side URL fetches validated against an allowlist (no SSRF)
-- [ ] LLM/model output validated and encoded before use (if AI features present)
-- [ ] Personal data is classified, minimized to a stated purpose, and has a retention limit
-- [ ] Deletion and export requests work end-to-end (including backups, caches, and analytics copies)
+- [ ] The relevant diff/artifacts introduce no exposed secrets; a discovered exposure is handled under the project's incident authority
+- [ ] Changed input boundaries validate untrusted values; changed error responses conceal internal details
+- [ ] Affected protected paths retain authentication, resource/tenant authorization and denied-access coverage
+- [ ] If destructive filesystem behavior changes, target containment and ownership protections remain verified
+- [ ] If headers, sessions, auth throttling or deployment topology change, their affected protections are checked
+- [ ] If server fetches or AI/LLM behavior change, the affected URL/output trust boundaries are checked
+- [ ] If personal-data collection, retention, sharing or export/deletion behavior changes, the affected lifecycle and stores are checked
+- [ ] If dependencies/install policy change, or release scope requires it, audit reachability and script/lockfile controls have appropriate evidence; required missing proof stays open
+
+A local validator fix does not require a whole-history scan, audit-tool installation or new CI policy merely to finish this checklist. Do not dismiss an evidenced security defect affecting the agreed behavior as unrelated debt. Mandatory project release/security controls remain binding at their actual boundary.

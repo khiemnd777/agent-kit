@@ -1,11 +1,11 @@
 # Project state
 
-Fresh project state. These values are not the status of Agent Kit's own release.
+Optional fresh project summary; link task records rather than duplicate their checklists. These values are not the status of Agent Kit's own release.
 
 | Field | Current value |
 | --- | --- |
 | Updated | Not initialized |
-| Project Coordinator | Unassigned |
+| shared-record owner | Unassigned |
 | Current goal | Unspecified |
 | Current plan revision | Unspecified |
 | Mode | Planning |
@@ -21,4 +21,4 @@ Fresh project state. These values are not the status of Agent Kit's own release.
 | Latest feedback | None |
 | Next action | Propose the project goal, roles and bounded plan in chat |
 
-The designated Project Coordinator maintains this summary and links to task records. Distinguish integrated commits from branch results, and agent checks from human acceptance. Verify approval provenance before continuing from another session.
+The designated shared-record owner maintains this summary and links to task records. Distinguish integrated commits from branch results, and agent checks from human acceptance. Verify approval provenance before continuing from another session.

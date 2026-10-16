@@ -1,5 +1,7 @@
 # TechNote
 
+Delivery follows the [single team workflow](team-workflow.md); TechNote changes presentation, not delivery order or approval.
+
 TechNote is a four-level method for explaining technical work. Use it for investigation, planning, review and solution explanations. Start at Level 1 unless the user requests another level. An explicit request such as “TechNote Level 3: booking conflicts” selects the medium and topic; it does not require delivery of earlier levels.
 
 Use English by default. Follow an explicit request for another language. Preserve exact product labels, quotations, identifiers and project naming conventions. The user chooses when to advance, revisit a level or request more detail. Silence does not establish understanding or approval.

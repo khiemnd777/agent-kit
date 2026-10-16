@@ -1,15 +1,7 @@
 # Task records
 
-Create one `TASK-ID.md` per actual task only when documentation writes are authorized. The assigned Task Owner maintains that file on their branch. Use the [assignment and state templates](../agent-coordination-templates.md).
+Use one existing issue/task record for a coherent change. Create a Markdown task only when writes are authorized and the project has no preferred tracker. The delivery owner maintains the record through implementation, repairs, review and handoff. Use the [field guides](../agent-coordination-templates.md) only where useful.
 
-A task record contains:
-- Goal, plan revision, human approval source and latest stop.
-- Developer owner, runtime/role, branch/base commit and exact file ownership.
-- Dependencies, agreed contracts and acceptance criteria.
-- Model routing intent and observed model/capabilities where available.
-- Actual check commands/results, feedback, findings and limits.
-- Handoff branch/commit, receiver and concrete next action.
+Record the outcome/acceptance, approved scope and human source, ownership, relevant design decisions and source revision. At handoff add actual checks/results/limits, concrete remaining defects and next action. Update the same record for routine repairs; do not create a new plan, phase ledger or receipt per bug.
 
-Keep one current task state with traceable history. The coordinator indexes tasks in project-plan and summarizes integration in project-state. Task owners do not edit shared state without assigned ownership.
-
-Example naming: `TASK-001.md`. No example task or approval is pre-created in this template.
+Shared context/plan/state are optional project summaries with one named writer. Link tasks rather than duplicate them. Preserve past decisions and historical verification; new projects inherit no authority. A task state is not approval or human acceptance.

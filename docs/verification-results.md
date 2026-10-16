@@ -180,3 +180,62 @@ The approved-template path now requires template identity and prerequisites befo
 | Independent review and human product acceptance | NOT_RUN | The main session performed sequential source self-review; no independent native reviewer or product acceptance was requested or claimed. |
 
 Historical verification sections above retain their original observations. This maintenance result establishes local package and instruction consistency only; adopting projects must gather their own rendered evidence under their own approval.
+
+
+## Four feature / verification-infrastructure boundaries — 2026-10-16
+
+Current maintenance record: [KIT-HARNESS-BOUNDARIES-001 v1 / TASK-006](tasks/TASK-006.md). Khiêm directly approved the four boundaries and six skills plus Claude mirrors, excluding Pinky Lamb changes, a new harness and commit/push. This maintenance task does not change fresh project context/plan/state or grant authority to an adopting project.
+
+Policy, workflow and task assignment guidance distinguish business tests using the existing runner from verification-infrastructure implementation. Harness start/collection failures stop that attempt without harness repair/replacement/replay under feature approval. Source changes invalidate affected evidence instead of creating a new generation/namespace/review chain solely for a stale receipt. Application startup and requests retain necessary runtime protections while keeping agent/session/model/effort/coordination receipts outside operating conditions.
+
+The six adapted skills are debugging-and-error-recovery, test-driven-development, code-review-and-quality, code-simplification, context-engineering and spec-driven-development. Their Claude copies match the canonical content. Universal full-suite-per-implementation/refactor-step instructions, reviewer mutation edits, session/task-based reruns and per-phase human reapproval were removed. Failed business assertions, initial/material-change approval and required unproved acceptance criteria remain binding.
+
+The original upstream pin, origin metadata and license remain intact. Five canonical upstream entrypoints are newly marked as local adaptations; code-review-and-quality retains its earlier template adaptation and adds this approved change. Current total: 15 original / 11 adapted of 26 upstream canonical files. Historical observations above remain historical.
+
+Initial local checks: published package-integrity recipe PASS; 12 entrypoint frontmatters/name/description/scaffold checks via existing Ruby/Psych PASS; git diff --check PASS. The bundled quick_validate.py is NOT_RUN because its PyYAML dependency is absent; no installation or retry occurred. Final scope/link/preservation/package evidence and the reviewed handoff are recorded in TASK-006.
+
+Native discovery/compliance with the four boundaries, effective model/permission behavior, two-machine compatibility, application/runtime behavior and independent native review remain NOT_RUN/Unknown. No new runner, fixture or harness was created. This record establishes instruction/package changes and local checks, not a Pinky Lamb repair or a measured reduction in tokens/time. Commit/push remains excluded.
+
+
+## Continuous workflow remake — 2026-10-17
+
+Current maintenance: [KIT-CONTINUOUS-WORKFLOW-001 v1 / TASK-007](tasks/TASK-007.md). Khiêm directly approved replacing old workflow instructions and synchronizing Claude, excluding Pinky Lamb, a new harness and commit/push. Prior records remain historical; TASK-006's four-boundary wording is superseded as active guidance by the continuous workflow.
+
+The single workflow now owns delivery. Developer tests accompany implementation; review/CI evaluates completed coherent changes; acceptance checks usable flows at milestones. One delivery owner is the default. Routine in-scope product/test/config repairs continue without new approval documents, while independent shared infrastructure faults have an owner. No per-edit reviewer, phase approval, default Supervisor/Coordinator or mandatory native scenario campaign is introduced.
+
+Nine process aids, seven technical skill routing notes, shared references, entrypoints/roles/native instruction bodies and onboarding/summary guidance align with that workflow. Original skill metadata, upstream origins/pin/license, native schema/model/permission intent and historical evidence are retained. Current local check results and exact scope are in TASK-007.
+
+Native discovery/workflow compliance, effective runtime settings, independent native review, two-machine collaboration, application behavior and measured delivery-speed/token improvements remain NOT_RUN/Unknown. Source/package consistency is not behavioral proof, human acceptance or a repair to Pinky Lamb. No new harness, installation, application execution or Git write is part of this maintenance.
+
+
+Final local result for TASK-007: PASS for the existing package recipe (81 entries, 28 mirror pairs, 17 skills/root, 8 original / 18 adapted upstream files), 37 YAML frontmatters and three TOML definitions, 275 local links/anchors, exact 67-file remake scope and preservation of 27 other starting files, plus whitespace and unchanged HEAD/empty index. All 34 skill frontmatters and original upstream origins/license are retained. quick_validate.py remains NOT_RUN because PyYAML is absent; existing Ruby/Psych provides separate metadata evidence. Sequential source review is complete; native behavior, independent review, two-machine operation and measured speed/token improvements remain unverified. The exact current evidence and next action are in TASK-007; no commit/push occurred.
+
+## Eight-finding correction to the remake — 2026-10-17
+
+Current maintenance remains [TASK-007](tasks/TASK-007.md#approved-eight-finding-correction--2026-10-17). Khiêm approved fixing exactly the eight subsequent review findings, P1 first, with Claude synchronization and no Pinky Lamb changes, new harness or commit/push. That review superseded the initial self-review's no-unresolved-finding conclusion; the earlier observations above are preserved.
+
+The correction adds a tooling stop based on restoring the original blocked check and valid result, scopes source research and security approval to actual missing decisions, removes mandatory RUM/CI/observability platform setup, line-count splits and commit prerequisites, and replaces missing-skill routes. Actual security/data protections, business assertions and project release requirements remain binding. Seven skill pairs, three reference pairs, workflow and package/evidence records are affected. Original upstream metadata remains intact; current adaptation counts are 21 adapted / 5 original. Source-driven and observability descriptions are narrowed; the skill inventory and native adapters are unchanged.
+
+Current local result: PASS for the existing package recipe (81 entries, 28 mirror pairs, 17 skills/root, 21 adapted / 5 original upstream files), Ruby/Psych parsing of 37 YAML frontmatters, 144 affected local links/anchors, exact 25-file follow-up scope with 69 other source files byte-identical, historical prefixes/provenance preservation and whitespace/unchanged HEAD/empty index. No source file was added/deleted. The full commands, eight source-review cases and limits are recorded in TASK-007. The bundled quick validator remains NOT_RUN because PyYAML is absent; Ruby/Psych is separate evidence.
+
+No native/application/independent behavioral review or speed/token experiment is part of this correction. Static package/source checks cannot prove that an agent will comply or that delivery is faster. Source corrections and Claude synchronization are complete; human acceptance, commit/push and runtime claims are not inferred.
+
+## Seven remaining instruction conflicts corrected — 2026-10-17
+
+Current maintenance remains [TASK-007](tasks/TASK-007.md#approved-seven-finding-correction--2026-10-17). Khiêm approved fixing exactly the seven subsequent review findings with Claude synchronization and no Pinky Lamb changes, new harness or commit/push. Prior observations remain historical.
+
+The correction scopes local security checks, UI evidence and documentation to the affected change; removes the invalid standalone axe-core command and automatic props-depth refactor; classifies failures before undoing performance work; and preserves valid assertions when retiring tests. Actual security/release criteria, approved-template fidelity and the existing tooling stop remain binding. Four skill pairs, two reference pairs and package/evidence records are affected. All frontmatter and original upstream metadata are retained; current adaptation counts are 23 adapted / 3 original.
+
+Current local result: PASS for the existing package recipe (81 entries, 28 mirror pairs, 17 skills/root, 23 adapted / 3 original upstream files), Ruby/Psych parsing of 37 YAML frontmatters, 102 affected local links/anchors, exact 16-file follow-up scope with 78 other files byte-identical, historical prefix/provenance/frontmatter preservation and whitespace/unchanged HEAD/empty index. No source file was added/deleted. Actual commands, seven source cases and limits are recorded in TASK-007. The bundled quick validator remains NOT_RUN because PyYAML is absent; Ruby/Psych is separate evidence.
+
+The seven approved source corrections and Claude synchronization are complete. No native/application/independent behavioral review or speed/token experiment is included. Source/package checks do not prove agent compliance, runtime improvement or human acceptance. No new harness, installation, Pinky Lamb change or Git mutation occurred; commit/push remains excluded.
+
+## Cookie and severity instruction conflicts corrected — 2026-10-17
+
+Current maintenance remains [TASK-007](tasks/TASK-007.md#approved-two-conflict-correction--2026-10-17). Khiêm approved correcting exactly the two remaining review findings and synchronizing Claude, excluding Pinky Lamb, a new harness and commit/push. Previous observations remain historical.
+
+Security skill/checklist now agree on Lax/Strict cookie choices under the established project session/CSRF policy. Observability skill/checklist preserve project severity names, level count and routing; page/ticket are urgency examples. Neither correction changes application configuration or introduces another approval/review stage. Frontmatter, inventory, native adapters, workflow/P1 stop and upstream origins/pin/license remain intact; adaptation counts remain 23 adapted / 3 original.
+
+Current local result: PASS for the existing package recipe (81 entries, 28 mirror pairs, 17 skills/root, unchanged 23 adapted / 3 original upstream files), Ruby/Psych parsing of 37 YAML frontmatters, 97 local links/anchors, exact 12-file follow-up scope with 82 other files byte-identical, historical prefix/frontmatter/provenance preservation, whitespace and unchanged HEAD/empty index. No source file was added/deleted. Actual checks, cases and limits are in TASK-007. The bundled quick validator remains NOT_RUN because PyYAML is absent; Ruby/Psych is separate evidence.
+
+The two source corrections and Claude synchronization are complete. Native/application cookie/auth/alert behavior, independent review, effective runtime settings, two-machine operation and speed/token effects remain NOT_RUN/Unknown. No application configuration, Pinky Lamb source, new harness, dependency, global setting or Git state was changed; commit/push remains excluded. Source/package checks do not establish runtime success or human acceptance.

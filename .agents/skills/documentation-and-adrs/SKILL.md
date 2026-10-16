@@ -5,6 +5,9 @@ description: Records decisions and documentation. Use when you need to document 
 
 # Documentation and ADRs
 
+
+This skill provides technical guidance under the [single team workflow](../../../docs/team-workflow.md). Select techniques/checklist items relevant to the change. Examples add no approval rounds, required agents, per-edit reviews or universal test/release gates.
+
 ## Overview
 
 Document decisions, not just code. The most valuable documentation captures the *why* — the context, constraints, and trade-offs that led to a decision. Code shows *what* was built; documentation explains *why it was built this way* and *what alternatives were considered*. This context is essential for future humans and agents working in the codebase.
@@ -278,11 +281,12 @@ Special consideration for AI agent context:
 
 ## Verification
 
-After documenting:
+Check documentation affected by this task, in the project's existing locations:
 
-- [ ] ADRs exist for all significant architectural decisions
-- [ ] README covers quick start, commands, and architecture overview
-- [ ] API functions have parameter and return type documentation
-- [ ] Known gotchas are documented inline where they matter
-- [ ] No commented-out code remains
-- [ ] Rules files (CLAUDE.md etc.) are current and accurate
+- [ ] A significant architectural decision made or changed by this task has its rationale recorded; use an ADR when that is the applicable convention
+- [ ] Setup/commands/architecture instructions are updated if this task changes them
+- [ ] Changed public API contracts have the relevant parameter, result and error documentation/types
+- [ ] Gotchas introduced or encountered in the affected flow are recorded where useful
+- [ ] Project rules are updated only if this task intentionally changes an agent-facing convention
+
+Do not backfill historical ADRs, rewrite unrelated API documentation or clean commented-out code across the repository to close a local documentation task. Existing documentation debt stays separate unless it blocks the agreed outcome or is explicitly included in scope.
