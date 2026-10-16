@@ -17,9 +17,39 @@ Shared project instructions, 17 technical skills and three optional native agent
 
 [Team workflow](docs/team-workflow.md) is the single delivery process:
 
-**Agree scope once -> implement with focused tests -> review/CI a complete change -> accept a usable flow -> release when authorized.**
+```mermaid
+flowchart TD
+    A["Agree scope, design and acceptance once<br/>Human + delivery owner"]
+    B["Implement a complete usable change<br/>Code + focused developer tests"]
+    C["Review + configured CI<br/>Completed coherent revision"]
+    D["Accept a usable flow<br/>QA / authorized human at a milestone"]
+    E["Release under explicit authority<br/>Required release controls + operation check"]
 
-These are moments in delivery, not approval gates after every file. Developer tests are part of coding. Review evaluates a concrete completed change. QA/human acceptance checks usable flows at milestones. Continue independent authorized work during review/CI waits, or hand off the waiting state without inventing work.
+    A --> B --> C --> D --> E
+    C -->|Concrete defect: routine repair| B
+    D -->|Flow defect: routine repair| B
+```
+
+One delivery owner carries the change through this flow. These are moments in delivery, not approval gates after every file. Developer tests are part of coding. Review evaluates a concrete completed change. QA/human acceptance checks usable flows at milestones. Routine repairs keep the existing approval and recheck only affected findings/checks; reuse unchanged evidence. Continue independent authorized work during review/CI waits, or hand off the waiting state without inventing work.
+
+If tooling prevents a check from running, use this bounded recovery path:
+
+```mermaid
+flowchart TD
+    T["Tooling blocks an existing check"]
+    R["Make a focused repair within scope<br/>Rerun the original check"]
+    Q{"Original check reaches its intended checkpoint<br/>and reports a valid result?"}
+    P["Resume product work<br/>Fix real failed assertions within scope"]
+    S["Stop tooling edits in this task<br/>Report blocker + maintenance owner/action"]
+    I["Continue independent authorized work<br/>Keep missing evidence open"]
+
+    T --> R --> Q
+    Q -->|Yes| P
+    Q -->|No, even if the error changed| S
+    S --> I
+```
+
+The checkpoint is the original assertion or usable-flow check. A new error, input, agent or session does not reset the tooling limit. Further tooling work needs explicit maintenance scope; see [failure handling](docs/team-workflow.md#failures-and-blockers).
 
 Pause only affected work for material missing decisions/expanded authority, incorrect or unsafe dependencies, or an action requiring release/real-data authority. Always honor human stops. See [policy](docs/team-policy.md) for permission/data boundaries.
 

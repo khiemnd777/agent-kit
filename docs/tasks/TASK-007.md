@@ -274,3 +274,19 @@ This is the current acceptance/authority for Git delivery. It supersedes the ear
 Delivery owner: this main session. Destination: the current `main` branch and its `origin/main` upstream at `https://github.com/khiemnd777/agent-kit.git`. Scope: all 76 modified tracked Agent Kit files plus the existing untracked TASK-006 and TASK-007 records, including this acceptance entry. No Pinky Lamb changes, new harness, installation, global configuration, application execution, force push or history rewrite is included.
 
 At delivery preparation, all 94 source files matched the final accepted-review snapshot, HEAD was `919ce6b8d84c8ac5ad4ce473ad6e6c2c9973d2ac`, the index was empty and no active commit/push hooks were found. Existing package/source evidence remains valid; only this mutable task record is updated for acceptance and Git authority. Run the normal stage/whitespace/commit/push flow and compare actual local/remote SHA, divergence and final worktree state. The resulting commit/history and final delivery report record the actual SHA and push outcome; authorization alone does not establish push success.
+
+## README workflow diagrams — 2026-10-17
+
+After delivery of `ef1fa545992a9a49a9f124c29a97bd92043b62a8`, Khiêm requested: “Tao muốn mày vẽ workflow này trong README.” The main session owns this documentation follow-up. Scope: `README.md`, its digest in `docs/skills-manifest.json`, and this existing task record. The request authorizes the documentation edit; this follow-up is not committed or pushed.
+
+README now diagrams the accepted delivery flow and the bounded tooling recovery path in two Mermaid blocks. Routine defects return to implementation under the existing approval, with affected rechecks and reuse of unchanged evidence. Tooling that still cannot reach the original checkpoint/report a valid result after focused repair stops in this task, even when the error changes. The diagrams describe the existing team workflow and introduce no new process or harness.
+
+Verification: the existing package integrity recipe passes (81 inventory entries, 28 mirror pairs, 17 skills per root, 3 original / 23 adapted upstream files); all 23 README local links/anchors resolve; `git diff --check` passes. Sequential source review compared diagram paths with `docs/team-workflow.md`. Mermaid/GitHub rendering is NOT_RUN: no existing `mmdc` command is available and no renderer was installed. Opening the file is not rendering evidence. Application/native behavior and delivery-speed effects were not retested for this documentation edit.
+
+State: documentation source complete, limited to three existing files. No Pinky Lamb change, installation, new harness, Git mutation or global configuration change. Next option: inspect the README diagrams; any subsequent commit/push needs explicit scope.
+
+## README diagram Git delivery authority — 2026-10-17
+
+Khiêm directly approved: “Approved. Commit các thay đổi README, manifest và task record rồi push lên branch hiện tại. Không mở harness mới. Báo commit SHA và trạng thái sau push.” This supersedes the pending Git authority in the preceding handoff for exactly `README.md`, `docs/skills-manifest.json` and `docs/tasks/TASK-007.md`, including this authority entry.
+
+The main session owns normal commit/push on the current `main` branch to `origin/main` (`https://github.com/khiemnd777/agent-kit.git`). Preparation found exactly these three modified files, an empty index, no active commit/push hooks and HEAD `ef1fa545992a9a49a9f124c29a97bd92043b62a8`. Existing source/package/link evidence remains valid; only this mutable record changes for delivery authority. No new harness or rendering/runtime verification is included. Verify staged scope/whitespace, commit, push normally, then compare local/actual remote SHA, divergence and final worktree state. Git history and the delivery report record the resulting SHA/outcome; authorization itself is not evidence of push success.
