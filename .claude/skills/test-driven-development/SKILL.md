@@ -1,34 +1,30 @@
 ---
 name: test-driven-development
-description: Drives development with tests using the red-green-refactor loop. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality.
+description: "Design meaningful tests for changed logic, risky behavior or a reproducible regression. Use when a test can distinguish the intended behavior from a plausible defect."
 ---
 
 # Test-Driven Development
 
-Use [team workflow](../../../docs/team-workflow.md#testing-layers) for delivery. Developer-owned tests provide fast feedback while coding; they are not a separate approval phase or a reason to run a full suite after every edit.
+Use the [lean operating core](../../../AGENTS.md). Tests provide developer feedback. Match their depth to the behavior and risk; a documentation, cosmetic or trivial reversible change does not automatically need a new test.
 
-## Trigger and inputs
+## Choose the useful assertion
 
-Use for changed logic, state/permission rules, error paths or a bug needing regression coverage. Documentation/static content without behavioral impact does not need a business test. Read existing source/tests and discover the actual framework, checked-in wrappers, focused command and integration/CI conventions before choosing commands. Do not assume npm or install a runner as a side effect.
+Read the affected source and existing tests. Use the project's framework, checked-in wrappers and focused commands. Identify the observable requirement and a plausible regression that the test should catch. Avoid tests that merely repeat the implementation or assert incidental internals.
 
-## Focused loop
+For a reproducible bug or new logic, observe the relevant failing assertion before the fix where practical. A missing dependency or import error is setup failure, not proof that the regression test detected the bug. If reproduction is unavailable, state that limit.
 
-1. Define the observable behavior or defect and a test that distinguishes correct output from the plausible regression.
-2. For new logic or a reproducible bug, observe the relevant failure before the fix where practical. Distinguish the expected assertion from an unrelated setup/import failure.
-3. Implement the behavior through the real owning seam and run its focused checks.
-4. Refactor while preserving those assertions. Add important boundary, denied/error/repeated/concurrent cases when the changed rules need them.
-5. At a completed coherent change, include the tests/results with the implementation for normal review/configured CI. Broader integration suites run for affected seams or actual project rules.
+## Implement and verify
 
-Keep tests deterministic, isolated and about behavior. Use representative authorized synthetic data. Mock external boundaries when useful, but test database transactions, contract mappings and integration semantics at their actual boundary when those are the claim. A unit test or mock alone cannot prove live integration or rendered UI.
+Implement the behavior through its owning seam, then run the focused check. Add boundary, denied/error, repeated or concurrent cases when the changed rules require them. Refactor only when it supports the task while retaining those assertions.
 
-## Test levels and evidence
+Prefer deterministic isolated tests and authorized synthetic data. Mock external boundaries where useful. Exercise transactions, contract mappings, rendering or live integration at their actual boundary when that is the claim; a mocked unit result cannot establish it.
 
-Prefer the fastest check that exposes the defect. Use integration/contract tests for affected consumers/data and a small set of acceptance tests for important user journeys. Manual/exploratory acceptance checks usable flows at milestones. Do not defer all tests until the project is complete or require every level for each change.
+Broaden testing when changed dependencies, an observed failure or real project requirements warrant it. Reuse unaffected evidence across edits, sessions and review. Do not run the full suite merely for reassurance or require every test level for every change.
 
-Reuse valid results until relevant source, inputs, environment or findings change. No rerun merely for a new session/stage or reassurance. A developer repairs tests/config broken by their own change inside valid scope; independent shared infrastructure faults go to their maintenance owner. Follow [failure handling](../../../docs/team-workflow.md#failures-and-blockers) without inventing new harness/orchestration or retrying until green.
+## Handle failures and stop
 
-## Output
+Repair product and related test/config defects within scope while evidence and useful progress justify the cost. Independent infrastructure faults need their owner; keep dependent proof open and continue unaffected work. Do not build a new runner or repeat a flaky check until green.
 
-Report the behavior covered, actual command/result and meaningful limits in the same task. Keep assertions strong; do not disable failing tests, loosen expectations or rebaseline unexplained mismatches. Required unproved criteria remain open with FAIL/NOT_RUN. A human-requested untested source handoff retains its explicit limits; no acceptance or release is inferred.
+Keep valid assertions strong. Change expectations only for a confirmed requirement change or demonstrated test defect; retire obsolete/duplicate tests only with required coverage preserved. Stop when scoped behavior has sufficient evidence, unless an actual project gate remains.
 
-Use the existing [testing patterns](../../references/testing-patterns.md) only when the project's framework matches their examples. They are techniques, not a required toolchain or another workflow.
+Report covered behavior, actual command/result and meaningful FAIL/NOT_RUN limits. Use [testing patterns](../../references/testing-patterns.md) only when the chosen technique and framework need them. A source handoff does not imply acceptance or release.

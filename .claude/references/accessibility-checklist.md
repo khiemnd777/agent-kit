@@ -1,6 +1,6 @@
 # Accessibility Checklist
 
-Quick reference for WCAG 2.1 AA compliance. Use alongside the `frontend-ui-engineering` skill.
+Select checks for the affected UI and the project's required accessibility standard, alongside `frontend-ui-engineering` when needed. Preserve accessibility controls; a local component change does not require an unrelated whole-site audit. This reference is not a complete conformance assessment.
 
 ## Table of Contents
 
@@ -12,32 +12,38 @@ Quick reference for WCAG 2.1 AA compliance. Use alongside the `frontend-ui-engin
 
 ## Essential Checks
 
+Apply relevant items to changed components and interactions or to the audit scope explicitly requested. Use existing evidence for unaffected surfaces.
+
 ### Keyboard Navigation
-- [ ] All interactive elements focusable via Tab key
+
+- [ ] Interactive controls in the affected flow are keyboard reachable, using the appropriate native or composite-widget navigation pattern
 - [ ] Focus order follows visual/logical order
 - [ ] Focus is visible (outline/ring on focused elements)
 - [ ] Custom widgets have keyboard support (Enter to activate, Escape to close)
-- [ ] No keyboard traps (user can always Tab away from a component)
+- [ ] No unintended keyboard traps; users can leave or close a component using its expected keyboard interaction
 - [ ] Skip-to-content link at top of page - visible (at least) on keyboard focus
 - [ ] Modals trap focus while open, return focus on close
 
 ### Screen Readers
+
 - [ ] All images have `alt` text (or `alt=""` for decorative images)
 - [ ] All form inputs have associated labels (`<label>` or `aria-label`)
 - [ ] Buttons and links have descriptive text (not "Click here")
 - [ ] Icon-only buttons have `aria-label`
-- [ ] Page has one `<h1>` and headings don't skip levels
-- [ ] Dynamic content changes announced (`aria-live` regions)
+- [ ] Affected headings convey a logical page structure; retain the established page title and hierarchy
+- [ ] Important status changes in the affected interaction are announced where needed (`aria-live` or suitable native semantics)
 - [ ] Tables have `<th>` headers with scope
 
 ### Visual
-- [ ] Text contrast ≥ 4.5:1 (normal text) or ≥ 3:1 (large text, 18px+)
+
+- [ ] Where WCAG AA text contrast applies, normal text reaches 4.5:1 and large text 3:1; large means at least 18pt regular or 14pt bold, not 18px regular ([W3C definition and exceptions](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html))
 - [ ] UI components contrast ≥ 3:1 against background
 - [ ] Color is not the only way to convey information
 - [ ] Text resizable to 200% without breaking layout
 - [ ] No content that flashes more than 3 times per second
 
 ### Forms
+
 - [ ] Every input has a visible label
 - [ ] Required fields indicated (not by color alone)
 - [ ] Error messages specific and associated with the field
@@ -46,10 +52,11 @@ Quick reference for WCAG 2.1 AA compliance. Use alongside the `frontend-ui-engin
 - [ ] Known fields use autocomplete (for example `type="email" autocomplete="email"`)
 
 ### Content
+
 - [ ] Language declared (`<html lang="en">`)
 - [ ] Page has a descriptive `<title>`
 - [ ] Links distinguish from surrounding text (not by color alone)
-- [ ] Touch targets ≥ 44x44px on mobile
+- [ ] Pointer targets meet the required project standard; 44×44 CSS px is the WCAG 2.1 AAA target-size criterion, subject to its exceptions, rather than a universal AA gate ([W3C target size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html))
 - [ ] Meaningful empty states (not blank screens)
 
 ## Common HTML Patterns
@@ -124,7 +131,7 @@ Quick reference for WCAG 2.1 AA compliance. Use alongside the `frontend-ui-engin
 
 Use existing project accessibility scripts or integrations when available. `axe-core` is a testing engine/library; `npx axe-core` is not a standalone audit command. Do not invent a wrapper, install a CLI or add a runner to satisfy this reference.
 
-For a relevant manual check, use available browser accessibility tools or an already available screen reader, such as Chrome DevTools' Accessibility tree or macOS VoiceOver. Record the actual tool, affected surface and observation. A missing required automated check remains NOT_RUN with its reason; manual evidence supports only what was observed.
+For an affected behavior that needs manual evidence, use available browser accessibility tools or an already available screen reader, such as Chrome DevTools' Accessibility tree or macOS VoiceOver. Record the actual tool, affected surface and observation. A missing required automated check remains NOT_RUN with its reason; manual evidence supports only what was observed.
 
 ## Quick Reference: ARIA Live Regions
 

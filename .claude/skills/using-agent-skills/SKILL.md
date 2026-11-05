@@ -1,31 +1,20 @@
 ---
 name: using-agent-skills
-description: Discovers and invokes agent skills. Use when starting a session, or when you need to decide which skill or workflow applies to the piece of work at hand. This is the meta-skill that governs how all other skills are discovered and invoked.
+description: "Select a relevant available skill when its applicability or effective source is unclear. Use for skill-routing questions, not as a session-start prerequisite."
 ---
 
 # Using Agent Skills
 
-[Team workflow](../../../docs/team-workflow.md) owns delivery. Skills are optional technical aids, not mandatory lifecycle hops, approval gates or reasons to create agents.
+Use the [lean operating core](../../../AGENTS.md). A skill supplies techniques for a current need; it does not add a lifecycle, permission or required agent.
 
-## Select relevant material
+## Select only what helps
 
-Read the assigned outcome and relevant project sources. Choose only skills whose techniques help the actual task from the [catalog](../../../docs/skills-catalog.md), read their entrypoints and relevant references, then return to the work. Do not preload all skills, run a catalogue-wide sequence or route through missing skills/invented slash commands.
+Start from the requested outcome and relevant source. If ordinary project knowledge is sufficient, proceed directly. Otherwise match the unresolved need to a description in the [catalog](../../../docs/skills-catalog.md), read that entrypoint, then open only the reference section needed for the decision. Return to the task when that need is resolved.
 
-| Need | Aid |
-| --- | --- |
-| Clarify requirements | spec-driven-development |
-| Organize coherent changes | planning-and-task-breakdown |
-| Implement through real layers/callers | incremental-implementation |
-| Refresh relevant context | context-engineering |
-| Test behavior or regression | test-driven-development |
-| Diagnose a concrete failure | debugging-and-error-recovery |
-| Review a completed change | code-review-and-quality |
-| Simplify while preserving behavior | code-simplification |
-| API/UI/security/performance/observability/source research/documentation | Matching technical skill in the catalog |
-| Explain results | technote |
+Do not preload every skill or chain specification, planning, implementation and review skills by default. A skill name in an example is not an invocation requirement. Use available tools and real skill paths; do not invent slash commands or missing skills.
 
-## Authority and result
+## Resolve ambiguity
 
-Preserve the current stack, ownership and authority. Planning stays in chat until writes are approved. Existing approval covers routine phases/checks/repairs within valid scope; a skill adds no approval round. Pause only affected material decisions, unsafe dependencies or actions needing unavailable authority, and always respect human stops. Continue independent work or hand off the waiting state.
+When names collide, identify the effective source before relying on it. Preserve the project's stack, contracts and current scope; do not change global settings to force discovery. Resolve material instruction/authority conflicts through the applicable instruction hierarchy, consulting [policy](../../../docs/team-policy.md) only if needed.
 
-Identify effective sources when names collide; do not silently substitute or edit global settings. The output is the user's result or an evidence-backed answer, not completion of a skill sequence. Report checks and limits without inferring runtime, acceptance or release from static evidence.
+The deliverable is the user's result or evidence-backed answer. Completing a skill sequence is not an acceptance criterion. Report meaningful checks and limits; source inspection does not prove native discovery or runtime behavior.

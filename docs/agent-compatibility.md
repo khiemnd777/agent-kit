@@ -16,17 +16,17 @@ The literal import in CLAUDE.md is outside a code block. Claude's current AGENTS
 
 Codex project-layer loading depends on project trust and client support. Managed settings and live parent permissions can affect the result. Codex inherits omitted sandbox settings; Claude inherits available subagent tools and the parent permission mode when the corresponding fields are omitted. The kit does not force a permission profile by role. Runtime filtering and the approved task scope still govern tool use. Authorized checks and evidence capture do not grant application code changes, implementation or deployment. Observe effective permissions and role behavior separately.
 
-A written role playbook is not a native registered agent. The main session normally owns delivery; a separate Coordinator is optional and does not replace the client's system prompt. All roles/skills route to the same team workflow rather than create approval phases.
+A written role playbook is not a native registered agent. The main session normally owns delivery; a separate Coordinator is optional and does not replace the client's system prompt. All roles/skills use the lean AGENTS.md core; they consult policy/workflow detail only when relevant and never create approval phases.
 
 ## Discovery and overrides
 
-Inspect the client's available repository skills and custom agents, including effective source paths. Identify personal/managed/plugin duplicates instead of assuming the repository copy is active. Do not change global configuration to make a test pass.
+Use these checks for initial adoption, a changed adapter or a concrete discovery/override problem. An ordinary task or new workflow stage does not require a compatibility audit. Inspect the client's available repository skills and custom agents, including effective source paths. Identify personal/managed/plugin duplicates instead of assuming the repository copy is active. Do not change global configuration to make a test pass.
 
 Record client version, account/provider availability and observed settings without exposing credentials. Supported effort levels and model aliases vary. Do not infer runtime model identity from what the language model says about itself.
 
-Fresh sessions from a completed checkout are preferred for initial discovery checks. Reload/restart only if the client requires it after a definition changes; do not claim universal hot reload. If delegation is unavailable, apply roles sequentially and mark native checks NOT_RUN.
+Fresh sessions from a completed checkout are preferred for initial discovery checks. Reload/restart only if the client requires it after a definition changes; do not claim universal hot reload. If delegation is unavailable, the main session can carry the task without a role ceremony; disclose self-review when relevant and keep native checks NOT_RUN.
 
-Models, tools and context are local to each runtime. Cross-tool continuation uses [shared Git documents](team-workflow.md), not native messages or shared chat history. TOML/YAML adapters require semantic review; checksum equality is only for skill mirrors.
+Models, tools and context are local to each runtime. Cross-tool continuation uses the relevant source and one useful [checkpoint](tasks/README.md); runtimes do not share live messages or chat history. TOML/YAML adapters require semantic review; checksum equality is only for skill mirrors.
 
 ## Official sources
 
@@ -41,4 +41,4 @@ Source review date: 2026-10-12; permission/tool inheritance rechecked on 2026-10
 - [Claude custom agents](https://code.claude.com/docs/en/sub-agents)
 - [Claude models](https://code.claude.com/docs/en/model-config)
 
-Verify these mechanisms against the client versions used in your two-machine run before claiming compatibility.
+Verify these mechanisms against the client versions under evaluation before claiming compatibility. A two-machine portability claim requires observations on both machines; it is not a prerequisite for a local source change.

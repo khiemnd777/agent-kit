@@ -1,30 +1,26 @@
 ---
 name: spec-driven-development
-description: Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when drafting a PRD or requirements document with objectives and scope, or when requirements are unclear, ambiguous, or only exist as a vague idea. Use when a single requirement spans several independently testable capabilities and needs decomposing into a capability map of modules before specifying.
+description: "Clarify unclear requirements, domain rules, interfaces or acceptance for a significant change. Use when a material product or design decision is needed before implementation."
 ---
 
 # Spec-Driven Development
 
-Clarify meaningful requirements under the [single team workflow](../../../docs/team-workflow.md). Specifications support implementation; they are not a mandatory Specify/Plan/Tasks/Implement approval hierarchy.
+Use the [lean operating core](../../../AGENTS.md). Resolve the uncertainty that prevents correct implementation. A clear contained fix can proceed without a separate specification.
 
-## Trigger and inputs
+## Define only the needed decisions
 
-Use when actors, rules, data/state, interfaces or acceptance are unclear for a significant change. A well-understood small fix can use a short explanation in its existing task. Reuse an accepted specification.
+Read existing requirements and relevant code/tests. Reuse accepted decisions instead of restating them. Identify the outcome, scope and observable acceptance. Examine actors/permissions, states, data invariants, interfaces and error or concurrent behavior only where the change affects them.
 
-## Define the requirement
+Separate confirmed requirements, inspected behavior, assumptions and open questions. An existing defect is not a business rule. Preserve the chosen stack and contracts unless changing them is part of the task.
 
-Record the outcome/scope, actors/permissions, states/invariants, happy/error/denied/repeated/concurrent behavior and observable acceptance where relevant. Identify material architecture/data choices, verified sources, assumptions and unknowns. Preserve the stack and confirmed domain rules.
+For several distinct capabilities, sketch their responsibilities and real dependencies. Elaborate only the boundary needed for implementation; do not create a recursive hierarchy of specifications or a document for each module.
 
-For distinct capabilities, sketch responsibilities and actual dependencies. Organize coherent changes with consumers rather than a fixed file budget or recursive specification hierarchy. Elaborate a module only when it helps implementation.
+## Resolve material choices
 
-## Approval and storage
+A direct implementation request covers routine work inside its scope. Ask about a material missing product/design decision or additional authority when evidence cannot resolve it. Present a concrete recommendation and its tradeoff. Continue independent authorized work. A planning-only request stays within planning; saving a proposed artifact follows that request's scope.
 
-Planning stays read-only and in chat until corresponding writes/execution are approved. Present the scope and material choices before dependent execution. Valid approval continues across routine phases and repairs; do not force a turn to end, a spec to be saved or approval to repeat solely because a phase ended.
+Keep a short decision in chat for focused work. Use an existing spec/tracker or one checkpoint when a durable decision or handoff needs it. No mandatory SPEC.md, owner-naming ceremony or new approval receipt.
 
-Use the existing authorized spec/task/tracker and writer. Do not automatically create SPEC.md, a tasks directory or competing checklists. Keep material decisions current without copying chat history.
+## Hand off to implementation
 
-## Handoff
-
-Identify the first complete change, affected layers/callers, acceptance and checks. Use planning-and-task-breakdown only if organization is still needed. Developer tests accompany code; review/CI evaluates completed changes; QA/human checks usable flows. Apply [failure handling](../../../docs/team-workflow.md#failures-and-blockers) for material missing decisions or unsafe dependencies. Routine bugs do not restart specification.
-
-Return an agreed requirement or a concrete decision with impact/recommendation. A written spec is not implementation, runtime proof, human acceptance or release authority.
+Provide the agreed behavior, affected contracts/callers and sufficient acceptance/checks to start. Stop specifying when those are clear. Routine bugs do not restart the specification process. A written requirement is not implementation, observed behavior, human acceptance or release authority.

@@ -15,19 +15,19 @@ Select checks for the instrumentation changed and the actual operational require
 
 ## On-Call Questions (Start Here)
 
-Telemetry without a question is noise. Before instrumenting anything:
+Start from the operational question the changed instrumentation must answer. Reuse existing incidents, runbooks or requirements; a small diagnostic change does not need a new planning document:
 
-- [ ] 2–4 questions an on-call engineer will ask about this feature are written down
-- [ ] Every signal below maps to one of those questions
+- [ ] The affected operational question is clear; capture it only where review or handoff needs durable context
+- [ ] Each selected or changed signal helps answer that question
 - [ ] Each question is matched to the right signal type: metrics say **that** something is wrong, traces say **where**, logs say **why**
 
 ## Structured Logging
 
-- [ ] Logs are structured (JSON) with stable event names — not free-form strings
-- [ ] Every log line carries a correlation/request ID, generated or accepted at the system boundary
-- [ ] Correlation ID is propagated on every outbound call and async boundary (HTTP headers, queue metadata)
-- [ ] Any log stream written by more than one entry point (scheduler, replay endpoint, manual run) carries an entry-point field, set where the run starts and propagated alongside the correlation ID
-- [ ] Log levels are consistent: `error` = invariant broken, someone may act; `warn` = degraded but handled; `info` = significant business event; `debug` = off in production
+- [ ] Changed events follow the established structured format and stable event naming
+- [ ] Request-scoped events carry the correlation/request context needed to diagnose the affected flow
+- [ ] Relevant outbound/async boundaries preserve correlation context (HTTP headers, queue metadata)
+- [ ] Where the same flow has multiple entry points (scheduler, replay, manual run), events distinguish their origin when needed for diagnosis
+- [ ] Levels and routing follow the project convention; retain appropriate production verbosity and avoid changing unrelated levels
 - [ ] No secrets, tokens, passwords, or unredacted PII in any log line (hard rule from `security-and-hardening`)
 - [ ] Fields are allowlisted — no whole request/response bodies, no auth headers
 - [ ] External service calls logged with metadata only: endpoint, status, latency, attempt count, sanitized identifiers
@@ -37,47 +37,47 @@ Telemetry without a question is noise. Before instrumenting anything:
 
 - [ ] Where request health needs metrics, **RED** covers the affected endpoints/dependencies: Rate, Errors, Duration
 - [ ] Where resource health needs metrics, **USE** covers the affected resources: Utilization, Saturation, Errors
-- [ ] Latency is a histogram; p50/p95/p99 queryable — never an average
+- [ ] Where tail latency is the question, a histogram or equivalent distribution exposes the needed percentiles; an average alone is insufficient
 - [ ] All labels come from small, fixed sets (route template, status class, provider name)
 - [ ] No unbounded label values: no user IDs, tenant IDs, emails, raw URLs, request IDs, or error message text
-- [ ] Status codes grouped by class (`5xx`, not `503`)
+- [ ] Status labels use the project's bounded grouping (for example `5xx`); do not migrate a valid existing schema for this example
 - [ ] Queue depth and processing duration cover workers/queues selected by the operational requirement
 
 ## Distributed Tracing
 
-- [ ] OpenTelemetry (or equivalent) initialized at service startup, before other imports
-- [ ] Auto-instrumentation enabled for HTTP, gRPC, and DB clients
-- [ ] Trace context propagated on every outbound call (W3C `traceparent`/`tracestate`) and extracted from every inbound request
+- [ ] When tracing is changed, initialization follows the existing SDK/client requirements
+- [ ] Existing auto-instrumentation covers the affected client boundary where needed; no unrelated tracing platform setup
+- [ ] The affected cross-service path propagates/extracts trace context using the established protocol
 - [ ] Context survives async boundaries — queue messages carry trace metadata
 - [ ] Manual spans only around meaningful internal units of work, with the attributes on-call will filter by
 - [ ] No secrets or PII as span attributes
-- [ ] Head-based sampling at a low default rate; 100% of errors kept if tail sampling is available
+- [ ] Sampling follows the project's cost/privacy/diagnosis requirements; inspect the changed path without requiring a new sampling system
 
 ## Alerting
 
-- [ ] Every alert is symptom-based (error rate, p99 latency, queue age) — causes (CPU, disk, restarts) go to dashboards, not pagers
-- [ ] Every alert is actionable; "ignore it, it self-heals" alerts are deleted
-- [ ] Every alert links to a runbook — minimum three lines: what it means, first query to run, escalation path
+- [ ] A changed alert identifies an actionable service symptom or justified operational risk, consistent with the established paging policy
+- [ ] A changed alert has a useful action; propose removal of noisy alerts only when evidence and scope justify it
+- [ ] A new/changed alert points to the needed meaning, first diagnostic and escalation owner; reuse the existing runbook
 - [ ] Thresholds and durations justified by an SLO or historical data, not guesses
 - [ ] Severity names, levels and routing follow the established project scheme and the affected alert's intended urgency; **page** and **ticket** are response examples, not required field values or a limit on the number of levels
-- [ ] Each new alert test-fired once: it reached the right channel and the runbook link works
-- [ ] No alerts that fire daily and get acknowledged without action
+- [ ] When delivery validation is required and authorized, check the changed alert's routing/runbook; do not notify people incidentally
+- [ ] Check observed noise for the affected alert when relevant; unrelated alert cleanup remains separate
 
 ## Dashboards
 
-- [ ] Service health dashboard exists: error rate, latency p99, traffic, saturation
-- [ ] Dependency health panel shows per-service error rates and latency
+- [ ] If a dashboard is required/changed, it shows the health signals needed for the affected question
+- [ ] Include dependency health only where it helps the affected diagnosis
 - [ ] Dashboard answers the on-call questions from the top of this checklist — not "everything except the answer"
-- [ ] Default time range is sensible (1h–6h, not 30d)
+- [ ] The selected time range fits the diagnosis or operational question
 
 ## Verify the Telemetry
 
 Verify only the instrumentation changed, in an authorized environment. The following are options, not requirements to induce failures, install tools or notify people:
 
-- [ ] Forced an error in staging → found it in the logs by correlation ID
-- [ ] Sent test traffic → metric series appear with expected labels and sane values
-- [ ] Followed one request end-to-end in the tracing UI → no broken spans
-- [ ] An induced failure was diagnosed from telemetry alone, without reading the source
+- [ ] For an authorized error-path check, locate the observed event by correlation ID
+- [ ] For affected metrics, use authorized traffic or existing observations to inspect expected labels and values
+- [ ] For changed trace propagation, follow an authorized representative request across the affected boundaries
+- [ ] Where diagnosis is the acceptance claim, assess whether the available telemetry answers the stated question; inducing a failure is optional and needs authority
 
 ## Pre-Launch Gate
 

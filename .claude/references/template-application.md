@@ -1,23 +1,23 @@
 # Applying an approved template
 
-Use only for a human-approved internal/user-supplied template. Follow the [single team workflow](../../docs/team-workflow.md#applying-an-approved-template). This reference defines fidelity evidence, not another lifecycle.
+Use for a human-approved internal/user-supplied template under the [lean operating core](../../AGENTS.md). Select fidelity evidence for the affected design and flow; this reference adds no approval lifecycle.
 
 ## Source and scope
 
-Record source/version or identifying hash, retained structure/hierarchy/workflow/controls, prototype removals and approved differences in the existing task. External inspiration does not replace an approved template. Resolve material discrepancies before changing the agreed design.
+Identify the source/version, retained structure/hierarchy/workflow/controls and approved differences. Keep that information in the existing task or one checkpoint when needed for resumption; a focused change does not need a new record. External inspiration does not replace the approved template. Resolve material discrepancies before changing the agreed design.
 
 ## Developer feedback
 
-Wire real controller/data/callers. Compare a representative rendered screen early when an uncertain choice would otherwise be replicated. Check that choice before copying it to dependent screens, and continue unaffected code. No mandatory Coordinator confirmation or human gate follows each screen/edit.
+Wire real controllers/data/callers. Compare a representative rendered screen early when an uncertain choice would otherwise be copied to dependent screens. Check that choice before replication while continuing unaffected work. No mandatory Coordinator confirmation or human gate follows each screen/edit.
 
 ## Usable-flow acceptance
 
-Choose relevant rows from the [acceptance guide](../../docs/template-application-acceptance.md). Compare rendered source/implementation at matched desktop/mobile viewports. Check structure, tabs/action order, controls, interactions and applicable populated/empty/loading/error/permission states. Check navigation/unsaved-state continuity, disabled/busy feedback and preview identity when the approved flow has them.
+Select the relevant rows from the [acceptance guide](../../docs/template-application-acceptance.md). For affected responsive behavior, compare source/implementation at matched relevant viewports. For affected interactions, check control/action order, navigation and the populated/empty/loading/error/permission states the flow needs. Check unsaved-state continuity, disabled/busy feedback or preview identity where changed or at risk.
 
-Inspect keyboard focus and controls inside clipped/scrollable containers. Page-level no-overflow does not prove nested control visibility; screenshots do not prove a sequence or authorization. Do not create data or execute data-changing actions outside scope.
+Inspect keyboard focus and controls inside changed clipped/scrollable containers. Page-level no-overflow does not establish nested control visibility; a screenshot does not prove an interaction sequence or authorization. Preserve retained data and stay within permitted environments/actions.
 
-Record actual PASS/FAIL/NOT_RUN, evidence and missing prerequisite/owner/next action. One screen's evidence does not prove another screen; reuse genuinely shared evidence without transferring an unobserved conclusion. Check usable-flow milestones, not every state after every edit.
+Report actual checks and missing required proof with the next action/owner. Reuse genuinely shared evidence, but do not transfer an unobserved conclusion from one screen to another. Recheck affected findings at usable milestones, not every state after every edit.
 
 ## Claims
 
-Source complete requires real wiring/review. Verified UI needs relevant rendered/interaction evidence; human acceptance needs the human. CODE_COMPLETE_UNTESTED is a requested self-test source handoff. Missing code stays incomplete and unrun runtime stays NOT_RUN. None grants release or proves native agent behavior.
+Source completion requires real wiring/review. Verified UI needs relevant rendered/interaction evidence; human acceptance needs the human. Missing implementation stays incomplete and required unrun checks stay NOT_RUN. A requested self-test source handoff keeps those limits. Finish when the scoped design/flow and sufficient checks are complete; do not expand to an unsolicited whole-application audit.

@@ -1,12 +1,14 @@
 ---
 name: technote
-description: Explain investigations, plans, reviews and solutions using concise evidence-based notes or requested TechNote diagrams, interactive websites and videos. Use for direct TechNote requests; do not apply a presentation workflow to trivial standalone transformations.
+description: "Explain technical outcomes concisely or produce a requested TechNote diagram, interactive explanation or video. Use for explicit TechNote requests or complex evidence that needs structured explanation."
 ---
 
 # TechNote
 
-Read the [canonical TechNote method](../../../docs/technote.md) before using this skill. Follow the requested level directly, or default relevant explanations to Level 1. Read applicable project instructions and the current task boundary first.
+Lead with the result, then the evidence or limits needed to assess it. Default to a concise Level 1 note in the requested language; include a next action only when work remains. Avoid empty headings, repeated approval references, unchanged context and copied logs. A simple answer needs no report form.
 
-Use the canonical document for language, evidence states, artifact capability checks, output requirements, acceptance and examples. Keep the full method in that document; this entrypoint only routes to it. Select other skills only when the requested medium needs them and they are available. Do not preload the whole skills catalogue.
+Distinguish observed behavior, proposals and unknowns without mandatory labels. State actual checks and relevant limits; a diagram, build or source review does not prove runtime behavior. Do not imply human acceptance or release.
 
-A presentation-level request does not expand application, provider, Git or publication authorization. If the selected medium cannot be delivered, report the missing capability and actual output status.
+Read the [TechNote guide](../../../docs/technote.md) when the requested explanation needs more structure. For a requested diagram, interactive website or video, use its linked reference for the chosen medium only. No need to deliver earlier levels or preload other skills.
+
+A presentation request does not expand application, provider, Git or publication authority. Deliver the requested medium when feasible and authorized; report unavailable capabilities and actual artifact status honestly.

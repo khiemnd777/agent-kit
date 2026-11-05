@@ -1,22 +1,22 @@
 # Optional agent coordination
 
-Follow the [single team workflow](../../docs/team-workflow.md) and task/runtime authority. One delivery owner carrying a coherent change is the default. Skills are technical aids, not mandatory hops or a reason to build orchestration.
+Use the [lean operating core](../../AGENTS.md) and actual task/runtime authority. The main session owns delivery by default. Delegate a bounded question or independent change only when the expected benefit exceeds coordination cost.
 
 ## Bounded patterns
 
-- One owner designs, implements with focused tests, submits a complete result, repairs findings and hands off.
-- A targeted explorer answers one blocking source/design question and returns evidence.
-- A completed-change reviewer assesses a defined diff/source revision and acceptance/evidence without implementation.
-- Authorized parallel implementers use agreed interfaces and separate ownership; the assigning owner integrates their outputs.
+- One owner implements a coherent result, runs relevant checks, repairs findings and hands off.
+- An explorer answers a specific source/design question and returns evidence.
+- A reviewer assesses a defined diff/revision against acceptance without implementing repairs.
+- Parallel implementers use agreed interfaces and separate ownership; the assigning owner integrates their outputs.
 
-Use actual available roles. No invented personas/slash commands, mandatory multi-model fan-out or recursive delegation. A Coordinator is optional for real integration; a Supervisor adds no ratification or authority.
+Use available roles, not invented personas/slash commands, mandatory multi-model fan-out or recursive delegation. A Coordinator can help real integration; a Supervisor adds no authority or approval layer.
 
 ## Assignment and handoff
 
-Name the outcome/question, inputs, owned files, allowed checks/side effects, authority, acceptance and receiver. Parent limits remain binding. Explorer/reviewer do not implement/deploy; roles do not force sandbox profiles. Identify shared record/contract writers.
+Give the task's outcome/question, relevant inputs, owned files, allowed checks/side effects, acceptance and receiver. Retain parent limits. Explorer/reviewer do not implement or deploy; tools/sandbox settings come from the runtime. Identify one writer only for records/contracts actually shared and edited.
 
-Return result, sources/checks/limits and next action. The assigning owner reads and integrates it. Agent completion is not acceptance/release or independent review when the same owner self-reviewed.
+Return the result and meaningful sources/checks/limits. Keep a single useful checkpoint for long or cross-session work. The assigning owner integrates it; agent completion is not human acceptance, release or independent review of its own implementation.
 
 ## Avoid replacing delivery with coordination
 
-Do not review every edit, wait for cross-chat acknowledgements without a real dependency, duplicate task ledgers or bind startup to agent/session/model/receipt identity. During review/CI waits, continue independent work or hand off the waiting state; do not build a harness to fill it.
+Do not review each edit, await acknowledgements without a real dependency, duplicate ledgers or bind application startup to agent/session/model/receipt identity. Continue independent authorized work during a genuine wait, or report the waiting state when none remains. Do not create a harness or new tasks to occupy the wait. Stop coordinating once the scoped result is complete.

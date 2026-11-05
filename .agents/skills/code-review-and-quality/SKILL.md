@@ -1,38 +1,33 @@
 ---
 name: code-review-and-quality
-description: Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch. Use when asked to review a diff or a pull request, even when the diff is pasted inline.
+description: "Review a diff or coherent change for concrete correctness, contract, security and maintainability defects. Use for requested PR/code review or required project review."
 ---
 
 # Code Review and Quality
 
-Review a completed coherent change under [team workflow](../../../docs/team-workflow.md#review-and-ci). Improve code health while allowing progress; do not create per-edit gates or a multi-model chain.
+Use the [lean operating core](../../../AGENTS.md). Review a coherent result at the appropriate project milestone. Do not introduce a reviewer after every edit or a multi-model approval chain.
 
-## Inputs
+## Read the relevant evidence
 
-Read agreed behavior/scope/acceptance, source revision/diff, relevant callers/data path and existing check results. Use a described working-tree snapshot when Git writes are excluded. A new receipt framework, commit or clean worktree is not needed solely for review.
+Read the requested behavior/acceptance, diff and revision, affected callers/data path and existing check results. A described working-tree snapshot is sufficient when no commit exists. No clean-worktree or custom receipt prerequisite is needed solely for review.
 
-## Inspect real risks
+Inspect the risks the change actually creates:
 
-- Correctness/domain: requirements, state/invariants, boundaries, errors, denied/repeated/concurrent actions when affected.
-- Contracts/data: consumers, mappings, compatibility, authorization/tenant/resource scope, transactions/history and invalidation.
-- Maintainability: ownership/dependency direction, clear types/control flow, useful abstractions and no unrelated cleanup or feature logic leaking into general modules.
-- Security: affected trust boundaries, inputs/outputs, secrets, dependency/upload risk.
-- Performance: affected query/payload bounds, N+1, complexity and evidence for measurement claims.
+- Correctness/domain: changed invariants, boundaries, errors and relevant denied/repeated/concurrent actions.
+- Contracts/data: consumers, compatibility, authorization/tenant/resource scope, transactions and invalidation.
+- Maintainability: clear control flow/types, sensible ownership and no unnecessary abstractions or unrelated cleanup.
+- Security/performance: affected trust boundaries, secret/input handling, query/payload bounds and evidence for any performance claim.
 
-Prioritize high-confidence defects with triggers and impact. Do not invent risk/latency numbers. Inspection does not prove runtime behavior.
+Prioritize defects with a credible trigger and concrete impact. Do not invent a risk or latency estimate. Source inspection is not runtime evidence.
 
-## Evaluate tests/evidence
+## Evaluate coverage and findings
 
-Check whether assertions distinguish intended behavior from plausible defects; report meaningful missing cases. Do not edit application code for mutation testing or repairs. Return a proposed experiment to the authorized owner if useful.
+Check whether assertions distinguish intended behavior from plausible regressions. Reuse valid test/build/rendered evidence. Rerun or broaden checks only to resolve a concrete uncertainty or actual required gate. For template fidelity claims, consult the relevant [template criteria](../../references/template-application.md).
 
-Assess relevant test/build/rendered evidence for its inputs and reuse valid conclusions. No full suite or repeated test is required merely to finish review. For approved templates use the [template reference](../../references/template-application.md): preserve structure/workflow/controls and require relevant rendered evidence for UI claims. Missing required proof remains open.
+Review-only authority does not permit application edits, mutation testing or repairs. Return a proposed experiment to the implementation owner if needed.
 
-## Findings and follow-up
+Each actionable finding states location, trigger, impact, severity and expected correction. Required behavior, actual correctness/security/data defects and evidenced quality regressions can block completion. Preferences, speculative improvements and polish remain optional.
 
-Each actionable finding names severity, location, condition, impact and expected correction. Block on unmet requirements, actual correctness/security/data defects or evidenced quality regressions. Preferences/polish are optional.
+## Conclude
 
-The implementation owner repairs findings. Recheck the affected diff/finding and retain unchanged conclusions. Stage/session/receipt changes alone do not need a new reviewer. Shared environment faults go to their owner without another review chain.
-
-## Output
-
-Return findings or state no actionable finding was found, with source/review scope, actual checks and limits. Disclose self-review versus independent review. Review is not authority expansion, human acceptance or release. Honor task/runtime limits and human stops; use TechNote in the requested language.
+Return findings, or state no actionable finding was found within the reviewed scope, with actual checks and limits. Disclose self-review versus independent review. The owner repairs findings; recheck the changed finding while retaining unaffected conclusions. A new session or stage alone does not justify a fresh review chain. Review does not grant human acceptance, Git or release authority.

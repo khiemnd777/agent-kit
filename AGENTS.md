@@ -1,31 +1,27 @@
-# Agent Kit project instructions
+# Agent Kit — lean operating core
 
-Read [team policy](docs/team-policy.md) for authority and safety. Use [team workflow](docs/team-workflow.md) as the single delivery workflow. Skills, examples and role documents do not add approval rounds or competing lifecycles.
+Read the assigned task and relevant source first. This is the default instruction entrypoint; consult [policy](docs/team-policy.md), [workflow](docs/team-workflow.md), [skill catalog](docs/skills-catalog.md) or role detail **only when the current task needs it**. Links are not mandatory reading or additional gates.
 
-## Start the assigned work
+## Authority and autonomy
 
-Read the assigned task and only the current project context, decisions, code and tests needed to understand it. Use verified project commands. Fresh templates contain no inherited approval.
+A clear request to implement/fix authorizes necessary local investigation, edits and focused checks within its scope and runtime permissions. A planning-only or review request does **not** authorize implementation. Main session owns delivery by default; no repeated approval for each file, bug or phase.
 
-Name one delivery owner. The main session normally owns the task from scope through implementation and handoff; a separate Coordinator or team is not required. Propose bounded ownership in chat if it is unassigned. Shared records have one explicitly assigned writer. Preserve other work.
+Ask for a material missing decision, expanded scope or an operation needing additional authority. Git commits/push/PR, deployment, production/real-data changes, paid, destructive and external operations retain their actual permission boundaries. Respect human stops and others' work; tools and records never grant authority.
 
-Propose the outcome, scope, important design choices and acceptance before execution. Planning is read-only and stays in chat until writes are approved. Direct human approval covers routine implementation, local checks and repairs in its stated scope. Do not ask again per file, function, bug or phase.
+## Proportionate delivery
 
-## Deliver without repeated stops
+- **Focused:** clear contained low-risk change. Implement directly, inspect diff, run relevant checks and hand off concisely. No mandatory task file or extra agent.
+- **Standard:** feature/bug crossing meaningful seams. Complete callers/integration, use targeted regression checks and a checkpoint if continuation needs it.
+- **Sensitive:** authorization, private data, payments, migrations, production or irreversible changes. Preserve actual risk-boundary checks and project-required review.
 
-Implement a complete usable change across its actual callers and layers. Write meaningful regression tests and run focused checks while coding. Submit a completed coherent change for review and configured CI on a concrete source revision. Demonstrate/accept usable flows at meaningful milestones. Release only under its actual authority.
+Risk—not number of files or task duration—determines effort. Preserve project domain rules, stack, contracts, existing data and security.
 
-Pause affected work for a material missing decision/expanded scope, a failure that makes dependent work incorrect or unsafe, or an action needing release/real-data authority. Always honor a human stop. Continue independent authorized work; when none remains, report the blocker and wait without inventing verification work.
+## Continue, stop and hand off
 
-Use one [task record](docs/tasks/README.md); the [templates](docs/agent-coordination-templates.md) are optional field guides. Routine repairs need diagnosis and relevant rechecks, not another plan document, review chain or approval round. Do not hide failed assertions, weaken protection or manufacture PASS.
+Use existing project commands and tests relevant to the change. Fix evidenced defects within scope, recheck affected inputs and reuse unaffected evidence. Never weaken assertions, invent PASS, or create a runner/review orchestration project incidentally.
 
-## Skills and optional delegation
+Continue diagnostics only while a concrete hypothesis, evidence and progress justify the cost. If attempts stop helping, change strategy or hand off a blocker. **Stop once required acceptance and appropriate verification are met; optional polish/refactors are separate.**
 
-Select only relevant skills from the [catalog](docs/skills-catalog.md) and read their actual entrypoints. Technical guidance and conditional checklists apply to the task, not every edit. Keep existing stack, contracts and domain rules.
+For long/delegated work keep [one checkpoint](docs/tasks/README.md) only when useful: outcome, done/todo, decisions, revision, checks/limits and next action. Resume rather than restart unaffected work. Skills and delegation are optional; children do not delegate.
 
-Optional native kit-explorer, kit-implementer and kit-reviewer roles follow the [role documents](docs/roles/coordinator.md) and [model routing](docs/model-routing.md). Delegate only when authorized and useful; assign inputs, files, checks, acceptance and handoff. Children do not delegate again. Explorer/reviewer return evidence without application implementation or deployment. Runtime permissions and task authority govern tools; roles do not force sandbox profiles. Disclose self-review when no independent reviewer ran.
-
-## Explain and hand off
-
-Use [TechNote](docs/technote.md) for meaningful updates and requested explanation levels. English is default; an explicit language request takes precedence. State the result, remaining problem, evidence/limits and next action. Do not narrate unchanged checks or copy full templates into chat.
-
-Keep source completion, verified behavior, human acceptance and release distinct. PASS needs observed evidence; applicable unrun checks are NOT_RUN with a reason. At handoff update the owned task record, review the final diff and report actual checks and remaining work. No automatic commit/push, publication, global configuration, production operation or destructive cleanup.
+Report result, observed checks, limits and next action if any. Use concise [TechNote Level 1](docs/technote.md) by default. Distinguish source complete, behavior verified, human accepted and released. Required unrun checks are NOT_RUN; no automatic publication or release.

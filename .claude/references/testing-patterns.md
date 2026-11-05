@@ -1,6 +1,6 @@
 # Testing Patterns Reference (JavaScript/TypeScript)
 
-Quick reference of JavaScript/TypeScript testing patterns — Jest, React Testing Library, Supertest, and Playwright — illustrating the universal principles from the `test-driven-development` skill. The principles (Arrange-Act-Assert, naming, mock discipline, anti-patterns) apply in any ecosystem; the syntax and tooling shown here are JS/TS-specific. In another stack, follow the same principles with the repository's own test framework and commands.
+Choose a pattern only when it helps test changed behavior or a plausible regression. These JavaScript/TypeScript examples use Jest, React Testing Library, Supertest and Playwright; they do not require installing those tools or adding every test level. Use the repository's existing framework and commands. Simple content/cosmetic changes may need inspection rather than a new behavioral test. Stop after the scoped result has sufficient evidence and actual project gates are satisfied.
 
 ## Table of Contents
 
@@ -112,6 +112,8 @@ jest.mock('./utils', () => ({
 ```
 
 ### Mock at Boundaries Only
+
+Mock external boundaries when isolation helps the assertion. If the claim concerns a transaction, contract or real integration, exercise that boundary in the relevant integration check; the mocked example cannot prove it.
 
 ```
 Mock these:                    Don't mock these:

@@ -1,31 +1,24 @@
 ---
 name: planning-and-task-breakdown
-description: Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels too large to start, when you need to estimate scope, or when parallel work is possible.
+description: "Organize a task whose dependencies, scope or delivery order are unclear. Use for a larger change, real parallel work or a requested implementation plan."
 ---
 
 # Planning and Task Breakdown
 
-Follow the [single team workflow](../../../docs/team-workflow.md). This skill organizes work; it does not create another tracker, checkpoints or approval rounds.
+Use the [lean operating core](../../../AGENTS.md). Organize work only as far as needed to execute it. Skip a separate plan when the task already gives a clear next action and acceptance.
 
-## Trigger and inputs
+## Make the next change executable
 
-Use when dependencies or acceptance need clarification. Skip a separate planning exercise if the current approved task already answers them. Read the outcome, relevant source/design decisions, actual constraints and authority.
+- State the outcome, boundaries and observable acceptance. Include permission, invalid-input, error or concurrent behavior where relevant.
+- Identify affected callers, layers, data and material design choices from source. Resolve only decisions that block correct dependent work.
+- Split large work into complete capabilities or coherent technical changes with actual consumers. File/line counts are estimates, not split or review gates.
+- The main session owns delivery by default. Delegate only when the benefit exceeds coordination cost and task/runtime authority permits it; define interfaces and non-conflicting ownership.
+- Choose focused checks for changed behavior and affected seams. Include existing project review/CI/release requirements at the appropriate milestone, not after every step.
 
-## Make an executable plan
+A long task may need one short [checkpoint](../../../docs/tasks/README.md). Reuse an existing tracker where useful or required; do not duplicate its state or overwrite another writer's work. A planning-only task stays in chat unless its scope includes a saved artifact.
 
-- State behavior and observable acceptance, including relevant permission, invalid-input, repeated/concurrent action and error cases.
-- Identify affected layers/callers/data and material design choices. Resolve important missing decisions before dependent work.
-- Split large work into small complete capabilities or coherent technical changes with real consumers. File/line counts are estimates, not mandatory split/review gates.
-- Name one delivery owner and only real contract, ownership or resource dependencies. Optional parallel work needs agreed interfaces and disjoint files, not a default Coordinator/Supervisor team.
-- Select focused developer tests, configured CI and acceptance of usable flows at meaningful milestones. No gate after every file or phase.
-- Identify release/real-data actions needing separate authority; routine repairs remain within valid task scope.
+For an approved template, retain its identity and agreed differences; consult the [template reference](../../references/template-application.md) when fidelity decisions need detail.
 
-## Record once
+## Finish planning
 
-Planning stays in chat. With write authority use the existing task/spec/tracker and its writer. Do not create a second plan or overwrite another unfinished task. The [field guide](../../../docs/agent-coordination-templates.md#task-assignment) is optional.
-
-For an approved template, record its identity, retained structure and approved differences; use the [template reference](../../references/template-application.md) for relevant rendered criteria. Uncertain replicated design choices may need early developer feedback, not a gate after every edit.
-
-## Output
-
-Identify the first complete change, its acceptance/checks and material missing decisions. Once the current scope is approved, continue covered work without per-step approval. Update the same task with results, blockers and next action.
+Return the first coherent change, intended checks and any material unresolved decision. Once these are clear and authorized, implement without per-step confirmation. Revise the plan when evidence changes a dependency or acceptance, not simply because a phase or session ended.

@@ -1,6 +1,6 @@
 # Model routing and native adapters
 
-The delivery owner is normally the main session using the developer's selected model; a separate Coordinator is optional. Start the main session normally. Do not force a main-session `--agent` flag or replace the default system prompt to use this kit. The role documents describe responsibilities; native adapters configure optional subagents.
+Consult this reference when adopting/customizing native agents or investigating routing. It is not required reading for ordinary tasks. The main session owns delivery using the developer's selected model; a separate Coordinator is optional. Start normally without forcing a main-session `--agent` flag or replacing the default system prompt. Native adapters configure optional subagents under the [lean core](../AGENTS.md).
 
 ## Inheritance by default
 
@@ -8,7 +8,7 @@ The Codex adapters omit `model` and `model_reasoning_effort`. According to the d
 
 The Claude adapters use `model: inherit` and omit effort. Documented model selection gives an invocation model precedence over frontmatter inheritance; environment or organization policy can also affect the runtime choice. Do not infer an observed model solely from this file.
 
-For a delegated task, keep relevant requested/observed routing evidence in its existing record; do not add a runtime identity gate or repeat unchanged model reporting each phase. If the runtime does not expose the resolved model or effort, mark the value **Unknown**. Do not claim inheritance was verified from a successful configuration parse.
+Record requested/observed routing evidence only when needed for an adoption check or routing question; ordinary delegation needs no new record or repeated model report. If the runtime does not expose the resolved model or effort, mark it **Unknown**. Parsing configuration does not verify inheritance.
 
 ## Deliberate project customization
 
@@ -22,7 +22,7 @@ Explorer and reviewer roles do not change application code, implement features o
 
 Authorized checks, application/browser inspection and evidence capture may use inherited tools when the task covers their side effects, fixtures and destinations. Available tools do not authorize application edits or out-of-scope actions. Implementer writes remain limited to approved ownership. Follow runtime approval mechanisms and report restrictions without bypassing them. Static parsing verifies omitted fields and role text; effective access and role behavior require separate native observations.
 
-The adapters use their platform's schema and explicit instructions to read common role documents. Paths in prose are instructions to read files; they are not an automatic import mechanism. No child may recursively spawn agents. The assigning delivery owner integrates delegated work; each shared record has one explicitly named writer. No default Coordinator or approval hierarchy is added.
+The adapters use their platform's schema, the lean core and bounded assignments. Common role documents supply additional detail on demand; policy, workflow, skills and TechNote are not a mandatory preload chain. Prose paths are references, not automatic imports. No child may recursively spawn agents. The assigning owner integrates useful delegation; shared records have one writer when edited. A focused task needs no new tracker or Coordinator.
 
 ## Evidence status
 

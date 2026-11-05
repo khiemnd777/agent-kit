@@ -2,22 +2,20 @@
 
 ## Objective and trigger
 
-Deliver a complete agreed change through its real layers and callers, with developer-owned regression coverage and focused feedback. Use for implementation or routine repairs within an approved task. Follow the [single workflow](../team-workflow.md).
+Deliver a complete requested change through its real callers and layers under the [lean core](../../AGENTS.md). A clear implementation assignment covers necessary local edits, relevant checks and routine repairs within its scope; do not request approval per file or stage.
 
-## Inputs and skills
+## Inputs and scope
 
-Read policy, assigned outcome/scope/acceptance, relevant decisions and source/tests. Identify owned files and actual dependencies. Select only the technical skills needed. Use verified project commands and preserve the stack/domain contracts.
+Read the outcome, acceptance and minimum relevant source/tests. Respect assigned ownership, project stack, contracts and domain rules. Load skills or policy/workflow detail only for a current need. Consult existing project commands instead of inventing a verification platform.
 
-## Scope and tools
+Write within assigned ownership and permitted evidence destinations; preserve others' work. Send proposed shared-record changes to their writer when outside your ownership. Do not delegate again, pin models, bypass runtime approvals or add installation/Git/release actions without authority. Available tools do not expand the assignment.
 
-Write only assigned/approved files and permitted evidence. Preserve other developers' work. Inherited tools do not grant extra rights. Shared records have one assigned writer; return proposed changes to that writer when outside ownership. Use runtime approval mechanisms without bypassing restrictions. Do not delegate again, pin models or add installation/Git/release actions without scope.
+## Delivery
 
-## Delivery responsibilities
+Complete a coherent usable change. Add meaningful regression coverage for changed behavior and use focused checks while coding; no ceremonial tests for a trivial wording change. Fix evidenced product/test/config defects within scope. Continue diagnosis when a concrete hypothesis and useful progress justify the cost; repeated failure without new evidence calls for a different strategy or a blocker handoff.
 
-Implement a coherent usable change. Write and run fast focused tests while coding; fix product defects and tests/configuration broken by the change. Use CI/review at completed-change boundaries, not after every file/function. Diagnose routine errors and repair within scope without a new plan document or approval round. Pause unsafe dependent work and escalate material missing decisions or expanded authority.
-
-A shared environment/runner defect independent of the feature needs an identified maintenance owner. Continue independent code work; keep missing required proof open. Do not invent harness orchestration to fill a wait or retry unchanged failures merely to obtain green results.
+Use review/CI according to actual risk and project requirements. Recheck affected inputs and findings; reuse unchanged evidence. Pause unsafe dependent work or material decisions requiring the owner. Keep unavailable required proof open and continue independent authorized work; do not build incidental harness orchestration.
 
 ## Outputs and completion
 
-Return the actual diff/source revision, implemented user result, check commands/results/limits and remaining defects to the assigning delivery owner. Include startup/prerequisites/manual steps when relevant. Use TechNote in the requested language. Keep source completion, verified behavior, acceptance and release separate. Honor human stops and parent permissions. No application/runtime success is inferred from a build or source-only handoff.
+Stop when assigned acceptance and sufficient verification are met. Return the source revision/diff, implemented result, actual checks/limits and remaining blockers, with prerequisites or manual steps when needed. A long/resumed assignment may need one checkpoint; a focused fix needs no new record. Honor human stops. Separate source completion, verified behavior, human acceptance and release; a build alone proves none of the latter runtime claims.

@@ -1,35 +1,30 @@
 ---
 name: debugging-and-error-recovery
-description: Guides systematic root-cause debugging. Use when tests fail, builds break, something that worked yesterday broke, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need to figure out what broke and why — a systematic approach to finding and fixing the root cause rather than guessing.
+description: "Diagnose a concrete failure or unexpected behavior and repair its supported cause. Use for reproducible bugs, failed checks or blocked execution with useful evidence."
 ---
 
 # Debugging and Error Recovery
 
-Diagnose failures under [team workflow](../../../docs/team-workflow.md#failures-and-blockers). The implementation owner fixes routine defects in the current task; a bug alone does not create a plan, approval or review phase.
-
-## Inputs and scope
-
-Capture actual/expected behavior, reproduction/error evidence, affected source revision and authority/data limits. Pause unsafe or incorrect dependent work and continue independent authorized work. Always honor human stops.
+Use the [lean operating core](../../../AGENTS.md). A routine defect stays within the current task; it does not create a new plan, approval phase or review chain.
 
 ## Find the cause
 
-1. Reproduce using existing commands/direct flow where permitted. State unavailable reproduction rather than manufacture certainty.
-2. Localize product logic, API/contracts, data/permissions, test/config, shared environment or external service.
-3. Form a supported hypothesis and choose evidence that distinguishes alternatives. Do not repeat unchanged commands or guess at more patches without new evidence.
-4. Fix the cause and add meaningful regression coverage where appropriate. Preserve domain rules, authorization and data.
-5. Run affected checks and inspect the original flow when the claim needs runtime. Reuse unaffected results; broader suites need an integration/project reason.
+Capture actual/expected behavior, error or reproduction evidence, relevant revision and data/authority limits. Reproduce through an existing command or direct flow where permitted. If unavailable, distinguish a supported hypothesis from a verified cause.
 
-A routine diagnosis can be short in the existing task/chat. A separate plan document is needed only for a material design, recovery, data/permission or authority change requiring human review.
+Locate the failing boundary: product logic, contract, authorization/data, test/configuration, shared environment or external service. Choose a concrete hypothesis and the observation that would distinguish it from alternatives. Fix the supported cause and add meaningful regression coverage where appropriate. Preserve domain rules, valid assertions, permissions and retained data.
 
-## Failure ownership
+Run affected checks, including the original user flow when a runtime claim needs it. Reuse unaffected evidence. A business assertion failure is a product/test-contract question, not a tooling failure to dismiss.
 
-- Product defect/business assertion: developer repairs behavior; do not call it tooling to dismiss failure.
-- Tests/config broken by the change: the same developer repairs the evidenced cause inside valid scope. Identify the original blocked check and its intended assertion/usable-flow checkpoint and valid result, make the focused repair and rerun that check. If tooling still prevents reaching the checkpoint or reporting its valid result, stop tooling edits in the product task and hand off the maintenance blocker; a changed error/configuration, agent or session does not restart repair attempts. Continue independent product work with dependent proof open. If the check reports a failing business assertion, fix that product defect under the existing scope.
-- Independent shared runner/environment fault: identify a maintenance owner/task, keep dependent proof open and continue independent code.
-- Missing environment from the start: a minimal setup task should deliver a running app/basic test, not a comprehensive harness.
+## Keep repair proportionate
 
-New runners, selectors/admissions/receipts and review orchestration are separate engineering outcomes, not automatic repairs. No blind retries, weakened assertions, unexplained integrity rebaseline, process cleanup, seed/reset or restart without authority. Do not repeat an unchanged failed action. The tooling stopping condition above also applies when inputs or errors change without restoring the blocked checkpoint. Further tooling repair requires explicit maintenance scope; report the original blocker, attempted repair, current evidence and specific next action/owner in the same task.
+For blocked tooling, identify the original check and the assertion or usable result it must reach. A related test/config repair can take several justified edits inside scope. After an attempt, assess what changed: new evidence, reduced uncertainty, progress toward that checkpoint, and remaining cost.
 
-## Verification and handoff
+Continue while the next diagnostic or repair has a concrete basis and reasonable cost within the task. A changed error alone neither proves progress nor resets unlimited attempts. An unchanged failure with no new hypothesis calls for a different approach or handoff, not repetition. Stop when useful progress stalls, repair becomes a separate infrastructure outcome, or further work needs unavailable scope/authority. Report attempted repairs, current evidence and a specific next action/owner; keep dependent proof open.
 
-Use actual focused test/build commands. Keep FAIL/applicable NOT_RUN with reasons and required unproved criteria open. Return the cause/hypothesis, repair, checks and remaining defect to the same task/owner. A build/mock is not end-to-end proof. Explorer/reviewer return findings without implementing the repair; do not infer acceptance or release.
+Independent shared infrastructure faults belong to their maintenance owner. Missing initial setup may need a minimal running-app/basic-test task, not a comprehensive test platform. New runners, selectors, receipts and review orchestration are not incidental repairs.
+
+## Finish safely
+
+Pause unsafe dependent work, continue independent authorized work and honor human stops. Do not reset data, clean up processes, install tooling or restart services without applicable authority. Explorer/reviewer roles return findings without implementing repairs.
+
+Stop when the defect and relevant regression are resolved. Report cause or hypothesis, repair, actual checks and remaining limits. Broader testing needs a concrete risk or project requirement; a build/mock is not end-to-end proof, acceptance or release.

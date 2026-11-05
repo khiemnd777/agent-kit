@@ -1,6 +1,6 @@
 # Performance Checklist
 
-Quick reference for relevant performance techniques alongside the `performance-optimization` skill. Select checks for the measured bottleneck and project targets; listed tools/budgets are examples, not installation, RUM or CI setup requirements. A controlled local result does not establish real-user impact.
+Choose techniques for a measured bottleneck and the actual project target, alongside `performance-optimization` when needed. The sections are alternatives, not an all-items gate. Preserve correctness, security and data semantics; stop when the scoped target and sufficient verification are met. Tools/budgets do not authorize installation, infrastructure changes or new RUM/CI setup. A controlled local result does not establish real-user impact.
 
 ## Table of Contents
 
@@ -14,6 +14,8 @@ Quick reference for relevant performance techniques alongside the `performance-o
 
 ## Core Web Vitals Targets
 
+Use these web-vital categories only when relevant to the affected page/interaction. They do not replace the project's acceptance or turn every local change into a field-measurement task.
+
 | Metric | Good | Needs Work | Poor |
 |--------|------|------------|------|
 | LCP (Largest Contentful Paint) | ≤ 2.5s | ≤ 4.0s | > 4.0s |
@@ -22,15 +24,18 @@ Quick reference for relevant performance techniques alongside the `performance-o
 
 ## TTFB Diagnosis
 
-When TTFB is slow (> 800ms), check each component in DevTools Network waterfall:
+When TTFB is the observed problem, inspect the relevant network timing to distinguish causes. The actions below are candidates to evaluate, not instructions to change infrastructure automatically:
 
-- [ ] **DNS resolution** slow → add `<link rel="dns-prefetch">` or `<link rel="preconnect">` for known origins
-- [ ] **TCP/TLS handshake** slow → enable HTTP/2, consider edge deployment, verify keep-alive
-- [ ] **Server processing** slow → profile backend, check slow queries, add caching
+- [ ] **DNS resolution** dominates → evaluate a hint for the relevant known origin (`dns-prefetch` or `preconnect`)
+- [ ] **TCP/TLS handshake** dominates → inspect existing protocol/connection reuse; a hosting or protocol change needs its own scope
+- [ ] **Server processing** dominates → profile the affected handler/query before selecting a repair or cache
 
 ## Frontend Checklist
 
+Select the affected resource or rendering path from the measurement. Check before/after under comparable conditions; leave unrelated optimization ideas outside the task.
+
 ### Images
+
 - [ ] Images use modern formats (WebP, AVIF)
 - [ ] Images are responsively sized (`srcset` and `sizes`)
 - [ ] Images and `<source>` elements have explicit `width` and `height` (prevents CLS in art direction)
@@ -38,69 +43,79 @@ When TTFB is slow (> 800ms), check each component in DevTools Network waterfall:
 - [ ] Hero/LCP images use `fetchpriority="high"` and no lazy loading
 
 ### JavaScript
-- [ ] Bundle size under 200KB gzipped (initial load)
+
+- [ ] Initial load meets the project's measured budget; 200KB gzipped is an example budget, not a universal gate
 - [ ] Code splitting with dynamic `import()` for routes and heavy features
 - [ ] Tree shaking enabled (verify dependency ships ESM and marks `sideEffects: false`)
 - [ ] No blocking JavaScript in `<head>` (use `defer` or `async`)
 - [ ] Heavy computation offloaded to Web Workers (if applicable)
-- [ ] `React.memo()` on expensive components that re-render with same props
+- [ ] Consider `React.memo()` for an expensive repeated render only when profiling supports a benefit
 - [ ] `useMemo()` / `useCallback()` only where profiling shows benefit
 - [ ] Long tasks (> 50ms) broken up to keep the main thread available — main lever for INP
-- [ ] `yieldToMain` pattern used inside long-running loops so input events can run between chunks
-- [ ] Modern scheduling APIs used where available: `scheduler.yield()` (preferred), `scheduler.postTask()` with priorities, `isInputPending()` to yield only when needed
+- [ ] Where a measured long loop delays input, consider yielding between safe chunks without breaking ordering or state
+- [ ] If scheduling is the selected repair, choose a supported API/pattern for the project's browser targets and preserve a suitable fallback
 - [ ] `requestIdleCallback` for deferrable, non-urgent work (analytics flush, prefetch, warmup)
 - [ ] Non-critical work deferred out of event handlers (e.g. analytics, logging) so the response to the interaction is not delayed
 - [ ] Third-party scripts loaded with `async` / `defer`, audited for size, and fronted by a facade when heavy (chat widgets, embeds)
 
 ### CSS
+
 - [ ] Critical CSS inlined or preloaded
 - [ ] No render-blocking CSS for non-critical styles
-- [ ] No CSS-in-JS runtime cost in production (use extraction)
+- [ ] If CSS runtime cost is material, measure an appropriate repair; do not migrate the styling stack solely for this checklist
 
 ### Fonts
-- [ ] Limited to 2–3 font families, 2–3 weights each (every additional weight is another request)
-- [ ] WOFF2 format only (smallest, universal support — skip WOFF/TTF/EOT)
+
+- [ ] Compare the fonts/weights loaded with the design requirement; reduce redundant resources when they cause the measured cost
+- [ ] Font formats suit the actual client targets; avoid unnecessary duplicate formats where compatibility permits
 - [ ] Self-hosted when possible (third-party font CDNs add DNS + TCP + TLS round-trips)
 - [ ] LCP-critical fonts preloaded: `<link rel="preload" as="font" type="font/woff2" crossorigin>`
 - [ ] `font-display: swap` (or `optional` for non-critical) to avoid FOIT blocking render
 - [ ] Subsetted via `unicode-range` to ship only the glyphs each page needs
 - [ ] Variable fonts considered when multiple weights/styles are required (one file replaces many)
 - [ ] Fallback font metrics adjusted with `size-adjust`, `ascent-override`, `descent-override` to reduce CLS on font swap
-- [ ] System font stack considered before any custom font
+- [ ] Preserve the approved typography; a system-font substitution is a design choice, not a prerequisite
 
 ### Network
+
 - [ ] Static assets cached with long `max-age` + content hashing
 - [ ] API responses cached where appropriate (`Cache-Control`)
-- [ ] HTTP/2 or HTTP/3 enabled
+- [ ] If transport overhead is the measured cause, inspect existing HTTP support before proposing an authorized infrastructure change
 - [ ] Resources preconnected (`<link rel="preconnect">`) for known origins
 - [ ] `fetchpriority` used on critical non-image resources (e.g., key `<link rel="preload">`, above-the-fold `<script>`) — not only on `<img>`
 - [ ] No unnecessary redirects
 
 ### Rendering
+
 - [ ] No layout thrashing (forced synchronous layouts)
 - [ ] Animations use `transform` and `opacity` (GPU-accelerated)
-- [ ] Long lists use virtualization (e.g., `react-window`)
+- [ ] Consider virtualization for a measured long-list rendering problem, retaining accessibility and interaction behavior
 - [ ] No unnecessary full-page re-renders
 - [ ] Off-screen sections use `content-visibility: auto` with `contain-intrinsic-size` to skip layout/paint of non-visible areas
-- [ ] No `unload` event handlers and no `Cache-Control: no-store` on HTML responses — preserves back/forward cache (bfcache) eligibility
+- [ ] For an affected back/forward navigation issue, inspect bfcache eligibility; preserve required privacy/cache directives instead of removing `no-store` solely for speed
 
 ## Backend Checklist
 
+Investigate the measured query/request/resource boundary. Preserve transaction, ownership and consistency rules. Diagnostic commands that execute queries or affect retained data require the relevant environment/data authority.
+
 ### Database
+
 - [ ] No N+1 query patterns (use eager loading / joins)
 - [ ] Queries have appropriate indexes
-- [ ] List endpoints paginated (never `SELECT * FROM table`)
+- [ ] Affected collection reads have appropriate bounds/pagination; avoid unbounded user-controlled result sets
 - [ ] Connection pooling configured
 - [ ] Slow query logging enabled
 
 #### Query plans
-- [ ] `EXPLAIN ANALYZE` captured **before** the fix, not just after — it is the baseline
+
+- [ ] For a query-plan repair, capture a comparable baseline with existing authorized tools; `EXPLAIN ANALYZE` executes the query, so use it only where that execution is permitted
 - [ ] `Seq Scan` on a large table understood: index missing, unusable, or genuinely not worth it
-- [ ] Estimated vs actual `rows=` within an order of magnitude (if not, refresh statistics before touching indexes)
-- [ ] No `Sort` node that a composite index could absorb
-- [ ] Plan re-checked after the change — an index that did not change the plan gets reverted
+- [ ] Investigate material estimated/actual row differences, including stale statistics; refresh statistics only under applicable authority
+- [ ] If sorting dominates the cost, compare an appropriate composite index with its write/storage tradeoffs
+- [ ] Recheck the affected workload after an index change; keep or remove it based on measured benefit and required semantics, not a plan-shape change alone
 
 #### Index strategy
+
 - [ ] Composite index column order is equality first, then range/sort
 - [ ] Index covers the query shape (filter + sort), not just one column in isolation
 - [ ] Covering index considered for hot read paths (index-only scan avoids the heap fetch)
@@ -108,27 +123,32 @@ When TTFB is slow (> 800ms), check each component in DevTools Network waterfall:
 - [ ] Expression index used where the query applies a function (`lower(email)`)
 - [ ] Full-text or trigram index used for leading-wildcard search, not a B-tree
 - [ ] Write cost measured on write-heavy tables (every index taxes every `INSERT`/`UPDATE`)
-- [ ] Unused and duplicate indexes dropped (they cost writes and buy nothing)
+- [ ] Remove a suspected redundant index only with sufficient workload/constraint evidence and authorized migration scope
 
 #### Connection pooling
+
 - [ ] One pool per process, not per request or per module
 - [ ] `instances × pool max` stays under the database's `max_connections`
 - [ ] `connectionTimeoutMillis` set so exhaustion fails fast instead of queueing forever
 - [ ] Exhaustion diagnosed before resizing: find what holds connections (long transactions, missing `await`, leaked clients)
-- [ ] Serverless / autoscaling fronted by a multiplexing proxy (pgbouncer, RDS Proxy) rather than a larger pool
+- [ ] If connection pressure under autoscaling is evidenced, evaluate the existing pool/proxy design; adding infrastructure is separate scope
 
 ### API
-- [ ] Response times < 200ms (p95)
+
+- [ ] The affected endpoint meets its actual latency target under stated load; 200ms p95 is an example, not a default requirement
 - [ ] No synchronous heavy computation in request handlers
 - [ ] Bulk operations instead of loops of individual calls
 - [ ] Response compression (gzip/brotli)
 - [ ] Appropriate caching (in-memory, Redis, CDN)
 
 ### Infrastructure
-- [ ] CDN for static assets
-- [ ] Server located close to users (or edge deployment)
-- [ ] Horizontal scaling configured (if needed)
-- [ ] Health check endpoint for load balancer
+
+Only for an evidenced infrastructure bottleneck or an explicit infrastructure task:
+
+- [ ] Evaluate existing CDN/cache behavior for the affected static assets
+- [ ] Compare network distance or edge options if location dominates latency
+- [ ] Evaluate scaling only where capacity measurements justify it
+- [ ] Preserve the load balancer's required health checks when its configuration changes
 
 ## Caching Strategies
 
@@ -145,7 +165,7 @@ The decision material (which layer, which invalidation strategy, what never to c
 
 ### Negative caching
 
-Cache the *absence* of a result too. A key that misses on every lookup (a nonexistent user ID probed in a loop, a 404 asset) sends every request to the origin, which is a cache that only protects the happy path.
+Consider caching the *absence* of a result when repeated misses are a measured source of load and the consistency/privacy policy permits it. A key that misses on every lookup (a nonexistent user ID probed in a loop, a 404 asset) sends every request to the origin, which is a cache that only protects the happy path.
 
 - Store an explicit "not found" sentinel with a **shorter** TTL than positive entries
 - Keep the negative TTL short enough that a newly created record appears promptly
@@ -170,6 +190,7 @@ function loadOnce<T>(key: string, fetcher: () => Promise<T>): Promise<T> {
 For a shared cache, the same idea needs a distributed lock, or `stale-while-revalidate` so waiters serve the stale value instead of blocking.
 
 ### Cache checklist
+
 - [ ] The cached call was measured as expensive first (caching a fast call adds a hop and buys nothing)
 - [ ] Read/write ratio justifies the cache (re-read far more often than written)
 - [ ] Cache key includes every input the response varies on: tenant, viewer, locale, permissions, feature flags
@@ -177,9 +198,9 @@ For a shared cache, the same idea needs a distributed lock, or `stale-while-reva
 - [ ] One invalidation strategy chosen (TTL, event/tag, or versioned keys), not an accidental mix
 - [ ] Acceptable staleness window written down, not implied by whatever TTL was typed
 - [ ] Stampede protection on hot keys (coalescing, lock, or `stale-while-revalidate`)
-- [ ] Negative results cached with a shorter TTL; origin errors never cached
+- [ ] If negative caching is selected, use an appropriate shorter TTL; do not turn origin errors into false not-found entries
 - [ ] Eviction policy and memory ceiling set (an unbounded cache is a memory leak)
-- [ ] Hit rate monitored — a cache nobody measures is an assumption, and a low hit rate is pure overhead
+- [ ] Use available hit-rate/cost evidence to assess the changed cache; new telemetry infrastructure is not an incidental requirement
 - [ ] Nothing cached whose staleness is a correctness bug (balances, permissions, inventory at checkout)
 
 ## Measurement Commands
@@ -188,31 +209,23 @@ For a shared cache, the same idea needs a distributed lock, or `stale-while-reva
 
 1. **Use available evidence** — inspect existing [CrUX Vis](https://developer.chrome.com/docs/crux/vis) or RUM data when available. Otherwise reproduce the slow interaction with existing local tools; state that field impact is unverified rather than requiring new RUM setup or a field-data wait
 2. **Identify slow interactions** — open DevTools → Performance panel → record while interacting; look for long tasks triggered by clicks/keystrokes
-3. **Test on mid-range Android** — INP issues often only surface on slower hardware; use a real device or DevTools CPU throttling (4×–6× slowdown)
+3. **Check representative device limits when relevant** — use available hardware or an appropriate emulation profile for the claimed user group; record conditions and limits rather than requiring a device lab
 
-```bash
-# Lighthouse CLI
-npx lighthouse https://localhost:3000 --output json --output-path ./report.json
+Use existing project scripts or already installed, version-matched Lighthouse/bundle-analysis tools when those measurements answer the current question. Do not let a convenience command fetch a missing CLI or build a benchmark platform. If the required tool is unavailable, report the specific missing evidence and a scoped next step.
 
-# Bundle analysis
-npx webpack-bundle-analyzer stats.json
-# or for Vite:
-npx vite-bundle-visualizer
+When the project already uses `web-vitals`, its callbacks can support relevant local inspection; they do not establish field impact or authorize transmitting telemetry:
 
-# Check bundle size
-npx bundlesize
-
-# Web Vitals in code
+```javascript
 import { onLCP, onINP, onCLS } from 'web-vitals';
 onLCP(console.log);
 onINP(console.log);
 onCLS(console.log);
 
-# INP with interaction-level detail (attribution build)
-import { onINP } from 'web-vitals/attribution';
-onINP(({ value, attribution }) => {
+// If supported by the installed version, attribution helps localize slow input.
+import { onINP as onINPWithAttribution } from 'web-vitals/attribution';
+onINPWithAttribution(({ value, attribution }) => {
   const { interactionTarget, inputDelay, processingDuration, presentationDelay } = attribution;
-  console.log({ value, interactionTarget, inputDelay, processingDuration, presentationDelay });
+  // Inspect only the fields needed for diagnosis; sanitize any recorded output.
 });
 ```
 
@@ -221,10 +234,10 @@ onINP(({ value, attribution }) => {
 | Anti-Pattern | Impact | Fix |
 |---|---|---|
 | N+1 queries | Linear DB load growth | Use joins, includes, or batch loading |
-| Unbounded queries | Memory exhaustion, timeouts | Always paginate, add LIMIT |
+| Unbounded queries | Memory exhaustion, timeouts | Bound collection reads with appropriate pagination or limits |
 | Missing indexes | Slow reads as data grows | Add indexes for filtered/sorted columns |
-| Indexing without reading the plan | Write cost paid, read gain unproven | `EXPLAIN ANALYZE` before and after; revert if the plan is unchanged |
-| Redundant / unused indexes | Every write pays for them | Audit usage stats, drop what nothing reads |
+| Indexing without workload evidence | Write cost paid, read gain unproven | Compare authorized plans/measurements; judge the actual benefit and constraints |
+| Redundant / unused indexes | Additional write/storage cost | Confirm workload and constraint use before an authorized removal |
 | Connection pool per request | Exhausts `max_connections` under load | One pool per process; proxy for serverless |
 | Cache key missing the viewer | One user's data served to another | Key on tenant, viewer, locale, permissions |
 | Unbounded cache | Memory leak wearing an optimization's clothing | Set eviction policy and a memory ceiling |

@@ -1,6 +1,6 @@
 # Security Checklist
 
-Quick reference for web application security. Use alongside the `security-and-hardening` skill.
+Select checks for the trust boundaries, data and dependencies affected by the task, using `security-and-hardening` when needed. Keep actual project security/release requirements. Unrelated sections are not new work, and this reference does not authorize installation, destructive actions or production access.
 
 ## Table of Contents
 
@@ -20,30 +20,36 @@ Quick reference for web application security. Use alongside the `security-and-ha
 
 ## Threat Modeling (Start Here)
 
-Before reaching for controls, spend five minutes thinking like an attacker:
+For a changed sensitive boundary, identify the relevant assets and plausible abuse. Reuse the existing threat model. Use a structured method such as STRIDE when its complexity warrants one; a local safe fix does not need a timed exercise or new threat-model document:
 
-- [ ] Trust boundaries mapped (requests, uploads, webhooks, third-party APIs, LLM output, and local values written by processes you don't control)
-- [ ] Assets named (credentials, PII, payment data, admin actions, money movement)
-- [ ] STRIDE run per boundary (Spoofing, Tampering, Repudiation, Info disclosure, DoS, Elevation)
-- [ ] Abuse cases written next to use cases ("how would I misuse this?")
+- [ ] Affected trust boundaries identified (requests, uploads, webhooks, third-party APIs, LLM output, or values written by untrusted processes)
+- [ ] Assets at risk identified (credentials, PII, payment data, admin actions, money movement)
+- [ ] Plausible threats examined at the affected boundary; STRIDE is an optional prompt for missed categories, not a required separate pass
+- [ ] Important abuse cases inform implementation and relevant tests; record only decisions needed for review or continuation
 
 ## Pre-Commit Checks
 
-- [ ] No secrets in code (`git diff --cached | grep -i "password\|secret\|api_key\|token"`)
-- [ ] `.gitignore` covers: `.env`, `.env.local`, `*.pem`, `*.key`
+For a change being prepared for authorized Git delivery, inspect its actual diff and use existing secret checks. These checks do not require staging or committing merely to inspect work.
+
+- [ ] No credentials or private values added to source, examples, output or logs; avoid printing discovered secret values
+- [ ] Secret-bearing local files are excluded under the project policy (for example `.env`, `.env.local`, private keys)
 - [ ] `.env.example` uses placeholder values (not real secrets)
 
 ## Authentication
 
-- [ ] Passwords hashed with bcrypt (≥12 rounds), scrypt, or argon2
-- [ ] Session cookies: `httpOnly`, `secure`, `sameSite: 'lax'` or `'strict'`, consistent with the established project session/CSRF policy and required flows; an approved `'strict'` choice does not need conversion to `'lax'`
+For changed authentication/session flows, preserve the established security policy and test relevant allowed/denied behavior. Do not migrate unrelated authentication configuration to match an example.
+
+- [ ] Password storage uses an approved password-hashing library and project parameters, never plaintext or a fast general-purpose digest
+- [ ] Session cookies retain appropriate `httpOnly`, `secure` and `sameSite` settings under the established session/CSRF policy. Preserve an approved `'lax'` or `'strict'` choice; an established cross-site `'none'` flow needs secure cookies and its actual CSRF protections, not a migration just to match an example
 - [ ] Session expiration configured (reasonable max-age)
-- [ ] Rate limiting on login endpoint (≤10 attempts per 15 minutes)
-- [ ] Password reset tokens: time-limited (≤1 hour), single-use
+- [ ] Login abuse controls follow the project threat model and limits, with relevant denial/recovery behavior checked
+- [ ] Password reset tokens are single-use with the project's justified expiry
 - [ ] Account lockout after repeated failures (optional, with notification)
 - [ ] MFA supported for sensitive operations (optional but recommended)
 
 ## Authorization
+
+Check the affected protected operations and their real callers; preserve these invariants without reopening unrelated endpoints.
 
 - [ ] Every protected endpoint checks authentication
 - [ ] Every resource access checks ownership/role (prevents IDOR)
@@ -52,6 +58,8 @@ Before reaching for controls, spend five minutes thinking like an attacker:
 - [ ] JWT tokens validated (signature, expiration, issuer)
 
 ## Input Validation
+
+Select the boundary types changed by the task. Keep validation/encoding at the real trust boundary rather than adding unused parallel controls.
 
 - [ ] All user input validated at system boundaries (API routes, form handlers)
 - [ ] Validation uses allowlists (not denylists)
@@ -106,6 +114,8 @@ What this does not do, and must be said where the snippet is copied from:
 
 ## Security Headers
 
+If header policy is changed, check the required protection and affected integrations. This example is not a literal configuration to apply to every service; preserve established policy unless a supported change is authorized.
+
 ```
 Content-Security-Policy: default-src 'self'; script-src 'self'
 Strict-Transport-Security: max-age=31536000; includeSubDomains
@@ -118,6 +128,8 @@ Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 ## CORS Configuration
 
+For changed cross-origin access, retain the intended public/private boundary and credential policy. The restricted-origin example below applies to a private/credentialed API; it is not a reason to change an intentionally public unauthenticated resource.
+
 ```typescript
 // Restrictive (recommended)
 cors({
@@ -127,11 +139,13 @@ cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
 })
 
-// NEVER use in production:
-cors({ origin: '*' })  // Allows any origin
+// Do not use a wildcard as the policy for a private/credentialed API:
+cors({ origin: '*' })  // Allows any origin; not a substitute for authorization
 ```
 
 ## Data Protection
+
+Apply to affected sensitive data paths and actual retention/compliance requirements. Do not read, export or mutate real data to fill this checklist without applicable authority.
 
 - [ ] Sensitive fields excluded from API responses (`passwordHash`, `resetToken`, etc.)
 - [ ] Sensitive data not logged (passwords, tokens, full CC numbers)
@@ -144,7 +158,7 @@ cors({ origin: '*' })  // Allows any origin
 
 ## Dependency Security
 
-First locate the **installation boundary**. If the package is matched by a parent `workspaces` declaration, use that workspace root; otherwise use the nearest project root that owns both its manifest and dependency graph. At that boundary, corroborate `packageManager` (when present), the lockfile, and CI commands. Stop if they disagree or competing manager lockfiles exist there. A nested project is independent only when it is outside the parent workspace; independent subprojects may legitimately use different managers.
+For dependency changes, audits or authorized installation, first locate the **installation boundary**. An unrelated source edit does not require reinstalling or auditing the whole dependency graph. If the package is matched by a parent `workspaces` declaration, use that workspace root; otherwise use the nearest project root that owns both its manifest and dependency graph. At that boundary, corroborate `packageManager` (when present), the lockfile, and CI commands. Resolve conflicts before the affected install if these disagree or competing manager lockfiles exist there; continue independent source work. A nested project is independent only when it is outside the parent workspace; independent subprojects may legitimately use different managers.
 
 | Manager/version signal | Frozen/immutable CI install | Known-advisory audit |
 |---|---|---|
@@ -157,7 +171,7 @@ For an unlisted manager or version, consult its official documentation; do not s
 
 ### Install-Script Gate
 
-Never discover dependency lifecycle scripts by first executing an ordinary install on a client whose defaults have not been verified.
+When installation is in scope, do not discover dependency lifecycle scripts by first executing an ordinary install on a client whose defaults have not been verified. Existing valid dependency evidence can be reused; this section does not create an installation requirement for every task.
 
 1. Bootstrap with dependency scripts disabled, or with a documented default-deny policy plus fail-closed enforcement.
 2. Inspect the exact script source and package version before approval.
@@ -191,12 +205,12 @@ Authoritative checks: [npm install-scripts](https://docs.npmjs.com/cli/v11/comma
 
 ## AI / LLM Security
 
-For any feature that calls an LLM (chatbots, summarizers, agents, RAG):
+For changed LLM/tool/data boundaries (chatbots, summarizers, agents, RAG), select the applicable controls:
 
 - [ ] Model output treated as untrusted — never into `eval`/SQL/shell/`innerHTML`/file paths
 - [ ] Prompt injection assumed; permissions enforced in code, not in the system prompt
 - [ ] Secrets, cross-tenant data, and full system prompts kept out of the context window
-- [ ] Tool/agent permissions scoped; destructive or irreversible actions require confirmation
+- [ ] Tool/agent permissions scoped; destructive or irreversible actions require applicable human authority, without repeating confirmation for scope already explicitly granted
 - [ ] Token, rate, and recursion/loop limits set (bound consumption)
 
 ## Error Handling
@@ -241,7 +255,7 @@ For apps with LLM features. See the [OWASP GenAI Security Project](https://genai
 | LLM03 | Supply Chain | Vet models, datasets, and plugins like any dependency |
 | LLM04 | Data and Model Poisoning | Use trusted model sources, verify integrity; vet fine-tuning and RAG data |
 | LLM05 | Improper Output Handling | Treat model output as untrusted; validate, parameterize, encode |
-| LLM06 | Excessive Agency | Scope tool permissions; confirm destructive actions |
+| LLM06 | Excessive Agency | Scope tool permissions; require applicable human authority for destructive actions |
 | LLM07 | System Prompt Leakage | Assume the system prompt can leak; put no secrets in it |
 | LLM08 | Vector and Embedding Weaknesses | Partition RAG embeddings per tenant; validate documents before indexing |
 | LLM09 | Misinformation | Ground answers with citations; validate critical claims; keep a human in the loop |
