@@ -1122,7 +1122,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "3649a18a8791a9e959b548e4aeff64467ae2a0ba0d47735d0c72ff7979b42e4b",
+      "sha256": "4d2e5bf5a7cfa278d1d235e5625172c451dea43cf76223194b0af1accf75efa6",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1226,7 +1226,7 @@
     },
     {
       "path": "docs/team-policy.md",
-      "sha256": "b49d672aafbbbf316776dfd92d3923007749db2089be890743ace3f1087779cc",
+      "sha256": "83e20dadcc3732b8a5a8bb689bd412afe14d4e773cf82b302948763ac35fd168",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1234,7 +1234,7 @@
     },
     {
       "path": "docs/team-workflow.md",
-      "sha256": "ba1bc7d20b5a773d38df00ac997fbec9eec20952dfdafce469eb36da22fc2188",
+      "sha256": "eb6e2ae12dfa048f197e35834355e895de0fa5879cfd94d630d53f43ca3c6058",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"

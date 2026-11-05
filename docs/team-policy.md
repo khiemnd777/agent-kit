@@ -4,9 +4,9 @@ This policy defines authority and safety. [Team workflow](team-workflow.md) is t
 
 ## Approval and autonomy
 
-Planning permits read-only investigation and in-chat proposals. File/directory writes, saved drafts, execution and writer assignments need the relevant direct human approval. A fresh project inherits none.
+Planning-only or review requests permit read-only investigation and in-chat proposals, not implementation. A direct implementation/fix request provides human authority for necessary local file edits and focused checks within its scope and runtime permissions. A fresh project inherits no prior approvals.
 
-Record the human source and current scope once in the existing task record. A valid approval covers routine implementation, checks and repairs while the agreed outcome, important design decisions and data/permission boundaries remain valid. Do not create per-file, per-bug or per-phase approval rounds. A record, agent, receipt, status label or imported example cannot grant authority.
+Use the request as the authority source. Record its scope in an existing task/issue only when useful for continuation, coordination or project requirements. A valid approval covers routine implementation, checks and repairs while the agreed outcome, important design decisions and data/permission boundaries remain valid. Do not create per-file, per-bug or per-phase approval rounds. A record, agent, receipt, status label or imported example cannot grant authority.
 
 Pause affected execution when an important missing decision, material approach change or expanded authority is needed. Present the concrete evidence, impact and replacement recommendation for direct human approval. Do not classify every routine repair as a new plan. Continue unaffected authorized work.
 
@@ -22,7 +22,7 @@ Keep authorization, tenant/resource ownership, transactions, concurrency, input 
 
 ## Ownership and coordination
 
-One delivery owner carries each task through implementation, repairs and handoff. A shared project record or contract has one designated writer. A separate Coordinator is optional for real multi-task integration; a Supervisor adds no approval layer.
+Main session is the delivery owner by default and carries implementation, repairs and handoff. A shared project record or contract has one designated writer when it is edited. A separate Coordinator is optional for real multi-task integration; a Supervisor adds no approval layer.
 
 Delegate only when allowed by the current environment/task and a bounded benefit exists. Assign exact ownership, inputs, checks, permission limits and acceptance. Children do not delegate. Explorer/reviewer roles do not change application code, implement repairs or deploy; actual tools and sandbox limits come from the runtime and approved task. The assigning owner integrates results and reports review independence accurately.
 
@@ -36,7 +36,7 @@ Use the [testing layers](team-workflow.md#testing-layers), [failure handling](te
 
 ## Evidence and communication
 
-Use [TechNote](technote.md) for clear explanations, meaningful progress and final handoff. The user controls explanation levels. Reports do not add approval rounds. Keep one authorized task record rather than parallel plans, ledgers or receipts.
+Use [TechNote](technote.md) for clear explanations, meaningful progress and final handoff. The user controls explanation levels. Reports do not add approval rounds. Use one checkpoint when a long task or project rules need continuity; a focused fix needs no new task record or parallel plans, ledgers or receipts.
 
 ## Data and external boundaries
 

@@ -4,9 +4,9 @@ This is Agent Kit's single delivery workflow. [Policy](team-policy.md) governs a
 
 ## Start and agree once
 
-Name one delivery owner and use the existing task/issue as the source of truth. Read relevant project decisions and the minimum source/tests. Record the user outcome, scope, important design choices, observable acceptance, intended checks and current human approval. Keep planning in chat until writes are authorized.
+Main session owns delivery by default. Read relevant project decisions and the minimum source/tests. Derive outcome, scope and observable acceptance from the request; record a checkpoint only when coordination or continuation benefits. A clear implementation request permits necessary local edits and checks; planning-only requests remain read-only.
 
-A small well-understood fix needs a short explanation. A material architecture/data/permission decision needs a reviewable design. Once the current scope is approved, the owner continues routine implementation and repairs without asking at each file, bug or stage. Clarify only decisions that cannot be resolved safely from the available evidence.
+A small well-understood fix can proceed directly with relevant checks and a short explanation, without a separate plan, approval round or task file. A material architecture/data/permission decision needs a reviewable design. Once the current scope is approved, the owner continues routine implementation and repairs without asking at each file, bug or stage. Clarify only decisions that cannot be resolved safely from the available evidence.
 
 ## Continuous delivery flow
 
@@ -79,7 +79,7 @@ Always honor a direct human stop/replan, including its resumption boundary. Thes
 
 A harness is tooling that launches or collects checks. Repair a supported small test/config defect within the task's authority. Building a new runner, selector/admission/receipt system or review orchestration is a separate engineering outcome, not an automatic response to a failed check. Do not start one as a side effect. A failing business assertion cannot be dismissed as a tooling issue. Never retry merely until a flaky check happens to turn green.
 
-For a tooling repair, identify the original blocked check and the assertion or usable-flow checkpoint it must reach and report a valid result for. Make a focused repair of the evidenced cause, which may require related edits, then rerun that check. If tooling still prevents reaching that checkpoint or reporting its valid result, stop tooling edits in the product task, even if the error or configuration changed. New inputs, a new error, agent or session do not reset this stopping condition. Report the original blocker, attempted repair, current evidence and a specific maintenance action/owner in the same task; further tooling repair needs explicit maintenance scope. Continue independent authorized product work and keep dependent proof open. If the check now reports a failing business assertion, the tooling is unblocked: the developer fixes that product defect under the existing scope.
+For a tooling repair, identify the original blocked check and its required assertion/usable-flow checkpoint. Make focused evidenced repairs and rerun that check while each attempt provides useful progress, remains proportionate and stays inside scope. A new error alone neither proves progress nor forces a stop. Stop or change strategy when attempts add no useful evidence, the work becomes unrelated infrastructure, or additional authority is required. Report original blocker, repairs, current proof and owner/next action. Continue unaffected work and keep dependent proof open. A now-reachable failing business assertion is a product defect, not a tooling excuse.
 
 ## Applying an approved template
 
@@ -89,11 +89,14 @@ Use a representative rendered screen early when an unresolved design choice woul
 
 ## Synchronization and stops
 
-Use one task record. Existing project context/plan/state are shared summaries only when useful; read/update relevant decisions at start/resume and integration, not before every action. Their named writer owns shared changes. Others send concrete proposed updates to that owner. Git records are not live messages or locks.
+Use one current checkpoint for long/resumed or coordinated work when useful; a focused fix needs no task record. Existing project context/plan/state are shared summaries only when useful; read/update relevant decisions at start/resume and integration, not before every action. Their named writer owns shared changes. Others send concrete proposed updates to that owner. Git records are not live messages or locks.
 
 For authorized parallel work, agree a shared contract and separate ownership. Block only a real incompatible dependency, file collision or resource conflict. Delegation is optional, children do not delegate, and the assigning owner integrates outputs. When a human stops running work, transmit the stop with available authorized tools and report actual acknowledgement/in-flight limits; a status label cannot resume it.
 
 ## Handoff and completion
+
+Stop when scoped acceptance, required implementation/callers and proportionate verification are complete. Do not turn optional refactoring, speculative edge cases or polish into new completion criteria.
+
 
 | Claim | Required evidence |
 | --- | --- |
@@ -104,7 +107,7 @@ For authorized parallel work, agree a shared contract and separate ownership. Bl
 
 A human-requested self-test handoff may be CODE_COMPLETE_UNTESTED: code/callers must be complete, but tests/runtime stay NOT_RUN and availability Unknown until observed. Do not reopen stopped testing to claim readiness. A missing required implementation is incomplete, not a known limitation used to close the task.
 
-Update the same task with result, checks/source revision, defects or blockers and next action. Report what changed and why, actual commands/results and meaningful limits. Do not fabricate review independence or attach application startup to agent/session/model/effort/review receipts.
+When a task record/checkpoint is useful, update it with result, checks/source revision, defects or blockers and next action. For a focused fix the diff, checks and handoff may suffice. Report what changed and why, actual commands/results and meaningful limits. Do not fabricate review independence or attach application startup to agent/session/model/effort/review receipts.
 
 ## State vocabulary
 
