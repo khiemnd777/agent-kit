@@ -720,7 +720,7 @@
     },
     {
       "path": ".claude/agents/kit-explorer.md",
-      "sha256": "9d9418c646bf963e1934197b2ecaa4b77f2efd1eeb3038d55af9299f9cbb4431",
+      "sha256": "c394f73dcff61e45661378082d04cd8da7a2fb22b3a933d2a3f58e5eb701aa3a",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -728,7 +728,7 @@
     },
     {
       "path": ".claude/agents/kit-implementer.md",
-      "sha256": "cdbe550d34dd4584f8323238c444dd82cd92e1796fd8b9c230c0a8952218baae",
+      "sha256": "094152570bd40746f738208be10cc5affbb383655ff153ab8c724746cfb9cfbd",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -736,7 +736,7 @@
     },
     {
       "path": ".claude/agents/kit-reviewer.md",
-      "sha256": "6e117f688beba07500e0d967cc2861ebb6433734f21f85425c9ff6f909869c1b",
+      "sha256": "809c81eeed09de7be00aaed447ed975948ce75a83b196f7f7b3c918815a88df6",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1125,7 +1125,7 @@
     },
     {
       "path": ".codex/agents/kit-explorer.toml",
-      "sha256": "7df91781fcb49377c6465eebc0c18052d9e52105f7ad78660f50ffa7fc06db43",
+      "sha256": "7d0790e39dba4f9637b81664bf4ebba65beb8b71d51bcef9a93e1cd3e3ea0ba0",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1133,7 +1133,7 @@
     },
     {
       "path": ".codex/agents/kit-implementer.toml",
-      "sha256": "e5482968b5f495ee443cdf36853303fcedf672cef878c089bf06d4f87f23e131",
+      "sha256": "0bdfce5aef4936030297dd751a103ce0fbf6d19d6ac8d04dba050b3dab22d33d",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1141,7 +1141,7 @@
     },
     {
       "path": ".codex/agents/kit-reviewer.toml",
-      "sha256": "58f7ecc114a12f53cc6cf0d698ebdb773c07090f0ba5bd0721c5f6c3c946e80c",
+      "sha256": "244321926e19fb7589ec36280fbb06b4027aa07716cbc2562bf91878f8a45882",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1221,7 +1221,7 @@
     },
     {
       "path": "docs/roles/coordinator.md",
-      "sha256": "a4f450aaaa774d027d8619c012639bc5394995695532cea0bb025156ef10cbc9",
+      "sha256": "109e509793e6f069507d97d9c698bd050b3886b0bc6be07e0d4e1f96a7a6caef",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1229,7 +1229,7 @@
     },
     {
       "path": "docs/roles/explorer.md",
-      "sha256": "7ce93a9451d5f8334d214d383a8d63ce2f42b7339167640dfea8296deea1d3d9",
+      "sha256": "bffb84aef7044c3d7e71f2b1a2a77cf046ed33a0adf259eba214dafecf9d2f47",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1237,7 +1237,7 @@
     },
     {
       "path": "docs/roles/implementer.md",
-      "sha256": "3b61a8bd9aa8d4ab81039b836641ab0d4b04f48a45df99e264ec045d0422e453",
+      "sha256": "a174a66fa10a2ae76e3aca68ac2543d5a423191a859578224a008c06a5857ae0",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1245,7 +1245,7 @@
     },
     {
       "path": "docs/roles/reviewer.md",
-      "sha256": "d547d177cc8bab8a5e8ae454c8b2f566810f1c0b42783e02bd2b7cdc34e9794b",
+      "sha256": "cf81a7414c7dab81578575adc2e3bbbbe305b988cdd8aeab29170b7476e5ae0d",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"

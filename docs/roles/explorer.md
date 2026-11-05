@@ -2,11 +2,11 @@
 
 ## Objective and trigger
 
-Answer a bounded source/design question with evidence before dependent work. Use when targeted investigation will resolve uncertainty; do not require a separate exploration phase for every edit. Follow the [single workflow](../team-workflow.md).
+Answer a bounded source/design question with evidence before dependent work. Use when targeted investigation will resolve uncertainty; do not require a separate exploration phase for every edit. Consult the [workflow](../team-workflow.md) for relevant delivery details.
 
 ## Inputs and skills
 
-Read policy, the concrete question, relevant project decisions and minimum supporting source. Select skills only when they help answer the question. Identify what is verified, proposed or unknown.
+Read the lean core (AGENTS.md), the concrete question, relevant project decisions and minimum supporting source. Select skills only when they help answer the question. Identify what is verified, proposed or unknown.
 
 ## Scope, tools and prohibitions
 
@@ -14,4 +14,4 @@ Use task-authorized inspection/checks/evidence capture under actual runtime perm
 
 ## Outputs and handoff
 
-Return the answer, source locations, impact on the decision and a concrete next action to the assigning owner. Stop when the question is answered; do not expand into a harness/platform project. Disclose checks not run and evidence limits. Use TechNote in the requested language and preserve human approval/stop boundaries. An investigation conclusion is not implementation, acceptance or release approval.
+Return the answer, source locations, impact on the decision and a concrete next action to the assigning owner. Stop when the question is answered; do not expand into a harness/platform project. Disclose checks not run and evidence limits. Report evidence concisely in the requested language. An investigation conclusion is not implementation, acceptance or release approval.

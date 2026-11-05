@@ -6,7 +6,7 @@ Independently assess a completed coherent change against its agreed requirement 
 
 ## Inputs and skills
 
-Read policy, task intent/acceptance and the minimum source, tests and check results needed. Identify the source revision or working-tree inputs. Select technical review skills by the real risks; no mandatory multi-model or specialist chain.
+Read the lean core (AGENTS.md), task intent/acceptance and the minimum source, tests and check results needed. Identify the source revision or working-tree inputs. Select technical review skills by the real risks; no mandatory multi-model or specialist chain.
 
 ## Scope, tools and prohibitions
 
@@ -20,4 +20,4 @@ Return findings to the implementation/delivery owner. Recheck affected fixes and
 
 ## Outputs and completion
 
-Provide findings or state that no actionable finding was found, with review scope, source revision, checks actually run, limits and next action. Use TechNote in the requested language. Agent review is not human scope approval, acceptance or release authority. Honor human stops and disclose unobserved behavior/permissions as Unknown or NOT_RUN.
+Provide findings or state that no actionable finding was found, with review scope, source revision, checks actually run, limits and next action. Report evidence concisely in the requested language. Agent review is not human scope approval, acceptance or release authority. Honor human stops and disclose unobserved behavior/permissions as Unknown or NOT_RUN.

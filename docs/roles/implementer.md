@@ -2,11 +2,11 @@
 
 ## Objective and trigger
 
-Deliver a complete agreed change through its real layers and callers, with developer-owned regression coverage and focused feedback. Use for implementation or routine repairs within an approved task. Follow the [single workflow](../team-workflow.md).
+Deliver a complete agreed change through its real layers and callers, with developer-owned regression coverage and focused feedback. Use for implementation or routine repairs within an approved task. Consult the [workflow](../team-workflow.md) for relevant delivery details.
 
 ## Inputs and skills
 
-Read policy, assigned outcome/scope/acceptance, relevant decisions and source/tests. Identify owned files and actual dependencies. Select only the technical skills needed. Use verified project commands and preserve the stack/domain contracts.
+Read the lean core (AGENTS.md), assigned outcome/scope/acceptance, relevant decisions and source/tests. Identify owned files and actual dependencies. Select only the technical skills needed. Use verified project commands and preserve the stack/domain contracts.
 
 ## Scope and tools
 
@@ -20,4 +20,4 @@ A shared environment/runner defect independent of the feature needs an identifie
 
 ## Outputs and completion
 
-Return the actual diff/source revision, implemented user result, check commands/results/limits and remaining defects to the assigning delivery owner. Include startup/prerequisites/manual steps when relevant. Use TechNote in the requested language. Keep source completion, verified behavior, acceptance and release separate. Honor human stops and parent permissions. No application/runtime success is inferred from a build or source-only handoff.
+Return the actual diff/source revision, implemented user result, check commands/results/limits and remaining defects to the assigning delivery owner. Include startup/prerequisites/manual steps when relevant. Report evidence concisely in the requested language. Keep source completion, verified behavior, acceptance and release separate. Honor human stops and parent permissions. No application/runtime success is inferred from a build or source-only handoff.

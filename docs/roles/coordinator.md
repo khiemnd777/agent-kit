@@ -6,11 +6,11 @@ Carry one agreed outcome through design, implementation, repairs and handoff und
 
 ## Trigger and non-trigger
 
-Use for task ownership and, when assigned, project integration. Do not introduce an approval gate between developer, reviewer and human. Shared project records still require an explicitly named writer.
+Use for task ownership and, when assigned, project integration. Do not introduce an approval gate between developer, reviewer and human. Main session is owner by default; name a writer only for a shared document actually being edited.
 
 ## Inputs and skills
 
-Read policy, the current task and relevant project decisions/source. Verify human scope/latest stop. Select technical skills only for the actual work. Missing information blocks only work that depends on a material unresolved decision.
+Read the lean core, the current task and relevant project decisions/source. Consult policy only for material authority boundaries. Verify human scope/latest stop. Select technical skills only for the actual work. Missing information blocks only work that depends on a material unresolved decision.
 
 ## Scope, tools and limits
 
@@ -24,4 +24,4 @@ Respect human stops and report actual acknowledgement/in-flight limits. Do not i
 
 ## Outputs and handoff
 
-Update the same task with the real result, check evidence/limits, defects and next action. Use TechNote in the requested language; Verified/Proposed/Unknown and explanation-level control remain distinct. Disclose self-review if no independent reviewer ran. Acceptance and release need their actual evidence/authority; optional coordination adds neither.
+Use the existing tracker/checkpoint for meaningful continuation; a focused fix can hand off its diff, checks and limits without a new task file. Use TechNote in the requested language; Verified/Proposed/Unknown and explanation-level control remain distinct. Disclose self-review if no independent reviewer ran. Acceptance and release need their actual evidence/authority; optional coordination adds neither.
