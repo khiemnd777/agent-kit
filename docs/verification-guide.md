@@ -110,9 +110,9 @@ Inspect actual instructions and their callers/entrypoints. Confirm that one owne
 
 Consider these concrete cases without executing a behavioral harness:
 
-- A small approved fix: the owner implements/tests directly, without a separate spec/checkpoint/reviewer per file.
-- Tests/config broken by that fix: the same developer diagnoses/repairs within scope.
-- Shared runner failure independent of the feature: a maintenance owner is named, dependent proof stays blocked and independent code work continues.
+- A clear focused fix: the owner implements/checks directly under the user's scope, without a separate spec, task file, repeated approval or reviewer per file.
+- Tests/config broken by that fix: the developer diagnoses/repairs within scope while useful progress and evidence justify the work.
+- Shared runner failure independent of the feature: a maintenance owner is named, dependent proof stays blocked and independent code work continues. A changed error is neither proof of progress nor an automatic stop.
 - Review waits or a command fails unchanged: continue independent authorized work or hand off the blocker; do not invent verification/orchestration to fill the wait.
 - Source/session/stage changes: retain valid checks/reviews and recheck affected inputs/findings only.
 - Material missing decision, unsafe dependency or release/data authority missing: pause the affected work and request the needed decision. A direct human stop always applies.

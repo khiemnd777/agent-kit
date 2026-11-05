@@ -1154,7 +1154,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "14da968f29ea62e8bf3bc9628629384cbdeefda68c9171dd887c316d300c49c1",
+      "sha256": "cf8ae83b61a06a5f90813afb22dec53aa192f79147ce2e9ef84b8457edbb281a",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1162,7 +1162,7 @@
     },
     {
       "path": "docs/agent-compatibility.md",
-      "sha256": "9d1a860e2d1393de898282109b1e69c70d7dd6b15d26b6f79a9c88422679f2a6",
+      "sha256": "100de114feae1463dbf46cdd6e06f92151a4e8c22d8e033f77169a07d4cfd9ee",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1218,7 +1218,7 @@
     },
     {
       "path": "docs/skills-catalog.md",
-      "sha256": "d91be2c36717fe0b2c5bfc85b8a97f8b69643402e109700bacf71ecc5bf84eda",
+      "sha256": "428f9419001f52656d88189e9153eddb5c9ecf3482c286713db2623212a96ece",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1242,7 +1242,7 @@
     },
     {
       "path": "docs/technote.md",
-      "sha256": "088c0e2ac5f5285367d380721530e9ddae61d4c2c5a7d5c3f3a105515445c732",
+      "sha256": "348b86314cfce4b05550c4d8abc4acc06a7ba0269d5d55d478157ee27d44ab46",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1258,10 +1258,34 @@
     },
     {
       "path": "docs/verification-guide.md",
-      "sha256": "86d4aafc7052eae744c035a1edb221588ad516eb0745d4b16c1c66308fc1c82f",
+      "sha256": "21a878a757bc6bc1c45cd6a18c976c3b5d35460c1c0c71ea6f417bae43ec39eb",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
+      }
+    },
+    {
+      "path": "docs/skills-provenance.md",
+      "sha256": "98f70a8df77a7c206ccf9496d7dbcf6bcbdc694c97d96b01ad8491ff2e372c80",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "docs/technote-reference.md",
+      "sha256": "a21edf73fb61b69f6149636c5985a801675b90feb82cc319b4413c0883c797a1",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "docs/codex-pilot-handoff.md",
+      "sha256": "c2bf2fc17efbc809acb27ca1bb96ab06c10d80fa7092339dda0ad11e2b384e4e",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
       }
     }
   ],

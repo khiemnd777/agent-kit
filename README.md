@@ -30,7 +30,7 @@ flowchart TD
     D -->|Flow defect: routine repair| B
 ```
 
-One delivery owner carries the change through this flow. These are moments in delivery, not approval gates after every file. Developer tests are part of coding. Review evaluates a concrete completed change. QA/human acceptance checks usable flows at milestones. Routine repairs keep the existing approval and recheck only affected findings/checks; reuse unchanged evidence. Continue independent authorized work during review/CI waits, or hand off the waiting state without inventing work.
+The main session normally owns the work; effort and evidence scale with risk, not file count. These are not per-file approval gates. Developer tests are part of coding. Review evaluates a concrete completed change. QA/human acceptance checks usable flows at milestones. Routine repairs keep the existing approval and recheck only affected findings/checks; reuse unchanged evidence. Continue independent authorized work during review/CI waits, or hand off the waiting state without inventing work.
 
 If tooling prevents a check from running, use this bounded recovery path:
 
@@ -53,12 +53,16 @@ The checkpoint is the original assertion or usable-flow check. A new error, inpu
 
 Pause only affected work for material missing decisions/expanded authority, incorrect or unsafe dependencies, or an action requiring release/real-data authority. Always honor human stops. See [policy](docs/team-policy.md) for permission/data boundaries.
 
+## Lean default
+
+A clear local implementation request can proceed without a ceremonial plan or new task file. For focused work, change the necessary source, check relevant behavior and hand off. For long work, keep one checkpoint; for sensitive work, retain the actual project risk controls. Consult workflow, policy or skills only when the task needs the detail. See [Codex pilot handoff](docs/codex-pilot-handoff.md) for the unrun A/B evaluation.
+
 ## Quick start
 
 1. Create one project repository from this template, or integrate its relevant parts into an existing codebase after review.
 2. Open the root in Codex or Claude Code and give the actual task/outcome.
-3. Agree scope, material choices and acceptance. Direct human approval covers its routine implementation/checks/repairs.
-4. Name one delivery owner and use one task/issue. Shared project summaries are optional and have one assigned writer.
+3. A clear implementation request covers local work and focused checks in scope; resolve material missing choices only.
+4. The main session owns delivery by default; use a tracker/checkpoint only when helpful or required. Shared records have one writer when edited.
 5. Deliver a usable coherent change, then review/CI and acceptance. Git writes and release require their actual scope.
 
 ### New project
@@ -103,7 +107,7 @@ content consistency. Do not duplicate trackers or change global settings.
 
 ## Project records
 
-Use an existing issue/task tracker when available. Otherwise use [task records](docs/tasks/README.md) with authorized writes. [Context](docs/project-context.md), [plan](docs/project-plan.md) and [state](docs/project-state.md) are fresh optional shared summaries; keep one writer and link tasks instead of duplicating their checklists. They contain no inherited authority or completed product evidence.
+Use a project tracker when required or useful; [checkpoints](docs/tasks/README.md) are optional for focused fixes and valuable for long/resumed tasks. [Context](docs/project-context.md), [plan](docs/project-plan.md) and [state](docs/project-state.md) are fresh optional shared summaries; keep one writer and link tasks instead of duplicating their checklists. They contain no inherited authority or completed product evidence.
 
 For multiple developers, agree actual contracts and separate ownership. The assigning owner integrates results. Codex and Claude do not share live chat or locks; continuation uses the project record/source and the authorized team communication path.
 
@@ -115,4 +119,4 @@ No application dependencies, credentials, hooks, automatic installers, services,
 
 ## Contributing and license
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) and [LICENSE](LICENSE). Sixteen engineering skills and selected references derive from the pinned [Addy Osmani source](https://github.com/addyosmani/agent-skills/tree/1401c8b8030e023baeebb31781a6653fe8e93026); approved adaptations retain origin metadata and the upstream MIT notice in [.agents/ADDY-AGENT-SKILLS-LICENSE](.agents/ADDY-AGENT-SKILLS-LICENSE) and its Claude mirror. See [catalog provenance](docs/skills-catalog.md#provenance) for current counts.
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [LICENSE](LICENSE). Sixteen engineering skills and selected references derive from the pinned [Addy Osmani source](https://github.com/addyosmani/agent-skills/tree/1401c8b8030e023baeebb31781a6653fe8e93026); approved adaptations retain origin metadata and the upstream MIT notice in [.agents/ADDY-AGENT-SKILLS-LICENSE](.agents/ADDY-AGENT-SKILLS-LICENSE) and its Claude mirror. See [skill provenance](docs/skills-provenance.md) for current counts.
