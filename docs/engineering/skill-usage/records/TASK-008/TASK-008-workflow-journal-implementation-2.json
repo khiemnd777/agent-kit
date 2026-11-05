@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "task_id": "TASK-008",
+  "scope_id": "workflow-journal",
+  "recorded_at": "2026-11-05T07:20:09.660837+00:00",
+  "reported_by": "delivery_owner",
+  "event_id": "TASK-008-workflow-journal-implementation-2",
+  "event_type": "phase_handoff",
+  "source_kind": "agent_self_report",
+  "phase": "implementation",
+  "handoff_index": 2,
+  "classification": {
+    "size": "short",
+    "complexity": "approved Git integration",
+    "ui": false
+  },
+  "authority": {
+    "source": "Current user approval: merge codex/agent-kit-workflow-and-skill-journal into Agent Kit main and push.",
+    "scope": "Integrate approved branch, maintain task/journal records and push main; no deploy."
+  },
+  "skills": [
+    {
+      "skill_id": "git-workflow",
+      "contribution_summary": "Verified clean worktree and fetched refs; fast-forwarded approved branch into main and prepared scoped integration receipt/publication.",
+      "contribution_percent_estimate": 100,
+      "estimate_source": "agent_self_report",
+      "source_identity": {
+        "kind": "host_skill",
+        "path": "personal/git-workflow/SKILL.md",
+        "version": null,
+        "sha256": "62fb3807afd019f9071acc56c6f5c70cfac34cbd2fc447b751532461fb3e66d9",
+        "fingerprint_basis": "Bytes read in this merge/push handoff."
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "COMPLETED",
+    "verification_level": "local fast-forward integration observed; publication verified separately via Git refs",
+    "human_acceptance": "ACCEPTED",
+    "limitations": [
+      "Acceptance refers to the approved source branch; remote push is pending at record creation.",
+      "This is a genuine authorized integration handoff of the same task/scope, not a new usage count for resuming implementation.",
+      "No new native/runtime verification or measured efficiency claim."
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter/configuration captured."
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter/configuration captured."
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter/configuration captured."
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter/configuration captured."
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter/configuration captured."
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter/configuration captured."
+    },
+    "client": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter/configuration captured."
+    },
+    "model": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter/configuration captured."
+    },
+    "effort": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter/configuration captured."
+    }
+  },
+  "evidence_refs": [
+    "8081d050d82c98bee2415087765089fe4f51a83f",
+    "docs/tasks/TASK-008.md"
+  ]
+}

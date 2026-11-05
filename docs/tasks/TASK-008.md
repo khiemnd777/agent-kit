@@ -25,3 +25,9 @@ PASS: existing package integrity (35 mirror pairs, 17 skills/root, 3 original / 
 NOT_RUN: native discovery/invocation, A/B tasks, two-machine compatibility, merge/deploy. UNKNOWN: measured phase cost/model configuration; counters are null with reasons. Review is delivery-owner self-review, not independent review. Human implementation acceptance remains PENDING_REVIEW; plan approval is distinct.
 
 Actual current-task skill phase records are under [skill usage](../engineering/skill-usage/README.md). No earlier task/pilot histories were fabricated. Publication was not yet observed at the time these records were saved; verify the review branch/ref rather than treating an intended action as evidence.
+
+## Approved main integration — 2026-11-05
+
+The user accepted the reviewed branch and explicitly authorized merge into Agent Kit `main` and push. Fetched `origin/main` remained `336229d671589508898d39ee8f49cdca1b16491b`; the approved branch remained `8081d050d82c98bee2415087765089fe4f51a83f`. Clean local `main` was fast-forwarded to that exact commit without conflict or source modification.
+
+The earlier pending-review/publication checkpoint above is historical. Human source acceptance is now ACCEPTED, captured in a linked journal evaluation. This integration receipt and the new genuine handoff record preserve previous events. Push of `main` is the remaining action at receipt creation; verify remote refs for its subsequent outcome. Existing package evidence is reused because implementation bytes did not change. No native checks, deployment, worktree creation or global configuration change.
