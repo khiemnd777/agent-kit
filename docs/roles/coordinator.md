@@ -6,7 +6,7 @@ Carry the requested outcome through implementation, checks and handoff under the
 
 ## Inputs and scope
 
-Read the task and relevant source/decisions. Resolve material missing choices; a clear implementation request already covers necessary local work and routine repairs within scope and runtime permissions. Consult [policy](../team-policy.md) or [workflow](../team-workflow.md) only for relevant authority or delivery detail.
+Read the task and relevant source/decisions. Resolve material missing choices; every task needs a plan and explicit approval first, including small fixes. Approved plans cover necessary local work and routine repairs within scope and runtime permissions. Investigate risks/alternatives for complex tasks and obtain ASCII UI preview approval for UI tasks. Consult [policy](../team-policy.md) or [workflow](../team-workflow.md) only for relevant authority or delivery detail.
 
 Delegate only when permitted and useful. Give bounded inputs, ownership, checks and acceptance; children do not delegate. Integrate their results and preserve others' work. A shared record needs one writer when edited, not a new ownership ritual for every task.
 
@@ -18,4 +18,4 @@ Honor human stops; report acknowledgement and in-flight limits accurately. No re
 
 ## Outputs and handoff
 
-Stop when scoped acceptance and sufficient checks are met. For long, resumed or coordinated work, keep one useful [checkpoint](../tasks/README.md); a focused task needs no new file. Report the result, actual evidence/limits and next action if one remains, in the requested language. Disclose self-review. Human acceptance and release require their actual evidence and authority.
+Stop when scoped acceptance and sufficient checks are met. For long, resumed or coordinated work, keep one useful [checkpoint](../tasks/README.md); a focused task needs no new file. Proactively maintain authorized state/task entries and save actual phase records using the skill journal before reporting. Report the result, actual evidence/limits, actual skills table and 1–3 next-step options with conditions/authority, in the requested language. Disclose self-review. Human acceptance and release require their actual evidence and authority.

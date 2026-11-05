@@ -1,5 +1,6 @@
 # Definition of Done
 
+For long/complex/UI tasks, complete all approved production files and real wiring before writing/updating unit or other tests, then run tests. Do not alternate code/test per file/function. Repair evidenced defects during the test phase and rerun affected checks.
 Use the [lean operating core](../../AGENTS.md). Completion means the requested result and sufficient evidence for its risk, with no unresolved blocker to that claim. Stop there; optional polish, broader audits and unrelated refactoring are separate work.
 
 ## Match evidence to the result
@@ -20,7 +21,7 @@ Use meaningful focused tests for changed behavior and relevant contract/integrat
 
 Reuse valid evidence. Recheck when relevant source, inputs, environment or findings change, not merely for a new session/stage. Routine repairs stay within task authority while evidence, progress and cost justify them; use [failure guidance](../../docs/team-workflow.md#failures-and-blockers) if ownership or next scope is unclear. Do not weaken assertions or build a harness to fill a gap.
 
-A focused result may need only the diff, relevant checks and short handoff. Use one checkpoint for long/resumed/coordinated work when useful; no mandatory additional record.
+A focused task can use a short approved chat plan, diff and relevant checks. Close planning/implementation with actual skill contributions and 1–3 concrete next-step options; the owner saves the authorized phase journal record before reporting. Keep one checkpoint only for a real interruption/handoff, not per file/function. Unapproved/read-only planning remains in chat.
 
 ## Requested self-test handoff
 

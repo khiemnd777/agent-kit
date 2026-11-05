@@ -1,5 +1,7 @@
 # Project context
 
+Keep stable domain/design/constraints here. Current progress belongs in project-state.md; outcomes belong in project-plan.md and historical approvals/evidence in tasks/decisions. Do not import another project's implementation authority.
+
 This is an optional fresh project context summary; the task/issue remains the delivery source of truth. It contains no approved product, stack or execution authority. The named shared-record owner updates it when documentation writes are authorized.
 
 | Field | Current value |

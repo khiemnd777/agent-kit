@@ -5,7 +5,7 @@ description: "Clarify unclear requirements, domain rules, interfaces or acceptan
 
 # Spec-Driven Development
 
-Use the [lean operating core](../../../AGENTS.md). Resolve the uncertainty that prevents correct implementation. A clear contained fix can proceed without a separate specification.
+Use the [lean operating core](../../../AGENTS.md). Resolve the uncertainty that prevents correct implementation. A clear contained fix needs a short plan and approval, but not a separate specification document.
 
 ## Define only the needed decisions
 
@@ -17,7 +17,7 @@ For several distinct capabilities, sketch their responsibilities and real depend
 
 ## Resolve material choices
 
-A direct implementation request covers routine work inside its scope. Ask about a material missing product/design decision or additional authority when evidence cannot resolve it. Present a concrete recommendation and its tradeoff. Continue independent authorized work. A planning-only request stays within planning; saving a proposed artifact follows that request's scope.
+Approval of the current plan covers routine work inside its scope. For complex tasks investigate risks/alternatives and discuss the proposal first; UI plans include an ASCII mockup. A direct implementation request does not itself approve a plan. Ask about a material missing product/design decision or additional authority when evidence cannot resolve it. Present a concrete recommendation and its tradeoff. Continue independent authorized work. A planning-only request stays within planning; saving a proposed artifact follows that request's scope.
 
 Keep a short decision in chat for focused work. Use an existing spec/tracker or one checkpoint when a durable decision or handoff needs it. No mandatory SPEC.md, owner-naming ceremony or new approval receipt.
 

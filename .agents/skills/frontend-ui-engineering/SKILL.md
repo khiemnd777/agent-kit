@@ -7,6 +7,10 @@ description: Build or repair UI components, layouts and interactions while prese
 
 Use the [lean operating core](../../../AGENTS.md). Inspect the affected screen, components, styles and data path. Reuse the project's design system and supported interaction patterns. A text or spacing fix does not require a new visual research phase, component architecture or state-management library.
 
+## Preview before implementation
+
+Every UI task includes an ASCII text mockup in the plan for discussion/preview and explicit approval before coding, even a small change. Scale the mockup to the affected control/state. Complex UI also needs risk/alternative investigation. Complete all approved UI/data/caller wiring before writing/updating and running tests or rendered verification.
+
 ## Implement the requested experience
 
 Keep components and state ownership understandable. Prefer local state and explicit props when they work; introduce shared state or extraction to solve a demonstrated coupling problem, not a line-count or tree-depth rule. Wire the real route, controller and data rather than presenting an isolated mock as a completed feature.
@@ -17,7 +21,7 @@ Follow existing tokens and hierarchy. Obtain visual references only when a mater
 
 ## Apply an approved template
 
-For an approved internal or supplied template, retain its agreed structure, navigation/action order, controls, interactions and responsive behavior. Use its identified source and approved differences. Resolve an uncertain choice on a representative rendered screen before propagating it across dependent screens; continue independent wiring.
+For an approved internal or supplied template, retain its agreed structure, navigation/action order, controls, interactions and responsive behavior. Use its identified source and approved differences. Resolve uncertain choices in the ASCII planning preview and obtain approval before coding. Rendered/interaction verification follows completed approved code and wiring; do not add a gate per screen.
 
 Read the [template reference](../../references/template-application.md) and [acceptance selection guide](../../../docs/template-application-acceptance.md) when template fidelity is part of acceptance. At a usable-flow milestone, compare relevant desktop/mobile views and interactions with the approved template. An external inspiration image does not override that contract.
 

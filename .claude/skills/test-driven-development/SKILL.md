@@ -1,17 +1,17 @@
 ---
 name: test-driven-development
-description: "Design meaningful tests for changed logic, risky behavior or a reproducible regression. Use when a test can distinguish the intended behavior from a plausible defect."
+description: "Design and run meaningful regression, unit and integration tests after the approved code scope is complete. Preserve the project code-first sequence; avoid per-file/function red-green cycles."
 ---
 
 # Test-Driven Development
 
-Use the [lean operating core](../../../AGENTS.md). Tests provide developer feedback. Match their depth to the behavior and risk; a documentation, cosmetic or trivial reversible change does not automatically need a new test.
+Use the [lean operating core](../../../AGENTS.md). The historical skill identifier does not impose test-first development. For long/complex/UI tasks complete all approved production files and real wiring before writing/updating unit or other tests, then run them. Tests provide developer feedback in that phase. Match their depth to the behavior and risk; a documentation, cosmetic or trivial reversible change does not automatically need a new test.
 
 ## Choose the useful assertion
 
 Read the affected source and existing tests. Use the project's framework, checked-in wrappers and focused commands. Identify the observable requirement and a plausible regression that the test should catch. Avoid tests that merely repeat the implementation or assert incidental internals.
 
-For a reproducible bug or new logic, observe the relevant failing assertion before the fix where practical. A missing dependency or import error is setup failure, not proof that the regression test detected the bug. If reproduction is unavailable, state that limit.
+Investigate existing source/tests and reproduction evidence during planning. During the test phase, make regression assertions distinguish intended behavior from the original defect using available evidence; do not start per-file/function red-green cycles or reverse the approved code-first order. A missing dependency or import error is setup failure, not proof that the regression test detected the bug. If reproduction is unavailable, state that limit.
 
 ## Implement and verify
 

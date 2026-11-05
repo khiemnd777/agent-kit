@@ -16,7 +16,7 @@ The literal import in CLAUDE.md is outside a code block. Claude's current AGENTS
 
 Codex project-layer loading depends on project trust and client support. Managed settings and live parent permissions can affect the result. Codex inherits omitted sandbox settings; Claude inherits available subagent tools and the parent permission mode when the corresponding fields are omitted. The kit does not force a permission profile by role. Runtime filtering and the approved task scope still govern tool use. Authorized checks and evidence capture do not grant application code changes, implementation or deployment. Observe effective permissions and role behavior separately.
 
-A written role playbook is not a native registered agent. The main session normally owns delivery; a separate Coordinator is optional and does not replace the client's system prompt. All roles/skills use the lean AGENTS.md core; they consult policy/workflow detail only when relevant and never create approval phases.
+A written role playbook is not a native registered agent. The main session normally owns delivery; a separate Coordinator is optional and does not replace the client's system prompt. All roles/skills use the lean AGENTS.md core; they consult policy/workflow detail only when relevant and follow the required planning → approval → implementation boundary without inventing extra per-file approvals.
 
 ## Discovery and overrides
 

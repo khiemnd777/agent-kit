@@ -1,6 +1,6 @@
 # Skills catalog
 
-Seventeen optional technical skills are available. The [lean core](../AGENTS.md) governs delivery; skills do not grant authority, force a lifecycle, or add approval rounds. Choose only the skill whose techniques resolve a **current** need; do not preload a catalog or start every session with a meta-skill.
+Seventeen optional technical skills are available. The [lean core](../AGENTS.md) governs delivery; skills do not grant authority or replace the required planning → approval → implementation workflow. Choose only the skill whose techniques resolve a **current** need; do not preload a catalog or start every session with a meta-skill.
 
 | Need | Skill |
 | --- | --- |
@@ -22,7 +22,7 @@ Seventeen optional technical skills are available. The [lean core](../AGENTS.md)
 | Requested TechNote medium or substantive explanation | technote |
 | Help selecting a skill | using-agent-skills |
 
-Read the selected `SKILL.md`, then only the relevant reference sections. A file count or session start alone does not trigger a skill. The project determines stack, checks and permissions. See [runtime compatibility](agent-compatibility.md).
+During planning, select the minimum sufficient skills for task type, boundaries, risks and outcome; state brief reasons. Read selected `SKILL.md` files before applying them, then only the relevant reference sections. Close planning and implementation with actual contributions and compact source labels (Personal / Repo / UNKNOWN), estimates totaling 100% among applied skills, and the [authorized journal record](engineering/skill-usage/README.md). No skill used means say so; reading alone is not contribution. Estimates are not effectiveness scores or measured resource use. A file count or session start alone does not trigger a skill. The project determines stack, checks and permissions. See [runtime compatibility](agent-compatibility.md).
 
 **Maintainers:** [provenance, upstream pin and historical adaptations](skills-provenance.md), [manifest](skills-manifest.json), [verification guide](verification-guide.md).
 

@@ -17,7 +17,7 @@ Use the [lean operating core](../../../AGENTS.md). Identify the assets and trust
 
 ## Apply authority at the actual boundary
 
-A direct implementation request already covers routine in-scope security work. Ask only when evidence requires a material new use of sensitive data, elevated access, weaker protection, external sharing or another authority not granted. Continue unaffected work. Runtime approval mechanisms and required project review/release controls remain binding.
+Approval of the task plan covers routine in-scope security work. Every new task first needs planning and approval, including small security fixes. Ask only when evidence requires a material new use of sensitive data, elevated access, weaker protection, external sharing or another authority not granted. Continue unaffected work. Runtime approval mechanisms and required project review/release controls remain binding.
 
 Preserve the project's data purpose, retention and export/deletion requirements. Do not invent consent, legal conclusions or approval from a template. Handle an exposed secret through authorized incident procedures; source cleanup alone does not revoke it.
 

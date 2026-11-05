@@ -1,5 +1,6 @@
 # Testing Patterns Reference (JavaScript/TypeScript)
 
+For long/complex/UI tasks, complete all approved production files and real wiring before writing/updating unit or other tests, then run tests. Do not alternate code/test per file/function. Repair evidenced defects during the test phase and rerun affected checks.
 Choose a pattern only when it helps test changed behavior or a plausible regression. These JavaScript/TypeScript examples use Jest, React Testing Library, Supertest and Playwright; they do not require installing those tools or adding every test level. Use the repository's existing framework and commands. Simple content/cosmetic changes may need inspection rather than a new behavioral test. Stop after the scoped result has sufficient evidence and actual project gates are satisfied.
 
 ## Table of Contents

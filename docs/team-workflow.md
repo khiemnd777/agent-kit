@@ -4,15 +4,15 @@ Use the [lean core](../AGENTS.md) for routine work and this detail when delivery
 
 ## Start and agree once
 
-Read the request, relevant decisions and the minimum source/tests. Derive the outcome, scope and observable acceptance. The main session owns delivery; a clear implementation request already covers necessary local work and focused checks. Planning-only work stays read-only.
+Read the request, relevant decisions and the minimum source/tests. Derive the outcome, scope and observable acceptance. The main session owns delivery. Present a plan and obtain explicit user/Product Owner approval before any implementation or file edits. Planning-only work stays read-only unless saving the artifact is authorized.
 
-Proceed directly on a clear contained fix. Explain or resolve a material architecture, contract, data or permission decision before dependent work. Do not create a plan, task file or approval round merely because work is starting.
+Every task, even a contained fix, requires planning and approval; a short chat plan suffices for small work and does not require a new task file. Select minimum sufficient skills with brief reasons. For complex tasks, investigate the current system, assess risks and alternatives, discuss a concrete proposal and obtain approval. For any UI task, include an ASCII text mockup for preview/discussion before approval and coding. Combined tasks apply all applicable requirements. Once approved, carry the covered work through without per-file or per-step approvals.
 
 ## Proportionate effort
 
 | Effort | Use when | Useful work |
 | --- | --- | --- |
-| Focused | Clear, contained, low-risk change | Edit, inspect the diff, check relevant behavior, give a short handoff |
+| Focused | Clear, contained, low-risk change | Short plan → approval → edit, inspect the diff, check relevant behavior, give a short handoff |
 | Standard | Feature/bug crosses meaningful seams | Complete callers/integration, cover regressions and use a checkpoint if useful |
 | Sensitive | Authorization, private data, money, migrations, production or irreversible effects | Examine affected failure/abuse cases and retain required review, data and release controls |
 
@@ -26,7 +26,7 @@ A role is a responsibility, not a required extra agent. The owner can design, im
 
 ## Development and local feedback
 
-Use existing commands and meaningful tests while changing behavior. Cover actual imports, routes, consumers and data paths; an unused API or disconnected UI is incomplete. A regression check should distinguish the reported defect from correct behavior. Do not add tests that merely restate implementation or an unrelated platform for a documentation edit.
+For long, complex or UI tasks, complete all approved production code files and real integration before writing/updating unit or other tests, then run them. Do not alternate code/test per file or function or split the work into artificial handoffs. Existing source/tests may be inspected during investigation; an unsafe dependency still blocks affected work. Use existing commands and meaningful tests in the test phase. Cover actual imports, routes, consumers and data paths; an unused API or disconnected UI is incomplete. A regression check should distinguish the reported defect from correct behavior. Do not add tests that merely restate implementation or an unrelated platform for a documentation edit.
 
 Repair defects caused by the change within valid scope. If basic setup blocks progress, diagnose the concrete missing capability and establish only the necessary readiness under existing authority. Do not turn product work into an incidental runner, selector, admission or review system.
 
@@ -70,11 +70,11 @@ A shared environment fault or substantial tooling rebuild is separate maintenanc
 
 Preserve the approved source/version, hierarchy, workflow, controls and responsive behavior. Use the [template reference](../.agents/references/template-application.md) and [acceptance selection guide](template-application-acceptance.md) only for relevant UI work.
 
-Check a representative rendered screen early if an unresolved choice would otherwise spread across dependent screens. Check relevant desktop/mobile states at a usable milestone. This is local feedback, not a gate per screen; source/build alone does not establish visual fidelity.
+Resolve visual choices with an ASCII text mockup during planning and obtain approval before coding. Complete the approved UI and real wiring before rendered/interaction tests. Check relevant desktop/mobile states at a usable milestone. This is local feedback, not a gate per screen; source/build alone does not establish visual fidelity.
 
 ## Synchronization and stops
 
-For long, resumed or coordinated work, maintain [one checkpoint](tasks/README.md) when useful. Prefer the existing issue/task; do not duplicate plan/state/approval ledgers. Update at meaningful milestones, handoff or a blocker.
+Keep permanent rules in AGENTS.md, stable design in project-context.md, intended outcomes in project-plan.md and the sole live summary in [project-state.md](project-state.md). Link detailed task approval/evidence instead of copying history. The owner proactively updates affected state/task entries within authorized writes after approval/scope changes, meaningful results, blockers/stops and before handoff. For a real interruption or handoff, maintain [one checkpoint](tasks/README.md); do not manufacture pause milestones or competing trackers. This is agent responsibility, not a scheduler or harness.
 
 Capture outcome/scope/acceptance, done/todo, decisions and latest stop, revision, checks/limits and next action. At resume read that checkpoint and affected source, then continue; do not restart completed work or rerun unaffected checks just because the session changed.
 
@@ -92,6 +92,8 @@ Finish when required implementation/callers and scoped acceptance are satisfied,
 | Released | Authorized release and observed operation |
 
 A requested source-only self-test handoff may be CODE_COMPLETE_UNTESTED: implementation is complete but runtime/tests stay NOT_RUN and availability Unknown. Do not reopen stopped tests or hide missing implementation as a limitation.
+
+Close planning and implementation with the actual skills table and 1–3 concrete next-step options. Save the authorized phase record first using the [journal guide](engineering/skill-usage/README.md), then derive the table from it. Unapproved/read-only planning is reported in chat with no claim of saved records.
 
 ## State vocabulary
 

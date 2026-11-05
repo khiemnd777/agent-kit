@@ -19,3 +19,5 @@ Return findings to the owner. Recheck affected fixes/evidence and retain unchang
 ## Outputs and completion
 
 Return actionable findings, or say none were found within the reviewed scope. Include revision, actual checks and limits; stop when that assessment is complete. A concise report in the requested language needs no new task file or TechNote ceremony. Disclose review independence accurately. Honor human stops; agent review is not human scope approval, acceptance or release authority.
+
+At planning/implementation handoff, return actual skill contributions with Personal / Repo / UNKNOWN source and estimates totaling 100% among applied skills; say explicitly if none was applied. Return proposed journal/state updates to the delivery owner. Include 1–3 concrete next-step options with conditions/authority. Read-only roles do not save records independently.

@@ -15,9 +15,9 @@ Separate confirmed requirements from bugs, proposals and unknowns. External cont
 
 ## Keep one useful checkpoint
 
-For a long, delegated or resumed task, retain outcome/scope/acceptance, completed and remaining work, material decisions/latest stop, source revision or changed files, actual checks/limits, and the next action or blocker. Use an existing tracker or one concise [checkpoint](../../../docs/tasks/README.md); focused work may need only the request, diff and final response.
+For a long, delegated or resumed task, retain outcome/scope/acceptance, completed and remaining work, material decisions/latest stop, source revision or changed files, actual checks/limits, and the next action or blocker. Use an existing tracker or one concise [checkpoint](../../../docs/tasks/README.md); focused work can use an approved short chat plan, diff and final response. The sole live project summary is docs/project-state.md; detailed approval/evidence stays in task/decision records.
 
-Update at a meaningful handoff or changed decision. Summarize exploration rather than replaying it. Preserve uncommitted changes and other writers' work. Saving a checkpoint follows current authority; planning-only work does not imply file writes.
+The owner proactively updates affected authorized state/task entries at approval/scope changes, meaningful results, blockers/stops and before handoff. Reuse the same task/scope/phase journal identity on resume; do not duplicate usage or create artificial interruptions. Summarize exploration rather than replaying it. Preserve uncommitted changes and other writers' work. Saving a checkpoint follows current authority; planning-only work does not imply file writes.
 
 ## Resume and finish
 

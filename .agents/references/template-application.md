@@ -8,7 +8,7 @@ Identify the source/version, retained structure/hierarchy/workflow/controls and 
 
 ## Developer feedback
 
-Wire real controllers/data/callers. Compare a representative rendered screen early when an uncertain choice would otherwise be copied to dependent screens. Check that choice before replication while continuing unaffected work. No mandatory Coordinator confirmation or human gate follows each screen/edit.
+Preview an ASCII text mockup and discuss uncertain choices in the plan; obtain approval before coding. Complete all approved UI and real controllers/data/callers before writing/updating and running tests and rendered/interaction verification. No mandatory Coordinator confirmation or human gate follows each screen/edit.
 
 ## Usable-flow acceptance
 

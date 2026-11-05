@@ -5,13 +5,13 @@ description: "Implement a larger feature as coherent usable changes through its 
 
 # Incremental Implementation
 
-Use the [lean operating core](../../../AGENTS.md). An already-small coherent change needs direct implementation, not an additional slicing exercise. A clear implementation request covers routine local edits and focused checks within its scope.
+Use the [lean operating core](../../../AGENTS.md). Implement only after approval of the task plan, including for small changes. Do not add an unnecessary slicing exercise. Approval covers routine local edits, focused checks and evidenced repairs within the plan; material scope/solution changes need amended approval.
 
 ## Deliver usable increments
 
 1. Read the relevant requirement, contracts, source and tests. Identify the actual caller or user flow that will exercise the change.
 2. Implement that behavior through the necessary UI/routes/services/data/commands. Include the real integration; an unused helper or disconnected screen is not a complete feature.
-3. Add or update meaningful regression coverage for changed logic and risky seams. Run the relevant existing checks while coding; do not add tests that merely mirror trivial edits.
+3. Add or update meaningful regression coverage for changed logic and risky seams. For long/complex/UI tasks complete all approved production files and real integration before writing/updating tests, then run relevant existing checks; do not add tests that merely mirror trivial edits.
 4. Diagnose evidenced defects and repair within scope. Inspect the coherent diff and report actual checks for normal project review/CI when applicable.
 
 Prefer complete capabilities over arbitrary file batches. A technical prerequisite can stand alone when it has a real consumer. Preserve authorization, data invariants, module boundaries and stack conventions. Keep unrelated cleanup outside the task.

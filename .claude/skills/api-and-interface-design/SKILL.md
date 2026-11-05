@@ -5,7 +5,7 @@ description: Design or change API, module and component contracts, including com
 
 # API and Interface Design
 
-Use the [lean operating core](../../../AGENTS.md). Work on the contract affected by the request and its real consumers. A small interface repair does not require a new specification, API-wide audit or separate approval cycle.
+Use the [lean operating core](../../../AGENTS.md). Work on the contract affected by the request and its real consumers. A small interface repair still requires a short plan and approval, but not a separate specification or API-wide audit. Covered repairs inside an already-approved plan do not need repeated approval.
 
 ## Establish the affected contract
 

@@ -124,11 +124,16 @@ Use PASS, FAIL and applicable NOT_RUN with reasons. A check that does not apply 
 
 ## Source review for workflow changes
 
-Inspect actual instructions and their callers/entrypoints. Confirm that one owner can proceed through implementation with focused tests, review/CI targets coherent completed changes, and acceptance targets usable flows. Check that routine repairs do not add approval/documents or per-edit review gates.
+Inspect actual instructions and their callers/entrypoints. Confirm that one owner can proceed through implementation with focused tests, review/CI targets coherent completed changes, and acceptance targets usable flows. Check that every new task has plan approval, while covered repairs do not add repeated approval/documents or per-edit review gates.
 
 Consider these concrete cases without executing a behavioral harness:
 
-- A clear focused fix: the owner implements/checks directly under the user's scope, without a separate spec, task file, repeated approval or reviewer per file.
+- A short fix: present a concise plan and wait for approval, then implement/check without a mandatory task file or repeated approval per file.
+- A long task: finish all approved production files and real wiring before writing/updating and running tests; one checkpoint only for a real interruption/handoff.
+- A complex task: investigate risks/alternatives and discuss a concrete proposal before approval/implementation; use the same code-first test order.
+- A UI task: preview an ASCII mockup before approval/coding; rendered/interaction verification follows completed code/wiring.
+- A combined long/complex/UI task applies all three requirements.
+- Planning/implementation handoff: report actual skill/source/contribution estimates from authorized saved records, or chat-only planning; preserve null missing metrics and do not duplicate resumed usage.
 - Tests/config broken by that fix: the developer diagnoses/repairs within scope while useful progress and evidence justify the work.
 - Shared runner failure independent of the feature: a maintenance owner is named, dependent proof stays blocked and independent code work continues. A changed error is neither proof of progress nor an automatic stop.
 - Review waits or a command fails unchanged: continue independent authorized work or hand off the blocker; do not invent verification/orchestration to fill the wait.

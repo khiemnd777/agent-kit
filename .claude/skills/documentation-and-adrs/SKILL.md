@@ -23,6 +23,10 @@ When an ADR is appropriate, follow the established directory, format, numbering 
 - Update agent-facing rules only when the requested work intentionally changes a convention. Preserve domain and permission boundaries.
 - Record a gotcha or recovery instruction where a future reader will need it. Link existing evidence rather than copying logs or secrets into the document.
 
+## Maintain rules, state and skill evidence
+
+Keep durable rules in AGENTS.md, stable design in project-context.md, outcomes in project-plan.md and the single live summary in project-state.md; link detailed task/decision history. Within authorized writes the owner proactively updates affected entries at approval/scope changes, results, blockers/stops and handoff, without a reminder or scheduler. Save actual phase contributions using the [journal](../../../docs/engineering/skill-usage/README.md); do not save unapproved/read-only planning or invent measurements/approvals.
+
 ## Verify and finish
 
 Compare the changed explanation with the implementation or other actual evidence. Check affected links, examples and commands to the extent relevant and authorized; distinguish reviewed syntax from commands actually executed. Do not claim a runtime result merely because documentation describes one.

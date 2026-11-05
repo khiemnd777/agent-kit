@@ -5,13 +5,14 @@ description: "Organize a task whose dependencies, scope or delivery order are un
 
 # Planning and Task Breakdown
 
-Use the [lean operating core](../../../AGENTS.md). Organize work only as far as needed to execute it. Skip a separate plan when the task already gives a clear next action and acceptance.
+Use the [lean operating core](../../../AGENTS.md). Organize work only as far as needed to execute it. Every task requires planning and explicit approval before implementation; small tasks can use a short chat plan without a separate document.
 
 ## Make the next change executable
 
 - State the outcome, boundaries and observable acceptance. Include permission, invalid-input, error or concurrent behavior where relevant.
-- Identify affected callers, layers, data and material design choices from source. Resolve only decisions that block correct dependent work.
-- Split large work into complete capabilities or coherent technical changes with actual consumers. File/line counts are estimates, not split or review gates.
+- Identify affected callers, layers, data and material design choices from source. For complex tasks investigate risks and alternatives, discuss a concrete proposal and obtain approval. For UI tasks preview an ASCII text mockup before approval/coding. Combined cases apply all relevant preparation.
+- Select minimum sufficient skills with brief reasons. Report actual planning contributions and compact source labels using the journal policy.
+- Plan dependency order within the approved scope. Long/complex/UI tasks complete all production code and real wiring before writing/updating and running unit or other tests; avoid per-file/function code/test cycles and artificial handoffs. Split independently approved outcomes only when actual scope/dependencies require it. File/line counts are estimates, not split or review gates.
 - The main session owns delivery by default. Delegate only when the benefit exceeds coordination cost and task/runtime authority permits it; define interfaces and non-conflicting ownership.
 - Choose focused checks for changed behavior and affected seams. Include existing project review/CI/release requirements at the appropriate milestone, not after every step.
 

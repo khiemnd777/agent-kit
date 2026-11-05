@@ -19,7 +19,8 @@ Shared project instructions, 17 technical skills and three optional native agent
 
 ```mermaid
 flowchart TD
-    A["Understand outcome and scope"] --> B["Implement complete change"]
+    A["Investigate and present plan / ASCII UI preview"] --> P["Explicit user / Product Owner approval"]
+    P --> B["Implement complete approved code and wiring"]
     B --> C["Run relevant checks"]
     C --> D{"Scoped acceptance met?"}
     D -->|Yes| E["Hand off result and evidence"]
@@ -27,9 +28,9 @@ flowchart TD
     D -->|Missing decision or authority| F["Pause affected work"]
 ```
 
-The main session owns delivery by default. A clear implementation request covers necessary local edits and checks. A focused fix needs no ceremonial plan, task file or extra agent. A feature needs complete callers and relevant regression coverage. Sensitive work retains its actual security, data and project review controls. These are effort choices within one workflow, based on risk rather than file count or duration.
+The main session owns delivery by default. Every task, including a focused fix, requires planning and explicit approval before implementation; a short chat plan is sufficient for small work and needs no new task file or extra agent. Long/complex/UI tasks complete all approved code before writing/updating and running tests. Complex tasks first evaluate risks/alternatives; UI tasks first preview an ASCII mockup. A feature needs complete callers and relevant regression coverage. Sensitive work retains its actual security, data and project review controls. These are effort choices within one workflow, based on risk rather than file count or duration.
 
-For long or resumed work, keep one useful checkpoint and reuse unaffected evidence. Finish when scoped acceptance and appropriate checks are satisfied. Optional polish, unrelated refactors and broader audits do not extend the task automatically. Human acceptance and release require their actual evidence and authority.
+Keep durable rules separate from stable context, planned outcomes and the single current-state summary. Update affected state/task entries proactively within authorized writes; use one concise checkpoint for a real interruption/handoff and reuse unaffected evidence. Select minimum sufficient skills during planning; report actual phase contributions, source and estimates from the [authorized local journal](docs/engineering/skill-usage/README.md). Finish when scoped acceptance and appropriate checks are satisfied. Optional polish, unrelated refactors and broader audits do not extend the task automatically. Human acceptance and release require their actual evidence and authority.
 
 ## When a check is blocked
 
@@ -41,7 +42,7 @@ Do not build a runner/review system incidentally or fill waiting time with unrel
 
 1. Create one project repository from this template, or integrate its relevant parts into an existing codebase after review.
 2. Open the root in Codex or Claude Code and give the actual task/outcome.
-3. A clear implementation request covers local work and focused checks in scope; resolve material missing choices only.
+3. Present a plan and obtain explicit approval before implementation, including small fixes; approved scope covers local edits, focused checks and routine repairs.
 4. The main session owns delivery by default; use a tracker/checkpoint only when helpful or required. Shared records have one writer when edited.
 5. Deliver a usable coherent change with relevant checks and project-required review/CI, then hand off. Human acceptance is performed when included in the task; Git writes and release require their actual scope.
 

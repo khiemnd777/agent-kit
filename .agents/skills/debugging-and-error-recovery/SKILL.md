@@ -5,7 +5,7 @@ description: "Diagnose a concrete failure or unexpected behavior and repair its 
 
 # Debugging and Error Recovery
 
-Use the [lean operating core](../../../AGENTS.md). A routine defect stays within the current task; it does not create a new plan, approval phase or review chain.
+Use the [lean operating core](../../../AGENTS.md). A new defect task requires a plan and approval, even if small. Evidenced repairs covered by an already-approved plan do not create another approval/review chain. For long/complex/UI tasks finish approved production code before writing/updating and running tests; use existing evidence during investigation.
 
 ## Find the cause
 

@@ -130,7 +130,7 @@
     {
       "canonical": ".agents/references/definition-of-done.md",
       "mirror": ".claude/references/definition-of-done.md",
-      "sha256": "ec0d644a4b88be4c44b52db58b5a94cdf7ae94075dd6ac9ff7cadeea42714d09"
+      "sha256": "b95e981dee2d579824cd53beb0e9b9c6536fe9228b835869e4baec1524cce704"
     },
     {
       "canonical": ".agents/references/observability-checklist.md",
@@ -155,17 +155,17 @@
     {
       "canonical": ".agents/references/template-application.md",
       "mirror": ".claude/references/template-application.md",
-      "sha256": "66265f496810cf0900d6cab9c7b186040a273224ff50bb556acd0f1f21fc320e"
+      "sha256": "a8364588093b2dc8f1e56571720b5b846fedc75ad81a712a52c6258fc4614eed"
     },
     {
       "canonical": ".agents/references/testing-patterns.md",
       "mirror": ".claude/references/testing-patterns.md",
-      "sha256": "f00ca587705efdef97ddf0dade02b721a7d7456520ba8ba4f296e9f204ce797f"
+      "sha256": "659b7a1ddd90479dafc09276417d1d672fd56a1dd857b580c531744a3cbc304e"
     },
     {
       "canonical": ".agents/skills/api-and-interface-design/SKILL.md",
       "mirror": ".claude/skills/api-and-interface-design/SKILL.md",
-      "sha256": "104f1479ffb1b8e86d2ee9156609c4ec0693ef8ee6c61cb0f24f2dc319f3761a"
+      "sha256": "2550ac99404f1d52566cdd95fd809e0984eb29f1174132a864fb7beb9f688f79"
     },
     {
       "canonical": ".agents/skills/code-review-and-quality/SKILL.md",
@@ -180,27 +180,27 @@
     {
       "canonical": ".agents/skills/context-engineering/SKILL.md",
       "mirror": ".claude/skills/context-engineering/SKILL.md",
-      "sha256": "3e339bf26815fa67173d7ebe67a6c4cdbec85d548040b3d43596c94d6e4aef41"
+      "sha256": "fe0b3bc35f5f2d600ef8077f40dbc5eb96336fdbf8773a47576a86180f16bb36"
     },
     {
       "canonical": ".agents/skills/debugging-and-error-recovery/SKILL.md",
       "mirror": ".claude/skills/debugging-and-error-recovery/SKILL.md",
-      "sha256": "d95b1f0af89188a2dbe56075475d66c74f0f2236c70d0a164fd88259441f12ea"
+      "sha256": "99e87dc385f15bf99a8ba859e0a6815497ad38fe34ce07038c3ee83944f038c8"
     },
     {
       "canonical": ".agents/skills/documentation-and-adrs/SKILL.md",
       "mirror": ".claude/skills/documentation-and-adrs/SKILL.md",
-      "sha256": "e75cdad1798cb8acb109bf250a20212be93246b02ca4854676775fd4a4e1f288"
+      "sha256": "f3199cfec5d6fdfa6533f180b1e6cbee584cd6175d8eb25c0d186c833120609c"
     },
     {
       "canonical": ".agents/skills/frontend-ui-engineering/SKILL.md",
       "mirror": ".claude/skills/frontend-ui-engineering/SKILL.md",
-      "sha256": "c8846fa9e4217d10a8ac67feeeb19d2cfe3aa2748608a85cb20db5da3f4a8cb0"
+      "sha256": "b5c47fed383892428172bf0b9c1ed1aeab50066ff9421a87a6c344f746386495"
     },
     {
       "canonical": ".agents/skills/incremental-implementation/SKILL.md",
       "mirror": ".claude/skills/incremental-implementation/SKILL.md",
-      "sha256": "78bcdd46dfca28ae29e057c498f563986d70d4286feaa698e43501b0ebe29fff"
+      "sha256": "4663b276ac0d2f38be6f14a23d792783a255efe714710726af21c0f52c873359"
     },
     {
       "canonical": ".agents/skills/observability-and-instrumentation/SKILL.md",
@@ -220,12 +220,12 @@
     {
       "canonical": ".agents/skills/planning-and-task-breakdown/SKILL.md",
       "mirror": ".claude/skills/planning-and-task-breakdown/SKILL.md",
-      "sha256": "31c0031e3b8cccb6b9b88b2979bc145237eeb567c91cdc9bbe1a1aa784afe274"
+      "sha256": "fb768e0a3d3a77f733eb613c078fb61dde0845a438c65cc095fc6448dc166d4c"
     },
     {
       "canonical": ".agents/skills/security-and-hardening/SKILL.md",
       "mirror": ".claude/skills/security-and-hardening/SKILL.md",
-      "sha256": "eeb3ce4da2f3bc68f9510df627acde44c75081df85d9b8da36825b5295d2c6e2"
+      "sha256": "4549688254258d5d6836a0f2d8cf606460a9baf426e9c644d3244a9973778ad3"
     },
     {
       "canonical": ".agents/skills/security-and-hardening/references/hardening-patterns.md",
@@ -240,22 +240,22 @@
     {
       "canonical": ".agents/skills/spec-driven-development/SKILL.md",
       "mirror": ".claude/skills/spec-driven-development/SKILL.md",
-      "sha256": "5c684aa36582db6db9a64000d78fd823f99646d00de340fe8918404662740517"
+      "sha256": "c6cfb5c766c45243290d4dcfc7eb3857dbfb77556355c7960a4411762764858b"
     },
     {
       "canonical": ".agents/skills/technote/SKILL.md",
       "mirror": ".claude/skills/technote/SKILL.md",
-      "sha256": "d4784968a09ba65bbe2642fff8340a45ebce65acab298e673122e32ce93cadb9"
+      "sha256": "e53826eaf1a6fdde246a8fc0d02fd56c9025dc063e955c2626b6a174f1127f71"
     },
     {
       "canonical": ".agents/skills/test-driven-development/SKILL.md",
       "mirror": ".claude/skills/test-driven-development/SKILL.md",
-      "sha256": "d1da520c0495a9038afad0a1cea92c5b7bb03a9f08a210f6dfc5e4c3303afa8b"
+      "sha256": "48d85b44f5e6286ba2a7a43550083609f299aa4001391768e9da126d2db86742"
     },
     {
       "canonical": ".agents/skills/using-agent-skills/SKILL.md",
       "mirror": ".claude/skills/using-agent-skills/SKILL.md",
-      "sha256": "0a4278df8874088692a0bb500697bf4587589d16146ca7cf03574d8b45250789"
+      "sha256": "3ad264a138cc02db21f6244a85ba6a9726775ac3f60d078fde2ae348456b350a"
     },
     {
       "canonical": ".agents/skills/api-and-interface-design/references/detailed-guide.md",
@@ -270,7 +270,7 @@
     {
       "canonical": ".agents/skills/frontend-ui-engineering/references/detailed-guide.md",
       "mirror": ".claude/skills/frontend-ui-engineering/references/detailed-guide.md",
-      "sha256": "4e923c7aa632b3db2b83b8cd1e9551ae7998c5986747e4dcfd7affc9113e71d7"
+      "sha256": "3ada7a8d73c25fb8baa7b78abf9b2981284c1336a485e8709cc4178892dc22a7"
     },
     {
       "canonical": ".agents/skills/observability-and-instrumentation/references/detailed-guide.md",
@@ -344,7 +344,7 @@
     },
     {
       "path": ".agents/references/definition-of-done.md",
-      "sha256": "ec0d644a4b88be4c44b52db58b5a94cdf7ae94075dd6ac9ff7cadeea42714d09",
+      "sha256": "b95e981dee2d579824cd53beb0e9b9c6536fe9228b835869e4baec1524cce704",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -354,7 +354,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
@@ -419,7 +419,7 @@
     },
     {
       "path": ".agents/references/template-application.md",
-      "sha256": "66265f496810cf0900d6cab9c7b186040a273224ff50bb556acd0f1f21fc320e",
+      "sha256": "a8364588093b2dc8f1e56571720b5b846fedc75ad81a712a52c6258fc4614eed",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -427,7 +427,7 @@
     },
     {
       "path": ".agents/references/testing-patterns.md",
-      "sha256": "f00ca587705efdef97ddf0dade02b721a7d7456520ba8ba4f296e9f204ce797f",
+      "sha256": "659b7a1ddd90479dafc09276417d1d672fd56a1dd857b580c531744a3cbc304e",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -437,12 +437,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".agents/skills/api-and-interface-design/SKILL.md",
-      "sha256": "104f1479ffb1b8e86d2ee9156609c4ec0693ef8ee6c61cb0f24f2dc319f3761a",
+      "sha256": "2550ac99404f1d52566cdd95fd809e0984eb29f1174132a864fb7beb9f688f79",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -452,7 +452,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
@@ -487,7 +487,7 @@
     },
     {
       "path": ".agents/skills/context-engineering/SKILL.md",
-      "sha256": "3e339bf26815fa67173d7ebe67a6c4cdbec85d548040b3d43596c94d6e4aef41",
+      "sha256": "fe0b3bc35f5f2d600ef8077f40dbc5eb96336fdbf8773a47576a86180f16bb36",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -497,12 +497,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved task workflow, canonical state and nonduplicated skill handoff records"
       }
     },
     {
       "path": ".agents/skills/debugging-and-error-recovery/SKILL.md",
-      "sha256": "d95b1f0af89188a2dbe56075475d66c74f0f2236c70d0a164fd88259441f12ea",
+      "sha256": "99e87dc385f15bf99a8ba859e0a6815497ad38fe34ce07038c3ee83944f038c8",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -512,12 +512,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".agents/skills/documentation-and-adrs/SKILL.md",
-      "sha256": "e75cdad1798cb8acb109bf250a20212be93246b02ca4854676775fd4a4e1f288",
+      "sha256": "f3199cfec5d6fdfa6533f180b1e6cbee584cd6175d8eb25c0d186c833120609c",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -527,12 +527,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".agents/skills/frontend-ui-engineering/SKILL.md",
-      "sha256": "c8846fa9e4217d10a8ac67feeeb19d2cfe3aa2748608a85cb20db5da3f4a8cb0",
+      "sha256": "b5c47fed383892428172bf0b9c1ed1aeab50066ff9421a87a6c344f746386495",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -542,12 +542,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".agents/skills/incremental-implementation/SKILL.md",
-      "sha256": "78bcdd46dfca28ae29e057c498f563986d70d4286feaa698e43501b0ebe29fff",
+      "sha256": "4663b276ac0d2f38be6f14a23d792783a255efe714710726af21c0f52c873359",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -557,7 +557,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
@@ -602,7 +602,7 @@
     },
     {
       "path": ".agents/skills/planning-and-task-breakdown/SKILL.md",
-      "sha256": "31c0031e3b8cccb6b9b88b2979bc145237eeb567c91cdc9bbe1a1aa784afe274",
+      "sha256": "fb768e0a3d3a77f733eb613c078fb61dde0845a438c65cc095fc6448dc166d4c",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -612,12 +612,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".agents/skills/security-and-hardening/SKILL.md",
-      "sha256": "eeb3ce4da2f3bc68f9510df627acde44c75081df85d9b8da36825b5295d2c6e2",
+      "sha256": "4549688254258d5d6836a0f2d8cf606460a9baf426e9c644d3244a9973778ad3",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -627,7 +627,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
@@ -657,7 +657,7 @@
     },
     {
       "path": ".agents/skills/spec-driven-development/SKILL.md",
-      "sha256": "5c684aa36582db6db9a64000d78fd823f99646d00de340fe8918404662740517",
+      "sha256": "c6cfb5c766c45243290d4dcfc7eb3857dbfb77556355c7960a4411762764858b",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -667,12 +667,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".agents/skills/technote/SKILL.md",
-      "sha256": "d4784968a09ba65bbe2642fff8340a45ebce65acab298e673122e32ce93cadb9",
+      "sha256": "e53826eaf1a6fdde246a8fc0d02fd56c9025dc063e955c2626b6a174f1127f71",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -680,7 +680,7 @@
     },
     {
       "path": ".agents/skills/test-driven-development/SKILL.md",
-      "sha256": "d1da520c0495a9038afad0a1cea92c5b7bb03a9f08a210f6dfc5e4c3303afa8b",
+      "sha256": "48d85b44f5e6286ba2a7a43550083609f299aa4001391768e9da126d2db86742",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -690,12 +690,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".agents/skills/using-agent-skills/SKILL.md",
-      "sha256": "0a4278df8874088692a0bb500697bf4587589d16146ca7cf03574d8b45250789",
+      "sha256": "3ad264a138cc02db21f6244a85ba6a9726775ac3f60d078fde2ae348456b350a",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -705,7 +705,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
@@ -720,7 +720,7 @@
     },
     {
       "path": ".claude/agents/kit-explorer.md",
-      "sha256": "b7eff571003aa544e39a670b46b03fb7f1125566ad28fc76567551a7548233f7",
+      "sha256": "3147316652929ac1fef20ecc055042aec9f7a23ea0aedc418a0f3063082e7c4b",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -728,7 +728,7 @@
     },
     {
       "path": ".claude/agents/kit-implementer.md",
-      "sha256": "0305ecf9edba9e9770840e6a052648ef2f240b512e1b0ac3b8a00618f9c3c051",
+      "sha256": "f5a7c3c2a7fea0ed38e63aacde1511b68a243cfd3a1a8fab349198939ff28854",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -736,7 +736,7 @@
     },
     {
       "path": ".claude/agents/kit-reviewer.md",
-      "sha256": "a2fdd5dab8ce49808cd4072a189962747cd1ebd24cf48fdfeb2729c4264aa08f",
+      "sha256": "50bd2c89221da1ef0eae2abbe85c8912dbec7cbe2309fe56cd20a2f810393e8d",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -759,7 +759,7 @@
     },
     {
       "path": ".claude/references/definition-of-done.md",
-      "sha256": "ec0d644a4b88be4c44b52db58b5a94cdf7ae94075dd6ac9ff7cadeea42714d09",
+      "sha256": "b95e981dee2d579824cd53beb0e9b9c6536fe9228b835869e4baec1524cce704",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -769,7 +769,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
@@ -834,7 +834,7 @@
     },
     {
       "path": ".claude/references/template-application.md",
-      "sha256": "66265f496810cf0900d6cab9c7b186040a273224ff50bb556acd0f1f21fc320e",
+      "sha256": "a8364588093b2dc8f1e56571720b5b846fedc75ad81a712a52c6258fc4614eed",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -842,7 +842,7 @@
     },
     {
       "path": ".claude/references/testing-patterns.md",
-      "sha256": "f00ca587705efdef97ddf0dade02b721a7d7456520ba8ba4f296e9f204ce797f",
+      "sha256": "659b7a1ddd90479dafc09276417d1d672fd56a1dd857b580c531744a3cbc304e",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -852,12 +852,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".claude/skills/api-and-interface-design/SKILL.md",
-      "sha256": "104f1479ffb1b8e86d2ee9156609c4ec0693ef8ee6c61cb0f24f2dc319f3761a",
+      "sha256": "2550ac99404f1d52566cdd95fd809e0984eb29f1174132a864fb7beb9f688f79",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -867,7 +867,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
@@ -902,7 +902,7 @@
     },
     {
       "path": ".claude/skills/context-engineering/SKILL.md",
-      "sha256": "3e339bf26815fa67173d7ebe67a6c4cdbec85d548040b3d43596c94d6e4aef41",
+      "sha256": "fe0b3bc35f5f2d600ef8077f40dbc5eb96336fdbf8773a47576a86180f16bb36",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -912,12 +912,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved task workflow, canonical state and nonduplicated skill handoff records"
       }
     },
     {
       "path": ".claude/skills/debugging-and-error-recovery/SKILL.md",
-      "sha256": "d95b1f0af89188a2dbe56075475d66c74f0f2236c70d0a164fd88259441f12ea",
+      "sha256": "99e87dc385f15bf99a8ba859e0a6815497ad38fe34ce07038c3ee83944f038c8",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -927,12 +927,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".claude/skills/documentation-and-adrs/SKILL.md",
-      "sha256": "e75cdad1798cb8acb109bf250a20212be93246b02ca4854676775fd4a4e1f288",
+      "sha256": "f3199cfec5d6fdfa6533f180b1e6cbee584cd6175d8eb25c0d186c833120609c",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -942,12 +942,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".claude/skills/frontend-ui-engineering/SKILL.md",
-      "sha256": "c8846fa9e4217d10a8ac67feeeb19d2cfe3aa2748608a85cb20db5da3f4a8cb0",
+      "sha256": "b5c47fed383892428172bf0b9c1ed1aeab50066ff9421a87a6c344f746386495",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -957,12 +957,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity and evidence boundary; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".claude/skills/incremental-implementation/SKILL.md",
-      "sha256": "78bcdd46dfca28ae29e057c498f563986d70d4286feaa698e43501b0ebe29fff",
+      "sha256": "4663b276ac0d2f38be6f14a23d792783a255efe714710726af21c0f52c873359",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -972,7 +972,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
@@ -1017,7 +1017,7 @@
     },
     {
       "path": ".claude/skills/planning-and-task-breakdown/SKILL.md",
-      "sha256": "31c0031e3b8cccb6b9b88b2979bc145237eeb567c91cdc9bbe1a1aa784afe274",
+      "sha256": "fb768e0a3d3a77f733eb613c078fb61dde0845a438c65cc095fc6448dc166d4c",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -1027,12 +1027,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; KIT-TEMPLATE-APPLICATION-001 v1: representative rendered template fidelity; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".claude/skills/security-and-hardening/SKILL.md",
-      "sha256": "eeb3ce4da2f3bc68f9510df627acde44c75081df85d9b8da36825b5295d2c6e2",
+      "sha256": "4549688254258d5d6836a0f2d8cf606460a9baf426e9c644d3244a9973778ad3",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -1042,7 +1042,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; Approved TASK-007 seven-finding correction: scoped local security/UI/documentation checks, valid accessibility tooling, classified performance failures, no props-depth refactor and preserved required test assertions; Approved TASK-007 two-conflict correction: consistent project-policy Lax/Strict cookie checks and inherited alert severity/routing conventions; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
@@ -1072,7 +1072,7 @@
     },
     {
       "path": ".claude/skills/spec-driven-development/SKILL.md",
-      "sha256": "5c684aa36582db6db9a64000d78fd823f99646d00de340fe8918404662740517",
+      "sha256": "c6cfb5c766c45243290d4dcfc7eb3857dbfb77556355c7960a4411762764858b",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -1082,12 +1082,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".claude/skills/technote/SKILL.md",
-      "sha256": "d4784968a09ba65bbe2642fff8340a45ebce65acab298e673122e32ce93cadb9",
+      "sha256": "e53826eaf1a6fdde246a8fc0d02fd56c9025dc063e955c2626b6a174f1127f71",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1095,7 +1095,7 @@
     },
     {
       "path": ".claude/skills/test-driven-development/SKILL.md",
-      "sha256": "d1da520c0495a9038afad0a1cea92c5b7bb03a9f08a210f6dfc5e4c3303afa8b",
+      "sha256": "48d85b44f5e6286ba2a7a43550083609f299aa4001391768e9da126d2db86742",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -1105,12 +1105,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".claude/skills/using-agent-skills/SKILL.md",
-      "sha256": "0a4278df8874088692a0bb500697bf4587589d16146ca7cf03574d8b45250789",
+      "sha256": "3ad264a138cc02db21f6244a85ba6a9726775ac3f60d078fde2ae348456b350a",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -1120,12 +1120,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion"
+        "reason": "Approved P2.1: proportionate verification, focused repair planning and bounded coordination; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".codex/agents/kit-explorer.toml",
-      "sha256": "29f88c8f906b69012c1e1d8044d0eab6cbaa6163f12326159b6c626415075777",
+      "sha256": "917859f0c856b1d209c7d5891d10108817bf49df250b5b2005bc029703b0ce13",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1133,7 +1133,7 @@
     },
     {
       "path": ".codex/agents/kit-implementer.toml",
-      "sha256": "63cf66c095a6ce6c1fd6afa161a5e5e01ae03e10b82263be58a70055d3a6fd19",
+      "sha256": "79b6ccd9607e6e9fd8a2ebea58c8391c240d05c8ae3892baa953f1033d774a72",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1141,7 +1141,7 @@
     },
     {
       "path": ".codex/agents/kit-reviewer.toml",
-      "sha256": "7709ffda8f5378c20472be9c69dcb13bac2adc05e224d8374f72a5cac7cbd1fe",
+      "sha256": "9688db7e14ebb3316439adc168c3ce67ba5c1e7d9444237394ae5da7569b3991",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1157,7 +1157,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "4d2e5bf5a7cfa278d1d235e5625172c451dea43cf76223194b0af1accf75efa6",
+      "sha256": "4bb7ed85a95947963023bcbe8cc726398726c3ef5907ad16bc0381d0fc49edac",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1189,7 +1189,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "821ecc9214366bd05f2ffc3a166ab2d427869739d0fd45654680b85f807ebab5",
+      "sha256": "5e29ef69a39c54d6d09711d4b935e707e2ec97f38a47ce75efd7bab325afb369",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1197,7 +1197,7 @@
     },
     {
       "path": "docs/agent-compatibility.md",
-      "sha256": "d1550c4207909b8ab9af6211394e50130dafaaef45b487d5d189dab720780b38",
+      "sha256": "1a7aa39673275435ff4a0005b62a5720980bbcdc46f8b88a4728e970c0d8dcce",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1205,7 +1205,7 @@
     },
     {
       "path": "docs/agent-coordination-templates.md",
-      "sha256": "c02af4fb29e7aafdf6379b8450928e9b1bb879eccc82ba5600f1941c78de4452",
+      "sha256": "d1653c796b5cc73eea450ee478786fc209a1e5e3afe06b4bf1bbb1e407acdd60",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1221,7 +1221,7 @@
     },
     {
       "path": "docs/roles/coordinator.md",
-      "sha256": "424d4e6548ce93fa613af53ad8a85b6c02bf99b369fcc4a4554be819d1505cf1",
+      "sha256": "e9752a70c7be9790c55dd8cba273927e562a43f76c66d19eb79b0a190f1eab6a",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1229,7 +1229,7 @@
     },
     {
       "path": "docs/roles/explorer.md",
-      "sha256": "db27d5941be38f3e4c83c0ed29107c6c0e2d390acd001020fe5f2868a3ecc6fb",
+      "sha256": "4149afd0b2c3544484ffec7eec02e4f8913bf5ae1f28791a469c2e6527245ca5",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1237,7 +1237,7 @@
     },
     {
       "path": "docs/roles/implementer.md",
-      "sha256": "34f78490184a882071ea4359b011c91339fbd4f02af360de74caa84c36776aef",
+      "sha256": "c5c91a448d2c0f9375b50c8e77bdea28a9bf334bc80923e6235fa9a4d91fa302",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1245,7 +1245,7 @@
     },
     {
       "path": "docs/roles/reviewer.md",
-      "sha256": "2b835f2eed2a727f0c884c3632e03feb1c9b5b6e6479d1f6f65f3ab62a2a7f64",
+      "sha256": "6ec52dad3d5d9dba59a62978f88493d8933bc0cf7728a22ffa9dd714a793d105",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1253,7 +1253,7 @@
     },
     {
       "path": "docs/skills-catalog.md",
-      "sha256": "47a7dbcff5656b7bfb0d1cc6362427e74bbac5cf5b303d55f2dfad05a3de3ad0",
+      "sha256": "faa37bb54571d47276587e022294d6fe69e617320b391d927f4577c41442f9c8",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1261,7 +1261,7 @@
     },
     {
       "path": "docs/team-policy.md",
-      "sha256": "dcf95d81399cb5a3cf4d2c0cebbde23571877186eb7d28883592195682bc8efc",
+      "sha256": "e1df7312078ee8a5ba72375930086f09fca4739d3a9e134d17db3bc52d77ec71",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1269,7 +1269,7 @@
     },
     {
       "path": "docs/team-workflow.md",
-      "sha256": "efac223ad9aa66a0da29cda81b7d7377b48ff1694c9ba2d03e96f7ad35bce9d9",
+      "sha256": "53721a8a4677f8d01951b12fdc1bd702ad4416100b09c074401478dfcdc0ced7",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1277,7 +1277,7 @@
     },
     {
       "path": "docs/technote.md",
-      "sha256": "d6acfafe5bbb81dc32917fcd823974ff8209e79990bdc2a2aaa388ee489b45b6",
+      "sha256": "63fb6ec908ead11d24bd3f7fe9f6b13d5a341082d3626002bec92c1f116bb44f",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1293,7 +1293,7 @@
     },
     {
       "path": "docs/verification-guide.md",
-      "sha256": "2e79373f3a4dfe5cc123901a6a8617ad20ce2d636136bbfac4951b2760cd11c6",
+      "sha256": "a61d6981892501781517005f3d7b1fdae5f3f3e2075ec543d8b869f48957fe06",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1301,7 +1301,7 @@
     },
     {
       "path": "docs/skills-provenance.md",
-      "sha256": "03eaa9b636a5b720f7814e3cb53ff183268d78f1c1a1f65513fae26e38b54e89",
+      "sha256": "80aa5c71f9d5770204da502fde5af2b236c97795c0481210774ba74887116e56",
       "origin": {
         "source": "agent-kit contributors",
         "license": "MIT"
@@ -1401,7 +1401,7 @@
     },
     {
       "path": ".agents/skills/frontend-ui-engineering/references/detailed-guide.md",
-      "sha256": "4e923c7aa632b3db2b83b8cd1e9551ae7998c5986747e4dcfd7affc9113e71d7",
+      "sha256": "3ada7a8d73c25fb8baa7b78abf9b2981284c1336a485e8709cc4178892dc22a7",
       "origin": {
         "source": "agent-kit contributors",
         "license": "MIT",
@@ -1415,12 +1415,12 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "2026-11-05 lean refactor: split detailed techniques from the pinned upstream entrypoint; scope examples and checks to the current task and correct relative links"
+        "reason": "2026-11-05 lean refactor: split detailed techniques from the pinned upstream entrypoint; scope examples and checks to the current task and correct relative links; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
       "path": ".claude/skills/frontend-ui-engineering/references/detailed-guide.md",
-      "sha256": "4e923c7aa632b3db2b83b8cd1e9551ae7998c5986747e4dcfd7affc9113e71d7",
+      "sha256": "3ada7a8d73c25fb8baa7b78abf9b2981284c1336a485e8709cc4178892dc22a7",
       "origin": {
         "source": "agent-kit contributors",
         "license": "MIT",
@@ -1434,7 +1434,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "2026-11-05 lean refactor: split detailed techniques from the pinned upstream entrypoint; scope examples and checks to the current task and correct relative links"
+        "reason": "2026-11-05 lean refactor: split detailed techniques from the pinned upstream entrypoint; scope examples and checks to the current task and correct relative links; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
       }
     },
     {
@@ -1588,6 +1588,14 @@
         "record": "docs/skills-provenance.md",
         "reason": "2026-11-05 lean refactor: split detailed techniques from the pinned upstream entrypoint; scope examples and checks to the current task and correct relative links"
       }
+    },
+    {
+      "path": "docs/engineering/skill-usage/README.md",
+      "sha256": "b251ffba4e035ac9df92dc314dcacdf528903844c10a044bb8d811ff1f9f26a7",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
+      }
     }
   ],
   "excluded_mutable_paths": [
@@ -1596,7 +1604,9 @@
     "docs/project-state.md",
     "docs/skills-manifest.json",
     "docs/tasks/README.md",
-    "docs/verification-results.md"
+    "docs/verification-results.md",
+    "docs/tasks/TASK-008.md",
+    "docs/engineering/skill-usage/records/"
   ],
   "integrity_note": "SHA-256 checks detect differences; hashes and parsed fields do not prove runtime behavior."
 }

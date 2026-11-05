@@ -11,11 +11,11 @@ Material decisions, authority limits or latest stop:
 Relevant checks / result to return:
 ```
 
-A short message can carry this assignment. Include enough detail for material design/data/permission decisions; do not create another plan or approval round for routine implementation. Delegation is optional and children do not delegate.
+A short message can carry this assignment. Include enough detail for material design/data/permission decisions; reference approval of the parent plan before implementation; do not create repeated approvals for covered work. Include task type/risks, ASCII UI preview where applicable and selected skills/reasons in planning. Delegation is optional and children do not delegate.
 
 ## Project / Task State
 
-For long, resumed or coordinated work, maintain one current checkpoint rather than parallel status files:
+Use project-state.md as the single live summary and link detailed task/decision history. The delivery owner proactively updates affected state/task entries within authorized writes. For a real interruption or handoff, keep one concise checkpoint:
 
 ```text
 Goal / scope / acceptance:
@@ -37,5 +37,7 @@ This heading remains for existing links. These optional handoff questions do not
 - Is the requested output complete, including necessary callers and data paths?
 - Do actual checks support the claim, with missing proof and review independence stated accurately?
 - Are material limits, unresolved defects and any next action clear?
+
+Close planning/implementation with actual skills (Skill | Source | Actual contribution | Estimated participation %) and 1–3 concrete next-step options with conditions/authority. Save authorized journal records first; children propose records to the owner. Unapproved/read-only planning stays in chat.
 
 Stop when scoped acceptance and sufficient verification are met. Keep Source complete, Behavior verified, Human accepted and Released distinct. Optional polish does not extend completion.

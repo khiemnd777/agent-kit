@@ -1,5 +1,11 @@
 # Task records and checkpoints
 
-A focused fix needs no new task file if the request, diff, relevant checks and short handoff suffice. Use an existing tracker when the project requires one or coordination benefits. No mandatory per-phase plan, state ledger, receipt or Coordinator.
+Every task requires a plan and explicit user/Product Owner approval before implementation, even a short fix. A concise chat plan is sufficient for small work; a separate task file is optional unless project rules or useful coordination require one. A proposal is planning-only, and historical approvals do not authorize another task.
 
-When continuation, coordination or project requirements benefit, maintain **one current checkpoint** for long, delegated or cross-session work: outcome/acceptance/scope, completed and remaining work, decisions/latest stop, revision, actual PASS/FAIL/NOT_RUN checks and limits, blocker/owner and next action. Update at meaningful milestones, not after every command. Preserve historical approvals and evidence. A record never grants permission or proves human acceptance/release.
+Keep durable rules in AGENTS.md, stable design in project-context.md, intended outcomes in project-plan.md and the single current-state summary in project-state.md. Detailed approvals, decisions and evidence belong in the relevant task. The delivery owner proactively maintains affected entries within authorized writes at approval/scope changes, meaningful results, blockers/stops and before handoff; children propose shared changes to the owner.
+
+When a real interruption or handoff needs it, maintain **one concise checkpoint**: outcome/acceptance/scope, done/todo, decisions/latest stop, revision, actual PASS/FAIL/NOT_RUN checks/limits, blocker/owner and next action. Resume remaining work and reuse valid evidence. Do not create artificial pauses or checkpoints per file/function.
+
+Record skill use at authorized planning/implementation handoffs under the [journal guide](../engineering/skill-usage/README.md). This is not a command log, a second live task tracker or permission to write during read-only planning. Preserve history and avoid duplicate usage on resume.
+
+TASK-001 through TASK-007 describe historical kit maintenance, not adoption authority. [TASK-008](TASK-008.md) records the approved workflow/journal maintenance; its authorization also does not transfer to an adopting project.

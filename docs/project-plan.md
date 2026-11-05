@@ -1,6 +1,6 @@
 # Project plan
 
-**Mode: Planning.** Optional project task index; no execution has been approved. The named shared-record owner owns this task index.
+**Mode: Planning.** Intended project outcomes and task index; no execution has been approved. The delivery owner maintains this index within authorized writes. Current status belongs only in project-state.md; detailed history/evidence stays in tasks/decisions.
 
 | Field | Current value |
 | --- | --- |

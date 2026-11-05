@@ -4,7 +4,7 @@ Explain the result in the requested language; otherwise use English. Default to 
 
 ## Level 1 — Technical note
 
-Lead with the result. Add the evidence and limits needed to assess it, and a next action only if work remains. Distinguish observed behavior, proposed choices and unknowns without mandatory labels. State actual checks when relevant; source or build success does not prove runtime behavior.
+Lead with the result. Add the evidence and limits needed to assess it, and 1–3 concrete next-step options with expected outcomes and conditions/authority. Review/acceptance can be the sole option when no work remains. At planning and implementation handoff, include the actual skills table under the [journal guide](engineering/skill-usage/README.md): Skill | Source | Actual contribution | Estimated participation %. Use Personal / Repo / UNKNOWN, keep paths in the journal and distinguish estimates from measured resource use or effectiveness. Distinguish observed behavior, proposed choices and unknowns without mandatory labels. State actual checks when relevant; source or build success does not prove runtime behavior.
 
 Omit unchanged context, empty fields, repeated approval references and full logs. Keep a checkpoint only when continuation needs it. Explanation does not create delivery phases or permission.
 

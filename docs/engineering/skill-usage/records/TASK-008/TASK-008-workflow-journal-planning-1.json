@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "event_id": "TASK-008-workflow-journal-planning-1",
+  "event_type": "phase_handoff",
+  "task_id": "TASK-008",
+  "scope_id": "workflow-journal",
+  "recorded_at": "2026-11-05T07:15:40.906737+00:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "phase": "planning",
+  "handoff_index": 1,
+  "classification": {
+    "size": "long",
+    "complexity": "cross-cutting instruction consistency",
+    "ui": false
+  },
+  "authority": {
+    "source": "Current conversation: approved reverse-port plan and exact AGENTS draft; final approval 2026-11-05.",
+    "scope": "Update generalized kit guidance and journal; commit/push review branch; no merge."
+  },
+  "skills": [
+    {
+      "skill_id": "skill-creator",
+      "contribution_summary": "Scoped skill amendments and progressive references.",
+      "contribution_percent_estimate": 20,
+      "estimate_source": "agent_self_report",
+      "source_identity": {
+        "kind": "host_skill",
+        "path": "system/skill-creator/SKILL.md",
+        "version": null,
+        "sha256": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66",
+        "fingerprint_basis": "Read source bytes; repository skill fingerprint refers to baseline entrypoint read before amendment, not edited replacement."
+      }
+    },
+    {
+      "skill_id": "documentation-and-adrs",
+      "contribution_summary": "Separated permanent rules, context, current state and history.",
+      "contribution_percent_estimate": 30,
+      "estimate_source": "agent_self_report",
+      "source_identity": {
+        "kind": "repository",
+        "path": ".agents/skills/documentation-and-adrs/SKILL.md",
+        "version": "336229d671589508898d39ee8f49cdca1b16491b",
+        "sha256": "e75cdad1798cb8acb109bf250a20212be93246b02ca4854676775fd4a4e1f288",
+        "fingerprint_basis": "Read source bytes; repository skill fingerprint refers to baseline entrypoint read before amendment, not edited replacement."
+      }
+    },
+    {
+      "skill_id": "planning-and-task-breakdown",
+      "contribution_summary": "Translated the approved plan into bounded ownership, sequence and acceptance.",
+      "contribution_percent_estimate": 30,
+      "estimate_source": "agent_self_report",
+      "source_identity": {
+        "kind": "repository",
+        "path": ".agents/skills/planning-and-task-breakdown/SKILL.md",
+        "version": "336229d671589508898d39ee8f49cdca1b16491b",
+        "sha256": "31c0031e3b8cccb6b9b88b2979bc145237eeb567c91cdc9bbe1a1aa784afe274",
+        "fingerprint_basis": "Read source bytes; repository skill fingerprint refers to baseline entrypoint read before amendment, not edited replacement."
+      }
+    },
+    {
+      "skill_id": "git-workflow",
+      "contribution_summary": "Verified clean source and created the authorized review branch.",
+      "contribution_percent_estimate": 15,
+      "estimate_source": "agent_self_report",
+      "source_identity": {
+        "kind": "host_skill",
+        "path": "personal/git-workflow/SKILL.md",
+        "version": null,
+        "sha256": "62fb3807afd019f9071acc56c6f5c70cfac34cbd2fc447b751532461fb3e66d9",
+        "fingerprint_basis": "Read source bytes; repository skill fingerprint refers to baseline entrypoint read before amendment, not edited replacement."
+      }
+    },
+    {
+      "skill_id": "technote",
+      "contribution_summary": "Kept requested-language explanation and evidence limits clear.",
+      "contribution_percent_estimate": 5,
+      "estimate_source": "agent_self_report",
+      "source_identity": {
+        "kind": "repository",
+        "path": ".agents/skills/technote/SKILL.md",
+        "version": "336229d671589508898d39ee8f49cdca1b16491b",
+        "sha256": "d4784968a09ba65bbe2642fff8340a45ebce65acab298e673122e32ce93cadb9",
+        "fingerprint_basis": "Read source bytes; repository skill fingerprint refers to baseline entrypoint read before amendment, not edited replacement."
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "COMPLETED",
+    "verification_level": "approved plan and source investigation",
+    "human_acceptance": "ACCEPTED",
+    "limitations": [
+      "Recorded after current-task write approval; not a reconstruction of earlier tasks or pilot sessions.",
+      "Plan acceptance is not implementation acceptance."
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter exposed by this session."
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter exposed by this session."
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter exposed by this session."
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter exposed by this session."
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter exposed by this session."
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No reliable phase-scoped counter exposed by this session."
+    },
+    "client": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified exact execution configuration captured for this phase."
+    },
+    "model": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified exact execution configuration captured for this phase."
+    },
+    "effort": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified exact execution configuration captured for this phase."
+    }
+  },
+  "evidence_refs": [
+    "docs/tasks/TASK-008.md",
+    "336229d671589508898d39ee8f49cdca1b16491b"
+  ]
+}

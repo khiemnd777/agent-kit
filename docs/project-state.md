@@ -1,6 +1,6 @@
 # Project state
 
-Optional fresh project summary; link task records rather than duplicate their checklists. These values are not the status of Agent Kit's own release.
+The single current-state summary for an adopting project; link task records rather than duplicate their checklists. These values are not the status of Agent Kit's own release.
 
 | Field | Current value |
 | --- | --- |
@@ -21,4 +21,4 @@ Optional fresh project summary; link task records rather than duplicate their ch
 | Latest feedback | None |
 | Next action | Propose the project goal, roles and bounded plan in chat |
 
-The designated shared-record owner maintains this summary and links to task records. Distinguish integrated commits from branch results, and agent checks from human acceptance. Verify approval provenance before continuing from another session.
+The delivery owner proactively updates this summary and affected tasks within authorized writes after approval/scope changes, meaningful results, blockers/stops and before handoff. Keep stable design in project-context.md, intended outcomes in project-plan.md and history in tasks/decisions. This fresh template grants no authority and is not Agent Kit maintenance status. No scheduler or daemon is implied. Distinguish integrated commits from branch results, and agent checks from human acceptance. Verify approval provenance before continuing from another session.

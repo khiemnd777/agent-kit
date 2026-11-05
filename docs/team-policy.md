@@ -4,9 +4,9 @@ The [operating core](../AGENTS.md) is sufficient for routine work. Consult this 
 
 ## Approval and autonomy
 
-A direct implementation/fix request authorizes necessary local investigation, edits and focused checks within the requested outcome and runtime permissions. Planning-only and review requests remain read-only unless writes are requested. Fresh projects and imported records carry no inherited approval.
+Every task follows planning → explicit user/Product Owner approval → implementation, including small fixes. A concise chat plan is sufficient for a small task. Investigate read-only to inform it; wait for approval before editing files. A direct fix/update request does not replace approval of the plan. A proposal is planning-only. Fresh projects and imported records carry no inherited approval.
 
-Use existing authorization; do not request it again per file, repair or phase. Ask when a material choice cannot be resolved from evidence, the outcome or authority expands, or the next side effect is not covered. Explain the concrete decision and impact. Continue unaffected authorized work.
+Use approval of the current plan; do not request it again per file, covered repair or phase. Material scope/solution changes need an amended plan and approval. Ask when a material choice cannot be resolved from evidence, the outcome or authority expands, or the next side effect is not covered. Explain the concrete decision and impact. Continue unaffected authorized work.
 
 Git mutations, publication, production/real-data operations, paid services, global configuration, new external integrations and destructive actions need their actual explicit scope. Approval for commit/push/PR does not include merge or release. Follow runtime approval controls. Do not install tools as an incidental response to an unavailable check.
 
@@ -30,7 +30,7 @@ Use relevant checks and reuse unaffected evidence. Missing required proof stays 
 
 ## Evidence and communication
 
-Report the result, meaningful evidence/limits and remaining action. A short response needs no form. Keep [one checkpoint](tasks/README.md) when continuation, coordination or project rules need it. [TechNote](technote.md) offers optional explanation detail, not another approval cycle.
+Report the result, meaningful evidence/limits, the actual skills table and 1–3 concrete next-step options with their conditions/authority. Save authorized phase records using the [skill journal](engineering/skill-usage/README.md); read-only planning stays in chat. A short response needs no form. Keep [one checkpoint](tasks/README.md) when continuation, coordination or project rules need it. [TechNote](technote.md) offers optional explanation detail, not another approval cycle.
 
 ## Data and external boundaries
 

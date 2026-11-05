@@ -290,3 +290,24 @@ These figures measure instruction source, not token usage, cached context, elaps
 - **Not claimed:** runtime savings, human acceptance, merge, release or adoption in another project.
 
 The source/package refactor is ready for PR review. The pilot handoff is prepared; the owner must select and authorize the future target/worktree scope before anyone applies this kit there.
+
+## TASK-008 — 2026-11-05 workflow and journal source maintenance
+
+Scope: approved generalized workflow/journal overlay on `336229d671589508898d39ee8f49cdca1b16491b`, separate review branch `codex/agent-kit-workflow-and-skill-journal`. This dated record supersedes no historical observations; prior task authorizations are not adoption permissions.
+
+| Check | Result | Observation and limit |
+| --- | --- | --- |
+| Existing package-integrity recipe | PASS | Inventory hashes and 35 canonical/mirror pairs; 17 skills per root; original upstream identities remain 3 byte-original / 23 adapted |
+| YAML frontmatter | PASS | Existing Ruby/Psych parsed 34 skill entrypoints and 3 Claude agent definitions |
+| Native adapter structure | PASS | Python tomllib parsed 3 Codex definitions, expected fields only; Claude instruction bodies match. No model/permission override added |
+| Affected Markdown references | PASS | File links resolve and 42 affected local heading anchors resolve |
+| Diff whitespace | PASS | `git diff --check` |
+| Fresh adoption boundary | PASS | Context/plan/state templates remain uninitialized; no transferred application permissions/data or historical usage records |
+| Current-task journal | PASS | Planning/implementation JSON and stable identities, contribution totals and nullable unavailable measurements checked; immutable creation, no past-task backfill |
+| Workflow source review | PASS | Short plan + approval; long complete-code-before-tests; complex risk/alternative discussion; UI ASCII preview; combined requirements; actual skill/source reporting and proactive state covered in owning instructions/adapters |
+| Review independence | Not independent | Delivery-owner self-review only; no subagent/native reviewer invoked |
+| Native loading/behavior, A/B pilot, two-machine compatibility | NOT_RUN | Not part of this source-maintenance task; no native result inferred |
+| Time/token/efficiency comparison | UNKNOWN | No reliable phase-scoped counters; journal values remain null with reasons |
+| Human implementation acceptance / merge / release | PENDING_REVIEW / NOT_RUN | Approval covers implementation and branch publication, not implementation acceptance, merge or release |
+
+Existing read-only package recipe, temporary Python structural/link inspections, system Ruby/Psych and Git were used. No new harness, dependency, global configuration, worktree or application change. Detailed scope and publication boundaries: [TASK-008](tasks/TASK-008.md).
