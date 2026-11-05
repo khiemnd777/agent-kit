@@ -270,12 +270,12 @@
     {
       "canonical": ".agents/skills/security-and-hardening/references/extended.md",
       "mirror": ".claude/skills/security-and-hardening/references/extended.md",
-      "sha256": "689901c3d8ea0e8acce726806a74aecdcbdc5bf5e361d765aef639d257ed2e2f"
+      "sha256": "1ee9b1d2853bdf2883a9edc73aeb3e9c78c6deb4aa41602422ed4dca6e1d6fb3"
     },
     {
       "canonical": ".agents/skills/performance-optimization/references/extended.md",
       "mirror": ".claude/skills/performance-optimization/references/extended.md",
-      "sha256": "d56c88112fe2e3dcc367e730cfeea29e41890fbf2751d6221fd37cf05b9656cb"
+      "sha256": "acd462b088e1c6344349e5157e47d3e3d8a24ce509004c557d1c4aa385c04282"
     },
     {
       "canonical": ".agents/skills/documentation-and-adrs/references/extended.md",
@@ -1357,7 +1357,7 @@
     },
     {
       "path": ".agents/skills/security-and-hardening/references/extended.md",
-      "sha256": "689901c3d8ea0e8acce726806a74aecdcbdc5bf5e361d765aef639d257ed2e2f",
+      "sha256": "1ee9b1d2853bdf2883a9edc73aeb3e9c78c6deb4aa41602422ed4dca6e1d6fb3",
       "origin": {
         "source": "agent-kit contributors",
         "license": "MIT"
@@ -1365,7 +1365,7 @@
     },
     {
       "path": ".claude/skills/security-and-hardening/references/extended.md",
-      "sha256": "689901c3d8ea0e8acce726806a74aecdcbdc5bf5e361d765aef639d257ed2e2f",
+      "sha256": "1ee9b1d2853bdf2883a9edc73aeb3e9c78c6deb4aa41602422ed4dca6e1d6fb3",
       "origin": {
         "source": "agent-kit contributors",
         "license": "MIT"
@@ -1373,7 +1373,7 @@
     },
     {
       "path": ".agents/skills/performance-optimization/references/extended.md",
-      "sha256": "d56c88112fe2e3dcc367e730cfeea29e41890fbf2751d6221fd37cf05b9656cb",
+      "sha256": "acd462b088e1c6344349e5157e47d3e3d8a24ce509004c557d1c4aa385c04282",
       "origin": {
         "source": "agent-kit contributors",
         "license": "MIT"
@@ -1381,7 +1381,7 @@
     },
     {
       "path": ".claude/skills/performance-optimization/references/extended.md",
-      "sha256": "d56c88112fe2e3dcc367e730cfeea29e41890fbf2751d6221fd37cf05b9656cb",
+      "sha256": "acd462b088e1c6344349e5157e47d3e3d8a24ce509004c557d1c4aa385c04282",
       "origin": {
         "source": "agent-kit contributors",
         "license": "MIT"
