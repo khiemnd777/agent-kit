@@ -1,12 +1,8 @@
 ---
 name: technote
-description: Explain investigations, plans, reviews and solutions using concise evidence-based notes or requested TechNote diagrams, interactive websites and videos. Use for direct TechNote requests; do not apply a presentation workflow to trivial standalone transformations.
+description: Use for explicitly requested TechNote media or a substantive technical explanation; routine updates need only a short result and evidence.
 ---
 
 # TechNote
 
-Read the [canonical TechNote method](../../../docs/technote.md) before using this skill. Follow the requested level directly, or default relevant explanations to Level 1. Read applicable project instructions and the current task boundary first.
-
-Use the canonical document for language, evidence states, artifact capability checks, output requirements, acceptance and examples. Keep the full method in that document; this entrypoint only routes to it. Select other skills only when the requested medium needs them and they are available. Do not preload the whole skills catalogue.
-
-A presentation-level request does not expand application, provider, Git or publication authorization. If the selected medium cannot be delivered, report the missing capability and actual output status.
+For routine communication state the result, observed evidence/limits and next action if needed. Read [Level 1](../../../docs/technote.md#level-1--technical-note) for concise style. Read the [extended method](../../../docs/technote-reference.md) only for explicitly requested diagrams, interactive websites, videos or deep explanation. Presentation does not grant code, Git or deployment rights. A script or build alone does not prove a finished artifact or runtime behavior.

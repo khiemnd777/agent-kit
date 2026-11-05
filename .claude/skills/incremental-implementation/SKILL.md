@@ -1,6 +1,6 @@
 ---
 name: incremental-implementation
-description: Delivers changes incrementally in thin, verifiable slices. Use when implementing any feature or change that touches more than one file, or when picking up the next task from a plan. Use when rolling a change out behind a feature flag, when you're about to write a large amount of code at once, or when a task feels too big to land in one step.
+description: Use when a feature needs real vertical slices or dependencies; touching more than one file is not a trigger.
 ---
 
 # Incremental Implementation
@@ -9,7 +9,7 @@ Follow the [single team workflow](../../../docs/team-workflow.md). Deliver small
 
 ## Inputs
 
-Read the task, approved ownership, relevant domain/contracts/source/tests and real dependencies. Implement an already-small coherent change directly.
+Read the task and relevant domain/contracts/source/tests and real dependencies; main session owns delivery by default. Implement an already-small coherent change directly.
 
 ## Developer-owned loop
 

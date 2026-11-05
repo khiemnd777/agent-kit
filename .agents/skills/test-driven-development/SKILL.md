@@ -1,6 +1,6 @@
 ---
 name: test-driven-development
-description: Drives development with tests using the red-green-refactor loop. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality.
+description: Use for changed logic, state/permission rules or reproducible bugs needing meaningful regression coverage; not every static edit.
 ---
 
 # Test-Driven Development
