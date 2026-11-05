@@ -256,6 +256,26 @@
       "canonical": ".agents/skills/using-agent-skills/SKILL.md",
       "mirror": ".claude/skills/using-agent-skills/SKILL.md",
       "sha256": "5cbb66fb8ed70e0e2b2a6d7dca1087ae1eb2a0c4c8a3040deb47f23983fdff61"
+    },
+    {
+      "canonical": ".agents/skills/api-and-interface-design/references/extended.md",
+      "mirror": ".claude/skills/api-and-interface-design/references/extended.md",
+      "sha256": "09356246096e02a98abca6553653917443d00986fe9dcf6a67268fab44b7016a"
+    },
+    {
+      "canonical": ".agents/skills/frontend-ui-engineering/references/extended.md",
+      "mirror": ".claude/skills/frontend-ui-engineering/references/extended.md",
+      "sha256": "e8f1a43f39fed237bcf7310c2f5a0ef98e4550f55f4d28977f2f9d3820c0e0ab"
+    },
+    {
+      "canonical": ".agents/skills/security-and-hardening/references/extended.md",
+      "mirror": ".claude/skills/security-and-hardening/references/extended.md",
+      "sha256": "a247c4292f7587a67995dcd019344a7da909dfb1a078ea559c4f152e2b1bbbb0"
+    },
+    {
+      "canonical": ".agents/skills/performance-optimization/references/extended.md",
+      "mirror": ".claude/skills/performance-optimization/references/extended.md",
+      "sha256": "de094f9b368f440d2350ab0d989f024285c6c802c45592824658d6eb93d2c0f7"
     }
   ],
   "native_agents": [
@@ -407,7 +427,7 @@
     },
     {
       "path": ".agents/skills/api-and-interface-design/SKILL.md",
-      "sha256": "092ae9b57b3f69eb4e5ea4df56199d7cfe9d8ed9d8c2f84044453edb568a01f2",
+      "sha256": "7379759886b3dbce1d926dbc77bca5675975202a1bd282ddf3d6658f5d4d0bd4",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -497,7 +517,7 @@
     },
     {
       "path": ".agents/skills/frontend-ui-engineering/SKILL.md",
-      "sha256": "b10d0488d3866cf2a8d569bb27af9dd117364d8184c4f9aa1f0328c963ddcca4",
+      "sha256": "34583c5ffd9a2fe978b1fef5a69d50da35000f2177e2ba0ea212cdcdf84202f0",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -542,7 +562,7 @@
     },
     {
       "path": ".agents/skills/performance-optimization/SKILL.md",
-      "sha256": "05378b3946a685fe59a0f416dd7fd39d4f3a6c7542d377758b5ec0768fcfcb11",
+      "sha256": "478401456b383531370a07616e3c73238a7ec3f98cd058f0fdef0ddaa24e4e2c",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -582,7 +602,7 @@
     },
     {
       "path": ".agents/skills/security-and-hardening/SKILL.md",
-      "sha256": "f633474c5330f174a0a5e2e64d1360c18377067c62a3158800fb7faf31efc590",
+      "sha256": "f7bb140376cd76e65234523eedbe91592b54c2006a29a39af45ebb54483dadb3",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -822,7 +842,7 @@
     },
     {
       "path": ".claude/skills/api-and-interface-design/SKILL.md",
-      "sha256": "092ae9b57b3f69eb4e5ea4df56199d7cfe9d8ed9d8c2f84044453edb568a01f2",
+      "sha256": "7379759886b3dbce1d926dbc77bca5675975202a1bd282ddf3d6658f5d4d0bd4",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -912,7 +932,7 @@
     },
     {
       "path": ".claude/skills/frontend-ui-engineering/SKILL.md",
-      "sha256": "b10d0488d3866cf2a8d569bb27af9dd117364d8184c4f9aa1f0328c963ddcca4",
+      "sha256": "34583c5ffd9a2fe978b1fef5a69d50da35000f2177e2ba0ea212cdcdf84202f0",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -957,7 +977,7 @@
     },
     {
       "path": ".claude/skills/performance-optimization/SKILL.md",
-      "sha256": "05378b3946a685fe59a0f416dd7fd39d4f3a6c7542d377758b5ec0768fcfcb11",
+      "sha256": "478401456b383531370a07616e3c73238a7ec3f98cd058f0fdef0ddaa24e4e2c",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -997,7 +1017,7 @@
     },
     {
       "path": ".claude/skills/security-and-hardening/SKILL.md",
-      "sha256": "f633474c5330f174a0a5e2e64d1360c18377067c62a3158800fb7faf31efc590",
+      "sha256": "f7bb140376cd76e65234523eedbe91592b54c2006a29a39af45ebb54483dadb3",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -1283,6 +1303,70 @@
     {
       "path": "docs/codex-pilot-handoff.md",
       "sha256": "c2bf2fc17efbc809acb27ca1bb96ab06c10d80fa7092339dda0ad11e2b384e4e",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
+      }
+    },
+    {
+      "path": ".agents/skills/api-and-interface-design/references/extended.md",
+      "sha256": "09356246096e02a98abca6553653917443d00986fe9dcf6a67268fab44b7016a",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
+      }
+    },
+    {
+      "path": ".claude/skills/api-and-interface-design/references/extended.md",
+      "sha256": "09356246096e02a98abca6553653917443d00986fe9dcf6a67268fab44b7016a",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
+      }
+    },
+    {
+      "path": ".agents/skills/frontend-ui-engineering/references/extended.md",
+      "sha256": "e8f1a43f39fed237bcf7310c2f5a0ef98e4550f55f4d28977f2f9d3820c0e0ab",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
+      }
+    },
+    {
+      "path": ".claude/skills/frontend-ui-engineering/references/extended.md",
+      "sha256": "e8f1a43f39fed237bcf7310c2f5a0ef98e4550f55f4d28977f2f9d3820c0e0ab",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
+      }
+    },
+    {
+      "path": ".agents/skills/security-and-hardening/references/extended.md",
+      "sha256": "a247c4292f7587a67995dcd019344a7da909dfb1a078ea559c4f152e2b1bbbb0",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
+      }
+    },
+    {
+      "path": ".claude/skills/security-and-hardening/references/extended.md",
+      "sha256": "a247c4292f7587a67995dcd019344a7da909dfb1a078ea559c4f152e2b1bbbb0",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
+      }
+    },
+    {
+      "path": ".agents/skills/performance-optimization/references/extended.md",
+      "sha256": "de094f9b368f440d2350ab0d989f024285c6c802c45592824658d6eb93d2c0f7",
+      "origin": {
+        "source": "agent-kit contributors",
+        "license": "MIT"
+      }
+    },
+    {
+      "path": ".claude/skills/performance-optimization/references/extended.md",
+      "sha256": "de094f9b368f440d2350ab0d989f024285c6c802c45592824658d6eb93d2c0f7",
       "origin": {
         "source": "agent-kit contributors",
         "license": "MIT"
