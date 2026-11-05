@@ -1,10 +1,30 @@
 ---
 name: frontend-ui-engineering
-description: Use for affected user-facing UI, responsive behavior, accessibility or approved visual fidelity; select checks relevant to the actual change.
+description: Build or repair UI components, layouts and interactions while preserving the project's design, accessibility, responsive behavior and real data wiring.
 ---
 
-# frontend-ui-engineering
+# Frontend UI Engineering
 
-Preserve the project's existing design system and approved templates. Implement required components, state, responsive layout, keyboard/focus and meaningful loading/error/empty states. Verify affected rendered states and interactions when claiming UI fidelity; a passing build does not establish visual correctness. Avoid unrequested component-system rewrites.
+Use the [lean operating core](../../../AGENTS.md). Inspect the affected screen, components, styles and data path. Reuse the project's design system and supported interaction patterns. A text or spacing fix does not require a new visual research phase, component architecture or state-management library.
 
-Read the [extended patterns](references/extended.md) only for relevant techniques and examples.
+## Implement the requested experience
+
+Keep components and state ownership understandable. Prefer local state and explicit props when they work; introduce shared state or extraction to solve a demonstrated coupling problem, not a line-count or tree-depth rule. Wire the real route, controller and data rather than presenting an isolated mock as a completed feature.
+
+Preserve semantic structure, accessible names, keyboard reachability, visible focus and meaningful feedback on changed controls. Consider loading, empty, error, success and permission states where the change affects them. Keep layout usable at the project's supported sizes and with realistic content; page-level overflow checks alone do not prove that controls inside nested containers are reachable.
+
+Follow existing tokens and hierarchy. Obtain visual references only when a material design question remains unresolved; an established supported pattern can be reused directly. Reference examples do not require a particular palette, framework, animation style or new design document.
+
+## Apply an approved template
+
+For an approved internal or supplied template, retain its agreed structure, navigation/action order, controls, interactions and responsive behavior. Use its identified source and approved differences. Resolve an uncertain choice on a representative rendered screen before propagating it across dependent screens; continue independent wiring.
+
+Read the [template reference](../../references/template-application.md) and [acceptance selection guide](../../../docs/template-application-acceptance.md) when template fidelity is part of acceptance. At a usable-flow milestone, compare relevant desktop/mobile views and interactions with the approved template. An external inspiration image does not override that contract.
+
+## Verify and finish
+
+Select representative rendered and interaction checks for the changed behavior, relevant breakpoint boundaries and affected accessibility requirements. Reuse unaffected evidence. Classify new findings and relevant baseline defects; do not require a warning-free entire site or install an audit platform for every edit. A required flow blocked by a baseline defect remains unverified.
+
+Stop when the requested flow is usable and its relevant checks are sufficient. State any missing rendered evidence; source or build success alone does not prove visual fidelity.
+
+Use [detailed techniques](references/detailed-guide.md) for component, state or layout examples. Use the [accessibility reference](../../references/accessibility-checklist.md) for the affected accessibility question; neither is a mandatory whole-site checklist.

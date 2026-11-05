@@ -1,28 +1,24 @@
 ---
 name: code-simplification
-description: Use to remove evidenced complexity within scope while preserving behavior; do not perform unrelated cleanup.
+description: "Reduce concrete duplication, tangled control flow or needless indirection while preserving behavior. Use for requested refactoring or complexity obstructing the current task."
 ---
 
 # Code Simplification
 
-Simplify relevant code while preserving confirmed behavior under the [single team workflow](../../../docs/team-workflow.md). Avoid unsolicited cleanup, extra approval chains and a suite run after every small edit.
+Use the [lean operating core](../../../AGENTS.md). Simplify relevant code only. If the code is already clear or its behavior is unknown, do not create an extra cleanup pass.
 
-## Trigger and inputs
+## Preserve the contract
 
-Use for real duplication, tangled control flow, unclear boundaries or needless indirection obstructing current work. Read callers/tests and understand why the code exists. Skip a separate simplification pass when code is clear or behavior is not understood.
+Read callers and existing tests to understand outputs, errors, side effects/order, permission/data invariants and compatibility. An existing bug is not an approved requirement; identify behavior changes separately from refactoring.
 
-## Preserve behavior and reduce concepts
+Collapse duplicate branches, name a domain concept, clarify types/control flow, move logic to its actual owner, reuse an existing helper or remove a needless pass-through. Prefer fewer concepts over redistributing the same complexity across more files. Follow project idioms.
 
-Preserve outputs, errors, side effects/order, permissions, data and contracts. Existing bugs are not approved requirements; distinguish behavior fixes from refactoring.
+## Verify the affected behavior
 
-Collapse duplicate branches, name a domain concept, make types explicit, move feature logic to its owning module, reuse a canonical helper or remove a needless pass-through. Prefer fewer concepts over moving the same complexity into more files. Follow existing idioms/conventions.
+Keep a coherent diff and run checks that can detect the relevant regression. Use integration checks when an affected seam warrants them. Reuse unaffected evidence; a rename/helper extraction does not require a full suite or new test platform by default.
 
-## Coherent implementation
+Repair regressions caused by the change within scope. Preserve others' work and uncertain code. Resolve material behavior/design changes through the existing task authority. Do not install a codemod, reset, revert or commit automatically.
 
-Keep unrelated refactoring separate and the diff reviewable. Run focused checks during edits and relevant integration checks at completed-change boundaries. Reuse unaffected evidence. No fixed line/file budgets, automatic codemod installation or full suite after each rename/helper.
+## Stop at the requested improvement
 
-Repair defects caused by the change within scope. Shared environment faults follow workflow ownership. Do not reset/revert others, commit or delete uncertain code automatically. Material behavior/design changes need the relevant human decision.
-
-## Handoff
-
-Confirm reduced complexity and preserved behavior with applicable evidence, without weakened assertions. Report the structural improvement, checks and FAIL/NOT_RUN limits. Submit for normal review/CI, not another simplification gate. Source completion is not runtime readiness or human acceptance.
+Finish when the scoped complexity is reduced, required behavior is preserved and appropriate verification is sufficient. Optional broader cleanup does not extend the task. Report the structural improvement, actual checks and FAIL/NOT_RUN limits. Source completion is not runtime readiness or human acceptance.

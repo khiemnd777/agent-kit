@@ -1,123 +1,102 @@
 # Team workflow
 
-This is Agent Kit's single delivery workflow. [Policy](team-policy.md) governs authority and safety. Skills explain techniques; roles assign responsibilities. Neither creates another lifecycle. The flow below describes the life of a coherent change, not six approval gates after every edit.
+Use the [lean core](../AGENTS.md) for routine work and this detail when delivery decisions need it. [Policy](team-policy.md) governs authority. Skills and roles support this one workflow.
 
 ## Start and agree once
 
-Main session owns delivery by default. Read relevant project decisions and the minimum source/tests. Derive outcome, scope and observable acceptance from the request; record a checkpoint only when coordination or continuation benefits. A clear implementation request permits necessary local edits and checks; planning-only requests remain read-only.
+Read the request, relevant decisions and the minimum source/tests. Derive the outcome, scope and observable acceptance. The main session owns delivery; a clear implementation request already covers necessary local work and focused checks. Planning-only work stays read-only.
 
-A small well-understood fix can proceed directly with relevant checks and a short explanation, without a separate plan, approval round or task file. A material architecture/data/permission decision needs a reviewable design. Once the current scope is approved, the owner continues routine implementation and repairs without asking at each file, bug or stage. Clarify only decisions that cannot be resolved safely from the available evidence.
+Proceed directly on a clear contained fix. Explain or resolve a material architecture, contract, data or permission decision before dependent work. Do not create a plan, task file or approval round merely because work is starting.
+
+## Proportionate effort
+
+| Effort | Use when | Useful work |
+| --- | --- | --- |
+| Focused | Clear, contained, low-risk change | Edit, inspect the diff, check relevant behavior, give a short handoff |
+| Standard | Feature/bug crosses meaningful seams | Complete callers/integration, cover regressions and use a checkpoint if useful |
+| Sensitive | Authorization, private data, money, migrations, production or irreversible effects | Examine affected failure/abuse cases and retain required review, data and release controls |
+
+These are effort choices within one workflow. Duration and file count do not determine risk. Escalate detail when evidence exposes real uncertainty; a long ordinary task does not acquire every sensitive-task check.
 
 ## Continuous delivery flow
 
-| Moment | Responsible role | Result / next action |
-| --- | --- | --- |
-| Requirement | Human + delivery owner | Agree observable behavior, scope, constraints and acceptance |
-| Design | Delivery owner | Identify affected layers/contracts, error/data behavior and checks; resolve material choices |
-| Development | One implementation owner | Complete a usable change through its real layers and callers; write regression tests and run focused checks while coding |
-| Review and CI | Reviewer + configured CI | Evaluate the completed coherent change and relevant checks against the same concrete source revision; owner repairs evidenced defects |
-| Acceptance | QA role or authorized human | Demonstrate a usable flow at a meaningful milestone and check actual behavior, permissions/data and important edge states |
-| Release | Authorized release owner | Release the verified candidate under project controls, then check operation and recovery readiness |
+Clarify what is needed, implement a complete usable change, obtain relevant verification/review, and hand off. Human acceptance and release occur only when part of the task and under their actual authority.
 
-A role is a responsibility, not a mandatory extra agent. The delivery owner can design, implement, diagnose and hand off. Review should be independent when the risk/project requires it; disclose sequential self-review when independent review did not run. QA can be the human. A separate Coordinator/Supervisor is not the default.
-
-Work in small, complete changes. Include actual imports, routes, callers and data paths; do not hand off an unused API or disconnected UI as complete. Keep branches short-lived when Git work is authorized. A workflow approval is not permission to commit, push, merge or deploy.
+A role is a responsibility, not a required extra agent. The owner can design, implement and diagnose. Independent review is useful or required according to risk/project rules; disclose self-review when applicable. Git actions require their actual scope.
 
 ## Development and local feedback
 
-The developer owns both implementation and its tests. Use existing project commands for fast focused feedback during coding. Integration/contract checks belong close to changes that affect those seams. Do not invoke a formal reviewer, acceptance cycle or human approval after every function, file or small edit.
+Use existing commands and meaningful tests while changing behavior. Cover actual imports, routes, consumers and data paths; an unused API or disconnected UI is incomplete. A regression check should distinguish the reported defect from correct behavior. Do not add tests that merely restate implementation or an unrelated platform for a documentation edit.
 
-The owner repairs product defects and tests/configuration broken by their own change inside valid scope. Diagnose before changing code; a routine repair does not need a new plan document or approval receipt. Escalate when evidence changes a material design, data/permission boundary or required authority.
-
-If the project cannot start or run a basic test, make minimal environment readiness an explicit setup task. Its outcome is a running application/basic check and usable documented commands. Do not retrofit a comprehensive test platform before product work begins. Retained data and real environments still need their actual protections and authority.
+Repair defects caused by the change within valid scope. If basic setup blocks progress, diagnose the concrete missing capability and establish only the necessary readiness under existing authority. Do not turn product work into an incidental runner, selector, admission or review system.
 
 ## Testing layers
 
-| Layer | When | Scope |
+| Layer | Select when | Evidence |
 | --- | --- | --- |
-| Focused local feedback | While coding | Fast unit/regression checks for the changed logic; relevant integration/contract checks |
-| Configured CI | When a coherent revision is submitted, and integration as configured | Project lint/type/build/unit/integration checks; fast feedback target about ten minutes, with expensive jobs separated |
-| Acceptance and release checks | Usable user-flow milestones / release candidate | Real running behavior, relevant roles/data/edge states and the project's release/security/operational requirements |
+| Focused local checks | Changed logic, contract or UI behavior | Relevant unit/regression, integration or rendered checks |
+| Configured CI | Coherent submitted revision and project-required integration | The project's actual checks |
+| Acceptance/release | Usable milestone or authorized release | Observed flow, permissions/data and operational criteria appropriate to risk |
 
-These are check locations, not a universal all-items checklist. A documentation edit does not need an application run; a behavior claim needs the relevant runtime evidence. Do not leave all testing to the end or run an entire suite after each edit. Use broader suites when the affected integration or actual project release rules call for them.
+No layer is a universal all-items checklist. Documentation/source claims need source evidence; runtime claims need runtime evidence. Broaden checks only for an affected integration risk or required project gate.
 
-Reuse valid evidence across sessions, reviewers and stages. Recheck when relevant code, inputs, environment or a finding changes the result. An unrelated edit, new chat or stale coordination receipt alone does not invalidate all checks. Tests are maintained to distinguish intended behavior from actual defects; do not weaken assertions or rebaseline unexplained integrity mismatches to obtain green results.
+Reuse checks and review conclusions while their relevant code, inputs and environment remain valid. Recheck affected evidence after a change or finding. A new chat, phase, reviewer or unrelated edit alone does not invalidate everything. Never weaken assertions or rebaseline unexplained failures to get green.
 
 ## Review and CI
 
-Submit one coherent, reviewable result with intent, relevant diff, actual checks and known limits. Identify its source revision: use a commit/PR revision when available, or a clearly described working-tree snapshot when Git writes are excluded. Review and check results apply to those inputs; no custom receipt/approval framework is needed.
+Submit a coherent result with intent, diff, source revision, checks and limits. Use a commit/PR when available or identify the working snapshot when Git writes are excluded; no custom receipt framework is needed.
 
-A reviewer examines correctness, domain/contracts, maintainability and actual security/data/performance risks. Return concrete findings with location, trigger, impact and expected correction. Do not edit application code for mutation tests or repairs. Style preferences and optional polish do not block progress. Required project protections and unresolved relevant defects do.
+Review findings identify location, trigger, impact and expected correction. Preferences and optional cleanup do not block completion. The owner fixes relevant defects and reruns affected checks; the reviewer rechecks changed findings and retains unaffected conclusions. No per-file review chain is required.
 
-The implementation owner fixes findings and reruns affected checks. The reviewer rechecks the affected diff/finding; unchanged conclusions remain valid. A new stage does not trigger another reviewer chain. While review/CI waits, continue independent authorized work with non-conflicting ownership. If none remains, hand off the waiting state; do not invent harness work to fill the wait.
+During waits, continue independent authorized work with separate ownership. If none remains, report the waiting state without inventing verification work.
 
 ## Acceptance and release
 
-Present a usable flow with prerequisites, actual URL/commands, needed roles without secrets, steps and expected results. Acceptance checks happen when the flow is usable, not after every small edit. For an internal change without a user-facing flow, use its observable technical acceptance criteria.
+Demonstrate requested usable behavior with prerequisites, commands/URL, safe roles/data, steps and expected results where applicable. An internal change can use observable technical criteria. Routine defects are repaired under existing scope; changed product requirements return to the user.
 
-QA/human reports a defect with reproduction, actual/expected behavior and evidence. The developer repairs it and verifies the affected flow. A material product/design change returns to the human; a routine bug does not restart the whole specification/approval cycle.
-
-Release only under explicit scope and the project's required controls. Use the tested candidate, check application operation after release and retain an appropriate recovery path. Passing local checks or finishing code is not deployment, production verification or human acceptance.
+Release only if authorized and under project controls, using the checked candidate and an appropriate recovery path. Code completion and local checks do not imply human acceptance, deployment or production readiness.
 
 ## Failures and blockers
 
-Pause only affected work for these delivery reasons:
+Pause affected work for a material unresolved decision, expanded authority, an unsafe/incorrect dependency, or a direct human stop. Continue independent authorized work.
 
-1. A material decision is missing or the next action expands approved scope/authority.
-2. A concrete failure makes dependent work incorrect, unsafe or destructive to data.
-3. The next release/real-data action needs authority that has not been granted.
+For a failing check, identify whether it reached the intended assertion or was blocked by tooling. Diagnose a supported cause, make an in-scope repair and recheck the affected result. Continue while a concrete hypothesis and new evidence show useful progress at proportionate cost. There is no fixed one-repair cutoff or automatic retry allowance.
 
-Always honor a direct human stop/replan, including its resumption boundary. These rules do not authorize process termination, data cleanup or bypassing runtime controls.
+Stop repeating an unchanged command without changed inputs or new evidence. If repairs stop making progress, change diagnostic strategy or hand off the blocker with what was tried and one useful next action. A different error, agent or session is not itself progress. Conversely, reaching a new evidenced cause can justify another small repair without a new approval ritual.
 
-| Failure | Owner and response |
-| --- | --- |
-| Product code or business assertion fails | Developer diagnoses the supported cause, fixes it within scope and runs the affected checks |
-| The developer's change breaks its tests/configuration | The same developer repairs the evidenced cause within scope, then checks whether the original blocked check reaches its intended assertion or usable-flow checkpoint; apply the tooling stop below if it still cannot |
-| Shared runner/environment fails independently of the feature | Name a maintenance owner/task for that problem; keep dependent verification blocked and continue independent product work |
-| Same command fails again without changed inputs or new evidence | Stop repeating it; report the actual error, attempted change and one specific next diagnostic action or decision |
-| Review/CI/acceptance cannot run within available tools or authority | State the missing proof and owner/next action; required criteria remain open and the affected result is not releasable |
-
-A harness is tooling that launches or collects checks. Repair a supported small test/config defect within the task's authority. Building a new runner, selector/admission/receipt system or review orchestration is a separate engineering outcome, not an automatic response to a failed check. Do not start one as a side effect. A failing business assertion cannot be dismissed as a tooling issue. Never retry merely until a flaky check happens to turn green.
-
-For a tooling repair, identify the original blocked check and its required assertion/usable-flow checkpoint. Make focused evidenced repairs and rerun that check while each attempt provides useful progress, remains proportionate and stays inside scope. A new error alone neither proves progress nor forces a stop. Stop or change strategy when attempts add no useful evidence, the work becomes unrelated infrastructure, or additional authority is required. Report original blocker, repairs, current proof and owner/next action. Continue unaffected work and keep dependent proof open. A now-reachable failing business assertion is a product defect, not a tooling excuse.
+A shared environment fault or substantial tooling rebuild is separate maintenance scope when it exceeds the task. Keep dependent proof open and continue unaffected work. Do not install tools, retry until a flaky check turns green, dismiss a business assertion as tooling, or create a new harness to fill a wait.
 
 ## Applying an approved template
 
-Preserve the human-approved template's structure, hierarchy, workflow, controls and responsive behavior. Identify its source/version and approved differences in the same task record. Use the [template reference](../.agents/references/template-application.md) and [acceptance selection guide](template-application-acceptance.md) for relevant rendered/interaction criteria.
+Preserve the approved source/version, hierarchy, workflow, controls and responsive behavior. Use the [template reference](../.agents/references/template-application.md) and [acceptance selection guide](template-application-acceptance.md) only for relevant UI work.
 
-Use a representative rendered screen early when an unresolved design choice would otherwise be replicated. Check that choice before copying an unproved approach across dependent screens. This is developer feedback within the approved task, not a mandatory Coordinator/human gate for each screen or edit. Continue independent wiring and other unaffected code. At a usable-flow milestone, verify the affected desktop/mobile behavior and relevant states. Build/source alone does not prove UI fidelity.
+Check a representative rendered screen early if an unresolved choice would otherwise spread across dependent screens. Check relevant desktop/mobile states at a usable milestone. This is local feedback, not a gate per screen; source/build alone does not establish visual fidelity.
 
 ## Synchronization and stops
 
-Use one current checkpoint for long/resumed or coordinated work when useful; a focused fix needs no task record. Existing project context/plan/state are shared summaries only when useful; read/update relevant decisions at start/resume and integration, not before every action. Their named writer owns shared changes. Others send concrete proposed updates to that owner. Git records are not live messages or locks.
+For long, resumed or coordinated work, maintain [one checkpoint](tasks/README.md) when useful. Prefer the existing issue/task; do not duplicate plan/state/approval ledgers. Update at meaningful milestones, handoff or a blocker.
 
-For authorized parallel work, agree a shared contract and separate ownership. Block only a real incompatible dependency, file collision or resource conflict. Delegation is optional, children do not delegate, and the assigning owner integrates outputs. When a human stops running work, transmit the stop with available authorized tools and report actual acknowledgement/in-flight limits; a status label cannot resume it.
+Capture outcome/scope/acceptance, done/todo, decisions and latest stop, revision, checks/limits and next action. At resume read that checkpoint and affected source, then continue; do not restart completed work or rerun unaffected checks just because the session changed.
+
+Separate parallel ownership and agree contracts at real dependencies. Git is not a live lock or message channel. The assigning owner integrates children; a sent stop is not proof a worker stopped.
 
 ## Handoff and completion
 
-Stop when scoped acceptance, required implementation/callers and proportionate verification are complete. Do not turn optional refactoring, speculative edge cases or polish into new completion criteria.
+Finish when required implementation/callers and scoped acceptance are satisfied, appropriate verification is complete, and no in-scope blocker remains. Optional polish, wider audits or unrelated refactors are separate work.
 
-
-| Claim | Required evidence |
+| Claim | Evidence |
 | --- | --- |
-| Source complete | Required implementation, real caller/route/data wiring, source review and usable handoff instructions |
-| Behavior verified | Relevant observed checks, including runtime for runtime claims; open required failures/NOT_RUN stay explicit |
-| Human accepted | The authorized human's actual acceptance |
-| Released | Authorized release plus its actual operating evidence |
+| Source complete | Required implementation and real wiring, reviewed diff, usable handoff |
+| Behavior verified | Relevant observed checks; required failures/NOT_RUN remain explicit |
+| Human accepted | Actual authorized human acceptance |
+| Released | Authorized release and observed operation |
 
-A human-requested self-test handoff may be CODE_COMPLETE_UNTESTED: code/callers must be complete, but tests/runtime stay NOT_RUN and availability Unknown until observed. Do not reopen stopped testing to claim readiness. A missing required implementation is incomplete, not a known limitation used to close the task.
-
-When a task record/checkpoint is useful, update it with result, checks/source revision, defects or blockers and next action. For a focused fix the diff, checks and handoff may suffice. Report what changed and why, actual commands/results and meaningful limits. Do not fabricate review independence or attach application startup to agent/session/model/effort/review receipts.
+A requested source-only self-test handoff may be CODE_COMPLETE_UNTESTED: implementation is complete but runtime/tests stay NOT_RUN and availability Unknown. Do not reopen stopped tests or hide missing implementation as a limitation.
 
 ## State vocabulary
 
-Use Agreed, In Development, In Review, Ready for Acceptance, Accepted and Released as useful descriptions. Blocked/Stopped applies only to affected work with a reason and next action. Existing project labels can be retained. States describe progress; they are not approval gates or permission grants.
+Use project labels, or Agreed, In Development, In Review, Ready for Acceptance, Accepted and Released, only when useful. Blocked/Stopped names the affected work, reason and next action. Labels describe progress; they grant no authority.
 
 ## Engineering basis
 
-This workflow adapts small complete changes, rapid developer feedback and review that supports forward progress. It is a project operating choice, not a certification claim or proof of measured speed.
-
-- [DORA: test automation](https://dora.dev/capabilities/test-automation/)
-- [DORA: continuous integration](https://dora.dev/capabilities/continuous-integration/)
-- [Google: small changes](https://google.github.io/eng-practices/review/developer/small-cls.html)
-- [Google: code review standard](https://google.github.io/eng-practices/review/reviewer/standard.html)
+This is a project operating choice, not proof of measured speed. It draws on [DORA test automation](https://dora.dev/capabilities/test-automation/), [continuous integration](https://dora.dev/capabilities/continuous-integration/), and Google's guidance on [small changes](https://google.github.io/eng-practices/review/developer/small-cls.html) and [review standards](https://google.github.io/eng-practices/review/reviewer/standard.html).

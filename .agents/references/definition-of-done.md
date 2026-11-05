@@ -1,25 +1,27 @@
 # Definition of Done
 
-The [single team workflow](../../docs/team-workflow.md#handoff-and-completion) defines delivery/completion. Select evidence for the agreed claim; this is not another gate or all-items checklist.
+Use the [lean operating core](../../AGENTS.md). Completion means the requested result and sufficient evidence for its risk, with no unresolved blocker to that claim. Stop there; optional polish, broader audits and unrelated refactoring are separate work.
 
 ## Match evidence to the result
 
 | Claim | Evidence |
 | --- | --- |
-| Documentation/instruction change | Reviewed content, relevant links/metadata and package consistency |
-| Source complete | Required implementation, real imports/callers/routes/UI/data/commands, source review and usable instructions |
-| Behavior verified | Applicable observed checks, including runtime for running-behavior claims |
+| Documentation/instruction change | Reviewed content and relevant links, metadata or package consistency |
+| Source complete | Required implementation, real callers/routes/data/commands, source review and usable handoff instructions |
+| Behavior verified | Applicable observed checks, including runtime evidence for running-behavior claims |
 | Human accepted | Actual authorized human acceptance |
 | Released | Authorized release and operating evidence |
 
-Builds, mocks, reviews and source handoffs support only observed scope. Missing required code is incomplete. Required FAIL/NOT_RUN keeps the affected claim open.
+Builds, mocks and source reviews support only their observed scope. Missing required implementation is incomplete. Required FAIL/NOT_RUN keeps the affected claim open; an unselected optional check does not become a blocker.
 
-## Applicable checks
+## Select sufficient checks
 
-Use focused tests during implementation and project CI/review for completed changes. Check domain correctness, affected contracts/data/permissions, maintainability and relevant lint/type/build/documentation. Release security/recovery requirements apply at release, not every edit. Preserve data and others' work; do not weaken assertions.
+Use meaningful focused tests for changed behavior and relevant contract/integration checks for affected seams. Keep actual project review, CI, security and release requirements. A simple documentation or cosmetic edit does not imply an application run, new test or full-suite gate.
 
-Reuse valid evidence; recheck affected code/inputs/environment/findings, not every session/stage/unrelated edit. Routine repairs need no new approval/document chain. Developer-owned test/config repairs stay in scope; unrelated shared infrastructure faults have their own owner. Follow [failure handling](../../docs/team-workflow.md#failures-and-blockers).
+Reuse valid evidence. Recheck when relevant source, inputs, environment or findings change, not merely for a new session/stage. Routine repairs stay within task authority while evidence, progress and cost justify them; use [failure guidance](../../docs/team-workflow.md#failures-and-blockers) if ownership or next scope is unclear. Do not weaken assertions or build a harness to fill a gap.
+
+A focused result may need only the diff, relevant checks and short handoff. Use one checkpoint for long/resumed/coordinated work when useful; no mandatory additional record.
 
 ## Requested self-test handoff
 
-Complete required code/callers and provide actual startup/prerequisites/URL/manual steps and known blockers. CODE_COMPLETE_UNTESTED is a human-requested source handoff: tests/runtime stay NOT_RUN and availability Unknown until observed. Do not reopen stopped testing or infer acceptance/release. A later action needs its actual scope, not reopening every historical check.
+For a human-requested CODE_COMPLETE_UNTESTED handoff, complete required code/callers and provide actual prerequisites, commands/manual steps and known blockers. Tests/runtime remain NOT_RUN and availability Unknown until observed. Honor stopped testing and distinguish source completion from acceptance/release.

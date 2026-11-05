@@ -1,8 +1,14 @@
 ---
 name: technote
-description: Use for explicitly requested TechNote media or a substantive technical explanation; routine updates need only a short result and evidence.
+description: "Explain technical outcomes concisely or produce a requested TechNote diagram, interactive explanation or video. Use for explicit TechNote requests or complex evidence that needs structured explanation."
 ---
 
 # TechNote
 
-For routine communication state the result, observed evidence/limits and next action if needed. Read [Level 1](../../../docs/technote.md#level-1--technical-note) for concise style. Read the [extended method](../../../docs/technote-reference.md) only for explicitly requested diagrams, interactive websites, videos or deep explanation. Presentation does not grant code, Git or deployment rights. A script or build alone does not prove a finished artifact or runtime behavior.
+Lead with the result, then the evidence or limits needed to assess it. Default to a concise Level 1 note in the requested language; include a next action only when work remains. Avoid empty headings, repeated approval references, unchanged context and copied logs. A simple answer needs no report form.
+
+Distinguish observed behavior, proposals and unknowns without mandatory labels. State actual checks and relevant limits; a diagram, build or source review does not prove runtime behavior. Do not imply human acceptance or release.
+
+Read the [TechNote guide](../../../docs/technote.md) when the requested explanation needs more structure. For a requested diagram, interactive website or video, use its linked reference for the chosen medium only. No need to deliver earlier levels or preload other skills.
+
+A presentation request does not expand application, provider, Git or publication authority. Deliver the requested medium when feasible and authorized; report unavailable capabilities and actual artifact status honestly.

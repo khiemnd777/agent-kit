@@ -1,33 +1,26 @@
-# Extended patterns — documentation-and-adrs
+# Documentation and ADRs: detailed techniques
 
-Optional deep reference. The [lean core](../../../../AGENTS.md) sets scope; examples below are not mandatory task gates.
+Read the section that resolves the current technical question. The [skill entrypoint](../SKILL.md) sets scope and completion; examples here do not select a stack, authorize side effects or add delivery gates. Preserve the project's actual security and release requirements.
 
+## Contents
 
-# Documentation and ADRs
-
-
-This skill provides technical guidance under the [single team workflow](../../../../docs/team-workflow.md). Select techniques/checklist items relevant to the change. Examples add no approval rounds, required agents, per-edit reviews or universal test/release gates.
-
-## Overview
-
-Document decisions, not just code. The most valuable documentation captures the *why* — the context, constraints, and trade-offs that led to a decision. Code shows *what* was built; documentation explains *why it was built this way* and *what alternatives were considered*. This context is essential for future humans and agents working in the codebase.
-
-## When to Use
-
-- Making a significant architectural decision
-- Choosing between competing approaches
-- Adding or changing a public API
-- Shipping a feature that changes user-facing behavior
-- Onboarding new team members (or agents) to the project
-- When you find yourself explaining the same thing repeatedly
-
-**When NOT to use:** Don't document obvious code. Don't add comments that restate what the code already says. Don't write docs for throwaway prototypes.
+- [Architecture Decision Records (ADRs)](#architecture-decision-records-adrs)
+- [Inline Documentation](#inline-documentation)
+- [API Documentation](#api-documentation)
+- [README Structure](#readme-structure)
+- [Changelog Maintenance](#changelog-maintenance)
+- [Documentation for Agents](#documentation-for-agents)
+- [Documentation choices](#documentation-choices)
+- [Relevant warning signs](#relevant-warning-signs)
+- [Verification](#verification)
 
 ## Architecture Decision Records (ADRs)
 
-ADRs capture the reasoning behind significant technical decisions. They're the highest-value documentation you can write.
+ADRs preserve the rationale for significant technical decisions when a durable decision record is useful or required by the project.
 
 ### When to Write an ADR
+
+Use an ADR when the choice is significant, costly to reverse or governed by the project's decision-record convention. Possible subjects include:
 
 - Choosing a framework, library, or major dependency
 - Designing a data model or database schema
@@ -48,7 +41,7 @@ If the available evidence conflicts, surface the conflict rather than silently i
 
 ### ADR Template
 
-Store ADRs in `docs/decisions/` with sequential numbering (unless the project already uses another location — see above):
+If an ADR is needed and no convention exists, `docs/decisions/` with sequential numbering is one simple option. The following is a fictional decision illustrating the format; its technology comparisons are assumptions for that example, not current product recommendations:
 
 ```markdown
 # ADR-001: Use PostgreSQL for primary database
@@ -100,7 +93,7 @@ PROPOSED → ACCEPTED → (SUPERSEDED or DEPRECATED)
 ```
 
 - **Don't delete old ADRs.** They capture historical context.
-- When a decision changes, write a new ADR that references and supersedes the old one.
+- When a recorded decision changes materially, follow the project's supersession convention and link the replacement. Routine implementation details do not each need a new ADR.
 
 ## Inline Documentation
 
@@ -114,8 +107,8 @@ Comment the *why*, not the *what*:
 counter += 1;
 
 // GOOD: Explains non-obvious intent
-// Rate limit uses a sliding window — reset counter at window boundary,
-// not on a fixed schedule, to prevent burst attacks at window edges
+// Keep the count and its fixed-window start together so a stale count
+// is not carried into the next window.
 if (now - windowStart > WINDOW_SIZE_MS) {
   counter = 0;
   windowStart = now;
@@ -130,11 +123,11 @@ function calculateTotal(items: CartItem[]): number {
   return items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 }
 
-// Don't leave TODO comments for things you should just do now
-// TODO: add error handling  ← Just add it
+// Record actionable follow-up when it is outside the current scope.
+// Do not create a TODO instead of implementing required behavior.
 
-// Don't leave commented-out code
-// const oldImplementation = () => { ... }  ← Delete it, git has history
+// Remove obsolete commented-out code when it is part of the change;
+// a local documentation edit is not a repository-wide cleanup task.
 ```
 
 ### Document Known Gotchas
@@ -154,7 +147,7 @@ export function initializeTheme(theme: Theme): void {
 
 ## API Documentation
 
-For public APIs (REST, GraphQL, library interfaces):
+For changed public APIs (REST, GraphQL or library interfaces), update the relevant existing contract documentation. Select the format the project already uses:
 
 ### Inline with Types (Preferred for TypeScript)
 
@@ -202,7 +195,7 @@ paths:
 
 ## README Structure
 
-Every project should have a README that covers:
+When the task requires a new README or changes setup/usage, include the sections needed by its reader. This example does not require creating missing sections for an unrelated edit; substitute the project's actual commands:
 
 ```markdown
 # Project Name
@@ -233,7 +226,7 @@ How to contribute, coding standards, PR process.
 
 ## Changelog Maintenance
 
-For shipped features:
+If the project maintains a changelog and this task changes a release entry, follow its convention. For example:
 
 ```markdown
 # Changelog
@@ -252,32 +245,26 @@ For shipped features:
 
 ## Documentation for Agents
 
-Special consideration for AI agent context:
+Update only the agent-facing information affected by the task; do not create every document type below:
 
 - **CLAUDE.md / rules files** — Document project conventions so agents follow them
 - **Spec files** — Keep specs updated so agents build the right thing
 - **ADRs** — Help agents understand why past decisions were made (prevents re-deciding)
 - **Inline gotchas** — Prevent agents from falling into known traps
 
-## Common Rationalizations
+## Documentation choices
 
-| Rationalization | Reality |
-|---|---|
-| "The code is self-documenting" | Code shows what. It doesn't show why, what alternatives were rejected, or what constraints apply. |
-| "We'll write docs when the API stabilizes" | APIs stabilize faster when you document them. The doc is the first test of the design. |
-| "Nobody reads docs" | Agents do. Future engineers do. Your 3-months-later self does. |
-| "ADRs are overhead" | A 10-minute ADR prevents a 2-hour debate about the same decision six months later. |
-| "Comments get outdated" | Comments on *why* are stable. Comments on *what* get outdated — that's why you only write the former. |
+Code can establish what an implementation does; a short rationale can preserve constraints that are otherwise invisible. Add that rationale where a future reader needs it. Avoid repeated summaries, speculative promises and new records whose only purpose is satisfying a template.
 
-## Red Flags
+## Relevant warning signs
 
-- Architectural decisions with no written rationale
-- Public APIs with no documentation or types
-- README that doesn't explain how to run the project
-- Commented-out code instead of deletion
-- TODO comments that have been there for weeks
-- No ADRs in a project with significant architectural choices
-- Documentation that restates the code instead of explaining intent
+- A significant new decision lacks the rationale needed to maintain it.
+- Changed contract or setup instructions disagree with the implementation.
+- A document invents acceptance, approval or runtime evidence.
+- An explanation repeats syntax but omits the non-obvious constraint.
+- Multiple records present conflicting versions of the same current decision.
+
+Existing documentation debt outside the agreed change remains separate work.
 
 ## Verification
 

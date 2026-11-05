@@ -1,42 +1,41 @@
 # Coordination templates
 
-Optional field guides for the [single team workflow](team-workflow.md), not additional documents or approval gates. Use the existing task/issue and omit fields that do not affect the task. One task has one delivery owner; each shared record has one assigned writer. Keep detailed evidence here rather than repeat it in chat.
+Optional field guides under the [lean core](../AGENTS.md). Use an existing tracker/checkpoint when continuation or coordination benefits; a focused task needs no new file. Omit fields that add no information. The main session owns delivery by default, and a shared record has one writer when edited.
 
 ## Task Assignment
 
 ```text
-Task / owner:
-Outcome and acceptance:
-Relevant decisions / source revision:
-Approved scope / human approval source / latest stop:
-Owned files and any real dependencies:
-Approach and applicable checks:
-Result to hand off:
+Outcome / acceptance:
+Scope, ownership and relevant inputs:
+Material decisions, authority limits or latest stop:
+Relevant checks / result to return:
 ```
 
-For a small fix this can be a short paragraph in the existing issue. For material design/data/permission decisions, include enough detail for review before execution. Do not create a second plan or fill generic placeholders as product copy.
+A short message can carry this assignment. Include enough detail for material design/data/permission decisions; do not create another plan or approval round for routine implementation. Delegation is optional and children do not delegate.
 
 ## Project / Task State
 
+For long, resumed or coordinated work, maintain one current checkpoint rather than parallel status files:
+
 ```text
-Task / writer / source revision:
-Current result and stage:
-Authority / restrictions / latest stop:
-Checks: criterion -> actual command/evidence -> PASS / FAIL / NOT_RUN + limits
-Open defect or dependency: impact -> owner -> next action
-Next delivery / acceptance action:
+Goal / scope / acceptance:
+Done / remaining work:
+Decisions / current authority limits / latest stop:
+Source revision or working-tree inputs:
+Actual checks: evidence -> PASS / FAIL / NOT_RUN + meaningful limits
+Blocker and owner / next useful action, if any:
 ```
 
-A project summary links existing tasks and shared decisions; it does not duplicate their checklists. Keep requested/observed model metadata only when relevant to routing evidence; Unknown for unobserved values. Model/session/agent details never become application startup conditions.
+Update at meaningful milestones. A project summary links tasks instead of copying their checklists. Reuse unaffected evidence when resuming. Routing metadata belongs here only when needed to investigate model/permission behavior; unobserved values are Unknown. Model/session/agent identities never become application startup conditions.
 
-A waiting review is a state. Continue independent authorized work; if none exists, hand off and wait. A state field or technical PASS cannot grant permission or establish human acceptance.
+A waiting review does not create work: continue independent authorized tasks or hand off the waiting state. No field or technical PASS grants permission or proves human acceptance.
 
 ## Coordinator Checklist
 
-This heading is retained for existing links. These are the delivery owner's handoff questions, not a mandatory nine-step ceremony or a requirement to create a Coordinator role:
+This heading remains for existing links. These optional handoff questions do not require a Coordinator or another review cycle:
 
-- Is the actual output complete for the agreed outcome, including its real callers/data path?
-- Do the recorded checks support the claim, with failed/unrun criteria and review independence stated accurately?
-- Are material feedback, current scope/stop restrictions, blockers, owner and next action clear?
+- Is the requested output complete, including necessary callers and data paths?
+- Do actual checks support the claim, with missing proof and review independence stated accurately?
+- Are material limits, unresolved defects and any next action clear?
 
-Use at a meaningful handoff. Do not ask for per-file/phase approvals, restart unchanged checks or build a receipt chain to fill these fields. Keep Source complete, Behavior verified, Human accepted and Released distinct.
+Stop when scoped acceptance and sufficient verification are met. Keep Source complete, Behavior verified, Human accepted and Released distinct. Optional polish does not extend completion.

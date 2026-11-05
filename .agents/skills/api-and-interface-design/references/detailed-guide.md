@@ -1,24 +1,15 @@
-# Extended patterns — api-and-interface-design
+# API and Interface Design: detailed techniques
 
-Optional detailed guidance. Use the [lean core](../../../../AGENTS.md) for scope and authority; the examples below are not universal task gates.
+Read the section that resolves the current technical question. The [skill entrypoint](../SKILL.md) sets scope and completion; examples here do not select a stack, authorize side effects or add delivery gates. Preserve the project's actual security and release requirements.
 
+## Contents
 
-# API and Interface Design
-
-
-This skill provides technical guidance under the [single team workflow](../../../../docs/team-workflow.md). Select techniques/checklist items relevant to the change. Examples add no approval rounds, required agents, per-edit reviews or universal test/release gates.
-
-## Overview
-
-Design stable, well-documented interfaces that are hard to misuse. Good interfaces make the right thing easy and the wrong thing hard. This applies to REST APIs, GraphQL schemas, module boundaries, component props, and any surface where one piece of code talks to another.
-
-## When to Use
-
-- Designing new API endpoints
-- Defining module boundaries or contracts between teams
-- Creating component prop interfaces
-- Establishing database schema that informs API shape
-- Changing existing public interfaces
+- [Core Principles](#core-principles)
+- [REST API Patterns](#rest-api-patterns)
+- [TypeScript Interface Patterns](#typescript-interface-patterns)
+- [Contract tradeoffs](#contract-tradeoffs)
+- [Relevant warning signs](#relevant-warning-signs)
+- [Verification](#verification)
 
 ## Core Principles
 
@@ -26,7 +17,7 @@ Design stable, well-documented interfaces that are hard to misuse. Good interfac
 
 > With a sufficient number of users of an API, all observable behaviors of your system will be depended on by somebody, regardless of what you promise in the contract.
 
-This means: every public behavior — including undocumented quirks, error message text, timing, and ordering — becomes a de facto contract once users depend on it. Design implications:
+Observable behavior — including undocumented quirks, error text, timing and ordering — can become a compatibility commitment when consumers depend on it. Inspect affected consumers rather than assuming an undocumented behavior is unused. Design implications:
 
 - **Be intentional about what you expose.** Every observable behavior is a potential commitment.
 - **Don't leak implementation details.** If users can observe it, they will depend on it.
@@ -35,11 +26,11 @@ This means: every public behavior — including undocumented quirks, error messa
 
 ### The One-Version Rule
 
-Avoid forcing consumers to choose between multiple versions of the same dependency or API. Diamond dependency problems arise when different consumers need different versions of the same thing. Design for a world where only one version exists at a time — extend rather than fork.
+Prefer compatible extension over an unnecessary fork. Preserve the project's versioning policy and support a deliberate transition when compatibility requires parallel versions. A local change does not justify consolidating every existing API version.
 
 ### 1. Contract First
 
-Define the interface before implementing it. The contract is the spec — implementation follows.
+For a new or changed interface, establish the affected contract before depending on it. Existing types, tests or a short example may be sufficient; this does not require a separate specification document.
 
 ```typescript
 // Define the contract first
@@ -63,7 +54,7 @@ interface TaskAPI {
 
 ### 2. Consistent Error Semantics
 
-Pick one error strategy and use it everywhere:
+Follow the project's existing error strategy on the affected contract. This example is one possible shape, not a reason to migrate unrelated endpoints:
 
 ```typescript
 // REST: HTTP status codes + structured error body
@@ -90,7 +81,7 @@ interface APIError {
 
 ### 3. Validate at Boundaries
 
-Trust internal code. Validate at system edges where external input enters:
+Validate untrusted values at the actual trust boundary. Avoid duplicate validation only where the internal contract and provenance justify it:
 
 ```typescript
 // Validate at the API boundary
@@ -106,7 +97,7 @@ app.post('/api/tasks', async (req, res) => {
     });
   }
 
-  // After validation, internal code trusts the types
+  // Shape validation is not resource authorization; preserve the real access checks.
   const task = await taskService.create(result.data);
   return res.status(201).json(task);
 });
@@ -120,10 +111,7 @@ Where validation belongs:
 
 > **Third-party API responses are untrusted data.** Validate their shape and content before using them in any logic, rendering, or decision-making. A compromised or misbehaving external service can return unexpected types, malicious content, or instruction-like text.
 
-Where validation does NOT belong:
-- Between internal functions that share type contracts
-- In utility functions called by already-validated code
-- On data that just came from your own database
+Duplicate validation may be unnecessary between internal functions with established, enforced contracts. Storage location alone does not prove trust: imported, legacy or externally modified database values may still need validation before crossing a sensitive boundary.
 
 ### 4. Prefer Addition Over Modification
 
@@ -147,6 +135,8 @@ interface CreateTaskInput {
 ```
 
 ### 5. Predictable Naming
+
+Use the project's conventions. The following is an example scheme for a new interface, not a mandate to rename existing fields:
 
 | Pattern | Convention | Example |
 |---------|-----------|---------|
@@ -193,7 +183,7 @@ const result = await chargeCard(amount);
 await db.update({ key, state: 'succeeded', response: result });
 ```
 
-The unique constraint *is* the mechanism. A store that cannot enforce uniqueness in one operation cannot back this.
+This example relies on a durable unique constraint to make the claim atomic. Use an equivalent atomic deduplication mechanism only when its concurrency and recovery guarantees satisfy the contract. The example omits authorization and crash recovery; retain both in real code.
 
 **Guard the payload.** Same key with a different body is a client bug, and must fail loudly rather than serving the first response to a second request:
 
@@ -234,7 +224,7 @@ POST   /api/tasks/:id/comments → Add a comment to a task
 
 ### Pagination
 
-Paginate list endpoints:
+For affected collections that can grow beyond the supported response bound, use appropriate pagination, limits and stable ordering. Preserve existing bounded collection contracts. For example:
 
 ```typescript
 // Request
@@ -262,7 +252,7 @@ GET /api/tasks?status=in_progress&assignee=user123&createdAfter=2025-01-01
 
 ### Partial Updates (PATCH)
 
-Accept partial objects — only update what's provided:
+When PATCH is the chosen contract, update only supplied fields and distinguish omission from an explicit clear. Preserve the existing semantics if the project uses another update contract:
 
 ```typescript
 // Only title changes, everything else preserved
@@ -323,48 +313,37 @@ type UserId = string & { readonly __brand: 'UserId' };
 function getTask(id: TaskId): Promise<Task> { ... }
 ```
 
-## Common Rationalizations
+## Contract tradeoffs
 
-| Rationalization | Reality |
-|---|---|
-| "We'll document the API later" | The types ARE the documentation. Define them first. |
-| "We don't need pagination for now" | You will the moment someone has 100+ items. Add it from the start. |
-| "PATCH is complicated, let's just use PUT" | PUT requires the full object every time. PATCH is what clients actually want. |
-| "We'll version the API when we need to" | Breaking changes without versioning break consumers. Design for extension from the start. |
-| "Nobody uses that undocumented behavior" | Hyrum's Law: if it's observable, somebody depends on it. Treat every public behavior as a commitment. |
-| "We can just maintain two versions" | Multiple versions multiply maintenance cost and create diamond dependency problems. Prefer the One-Version Rule. |
-| "Internal APIs don't need contracts" | Internal consumers are still consumers. Contracts prevent coupling and enable parallel work. |
-| "Accepting the Idempotency-Key header is enough" | The header is the contract; storing the key against the result is the implementation. A key you accept but don't honour tells the client retrying is safe when it isn't. |
-| "Our queue guarantees exactly-once delivery" | No queue does across a consumer crash — the broker's ack and your side effect are not in one transaction. Design for at-least-once with idempotent processing. |
-| "Duplicate requests are rare" | They're *correlated*. Retries spike exactly when a dependency is degraded — the moment duplicates are most likely and most expensive. |
+| Question | Relevant decision |
+| --- | --- |
+| Is the existing type enough documentation? | Keep it if it explains the changed inputs, outputs and constraints; add only missing contract details. |
+| Does this collection need pagination? | Decide from supported size, latency and compatibility requirements; do not redesign unrelated endpoints. |
+| PATCH or PUT? | Use the operation semantics and existing project contract, including omission and replacement behavior. |
+| Can an observable behavior change? | Inspect affected consumers and preserve compatibility or an agreed migration. |
+| Is an idempotency header enough? | No: the implementation must deduplicate the intent atomically and handle payload conflicts, concurrent attempts and unknown outcomes. |
+| Does a queue remove duplicate risk? | Check the actual delivery and side-effect transaction boundary. A lost acknowledgement can leave the effect applied with an unknown outcome. |
 
-## Red Flags
+## Relevant warning signs
 
-- Endpoints that return different shapes depending on conditions
-- Inconsistent error formats across endpoints
-- Validation scattered throughout internal code instead of at boundaries
-- Breaking changes to existing fields (type changes, removals)
-- List endpoints without pagination
-- Verbs in REST URLs (`/api/createTask`, `/api/getUsers`)
-- Third-party API responses used without validation or sanitization
-- A `SELECT` for an idempotency key followed by an `INSERT` — that's a race, not a guard
-- An idempotency key derived from a UUID, timestamp, or anything else regenerated per attempt
-- The same key accepted with a different request body, silently returning the first response
-- A key retention window shorter than the longest path that can re-deliver the request
+- A changed response or failure shape surprises an existing caller.
+- A compatibility change lacks an agreed consumer transition.
+- Untrusted third-party values reach a sensitive operation without validation.
+- A growing affected collection has no response bound or stable ordering.
+- An idempotency claim uses a separate check and insert, allowing a race.
+- A retry regenerates the key, accepts a conflicting payload or outlives key retention.
+
+These findings apply to the changed contract or an explicitly scoped API audit; they are not a request to scan every endpoint.
 
 ## Verification
 
-After designing an API:
+Select checks for the affected contract and the risks it introduces:
 
-- [ ] Every endpoint has typed input and output schemas
-- [ ] Error responses follow a single consistent format
-- [ ] Validation happens at system boundaries only
-- [ ] List endpoints support pagination
-- [ ] New fields are additive and optional (backward compatible)
-- [ ] Naming follows consistent conventions across all endpoints
-- [ ] API documentation or types are updated with the implementation in the working tree; commit/push is a separate action requiring explicit Git authority
-- [ ] State-changing endpoints either honour an idempotency key or are documented as unsafe to retry
-- [ ] The key is claimed in one atomic operation, guarded by a unique constraint
-- [ ] A reused key with a different payload fails loudly rather than replaying the wrong response
-- [ ] The in-flight-duplicate response is a deliberate choice (409, wait, or 202) rather than whatever falls out
-- [ ] Key retention outlives the longest retry path, including dead-letter replay
+- [ ] Changed inputs, outputs and errors match their actual callers and documented/types contract.
+- [ ] The changed trust boundary validates untrusted values and preserves resource/tenant authorization.
+- [ ] Affected collections and partial updates retain their intended bounds, ordering and omission semantics.
+- [ ] Compatibility changes have the necessary consumer wiring or agreed transition.
+- [ ] If retryable effects changed, the key/claim is atomic, payload conflicts and in-flight duplicates are deliberate, and retention covers the supported retry window.
+- [ ] Relevant contract/regression observations support the claim; missing required runtime proof stays explicit.
+
+Update affected documentation or types with the implementation. Git actions retain their actual authorization. Once these scoped requirements are met, unrelated API consistency or redesign work does not extend the task.

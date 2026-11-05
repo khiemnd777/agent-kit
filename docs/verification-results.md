@@ -239,3 +239,54 @@ Security skill/checklist now agree on Lax/Strict cookie choices under the establ
 Current local result: PASS for the existing package recipe (81 entries, 28 mirror pairs, 17 skills/root, unchanged 23 adapted / 3 original upstream files), Ruby/Psych parsing of 37 YAML frontmatters, 97 local links/anchors, exact 12-file follow-up scope with 82 other files byte-identical, historical prefix/frontmatter/provenance preservation, whitespace and unchanged HEAD/empty index. No source file was added/deleted. Actual checks, cases and limits are in TASK-007. The bundled quick validator remains NOT_RUN because PyYAML is absent; Ruby/Psych is separate evidence.
 
 The two source corrections and Claude synchronization are complete. Native/application cookie/auth/alert behavior, independent review, effective runtime settings, two-machine operation and speed/token effects remain NOT_RUN/Unknown. No application configuration, Pinky Lamb source, new harness, dependency, global setting or Git state was changed; commit/push remains excluded. Source/package checks do not establish runtime success or human acceptance.
+
+
+## 2026-11-05 — Lean refactor: source/package verification
+
+### Scope and checked source
+
+The owner authorized source refactoring, package checks, a separate branch with commits/push and a review PR, plus a Codex pilot handoff. Merge, adoption in another project and native pilot execution are outside this task. Earlier results above remain historical evidence, not current workflow requirements.
+
+- Baseline: `4f5c3bc7dcb2d052e8fd28699f118a22eb1f82c5`.
+- Branch: `refactor/agent-kit-lean-20261105`; this entry belongs to the source commit containing it.
+- Maintained-file identities: the 98 entries in the manifest in this commit.
+- Manifest SHA-256: `04eec20c70167a4965046071ee0e6aa959d32d5942b42c72ebe5af4f5f1cfa21`.
+- Environment used for source checks: Python 3.12.14, PyYAML 6.0.3 and the Python standard-library TOML parser. No dependencies or native clients were installed for these checks.
+
+### Observed checks
+
+| Check | Result and actual scope |
+| --- | --- |
+| Existing Python recipe in `docs/verification-guide.md#package-integrity` | **PASS** — inventory SHA-256, scoped paths, mirror bytes/digests, provenance/adaptation records and 17 skills per root. The recipe now validates split-guide origin links and mirror inventory membership. |
+| Maintained inventory and mirrors | **PASS** — 98 maintained files, 35 canonical/mirror pairs, seven additional derived guides with matching Claude copies. No unexplained or uninventoried maintained source. |
+| Skill frontmatter | **PASS** — PyYAML parsed all 34 entrypoints; expected names, exact `name`/`description` fields and supported naming/description bounds. |
+| Native adapter syntax and intent | **PASS** — three Codex TOML and three Claude YAML definitions parsed. Paired descriptions/instruction bodies match. Codex field sets remain `name`, `description`, `developer_instructions`; Claude retains `name`, `description`, `model: inherit`. No model/effort/sandbox/tool/permission override added. |
+| Provenance, licenses and historical records | **PASS** — all 81 original inventory origins match baseline; upstream pin/counts remain 26 originals, 23 adapted and 3 byte-original. Licenses, original hardening/optimization pattern references and TASK-001 through TASK-007 remain unchanged. Previous verification evidence is preserved as a prefix. |
+| Local Markdown paths and anchors | **PASS** — 420 relative links/heading anchors across maintained Markdown and the checkpoint guide. The technical-skill pass also checked moved inline relative paths. External URL availability was not exhaustively rechecked. |
+| Whitespace/conflict hygiene | **PASS** — final `git diff --cached --check`; the staged check caught extra trailing blank lines in two new guides and their mirrors, which were normalized before the final pass. |
+| Instruction consistency | **Source review completed** — lean core, scoped effort/checks, on-demand skills, evidence reuse, progress-based repair and explicit finish conditions. A separate source reviewer found unconditional checkpoint and quick-start review/acceptance wording; both were corrected and rechecked. The owner reviewed the integrated references and aligned session/CORS/password guidance across security sources. This is not native behavioral validation. |
+
+The package recipe was rerun after the final security-reference alignment, EOF normalization and mirror/hash refresh. Metadata and link evidence was reused where those inputs did not change. Checks were selected for this source refactor; no new benchmark runner, application test platform or runtime approval mechanism was introduced.
+
+### Measured source size
+
+UTF-8 bytes, measured from the baseline Git objects and the checked working source:
+
+| Surface | Before | After | Meaning |
+| --- | ---: | ---: | --- |
+| Required reading chain expressed by the core | 22,356 | 2,777 | Baseline explicitly required AGENTS + policy + workflow; candidate makes detail conditional. Actual runtime loading is unobserved. |
+| AGENTS + policy + workflow, including optional detail | 22,356 | 15,775 | Total text still available for delivery/authority questions. |
+| Skills catalog | 5,712 | 2,152 | Routing remains; maintenance history moves to provenance. |
+| All 17 canonical skill entrypoints | 130,466 | 43,897 | 66.4% fewer entrypoint bytes; techniques remain available on demand. |
+| Seven long technical entrypoints | 104,457 | 22,008 | 78.9% fewer entrypoint bytes; detailed examples moved to references. |
+| TechNote entry guide | 12,522 | 1,272 | Media-specific detail is an optional reference. |
+
+These figures measure instruction source, not token usage, cached context, elapsed time or quality. Moving detailed material does not imply an equivalent reduction in the total package download size.
+
+### Remaining evidence and handoff
+
+- **NOT_RUN:** native Codex/Claude discovery, actual invocation, resolved model/effort/permissions and agent behavior.
+- **NOT_RUN:** two-machine compatibility and six-run A/B pilot. See [Codex pilot handoff](codex-pilot-handoff.md) for fixed revisions, isolated sessions, matched acceptance, resume milestone and measurements.
+- **Not claimed:** runtime savings, human acceptance, merge, release or adoption in another project.
+
+The source/package refactor is ready for PR review. The pilot handoff is prepared; the owner must select and authorize the future target/worktree scope before anyone applies this kit there.

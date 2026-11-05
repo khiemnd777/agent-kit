@@ -15,47 +15,27 @@ Shared project instructions, 17 technical skills and three optional native agent
 
 ## How work flows
 
-[Team workflow](docs/team-workflow.md) is the single delivery process:
+[AGENTS.md](AGENTS.md) is the lean operating core. Consult [workflow detail](docs/team-workflow.md), policy or a skill only when the current task needs it.
 
 ```mermaid
 flowchart TD
-    A["Agree scope, design and acceptance once<br/>Human + delivery owner"]
-    B["Implement a complete usable change<br/>Code + focused developer tests"]
-    C["Review + configured CI<br/>Completed coherent revision"]
-    D["Accept a usable flow<br/>QA / authorized human at a milestone"]
-    E["Release under explicit authority<br/>Required release controls + operation check"]
-
-    A --> B --> C --> D --> E
-    C -->|Concrete defect: routine repair| B
-    D -->|Flow defect: routine repair| B
+    A["Understand outcome and scope"] --> B["Implement complete change"]
+    B --> C["Run relevant checks"]
+    C --> D{"Scoped acceptance met?"}
+    D -->|Yes| E["Hand off result and evidence"]
+    D -->|Concrete defect| B
+    D -->|Missing decision or authority| F["Pause affected work"]
 ```
 
-The main session normally owns the work; effort and evidence scale with risk, not file count. These are not per-file approval gates. Developer tests are part of coding. Review evaluates a concrete completed change. QA/human acceptance checks usable flows at milestones. Routine repairs keep the existing approval and recheck only affected findings/checks; reuse unchanged evidence. Continue independent authorized work during review/CI waits, or hand off the waiting state without inventing work.
+The main session owns delivery by default. A clear implementation request covers necessary local edits and checks. A focused fix needs no ceremonial plan, task file or extra agent. A feature needs complete callers and relevant regression coverage. Sensitive work retains its actual security, data and project review controls. These are effort choices within one workflow, based on risk rather than file count or duration.
 
-If tooling prevents a check from running, use this bounded recovery path:
+For long or resumed work, keep one useful checkpoint and reuse unaffected evidence. Finish when scoped acceptance and appropriate checks are satisfied. Optional polish, unrelated refactors and broader audits do not extend the task automatically. Human acceptance and release require their actual evidence and authority.
 
-```mermaid
-flowchart TD
-    T["Tooling blocks an existing check"]
-    R["Make a focused repair within scope<br/>Rerun the original check"]
-    Q{"Original check reaches its intended checkpoint<br/>and reports a valid result?"}
-    P["Resume product work<br/>Fix real failed assertions within scope"]
-    S["Stop tooling edits in this task<br/>Report blocker + maintenance owner/action"]
-    I["Continue independent authorized work<br/>Keep missing evidence open"]
+## When a check is blocked
 
-    T --> R --> Q
-    Q -->|Yes| P
-    Q -->|No, even if the error changed| S
-    S --> I
-```
+Diagnose whether the check reached its intended assertion or was blocked by tooling. Repair a supported cause within scope and rerun the affected check. Continue while new evidence and useful progress justify the cost; a new error alone is not progress. If attempts stop helping, change strategy or hand off the concrete blocker. There is no one-repair cutoff or unlimited retry permission.
 
-The checkpoint is the original assertion or usable-flow check. A new error, input, agent or session does not reset the tooling limit. Further tooling work needs explicit maintenance scope; see [failure handling](docs/team-workflow.md#failures-and-blockers).
-
-Pause only affected work for material missing decisions/expanded authority, incorrect or unsafe dependencies, or an action requiring release/real-data authority. Always honor human stops. See [policy](docs/team-policy.md) for permission/data boundaries.
-
-## Lean default
-
-A clear local implementation request can proceed without a ceremonial plan or new task file. For focused work, change the necessary source, check relevant behavior and hand off. For long work, keep one checkpoint; for sensitive work, retain the actual project risk controls. Consult workflow, policy or skills only when the task needs the detail. See [Codex pilot handoff](docs/codex-pilot-handoff.md) for the unrun A/B evaluation.
+Do not build a runner/review system incidentally or fill waiting time with unrelated checks. Continue independent authorized work; keep missing required proof open. See [failure handling](docs/team-workflow.md#failures-and-blockers) and the [Codex pilot handoff](docs/codex-pilot-handoff.md). The pilot remains NOT_RUN.
 
 ## Quick start
 
@@ -63,7 +43,7 @@ A clear local implementation request can proceed without a ceremonial plan or ne
 2. Open the root in Codex or Claude Code and give the actual task/outcome.
 3. A clear implementation request covers local work and focused checks in scope; resolve material missing choices only.
 4. The main session owns delivery by default; use a tracker/checkpoint only when helpful or required. Shared records have one writer when edited.
-5. Deliver a usable coherent change, then review/CI and acceptance. Git writes and release require their actual scope.
+5. Deliver a usable coherent change with relevant checks and project-required review/CI, then hand off. Human acceptance is performed when included in the task; Git writes and release require their actual scope.
 
 ### New project
 

@@ -39,11 +39,27 @@ if manifest_path is None:
     raise SystemExit("\n".join(errors))
 manifest = json.loads(manifest_path.read_text())
 inventory = {item['path']: item for item in manifest['files']}
+if len(inventory) != len(manifest['files']):
+    errors.append('Duplicate inventory paths')
 for item in manifest["files"]:
     path = scoped_path(item["path"])
     if path is not None and hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
         errors.append("Hash mismatch: " + item["path"])
     origin = item.get('origin', {})
+    derived = origin.get('derived_from')
+    if derived is not None:
+        # Split guides retain their upstream identity without double-counting
+        # the 26 original imported files.
+        if (not isinstance(derived, dict)
+                or derived.get('repository') != manifest['upstream']['repository']
+                or derived.get('commit') != manifest['upstream']['commit']
+                or not any(entry.get('origin') == derived for entry in manifest['files'])):
+            errors.append('Unknown derived upstream origin: ' + item['path'])
+        adaptation = item.get('adaptation')
+        if not isinstance(adaptation, dict) or not adaptation.get('source') or not adaptation.get('reason'):
+            errors.append('Missing derived adaptation metadata: ' + item['path'])
+        else:
+            scoped_path(adaptation.get('record'))
     if path is not None and origin.get('repository') == manifest['upstream']['repository']:
         if origin.get('commit') != manifest['upstream']['commit']:
             errors.append('Upstream pin mismatch: ' + item['path'])
@@ -72,6 +88,8 @@ for pair in manifest["mirror_pairs"]:
         errors.append("Mirror mismatch: " + pair["mirror"])
     if canonical is not None and hashlib.sha256(canonical.read_bytes()).hexdigest() != pair.get('sha256'):
         errors.append("Mirror pair hash mismatch: " + pair["canonical"])
+    if pair['canonical'] not in inventory or pair['mirror'] not in inventory:
+        errors.append('Mirror missing from inventory: ' + pair['canonical'])
     canonical_item = inventory.get(pair['canonical'], {})
     mirror_item = inventory.get(pair['mirror'], {})
     if (canonical_item.get('origin') != mirror_item.get('origin')
@@ -93,7 +111,7 @@ PY
 
 Also check affected local links/anchors and changed metadata using available tools. Preserve upstream pin/original origins/license, native schema/model/permission intent and fresh project authority. Do not install missing tools merely to complete a checklist. Equivalent structural evidence must be reported separately from an unavailable validator.
 
-The manifest contains maintained rules/skills/roles/adapters. Mutable project/task/evidence records are excluded. New maintained sources need an intentional inventory update; hashes are not a security or language audit. Recheck only evidence invalidated by actual later changes.
+The manifest contains maintained rules/skills/roles/adapters. Additional split guides retain their original upstream identity in `origin.derived_from` and an explained adaptation record; they do not increase the original import count. Mutable project/task/evidence records are excluded. New maintained sources need an intentional inventory update; hashes are not a security or language audit. Recheck only evidence invalidated by actual later changes.
 
 ## Evidence levels
 
@@ -135,4 +153,4 @@ Historical A-G scenario references remain evidence of earlier maintenance only. 
 
 ## Record and acceptance
 
-Record source revision, actual command/observation, result and limits in the same authorized task. Source/package checks support instruction consistency, not runtime compliance, token/time improvement, an adopting project's recovery or human acceptance. Keep historical observations and mark the current outcome clearly.
+Record source revision, actual command/observation, result and limits in the existing task, PR or useful checkpoint; a source check does not require a new task file. Source/package checks support instruction consistency, not runtime compliance, token/time improvement, an adopting project's recovery or human acceptance. Keep historical observations and mark the current outcome clearly.

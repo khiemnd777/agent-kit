@@ -1,34 +1,25 @@
 ---
 name: incremental-implementation
-description: Use when a feature needs real vertical slices or dependencies; touching more than one file is not a trigger.
+description: "Implement a larger feature as coherent usable changes through its real layers and callers. Use when dependency order or unfinished behavior needs careful staging."
 ---
 
 # Incremental Implementation
 
-Follow the [single team workflow](../../../docs/team-workflow.md). Deliver small complete changes, not arbitrary file/line batches or a mandatory review after each edit.
+Use the [lean operating core](../../../AGENTS.md). An already-small coherent change needs direct implementation, not an additional slicing exercise. A clear implementation request covers routine local edits and focused checks within its scope.
 
-## Inputs
+## Deliver usable increments
 
-Read the task and relevant domain/contracts/source/tests and real dependencies; main session owns delivery by default. Implement an already-small coherent change directly.
+1. Read the relevant requirement, contracts, source and tests. Identify the actual caller or user flow that will exercise the change.
+2. Implement that behavior through the necessary UI/routes/services/data/commands. Include the real integration; an unused helper or disconnected screen is not a complete feature.
+3. Add or update meaningful regression coverage for changed logic and risky seams. Run the relevant existing checks while coding; do not add tests that merely mirror trivial edits.
+4. Diagnose evidenced defects and repair within scope. Inspect the coherent diff and report actual checks for normal project review/CI when applicable.
 
-## Developer-owned loop
+Prefer complete capabilities over arbitrary file batches. A technical prerequisite can stand alone when it has a real consumer. Preserve authorization, data invariants, module boundaries and stack conventions. Keep unrelated cleanup outside the task.
 
-1. Implement the agreed behavior through real UI/routes/services/data/commands and callers as applicable.
-2. Write meaningful regression tests and run focused checks while coding; use integration/contract checks for affected seams.
-3. Diagnose and repair product defects and tests/config broken by the change within valid scope.
-4. At a completed coherent change, self-review the diff and submit the result/evidence for normal review and configured CI.
-5. Hand off usable flows for acceptance at meaningful milestones. Continue independent authorized work while waiting; do not invent harness work.
+Use existing isolation for unfinished behavior when needed; do not introduce feature-flag or deployment infrastructure automatically. Migration recovery must reflect actual data reversibility. For template-based UI, consult the [template reference](../../references/template-application.md) when rendered fidelity is part of acceptance.
 
-No formal reviewer/approval is required after every function or file. Reuse valid evidence and rerun affected inputs/findings. Broader suites need an integration or actual project requirement.
+## Control effort and finish
 
-## Slicing and safeguards
+Reuse unaffected evidence; rerun checks for changed inputs or findings. Continue repair while a concrete hypothesis, useful progress and reasonable cost justify it. Escalate material changes or unavailable authority; pause unsafe dependent work and honor human stops. New runners, receipts or review orchestration are separate outcomes.
 
-Prefer vertical capabilities with the layers each needs. A technical prerequisite can be separate when it has a real consumer/dependency. Keep unrelated refactoring separate. Preserve module ownership, authorization, data invariants and stack conventions.
-
-Use existing isolation for unfinished features when needed; do not automatically add a flag/deployment framework. Recovery for migrations must reflect actual data reversibility, not an unconditional rollback promise. For approved templates use the [template reference](../../references/template-application.md); resolve uncertain replicated choices early and verify usable flows without a Coordinator gate.
-
-## Failure and handoff
-
-Apply [failure handling](../../../docs/team-workflow.md#failures-and-blockers): pause unsafe dependent work, escalate material changes and respect human stops. Small test/config repairs remain developer work; independent shared infrastructure faults need an owner. New runners/receipts/orchestration are not incidental work.
-
-Complete required source/callers before claiming source completion. Report actual checks and FAIL/NOT_RUN, prerequisites, manual steps and defects using the [Definition of Done](../../references/definition-of-done.md). Acceptance/release/Git need their actual authority. No automatic commit, reset or revert.
+For long/resumed work keep one useful checkpoint, not a record after each edit. Stop when scoped implementation, caller integration and appropriate checks are complete with no relevant blocker. Report remaining required FAIL/NOT_RUN honestly; optional polish is not unfinished delivery. Git, acceptance and release retain their actual authority. Consult the [completion reference](../../references/definition-of-done.md) only if the claim is unclear.

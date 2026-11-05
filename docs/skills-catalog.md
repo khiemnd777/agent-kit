@@ -25,3 +25,7 @@ Seventeen optional technical skills are available. The [lean core](../AGENTS.md)
 Read the selected `SKILL.md`, then only the relevant reference sections. A file count or session start alone does not trigger a skill. The project determines stack, checks and permissions. See [runtime compatibility](agent-compatibility.md).
 
 **Maintainers:** [provenance, upstream pin and historical adaptations](skills-provenance.md), [manifest](skills-manifest.json), [verification guide](verification-guide.md).
+
+## Provenance
+
+Maintenance history, the pinned upstream source and adaptation details are in [skill provenance](skills-provenance.md); they are not required context for application tasks.
