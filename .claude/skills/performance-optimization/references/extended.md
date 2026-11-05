@@ -125,7 +125,7 @@ Common bottlenecks by category:
 
 ### Step 3: Fix the Bottleneck
 
-Fix the one thing Step 2 identified, nothing else. The anti-patterns below are the usual suspects; each entry gives the rule and the signature to recognize it, and links to a worked fix in [references/optimization-patterns.md](references/optimization-patterns.md). Open the one you need when you reach that code, not before.
+Fix the one thing Step 2 identified, nothing else. The anti-patterns below are the usual suspects; each entry gives the rule and the signature to recognize it, and links to a worked fix in [references/optimization-patterns.md](optimization-patterns.md). Open the one you need when you reach that code, not before.
 
 **Backend**
 
