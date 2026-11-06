@@ -185,7 +185,7 @@
     {
       "canonical": ".agents/skills/debugging-and-error-recovery/SKILL.md",
       "mirror": ".claude/skills/debugging-and-error-recovery/SKILL.md",
-      "sha256": "99e87dc385f15bf99a8ba859e0a6815497ad38fe34ce07038c3ee83944f038c8"
+      "sha256": "9f42e9d582ae78e42e1b4e65ef2c4848f4debed2f2a9092037387d572ea5d358"
     },
     {
       "canonical": ".agents/skills/documentation-and-adrs/SKILL.md",
@@ -502,7 +502,7 @@
     },
     {
       "path": ".agents/skills/debugging-and-error-recovery/SKILL.md",
-      "sha256": "99e87dc385f15bf99a8ba859e0a6815497ad38fe34ce07038c3ee83944f038c8",
+      "sha256": "9f42e9d582ae78e42e1b4e65ef2c4848f4debed2f2a9092037387d572ea5d358",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -512,7 +512,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting; Approved TASK-009 DL01-DL04: source location from precise signals, screenshot evidence and project-specific ownership tracing without changing triggers or adding approval rounds"
       }
     },
     {
@@ -917,7 +917,7 @@
     },
     {
       "path": ".claude/skills/debugging-and-error-recovery/SKILL.md",
-      "sha256": "99e87dc385f15bf99a8ba859e0a6815497ad38fe34ce07038c3ee83944f038c8",
+      "sha256": "9f42e9d582ae78e42e1b4e65ef2c4848f4debed2f2a9092037387d572ea5d358",
       "origin": {
         "repository": "https://github.com/addyosmani/agent-skills",
         "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
@@ -927,7 +927,7 @@
       "adaptation": {
         "source": "agent-kit contributors",
         "record": "docs/skills-provenance.md",
-        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting"
+        "reason": "Approved KIT-HARNESS-BOUNDARIES-001 v1: four feature/infrastructure boundaries, scoped checks, evidence reuse and no per-phase reapproval; Approved KIT-CONTINUOUS-WORKFLOW-001 v1: single continuous workflow, developer-owned feedback/repairs, completed-change review/CI and scoped technical aids; Approved TASK-007 eight-finding correction: tooling progress stop, scoped research/security/performance/telemetry, no line-count or Git prerequisite and no missing-skill routing; 2026-11-05 lean refactor: task-triggered guidance, proportionate checks, continuity and progress-based completion; 2026-11-05 TASK-008: approved plan/approval boundary, code-first task ordering, ASCII UI preview, proactive state and skill contribution journal/source reporting; Approved TASK-009 DL01-DL04: source location from precise signals, screenshot evidence and project-specific ownership tracing without changing triggers or adding approval rounds"
       }
     },
     {
@@ -1301,7 +1301,7 @@
     },
     {
       "path": "docs/skills-provenance.md",
-      "sha256": "80aa5c71f9d5770204da502fde5af2b236c97795c0481210774ba74887116e56",
+      "sha256": "c52211f1338dcb3ea8973d96be476644cc9fd29c82dfe68c56903b74f4bd0315",
       "origin": {
         "source": "agent-kit contributors",
         "license": "MIT"

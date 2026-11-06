@@ -9,3 +9,5 @@ When a real interruption or handoff needs it, maintain **one concise checkpoint*
 Record skill use at authorized planning/implementation handoffs under the [journal guide](../engineering/skill-usage/README.md). This is not a command log, a second live task tracker or permission to write during read-only planning. Preserve history and avoid duplicate usage on resume.
 
 TASK-001 through TASK-007 describe historical kit maintenance, not adoption authority. [TASK-008](TASK-008.md) records the approved workflow/journal maintenance; its authorization also does not transfer to an adopting project.
+
+[TASK-009](TASK-009.md) records approved DL01–DL04 source-location guidance in debugging; no separate skill or publication.

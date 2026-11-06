@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "event_id": "TASK-009/source-location/implementation/1",
+  "event_type": "phase_handoff",
+  "task_id": "TASK-009",
+  "scope_id": "DL01-DL04",
+  "recorded_at": "2026-11-06T21:33:01.066382+07:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "phase": "implementation",
+  "handoff_index": 1,
+  "classification": {
+    "size": "small",
+    "complexity": "low",
+    "ui": false
+  },
+  "authority": {
+    "source": "Current-chat user approval on 2026-11-06: Approved implement DL01\u2013DL04 in original agent-kit",
+    "scope": "Source-location paragraph, mirror, metadata, checks and maintenance records; no separate skill; no commit/push"
+  },
+  "skills": [
+    {
+      "skill_id": "skill-creator",
+      "contribution_summary": "Kept the addition concise, preserved discovery trigger, separated source ownership from cause and checked structure.",
+      "contribution_percent_estimate": 75,
+      "estimate_source": "delivery_owner_relative_estimate",
+      "source_identity": {
+        "kind": "host_skill",
+        "path": "host:skill-creator/SKILL.md",
+        "version": null,
+        "sha256": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66",
+        "fingerprint_basis": "Bytes read and applied in this implementation; version not independently identified"
+      }
+    },
+    {
+      "skill_id": "using-agent-skills",
+      "contribution_summary": "Maintained existing routing and authority boundaries without adding another skill or mandatory workflow; recorded actual contributions.",
+      "contribution_percent_estimate": 25,
+      "estimate_source": "delivery_owner_relative_estimate",
+      "source_identity": {
+        "kind": "repository",
+        "path": ".agents/skills/using-agent-skills/SKILL.md",
+        "version": null,
+        "sha256": "3ad264a138cc02db21f6244a85ba6a9726775ac3f60d078fde2ae348456b350a",
+        "fingerprint_basis": "Bytes read and applied in this implementation; version not independently identified"
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "COMPLETED",
+    "verification_level": "source/package checks",
+    "human_acceptance": "PENDING_REVIEW",
+    "limitations": [
+      "Delivery-owner self-review, not independent review",
+      "Native discovery/invocation and performance NOT_RUN",
+      "Optional host validator unavailable: missing yaml; equivalent scoped structural checks PASS",
+      "No commit/push; no adopter changes"
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "client": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "model": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "effort": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    }
+  },
+  "evidence_refs": [
+    "docs/tasks/TASK-009.md",
+    "docs/verification-guide.md",
+    "docs/skills-provenance.md"
+  ]
+}

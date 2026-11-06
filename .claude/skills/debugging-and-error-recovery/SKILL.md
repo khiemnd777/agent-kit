@@ -7,6 +7,14 @@ description: "Diagnose a concrete failure or unexpected behavior and repair its 
 
 Use the [lean operating core](../../../AGENTS.md). A new defect task requires a plan and approval, even if small. Evidenced repairs covered by an already-approved plan do not create another approval/review chain. For long/complex/UI tasks finish approved production code before writing/updating and running tests; use existing evidence during investigation.
 
+## Locate the relevant source
+
+Start with the most specific available signal: error or UI text, route, endpoint, symbol or field. Prefer `rg` and `rg --files`, then narrow searches as evidence identifies the relevant area. For screenshots, search visible text and other observable clues; visual identification remains a hypothesis until source confirms it.
+
+Trace callers, registrations or consumers far enough to establish ownership in the actual project structure. If evidence suggests a contract mismatch, inspect the relevant sides; do not assume a fixed layer sequence. Distinguish a matching file, confirmed ownership and a verified cause. An owner match alone does not establish causality; report unresolved ownership rather than selecting the first plausible match.
+
+Reuse this source map in diagnosis and repair. It does not require a separate triage report, checkpoint or approval round. Keep the requested outcome: locating source alone does not complete an approved bug-fix task or authorize additional work.
+
 ## Find the cause
 
 Capture actual/expected behavior, error or reproduction evidence, relevant revision and data/authority limits. Reproduce through an existing command or direct flow where permitted. If unavailable, distinguish a supported hypothesis from a verified cause.
