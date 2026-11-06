@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "event_id": "TASK-009/source-location-publication/implementation/1",
+  "event_type": "phase_handoff",
+  "task_id": "TASK-009",
+  "scope_id": "source-location-publication",
+  "recorded_at": "2026-11-06T21:52:28.932695+07:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "phase": "implementation",
+  "handoff_index": 1,
+  "classification": {
+    "size": "small",
+    "complexity": "low",
+    "ui": false
+  },
+  "authority": {
+    "source": "Current chat: Khi\u00eam explicitly requests scoped commit/push DL01-DL04 and related records only",
+    "scope": "Original agent-kit publication only; no unrelated edits/runtime/deploy"
+  },
+  "skills": [
+    {
+      "skill_id": "git-workflow",
+      "contribution_summary": "Verified original repo/remote, fetched divergence, reviewed allowlist, staged scoped files, committed/pushed and recorded actual result.",
+      "contribution_percent_estimate": 100,
+      "estimate_source": "delivery_owner_relative_estimate",
+      "source_identity": {
+        "kind": "host_skill",
+        "path": "personal:git-workflow/SKILL.md",
+        "version": null,
+        "sha256": "62fb3807afd019f9071acc56c6f5c70cfac34cbd2fc447b751532461fb3e66d9",
+        "fingerprint_basis": "Bytes read and applied in this publication task"
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "COMPLETED",
+    "verification_level": "Full package PASS; content push exit 0 and divergence 0/0",
+    "human_acceptance": "PENDING_REVIEW",
+    "limitations": [
+      "Publication authorization is not human source acceptance",
+      "Native/runtime NOT_RUN",
+      "Receipt metadata follows content commit"
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "client": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "model": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    },
+    "effort": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement captured"
+    }
+  },
+  "evidence_refs": [
+    "docs/tasks/TASK-009.md",
+    "34973ea"
+  ]
+}

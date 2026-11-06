@@ -28,4 +28,10 @@ The adopting-project state remains an uninitialized template; only a kit-mainten
 
 Khiêm explicitly requested commit/push of DL01–DL04 and related records only in the original agent-kit. This supersedes the earlier no-publication restriction only for this scope; no application, native pilot or unrelated edits. Human implementation acceptance remains PENDING_REVIEW; publication authorization is not acceptance.
 
-Allowlist: canonical/mirror debugging skill, manifest/provenance, task index, TASK-009, project-state maintenance pointer and TASK-009 journal. Before publication, fetched main/origin/main divergence 0/0. Full existing package recipe and diff whitespace PASS. Publication execution pending; result will be recorded after push.
+Allowlist: canonical/mirror debugging skill, manifest/provenance, task index, TASK-009, project-state maintenance pointer and TASK-009 journal. Before publication, fetched main/origin/main divergence 0/0. Full existing package recipe and diff whitespace PASS. Content publication VERIFIED: commit 34973ea (8 allowlisted files), push exit 0; post-push main/origin/main divergence 0/0. No unrelated changes included. Receipt metadata is committed/pushed separately after this result; it does not claim its own commit hash.
+
+| Name | Purpose | Location | Status | Reason if undone/ignored |
+| --- | --- | --- | --- | --- |
+| DP01 | Publish DL01–DL04 and related records | main → origin/main, content 34973ea | done | — |
+| DP02 | Record result and publication skill use | TASK-009/state/publication journal | done | — |
+| DP03 | Unrelated changes/runtime/deployment | Other source/runtime | ignored | Outside authorization |
