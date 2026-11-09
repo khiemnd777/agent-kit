@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "task_id": "README-2026-11-09",
+  "scope_id": "publication",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "event_id": "README-2026-11-09/publication/correction/1",
+  "event_type": "correction",
+  "recorded_at": "2026-11-09T07:23:53.827757+07:00",
+  "supersedes_event_id": "README-2026-11-09/publication/implementation/1",
+  "reason": "Publication completed after the initial pre-push record; retain history and record verified remote evidence.",
+  "replacement": {
+    "schema_version": 1,
+    "event_id": "README-2026-11-09/publication/implementation/1",
+    "event_type": "phase_handoff",
+    "task_id": "README-2026-11-09",
+    "scope_id": "publication",
+    "recorded_at": "2026-11-09T07:23:06.357322+07:00",
+    "reported_by": "delivery_owner",
+    "source_kind": "agent_self_report",
+    "phase": "implementation",
+    "handoff_index": 1,
+    "classification": {
+      "size": "small",
+      "complexity": "low",
+      "ui": false
+    },
+    "authority": {
+      "approval_source": "Current chat: Khiêm accepted the README and explicitly authorized commit/push and GitHub description update.",
+      "authorized_scope": "Publish task-owned README, manifest and records on a separate branch with PR; update approved GitHub repository description. No merge/deploy or TASK-009 publication."
+    },
+    "skills": [
+      {
+        "skill_id": "git-workflow",
+        "contribution_summary": "Isolate task changes, verify remote/base, update description and prepare scoped branch publication with PR.",
+        "contribution_percent_estimate": 80,
+        "estimate_source": "agent_self_report",
+        "source_identity": {
+          "kind": "host_skill",
+          "path": "host:git-workflow/SKILL.md",
+          "version": null,
+          "sha256": "fae3c6e8c1994066b751a2405c0278e979e0589048d4ced3ae43b324fe9c4f87",
+          "fingerprint_basis": "Bytes read and applied in this publication phase; codex/ prefix follows higher-priority desktop instruction."
+        }
+      },
+      {
+        "skill_id": "documentation-and-adrs",
+        "contribution_summary": "Record human acceptance and update task-owned state and publication evidence.",
+        "contribution_percent_estimate": 20,
+        "estimate_source": "agent_self_report",
+        "source_identity": {
+          "kind": "repository",
+          "path": ".agents/skills/documentation-and-adrs/SKILL.md",
+          "version": null,
+          "sha256": "f3199cfec5d6fdfa6533f180b1e6cbee584cd6175d8eb25c0d186c833120609c",
+          "fingerprint_basis": "Bytes of the repository skill read and applied in this chat; no intervening edit."
+        }
+      }
+    ],
+    "outcome": {
+      "delivery_status": "COMPLETED",
+      "verification_level": "Description updated and read back; content commit 98f491fc3b57bf26215d5e1b0d85914753fa062c pushed and remote SHA verified; PR #2 opened against main.",
+      "human_acceptance": "ACCEPTED",
+      "limitations": [
+        "No PR merge or deployment; native behavior/GitHub README rendering NOT_RUN. TASK-009 local changes excluded."
+      ]
+    },
+    "measurements": {
+      "elapsed_seconds": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No scoped measured counter available."
+      },
+      "tool_calls": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No scoped measured counter available."
+      },
+      "input_tokens": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No scoped measured counter available."
+      },
+      "output_tokens": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No scoped measured counter available."
+      },
+      "cached_input_tokens": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No scoped measured counter available."
+      },
+      "reasoning_output_tokens": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No scoped measured counter available."
+      },
+      "client": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No verified scoped runtime metadata captured."
+      },
+      "model": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No verified scoped runtime metadata captured."
+      },
+      "effort": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No verified scoped runtime metadata captured."
+      }
+    },
+    "evidence_refs": [
+      "README.md",
+      "docs/skills-manifest.json",
+      "docs/engineering/skill-usage/records/README-2026-11-09/human-acceptance-1.json",
+      "https://github.com/khiemnd777/agent-kit",
+      "https://github.com/khiemnd777/agent-kit/pull/2",
+      "98f491fc3b57bf26215d5e1b0d85914753fa062c"
+    ]
+  }
+}
