@@ -54,3 +54,5 @@ Linked [human evaluation](../engineering/skill-usage/records/TASK-009/human-acce
 ## Closure publication — 2026-11-09
 
 Khiêm authorized commit/push of the five remaining closure metadata files after read-only review in the current chat. This authorizes publication of existing acceptance/closure and associated journal/state records only; no new skill scope, native pilot, merge or deployment. Prior local-only statements describe the 2026-11-06 closure step. Publication result follows in the [closure publication journal](../engineering/skill-usage/records/TASK-009/closure-publication-implementation-1.json) and its linked completion correction.
+
+Publication VERIFIED: content commit `9299546` pushed with matching remote SHA; [PR #3](https://github.com/khiemnd777/agent-kit/pull/3) opened into `main`, not merged. The [completion correction](../engineering/skill-usage/records/TASK-009/closure-publication-completed-correction-1.json) preserves the preparation snapshot and records the result.
