@@ -1,52 +1,33 @@
 # Agent Kit
 
-```text
-    _   ___ ___ _  _ _____   _  _____ _____
-   /_\ / __| __| \| |_   _| | |/ /_ _|_   _|
-  / _ \ (_ | _|| .` | | |   | ' < | |  | |
- /_/ \_\___|___|_|\_| |_|   |_|\_\___| |_|
+Shared instructions, technical skills, and optional agents for **Codex and Claude Code**—with explicit planning, approval, and verification.
 
-             CODEX + CLAUDE CODE
-```
+Use Agent Kit to establish a consistent way of working in a new project or an existing codebase. It provides guidance for AI-assisted software development while preserving your project's business rules, stack, contracts, and permissions.
 
-Shared project instructions, 17 technical skills and three optional native agents for Codex and Claude Code. One owner carries a coherent change through development and handoff. The kit does not choose your application stack.
+**Status:** 0.1.0 preview. Source/package evidence is recorded in [verification results](docs/verification-results.md). Native discovery, effective model/permissions, workflow behavior, and two-machine compatibility remain **NOT_RUN** unless a specific observation is recorded.
 
-**Version:** 0.1.0 preview. Package evidence is recorded in [verification results](docs/verification-results.md). Native discovery, effective model/permissions, workflow behavior and two-machine compatibility remain NOT_RUN unless a specific observation is recorded.
+## What's included
 
-## How work flows
+| Component | Purpose |
+| --- | --- |
+| [Shared instructions](AGENTS.md) | A lean operating core for planning, approval, implementation, and handoff. [CLAUDE.md](CLAUDE.md) imports the same instructions. |
+| [17 technical skills](docs/skills-catalog.md) | Focused guidance for requirements, implementation, debugging, testing, security, performance, documentation, and more. Skills are mirrored byte for byte in `.claude/skills/`. |
+| [Three optional Codex agents](.codex/agents/) | Explorer, implementer, and reviewer definitions for bounded assignments when delegation is authorized and useful. |
+| [Project records](docs/tasks/README.md) | Context, plan, state, and task templates for keeping decisions and evidence available across sessions. |
+| [TechNote](docs/technote.md) | A four-level method for explaining technical results through text, diagrams, interactive websites, or video, subject to available tools. |
 
-[AGENTS.md](AGENTS.md) is the lean operating core. Consult [workflow detail](docs/team-workflow.md), policy or a skill only when the current task needs it.
-
-```mermaid
-flowchart TD
-    A["Investigate and present plan / ASCII UI preview"] --> P["Explicit user / Product Owner approval"]
-    P --> B["Implement complete approved code and wiring"]
-    B --> C["Run relevant checks"]
-    C --> D{"Scoped acceptance met?"}
-    D -->|Yes| E["Hand off result and evidence"]
-    D -->|Concrete defect| B
-    D -->|Missing decision or authority| F["Pause affected work"]
-```
-
-The main session owns delivery by default. Every task, including a focused fix, requires planning and explicit approval before implementation; a short chat plan is sufficient for small work and needs no new task file or extra agent. Long/complex/UI tasks complete all approved code before writing/updating and running tests. Complex tasks first evaluate risks/alternatives; UI tasks first preview an ASCII mockup. A feature needs complete callers and relevant regression coverage. Sensitive work retains its actual security, data and project review controls. These are effort choices within one workflow, based on risk rather than file count or duration.
-
-Keep durable rules separate from stable context, planned outcomes and the single current-state summary. Update affected state/task entries proactively within authorized writes; use one concise checkpoint for a real interruption/handoff and reuse unaffected evidence. Select minimum sufficient skills during planning; report actual phase contributions, source and estimates from the [authorized local journal](docs/engineering/skill-usage/README.md). Finish when scoped acceptance and appropriate checks are satisfied. Optional polish, unrelated refactors and broader audits do not extend the task automatically. Human acceptance and release require their actual evidence and authority.
-
-## When a check is blocked
-
-Diagnose whether the check reached its intended assertion or was blocked by tooling. Repair a supported cause within scope and rerun the affected check. Continue while new evidence and useful progress justify the cost; a new error alone is not progress. If attempts stop helping, change strategy or hand off the concrete blocker. There is no one-repair cutoff or unlimited retry permission.
-
-Do not build a runner/review system incidentally or fill waiting time with unrelated checks. Continue independent authorized work; keep missing required proof open. See [failure handling](docs/team-workflow.md#failures-and-blockers) and the [Codex pilot handoff](docs/codex-pilot-handoff.md). The pilot remains NOT_RUN.
+The main session owns delivery. A separate coordinator, supervisor, or multi-agent team is not required.
 
 ## Quick start
 
-1. Create one project repository from this template, or integrate its relevant parts into an existing codebase after review.
-2. Open the root in Codex or Claude Code and give the actual task/outcome.
-3. Present a plan and obtain explicit approval before implementation, including small fixes; approved scope covers local edits, focused checks and routine repairs.
-4. The main session owns delivery by default; use a tracker/checkpoint only when helpful or required. Shared records have one writer when edited.
-5. Deliver a usable coherent change with relevant checks and project-required review/CI, then hand off. Human acceptance is performed when included in the task; Git writes and release require their actual scope.
+1. Use this repository as a template for a new project, or review the relevant parts before integrating them into an existing codebase.
+2. Open the project root in Codex or Claude Code and describe the outcome you need.
+3. Review the proposed plan and explicitly approve it before implementation, including small fixes.
+4. Let the owner complete the approved work, run relevant checks, and hand off the result with evidence and remaining limits.
 
-### New project
+Choose a starting prompt below and replace bracketed inputs with your project details.
+
+### Start a new project
 
 ```text
 Use https://github.com/khiemnd777/agent-kit as the template for a new project.
@@ -62,9 +43,7 @@ team workflow. Establish a running app and basic check before broadening.
 Do not import approvals from the template or build a comprehensive harness.
 ```
 
-Replace bracketed inputs with project details.
-
-### Existing codebase
+### Integrate into an existing codebase
 
 ```text
 Use https://github.com/khiemnd777/agent-kit to integrate Agent Kit into this existing codebase.
@@ -76,28 +55,41 @@ After approval, apply one delivery workflow and verify relevant package/
 content consistency. Do not duplicate trackers or change global settings.
 ```
 
-## Included sources
+## How work flows
 
-- [AGENTS.md](AGENTS.md) routes Codex; [CLAUDE.md](CLAUDE.md) imports the same instructions.
-- [Team policy](docs/team-policy.md) defines authority and safety; [team workflow](docs/team-workflow.md) owns the delivery flow.
-- [17 skills](docs/skills-catalog.md) provide selected technical guidance, mirrored byte for byte in `.claude/skills/`.
-- [Task field guides](docs/agent-coordination-templates.md) support one record rather than a required document for each phase.
-- [Role responsibilities](docs/roles/coordinator.md) support one owner and optional exploration/implementation/review delegation. No separate Coordinator or Supervisor is required.
-- [TechNote](docs/technote.md) explains results and limits in the requested language.
-- [Verification guide](docs/verification-guide.md), manifest and [compatibility notes](docs/agent-compatibility.md) distinguish source/package checks from native behavior.
+```mermaid
+flowchart LR
+    A["Investigate and plan"] --> B["User / Product Owner approval"]
+    B --> C["Complete approved implementation"]
+    C --> D["Verify and repair scoped defects"]
+    D --> E["Hand off results and evidence"]
+```
 
-## Project records
+Every task requires plan approval. Small tasks can use a short chat plan; they do not require a new task file or extra agent. Approved scope covers local edits, focused checks, and routine repairs. Material scope changes require renewed approval.
 
-Use a project tracker when required or useful; [checkpoints](docs/tasks/README.md) are optional for focused fixes and valuable for long/resumed tasks. [Context](docs/project-context.md), [plan](docs/project-plan.md) and [state](docs/project-state.md) are fresh optional shared summaries; keep one writer and link tasks instead of duplicating their checklists. They contain no inherited authority or completed product evidence.
+For long, complex, or UI tasks, complete all approved production code and real wiring before writing/updating and running tests. Complex tasks first evaluate risks and alternatives. UI tasks first present an ASCII mockup for approval. Missing decisions or authority pause the affected work; independent authorized work can continue.
 
-For multiple developers, agree actual contracts and separate ownership. The assigning owner integrates results. Codex and Claude do not share live chat or locks; continuation uses the project record/source and the authorized team communication path.
+Select only the skills needed for the task. Report actual skill contributions and save phase records in the [local skill journal](docs/engineering/skill-usage/README.md) within authorized write scope. Estimates are not measured time, token savings, or effectiveness scores.
 
-## Runtime and delivery limits
+See [team workflow](docs/team-workflow.md) for delivery details, [failure handling](docs/team-workflow.md#failures-and-blockers) for blocked checks, and [team policy](docs/team-policy.md) for authority and safety boundaries.
 
-[Model routing](docs/model-routing.md) inherits the developer's selection by default. Optional children retain parent/runtime and task limits; model selection adds no rights. Explorer/reviewer do not change application code, implement repairs or deploy, but their roles do not force sandbox/tool profiles. Disclose self-review if independent review did not run.
+## Keep project context available
 
-No application dependencies, credentials, hooks, automatic installers, services, global settings or test harness are bundled. TechNote presentation tools are separate capabilities. A completed source change is not verified runtime, human acceptance or release.
+Keep durable rules in `AGENTS.md`, stable design in [project context](docs/project-context.md), intended outcomes in [project plan](docs/project-plan.md), and one current summary in [project state](docs/project-state.md). Use task records and checkpoints when useful or required, especially for long or resumed work.
+
+Assign one writer to shared records and update affected entries during authorized work. New projects start with fresh records; template history grants no project approval or product acceptance.
+
+For multiple developers, agree on contracts and separate ownership. Codex and Claude Code do not share live chat or locks. Continue from source and project records through the authorized communication path. See [task field guides](docs/agent-coordination-templates.md) and [role responsibilities](docs/roles/coordinator.md).
+
+## Compatibility and limits
+
+- The kit supplies source instructions and definitions. See [compatibility notes](docs/agent-compatibility.md) and the [verification guide](docs/verification-guide.md) for the distinction between package checks and observed client behavior. The [Codex pilot](docs/codex-pilot-handoff.md) remains **NOT_RUN**.
+- [Model routing](docs/model-routing.md) inherits the developer's selection by default. Optional agents retain parent/runtime and task limits; role descriptions do not enforce sandbox or tool profiles.
+- No application dependencies, credentials, hooks, automatic installers, services, global settings, or test harness are bundled. TechNote presentation tools are separate capabilities.
+- A completed source change does not establish verified runtime behavior, human acceptance, or release. Git publication, deployment, production/data operations, paid actions, and destructive actions require their actual authority.
 
 ## Contributing and license
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) and [LICENSE](LICENSE). Sixteen engineering skills and selected references derive from the pinned [Addy Osmani source](https://github.com/addyosmani/agent-skills/tree/1401c8b8030e023baeebb31781a6653fe8e93026); approved adaptations retain origin metadata and the upstream MIT notice in [.agents/ADDY-AGENT-SKILLS-LICENSE](.agents/ADDY-AGENT-SKILLS-LICENSE) and its Claude mirror. See [skill provenance](docs/skills-provenance.md) for current counts.
+See [CONTRIBUTING.md](CONTRIBUTING.md) and the [MIT license](LICENSE).
+
+Sixteen engineering skills and selected references derive from the pinned [Addy Osmani source](https://github.com/addyosmani/agent-skills/tree/1401c8b8030e023baeebb31781a6653fe8e93026). Approved adaptations retain origin metadata and the upstream MIT notice in [.agents/ADDY-AGENT-SKILLS-LICENSE](.agents/ADDY-AGENT-SKILLS-LICENSE) and its Claude mirror. See [skill provenance](docs/skills-provenance.md) for current counts.

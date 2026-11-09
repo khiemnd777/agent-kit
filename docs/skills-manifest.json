@@ -1189,7 +1189,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "5e29ef69a39c54d6d09711d4b935e707e2ec97f38a47ce75efd7bab325afb369",
+      "sha256": "7e0ffc9b3ef3f05d65fa2f938fccd0d4e8ed9d353e75c0d1d0e91d7975f98f30",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
