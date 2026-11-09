@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "event_id": "TASK-009/source-location/human-acceptance/1",
+  "event_type": "evaluation",
+  "task_id": "TASK-009",
+  "scope_id": "DL01-DL04",
+  "recorded_at": "2026-11-06T21:53:41.120166+07:00",
+  "reported_by": "Delivery Owner",
+  "source_kind": "human_feedback",
+  "subject_event_id": "TASK-009/source-location/implementation/1",
+  "assessment_source": "human",
+  "review_attempt": 1,
+  "decision": "ACCEPTED",
+  "findings": [],
+  "evidence_refs": [
+    "docs/tasks/TASK-009.md#human-acceptance-and-closure"
+  ],
+  "approval_source": "Khi\u00eam in current chat: accept DL01\u2013DL04 and close TASK-009; no new scope or native pilot"
+}
