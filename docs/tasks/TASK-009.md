@@ -1,5 +1,7 @@
 # TASK-009 — source location in debugging
 
+**Current status: COMPLETED / HUMAN ACCEPTED / CLOSED (2026-11-06).** Earlier pending states below are historical snapshots.
+
 ## Authority and scope
 
 On 2026-11-06 Khiêm approved DL01–DL04 in the current chat: supplement debugging-and-error-recovery in the original Agent Kit, keep scope narrow, do not create fast-triage, do not commit/push. This record is kit maintenance, not adoption authority. No worktree, subagent or application change.
@@ -35,3 +37,20 @@ Allowlist: canonical/mirror debugging skill, manifest/provenance, task index, TA
 | DP01 | Publish DL01–DL04 and related records | main → origin/main, content 34973ea | done | — |
 | DP02 | Record result and publication skill use | TASK-009/state/publication journal | done | — |
 | DP03 | Unrelated changes/runtime/deployment | Other source/runtime | ignored | Outside authorization |
+
+<a id="human-acceptance-and-closure"></a>
+
+## Human acceptance and closure — 2026-11-06
+
+Khiêm explicitly accepted DL01–DL04 and instructed closing TASK-009 with no new scope or native pilot. DL01–DL04 remain done; DL05–DL06 exclusions remain ignored. DL07 is the original exclusion: scoped Git publication was subsequently authorized and completed under DP01–DP02; runtime/application exclusions remain. Human acceptance is limited to source/metadata/package outcome, not native behavior or production.
+
+Linked [human evaluation](../engineering/skill-usage/records/TASK-009/human-acceptance-1.json) preserves the prior implementation snapshot. [Closure journal](../engineering/skill-usage/records/TASK-009/accept-close-implementation-1.json) records actual contribution. Prior package/source PASS reused; optional validator missing yaml and native NOT_RUN remain unchanged. No checks/pilot reopened. Closure metadata remains local; no commit/push performed in this closure step.
+
+| Name | Purpose | Location | Status | Reason if undone/ignored |
+| --- | --- | --- | --- | --- |
+| CL01 | Record DL01–DL04 human acceptance and close task | TASK-009, linked evaluation, task index/state/journal | done | — |
+| CL02 | Additional scope or native pilot | Runtime/source | ignored | Explicit human instruction |
+
+## Closure publication — 2026-11-09
+
+Khiêm authorized commit/push of the five remaining closure metadata files after read-only review in the current chat. This authorizes publication of existing acceptance/closure and associated journal/state records only; no new skill scope, native pilot, merge or deployment. Prior local-only statements describe the 2026-11-06 closure step. Publication result follows in the [closure publication journal](../engineering/skill-usage/records/TASK-009/closure-publication-implementation-1.json) and its linked completion correction.

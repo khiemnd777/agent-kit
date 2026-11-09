@@ -11,3 +11,5 @@ Record skill use at authorized planning/implementation handoffs under the [journ
 TASK-001 through TASK-007 describe historical kit maintenance, not adoption authority. [TASK-008](TASK-008.md) records the approved workflow/journal maintenance; its authorization also does not transfer to an adopting project.
 
 [TASK-009](TASK-009.md) records approved DL01–DL04 source-location guidance in debugging; no separate skill or publication.
+
+[TASK-009](TASK-009.md) — DL01–DL04 HUMAN ACCEPTED / CLOSED on 2026-11-06; no new scope or native pilot. Closure publication authorized on 2026-11-09; see task publication records.
