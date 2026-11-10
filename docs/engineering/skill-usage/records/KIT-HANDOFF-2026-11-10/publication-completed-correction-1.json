@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "event_id": "KIT-HANDOFF-2026-11-10/publication/completion-correction/1",
+  "event_type": "correction",
+  "task_id": "KIT-HANDOFF-2026-11-10",
+  "scope_id": "publication",
+  "recorded_at": "2026-11-10T21:12:24.060324+07:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "supersedes_event_id": "KIT-HANDOFF-2026-11-10/publication/implementation/1",
+  "reason": "Commit/push and PR are now observed complete; preserve preparation history and correct the publication outcome.",
+  "replacement": {
+    "schema_version": 1,
+    "event_id": "KIT-HANDOFF-2026-11-10/publication/implementation/1",
+    "event_type": "phase_handoff",
+    "task_id": "KIT-HANDOFF-2026-11-10",
+    "scope_id": "publication",
+    "recorded_at": "2026-11-10T21:12:24.060324+07:00",
+    "reported_by": "delivery_owner",
+    "source_kind": "agent_self_report",
+    "phase": "implementation",
+    "handoff_index": 1,
+    "classification": {
+      "size": "small",
+      "complexity": "low",
+      "ui": false,
+      "delivery_type": "one_handoff",
+      "parent_roadmap": null
+    },
+    "authority": {
+      "approval_source": "Current chat: Khiêm explicitly requested commit and push of the original Agent Kit. The invoked git-workflow covers a task branch, commit, push and PR; merge/deploy excluded.",
+      "authorized_scope": "Publish only the reviewed handoff/classification sources, supporting templates and maintenance records on a task branch into main via PR. No merge, deployment, global settings, branch deletion, force push or history rewrite."
+    },
+    "skills": [
+      {
+        "skill_id": "git-workflow",
+        "contribution_summary": "Verified source scope and current remote/base, isolated delivery on a task branch, prepared scoped commit/push/PR and publication evidence.",
+        "contribution_percent_estimate": 100,
+        "estimate_source": "agent_self_report",
+        "source_identity": {
+          "kind": "host_skill",
+          "path": "skills/git-workflow/SKILL.md",
+          "version": null,
+          "sha256": "fae3c6e8c1994066b751a2405c0278e979e0589048d4ced3ae43b324fe9c4f87",
+          "fingerprint_basis": "Personal skill bytes read and applied for this publication task."
+        }
+      }
+    ],
+    "outcome": {
+      "delivery_status": "COMPLETED",
+      "verification_level": "Content commit pushed; remote branch SHA matched local content SHA; PR opened into main. Receipt metadata is published separately.",
+      "human_acceptance": "PENDING_REVIEW",
+      "limitations": [
+        "PR is not merged; no deployment.",
+        "Native/cross-session behavior NOT_RUN; publication does not establish behavioral verification."
+      ]
+    },
+    "measurements": {
+      "elapsed_seconds": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No trustworthy full-phase measurement captured."
+      },
+      "tool_calls": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No trustworthy full-phase measurement captured."
+      },
+      "input_tokens": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No trustworthy full-phase measurement captured."
+      },
+      "output_tokens": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No trustworthy full-phase measurement captured."
+      },
+      "cached_input_tokens": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No trustworthy full-phase measurement captured."
+      },
+      "reasoning_output_tokens": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No trustworthy full-phase measurement captured."
+      },
+      "client": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No trustworthy full-phase measurement captured."
+      },
+      "model": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No trustworthy full-phase measurement captured."
+      },
+      "effort": {
+        "value": null,
+        "source_ref": null,
+        "missing_reason": "No trustworthy full-phase measurement captured."
+      }
+    },
+    "evidence_refs": [
+      "docs/tasks/KIT-HANDOFF-2026-11-10.md",
+      "docs/tasks/KIT-HANDOFF-2026-11-10/validation.json",
+      "316010f9a2eca8126ebd7c3845fc9e3c0a2fbbee",
+      "f112ebf473dc996bb57de6b204ce9362eaca2b3e",
+      "https://github.com/khiemnd777/agent-kit/pull/5"
+    ]
+  }
+}
