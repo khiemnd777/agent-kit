@@ -40,3 +40,5 @@ Khiêm authorized adding the WHAT conversation rule and updating the original Ag
 Package/source checks PASS; implementation journal saved. Cross-session behavior NOT_RUN; human acceptance pending.
 
 Scoped publication now authorized: WHAT changes and related records on `refactor/what-conversation-table` into `main` via PR. Publication in progress; no merge/deploy. See the task publication section.
+
+Publication VERIFIED: WHAT content commit `b10a2b9` pushed with matching remote SHA; [PR #4](https://github.com/khiemnd777/agent-kit/pull/4) open into `main`, not merged. Publication completion correction linked from the task; receipt metadata published separately. Human acceptance pending; cross-session behavior NOT_RUN.
