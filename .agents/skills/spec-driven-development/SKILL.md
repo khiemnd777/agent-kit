@@ -17,7 +17,7 @@ For several distinct capabilities, sketch their responsibilities and real depend
 
 ## Resolve material choices
 
-Approval of the current plan covers routine work inside its scope. For complex tasks investigate risks/alternatives and discuss the proposal first; UI plans include an ASCII mockup. A direct implementation request does not itself approve a plan. Ask about a material missing product/design decision or additional authority when evidence cannot resolve it. Present a concrete recommendation and its tradeoff. Continue independent authorized work. A planning-only request stays within planning; saving a proposed artifact follows that request's scope.
+Approval of the current plan covers routine work inside its scope. For complex tasks investigate risks/alternatives and discuss the proposal first; UI plans include an ASCII mockup. A direct implementation request does not itself approve a plan. Ask about a material missing product/design decision or additional authority when evidence cannot resolve it. Present a concrete recommendation and its tradeoff. Continue independent authorized work. A planning-only request stays within planning; bounded local notes/proposed artifacts may be saved from task start under the core documentation rule, subject to explicit read-only/no-file restrictions and record ownership. A saved proposal is not approval to implement.
 
 Keep a short decision in chat for focused work. Use an existing spec/tracker or one checkpoint when a durable decision or handoff needs it. No mandatory SPEC.md, owner-naming ceremony or new approval receipt.
 

@@ -12,7 +12,8 @@ planning → user/Product Owner approval → implementation.
 Present the outcome, scope, intended result and relevant checks.
 A small task may use a short chat plan. A request to fix/update
 does not itself replace approval of that plan. Read-only investigation
-may inform planning; wait for approval before file edits or implementation.
+may inform planning; wait for approval before implementation. Bounded local
+planning documentation is permitted from task start under the rule below.
 
 At the start of every plan, including small tasks, state the delivery type,
 rationale and parent roadmap directly in chat, using the conversation language.
@@ -31,6 +32,26 @@ grant standing authority for another task.
 Git publication, deployment, production/real-data operations, paid,
 destructive and external actions retain their explicit permission
 boundaries. Honor human stops and preserve others' work.
+
+## Planning-only documentation
+
+From task start, the delivery owner may create/update bounded local planning
+documentation without waiting for implementation-plan approval or asking
+permission again for each update. Reuse the existing task record for notes,
+revisions, decisions, approval evidence and open questions; save meaningful
+changes as they occur. See [planning notes](docs/tasks/README.md#planning-notes).
+Related context/plan/state, necessary decision records and actual phase journals
+may be updated within this documentation boundary; keep one live state summary.
+
+This permits documentation only, not application code, runnable prototypes,
+tests, dependency/runtime configuration, migrations, changes to agent rules or
+skills, Git publication, external writes or real-data operations. Those actions
+retain their required approvals. Mark proposals and unknowns explicitly; a
+saved draft is not an approved plan or authority to implement.
+
+Explicit read-only/no-file instructions, human stops, assigned read-only roles,
+shared-record ownership and runtime permissions still apply. If writing is
+prohibited or unavailable, keep the notes in chat and disclose they are unsaved.
 
 ## Adapt preparation to the task
 
@@ -91,8 +112,9 @@ Within authorized write scope, the delivery owner saves the phase
 record in the local skill journal before reporting and uses that same
 record for the table. Preserve history through linked evaluations
 and corrections; do not duplicate usage on resume. Missing measured
-counters remain null with reasons. Read-only/unapproved planning
-stays in chat; never claim an unsaved record was saved.
+counters remain null with reasons. Planning records may use the bounded
+documentation permission above. Explicitly read-only/no-file work stays in
+chat; never claim an unsaved record was saved.
 
 ## Maintain current state
 

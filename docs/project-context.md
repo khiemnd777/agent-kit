@@ -2,7 +2,7 @@
 
 Keep stable domain/design/constraints here. Current progress belongs in project-state.md; outcomes belong in project-plan.md and historical approvals/evidence in tasks/decisions. Do not import another project's implementation authority.
 
-This is an optional fresh project context summary; the task/issue remains the delivery source of truth. It contains no approved product, stack or execution authority. The named shared-record owner updates it when documentation writes are authorized.
+This is an optional fresh project context summary; the task/issue remains the delivery source of truth. It contains no approved product, stack or execution authority. The named shared-record owner may update it within the [bounded planning-only documentation permission](../AGENTS.md#planning-only-documentation), respecting explicit read-only/no-file restrictions. Saving a proposed design does not make it accepted.
 
 | Field | Current value |
 | --- | --- |

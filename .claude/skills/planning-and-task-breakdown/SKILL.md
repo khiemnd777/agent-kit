@@ -16,7 +16,7 @@ Use the [lean operating core](../../../AGENTS.md). Organize work only as far as 
 - The main session owns delivery by default. Delegate only when the benefit exceeds coordination cost and task/runtime authority permits it; define interfaces and non-conflicting ownership.
 - Choose focused checks for changed behavior and affected seams. Include existing project review/CI/release requirements at the appropriate milestone, not after every step.
 
-A long task may need one short [checkpoint](../../../docs/tasks/README.md). Reuse an existing tracker where useful or required; do not duplicate its state or overwrite another writer's work. A planning-only task stays in chat unless its scope includes a saved artifact.
+A long task may need one short [checkpoint](../../../docs/tasks/README.md). Reuse an existing tracker where useful or required; do not duplicate its state or overwrite another writer's work. The core permits bounded planning-only documentation from task start: save meaningful notes/revisions/decisions/open questions in the existing task record, without implementation approval or per-note permission. Explicit read-only/no-file instructions and record ownership still apply; a saved draft does not approve implementation.
 
 For an approved template, retain its identity and agreed differences; consult the [template reference](../../references/template-application.md) when fidelity decisions need detail.
 
