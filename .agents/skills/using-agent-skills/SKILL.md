@@ -15,7 +15,7 @@ Do not preload every skill or chain specification, planning, implementation and 
 
 ## Report actual participation
 
-At planning and implementation handoff, include only applied skills in one table: Skill | Source | Actual contribution | Estimated participation %. Use Personal / Repo; UNKNOWN if unverified. Estimates total 100% among applied skills and are not measured time/tokens or effectiveness. If none was used, say so. Keep paths/versions/fingerprints in the [journal](../../../docs/engineering/skill-usage/README.md); the owner saves authorized phase records before reporting and derives the table from them. Do not write during unapproved/read-only planning or duplicate usage on resume.
+At planning and implementation handoff, include only applied skills in one table: Skill | Source | Actual contribution | Estimated participation %. Use Personal / Repo; UNKNOWN if unverified. Estimates total 100% among applied skills and are not measured time/tokens or effectiveness. If none was used, say so. Keep paths/versions/fingerprints in the [journal](../../../docs/engineering/skill-usage/README.md); the owner saves authorized phase records before reporting and derives the table from them. Bounded planning records may be saved from task start under the core rule; explicit read-only/no-file restrictions and assigned ownership still apply. Do not duplicate usage on resume.
 
 ## Resolve ambiguity
 

@@ -25,7 +25,7 @@ When an ADR is appropriate, follow the established directory, format, numbering 
 
 ## Maintain rules, state and skill evidence
 
-Keep durable rules in AGENTS.md, stable design in project-context.md, outcomes in project-plan.md and the single live summary in project-state.md; link detailed task/decision history. Within authorized writes the owner proactively updates affected entries at approval/scope changes, results, blockers/stops and handoff, without a reminder or scheduler. Save actual phase contributions using the [journal](../../../docs/engineering/skill-usage/README.md); do not save unapproved/read-only planning or invent measurements/approvals.
+Keep durable rules in AGENTS.md, stable design in project-context.md, outcomes in project-plan.md and the single live summary in project-state.md; link detailed task/decision history. Within authorized writes the owner proactively updates affected entries at approval/scope changes, results, blockers/stops and handoff, without a reminder or scheduler. Save actual phase contributions using the [journal](../../../docs/engineering/skill-usage/README.md); bounded planning notes and phase records may be saved from task start under the core documentation rule, while explicit read-only/no-file instructions and shared-record ownership still apply. Never invent measurements/approvals.
 
 ## Verify and finish
 

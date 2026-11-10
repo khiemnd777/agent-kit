@@ -18,7 +18,7 @@ The user/Product Owner approves classification with the plan; do not add a separ
 2. **Separate acceptance rounds.** Use roadmap delivery when distinct workflows, user groups or outcomes need separate review, or acceptance/decisions in an earlier result affect later work. Multiple files or modules alone do not justify splitting. Define the meaningful packages, their outcomes, dependencies and observable acceptance before implementation.
 3. **One complete assessment.** Use one handoff when the work is outside a parent roadmap, scope is clear, its checklist is focused and the complete result can be assessed together in one review. Do not invent phases to fill a template.
 
-If evidence is insufficient, continue authorized read-only investigation and present the classification with its rationale before implementation. Material scope growth requires an amended plan/classification before expanding work; do not silently change delivery type to cross an acceptance stop.
+If evidence is insufficient, continue source investigation with permitted [planning notes](tasks/README.md#planning-notes) and present the classification with its rationale before implementation. Explicit read-only/no-file assignments still prohibit saving notes. Material scope growth requires an amended plan/classification before expanding work; do not silently change delivery type to cross an acceptance stop.
 
 Risk is a separate axis. A small permission fix may use one handoff and still require authorization/security checks. Neither type grants publication, migration or real-data authority.
 

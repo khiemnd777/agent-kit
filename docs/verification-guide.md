@@ -134,7 +134,8 @@ Consider these concrete cases without executing a behavioral harness:
 - A complex task: investigate risks/alternatives and discuss a concrete proposal before approval/implementation; use the same code-first test order.
 - A UI task: preview an ASCII mockup before approval/coding; rendered/interaction verification follows completed code/wiring.
 - A combined long/complex/UI task applies all three requirements.
-- Planning/implementation handoff: report actual skill/source/contribution estimates from authorized saved records, or chat-only planning; preserve null missing metrics and do not duplicate resumed usage.
+- Planning notes: from task start, save meaningful draft requirements/revisions/decisions/open questions in the existing task record under the bounded documentation permission; implementation still waits for plan approval. Explicit read-only/no-file instructions prohibit saving, and read-only children return proposed record updates to the owner.
+- Planning/implementation handoff: report actual skill/source/contribution estimates from saved records under current authority, or chat-only notes when writes are prohibited; preserve null missing metrics and do not duplicate resumed usage.
 - Tests/config broken by that fix: the developer diagnoses/repairs within scope while useful progress and evidence justify the work.
 - Shared runner failure independent of the feature: a maintenance owner is named, dependent proof stays blocked and independent code work continues. A changed error is neither proof of progress nor an automatic stop.
 - Review waits or a command fails unchanged: continue independent authorized work or hand off the blocker; do not invent verification/orchestration to fill the wait.

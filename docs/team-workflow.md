@@ -4,7 +4,7 @@ Use the [lean core](../AGENTS.md) for routine work and this detail when delivery
 
 ## Start and agree once
 
-Read the request, relevant decisions and the minimum source/tests. Derive the outcome, scope and observable acceptance. The main session owns delivery. Present a plan and obtain explicit user/Product Owner approval before any implementation or file edits. Planning-only work stays read-only unless saving the artifact is authorized.
+Read the request, relevant decisions and the minimum source/tests. Derive the outcome, scope and observable acceptance. The main session owns delivery. Present a plan and obtain explicit user/Product Owner approval before implementation. From task start, the delivery owner may save bounded local planning documentation under the [core rule](../AGENTS.md#planning-only-documentation), reusing the existing task record and proactively preserving meaningful notes, revisions, decisions and open questions. This permission does not approve the plan or allow implementation; explicit read-only/no-file restrictions and record ownership still apply.
 
 Every task, even a contained fix, requires planning and approval; a short chat plan suffices for small work and does not require a new task file. Select minimum sufficient skills with brief reasons. For complex tasks, investigate the current system, assess risks and alternatives, discuss a concrete proposal and obtain approval. For any UI task, include an ASCII text mockup for preview/discussion before approval and coding. Combined tasks apply all applicable requirements. Once approved, carry the current acceptance package through without per-file or per-step approvals. For roadmap delivery, define meaningful packages before implementation and stop at each handoff until the user/Product Owner accepts the result and authorizes opening the next package.
 
@@ -99,7 +99,7 @@ Finish when required implementation/callers and scoped acceptance are satisfied,
 
 A requested source-only self-test handoff may be CODE_COMPLETE_UNTESTED: implementation is complete but runtime/tests stay NOT_RUN and availability Unknown. Do not reopen stopped tests or hide missing implementation as a limitation.
 
-Close planning and implementation with the actual skills table and 1–3 concrete next-step options. Save the authorized phase record first using the [journal guide](engineering/skill-usage/README.md), then derive the table from it. Unapproved/read-only planning is reported in chat with no claim of saved records.
+Close planning and implementation with the actual skills table and 1–3 concrete next-step options. Save the authorized phase record first using the [journal guide](engineering/skill-usage/README.md), then derive the table from it. Planning phase records may be saved under the bounded documentation permission even before implementation approval. Explicitly read-only/no-file work is reported in chat with no claim of saved records.
 
 ## State vocabulary
 

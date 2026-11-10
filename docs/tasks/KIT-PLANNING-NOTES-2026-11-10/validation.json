@@ -1,0 +1,134 @@
+{
+  "checked_at": "2026-11-10T21:51:24.930947+07:00",
+  "task_id": "KIT-PLANNING-NOTES-2026-11-10",
+  "base_revision": "86cc3863598e4d9ab794b11feb559d84e3a46287",
+  "checks": [
+    {
+      "name": "default_planning_permission",
+      "result": "PASS",
+      "detail": "Owner may save bounded planning records from task start without per-note approval."
+    },
+    {
+      "name": "implementation_boundary",
+      "result": "PASS",
+      "detail": "The planning exception grants documentation only; implementation and other side effects retain approval."
+    },
+    {
+      "name": "explicit_restrictions",
+      "result": "PASS",
+      "detail": "Explicit user/role/runtime restrictions override default document permission."
+    },
+    {
+      "name": "existing_record_mechanism",
+      "result": "PASS",
+      "detail": "Existing task-record mechanism retained; meaningful revisions and decision history are preserved."
+    },
+    {
+      "name": "meaningful_updates",
+      "result": "PASS",
+      "detail": "Notes cover meaningful requirement changes, revisions, decisions/approval evidence and unresolved questions."
+    },
+    {
+      "name": "no_new_tracker_or_log",
+      "result": "PASS",
+      "detail": "No transcript dump, new parallel tracker, compulsory ADR or per-message record."
+    },
+    {
+      "name": "stale_conflicts_removed",
+      "result": "PASS",
+      "detail": "Blanket chat-only planning restrictions removed from affected active instructions."
+    },
+    {
+      "name": "native_metadata_and_ownership",
+      "result": "PASS",
+      "detail": "Three TOML files parse; names/descriptions/native metadata and shared-record/read-only responsibilities unchanged. Claude frontmatter unchanged."
+    },
+    {
+      "name": "skill_discovery_metadata",
+      "result": "PASS",
+      "detail": "Existing skill names/descriptions unchanged; instruction body synchronization only, not native discovery proof."
+    },
+    {
+      "name": "fresh_adoption_values",
+      "result": "PASS",
+      "detail": "Blank adoption fields/values remain unchanged; documentation permission does not invent product or implementation authority."
+    },
+    {
+      "name": "package_integrity",
+      "result": "PASS",
+      "detail": "PASS: inventory hashes, mirror bytes, 17 skills per root; 3 original / 23 adapted upstream files"
+    },
+    {
+      "name": "local_links_and_anchors",
+      "result": "PASS",
+      "detail": {
+        "checked": 89,
+        "missing": [],
+        "pending_artifacts": [
+          "docs/engineering/skill-usage/records/KIT-PLANNING-NOTES-2026-11-10/implementation-1.json",
+          "docs/tasks/KIT-PLANNING-NOTES-2026-11-10/validation.json"
+        ]
+      }
+    },
+    {
+      "name": "diff_and_whitespace",
+      "result": "PASS",
+      "detail": "git diff --check and whitespace inspection include untracked task documentation."
+    },
+    {
+      "name": "git_scope_unchanged",
+      "result": "PASS",
+      "detail": "No branch, commit, staging or publication operation performed in this task."
+    },
+    {
+      "name": "journal_and_source_identity",
+      "result": "PASS",
+      "detail": "Schema-v1 record preserves actual pre-edit skill fingerprint and null unavailable measurements; no duplicate prior-task event."
+    }
+  ],
+  "review": "delivery_owner_self_review",
+  "source_sha256": {
+    "AGENTS.md": "3ac50d3e933326683b95c1c2a37e0bd5252e2a657658721492c845c93cffff8e",
+    "docs/team-policy.md": "9e4c20ff249c1d812613718e132bbc0520890f30c8297aef5f2b226c585eb5f1",
+    "docs/team-workflow.md": "e12bd7ebb8106984cbcd7df3ff7d0c90e59df38cd06410ffda8c7ed9c40e4afa",
+    "docs/tasks/README.md": "53b47d554040dc5b2778d1c2fba2fa01cb51966e336e5f078c6df25fd54e567a",
+    "docs/agent-coordination-templates.md": "55a2cca31c08986b76018ace32554b54f2650d2de8974af010595b969f807221",
+    "docs/engineering/skill-usage/README.md": "3c29d9d2445be126fee8d8ef530194d1c169f43c4de527b4db37ab7b3bec3385",
+    "docs/project-plan.md": "8e17c157f403fcd086e30f48b04b0d68e009eb4348b9a78a9af72ab3eedc4a3a",
+    "docs/project-context.md": "b51cc2c5bc90f2deff42eb05e25fcbe74779babb331a9eb8e09ace77d66563ca",
+    "docs/handoff-templates.md": "bc0289986b7f1f8be3721a3941cd6d96b7abb8e8c96a7efd53b9f410110d3919",
+    "docs/verification-guide.md": "dea5f3768e8ef5f1ccbcf1e93c395e5958406649d6e2c9825fe309eea062c906",
+    ".agents/skills/documentation-and-adrs/SKILL.md": "b93cb7b25f29c432ee6ba9dff6a78e91ea2fa545ac5aa73d89a7cb983122b80c",
+    ".claude/skills/documentation-and-adrs/SKILL.md": "b93cb7b25f29c432ee6ba9dff6a78e91ea2fa545ac5aa73d89a7cb983122b80c",
+    ".agents/skills/planning-and-task-breakdown/SKILL.md": "f80858ad76e18e26fb62001b426a4c2d4a1c72502be016ee99a7ae8aaaa10b58",
+    ".claude/skills/planning-and-task-breakdown/SKILL.md": "f80858ad76e18e26fb62001b426a4c2d4a1c72502be016ee99a7ae8aaaa10b58",
+    ".agents/skills/context-engineering/SKILL.md": "cd9204a1073f580bb651602a88fd2b7dd20191b15064290d46c073e3569bdb63",
+    ".claude/skills/context-engineering/SKILL.md": "cd9204a1073f580bb651602a88fd2b7dd20191b15064290d46c073e3569bdb63",
+    ".agents/skills/using-agent-skills/SKILL.md": "2b0ad6298f829d3363764ecb035eebe16244d6004a8125ff762b7b99d9cbf250",
+    ".claude/skills/using-agent-skills/SKILL.md": "2b0ad6298f829d3363764ecb035eebe16244d6004a8125ff762b7b99d9cbf250",
+    ".agents/skills/spec-driven-development/SKILL.md": "9844be3f9373ca3d400e4383c5af8e5aa21694a29a0aaa8157beee91f45c7af6",
+    ".claude/skills/spec-driven-development/SKILL.md": "9844be3f9373ca3d400e4383c5af8e5aa21694a29a0aaa8157beee91f45c7af6",
+    ".codex/agents/kit-explorer.toml": "ddd3784fa05441eac7aea22e1ef8f121a46380eda873437f581261a88857938f",
+    ".claude/agents/kit-explorer.md": "1911014806ea33f531f0255cda65b792f7d2314c652023167514f884f5a1defd",
+    ".codex/agents/kit-implementer.toml": "c39e1123f47d7299b67738a4debdd2acad6a2bd58862afbe054338877083f54d",
+    ".claude/agents/kit-implementer.md": "b4d827b73de942149701e1c381f3ce1b50468df2969b45e83fb322e16e2f32b9",
+    ".codex/agents/kit-reviewer.toml": "b0158f5b9b3d9f5de98c84855edf12e5bdbc106eb019777a54fb918d8b46baf0",
+    ".claude/agents/kit-reviewer.md": "62c4ee9f4d5dad9118e0b40ed7f5d2bab90f49c8c8d3abfed19083b083bd8642",
+    "docs/skills-provenance.md": "9c677eda8e4a2cb2c778e8095b1be0cd2bc90bc80b923c4d952a5d7356cf8f2a",
+    "docs/tasks/KIT-PLANNING-NOTES-2026-11-10.md": "e99134eaa26958a7bfca66efd48885b9c0ce6e86541c023f5a754ccb79c5d717",
+    "docs/project-state.md": "8c849d911031b2e452e72b6b951daf77ac0d50f2d971db4e5acf18176f90f646",
+    "docs/skills-manifest.json": "bae7a8d70387f243987324c70ccaf3ac631c8e4a3cc35a23b6df4b471e910d9d"
+  },
+  "content_review_cases": [
+    "Planning before implementation approval may save bounded meaningful notes.",
+    "Explicit read-only/no-file instruction prohibits saving, including journals.",
+    "Application/config/agent-rule changes remain outside the planning-only exception.",
+    "Read-only children return proposed shared-record changes to the owner.",
+    "Draft/superseded/unknown states and actual human sources stay distinct.",
+    "Short tasks do not create empty records per message."
+  ],
+  "limitations": [
+    "Content review cases are source analysis, not executed native agent behavior.",
+    "Native/cross-session behavior NOT_RUN; no independent reviewer or publication."
+  ]
+}

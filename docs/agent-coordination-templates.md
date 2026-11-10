@@ -60,7 +60,7 @@ This heading remains for existing links. These optional handoff questions do not
 - Do actual checks support the claim, with missing proof and review independence stated accurately?
 - Are material limits, unresolved defects and any next action clear?
 
-Close planning/implementation with actual skills (Skill | Source | Actual contribution | Estimated participation %) and 1–3 concrete next-step options with conditions/authority. Save authorized journal records first; children propose records to the owner. Unapproved/read-only planning stays in chat.
+Close planning/implementation with actual skills (Skill | Source | Actual contribution | Estimated participation %) and 1–3 concrete next-step options with conditions/authority. Save authorized journal records first; children propose records to the owner. Bounded planning notes and phase records may be saved from task start under the [core rule](../AGENTS.md#planning-only-documentation); explicitly read-only/no-file work stays in chat. Shared records retain their assigned writer.
 
 Stop when scoped acceptance and sufficient verification are met. Keep Source complete, Behavior verified, Human accepted and Released distinct. Optional polish does not extend completion.
 

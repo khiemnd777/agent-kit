@@ -4,7 +4,7 @@ The [operating core](../AGENTS.md) is sufficient for routine work. Consult this 
 
 ## Approval and autonomy
 
-Every task follows planning → explicit user/Product Owner approval → implementation, including small fixes. A concise chat plan is sufficient for a small task. Investigate read-only to inform it; wait for approval before editing files. A direct fix/update request does not replace approval of the plan. A proposal is planning-only. Fresh projects and imported records carry no inherited approval.
+Every task follows planning → explicit user/Product Owner approval → implementation, including small fixes. A concise chat plan is sufficient for a small task. Investigate source to inform it; implementation still waits for approval. The [planning-only documentation rule](../AGENTS.md#planning-only-documentation) permits the delivery owner to save bounded local planning records from task start, without separate approval for each note. It does not permit application/configuration/agent-rule changes, runtime actions or publication, and explicit read-only/no-file restrictions still win. A direct fix/update request does not replace approval of the plan. A proposal is planning-only. Fresh projects and imported records carry no inherited approval.
 
 Use approval of the current plan; do not request it again per file, covered repair or phase within the current acceptance package. For roadmap delivery, stop at each predefined package handoff until the user/Product Owner accepts it and authorizes opening the next. Approval of the overall roadmap alone does not cross these stops. Classify and declare the delivery type, rationale and parent roadmap at the start of planning using the [handoff criteria](handoff-templates.md#classification); classification is approved with the plan. Material scope/solution changes need an amended plan and approval. Ask when a material choice cannot be resolved from evidence, the outcome or authority expands, or the next side effect is not covered. Explain the concrete decision and impact. Continue unaffected authorized work.
 
@@ -30,7 +30,7 @@ Use relevant checks and reuse unaffected evidence. Missing required proof stays 
 
 ## Evidence and communication
 
-Report the result, meaningful evidence/limits, the actual skills table and 1–3 concrete next-step options with their conditions/authority. Save authorized phase records using the [skill journal](engineering/skill-usage/README.md); read-only planning stays in chat. A short response needs no form. Keep [one checkpoint](tasks/README.md) when continuation, coordination or project rules need it. [TechNote](technote.md) offers optional explanation detail, not another approval cycle.
+Report the result, meaningful evidence/limits, the actual skills table and 1–3 concrete next-step options with their conditions/authority. Save authorized phase records using the [skill journal](engineering/skill-usage/README.md); planning records may use the bounded documentation permission; explicitly read-only/no-file work stays in chat with unsaved status disclosed. A short response needs no form. Keep [one checkpoint](tasks/README.md) when continuation, coordination or project rules need it. [TechNote](technote.md) offers optional explanation detail, not another approval cycle.
 
 ## Data and external boundaries
 

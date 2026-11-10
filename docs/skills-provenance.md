@@ -37,3 +37,9 @@ Skill selection is task-specific; planning/implementation report actual contribu
 ## TASK-009 — source location in debugging, 2026-11-06
 
 Approved DL01–DL04 adds a concise source-location technique to debugging-and-error-recovery: exact signals, screenshot evidence, scoped search, ownership tracing and separation of matches from causes. The technique is informed by the personal noah-fast-triage skill without importing Noah paths, identity contracts, architectural layers or approval rules. Trigger/description, 17-skill inventory, upstream pin and licenses are unchanged. Canonical and Claude mirror remain byte-identical. No separate fast-triage skill, adopter update, native pilot or Git publication is authorized. See [task/evidence](tasks/TASK-009.md).
+
+## Planning-only documentation permission — 2026-11-10
+
+[KIT-PLANNING-NOTES-2026-11-10](tasks/KIT-PLANNING-NOTES-2026-11-10.md) records explicit approval of bounded local planning documentation from task start, separate from implementation approval. This supersedes blanket chat-only wording for unapproved implementation planning in five skill entrypoints and their Claude mirrors. Explicit read-only/no-file limits and assigned shared-record ownership remain binding; no application/runtime/publication authority is added. The three native agent instruction strings are aligned without changing role names, descriptions, tool/model/permission fields or read-only responsibilities.
+
+Original upstream origins, pins, blob identities and earlier adaptation reasons are retained; manifest reasons append this task. Existing task records remain the note/decision source; no new journal type, note hierarchy, scheduler or harness is introduced. Native behavior is not established by source/package checks.

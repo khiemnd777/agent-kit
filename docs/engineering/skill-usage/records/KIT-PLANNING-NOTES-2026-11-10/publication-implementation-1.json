@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "event_id": "KIT-PLANNING-NOTES-2026-11-10/publication/implementation/1",
+  "event_type": "phase_handoff",
+  "task_id": "KIT-PLANNING-NOTES-2026-11-10",
+  "scope_id": "publication",
+  "recorded_at": "2026-11-10T21:56:11.121226+07:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "phase": "implementation",
+  "handoff_index": 1,
+  "classification": {
+    "size": "small",
+    "complexity": "low",
+    "ui": false,
+    "delivery_type": "one_handoff",
+    "parent_roadmap": null
+  },
+  "authority": {
+    "approval_source": "Current chat: Khiêm explicitly accepted the source addition and requested commit/push. The invoked git-workflow covers task branch, commit, push and PR.",
+    "authorized_scope": "Publish only the accepted planning-documentation sources/mirrors/provenance/templates and scoped records on a task branch into main via PR. No merge, deployment, force push, branch deletion or history rewrite."
+  },
+  "skills": [
+    {
+      "skill_id": "git-workflow",
+      "contribution_summary": "Verified accepted source identity and remote base, recorded acceptance, isolated the publication branch and managed scoped commit/push/PR with remote verification.",
+      "contribution_percent_estimate": 100,
+      "estimate_source": "agent_self_report",
+      "source_identity": {
+        "kind": "host_skill",
+        "path": "skills/git-workflow/SKILL.md",
+        "version": null,
+        "sha256": "fae3c6e8c1994066b751a2405c0278e979e0589048d4ced3ae43b324fe9c4f87",
+        "fingerprint_basis": "Personal skill bytes read and applied for this publication."
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "INCOMPLETE",
+    "verification_level": "Accepted source fingerprints still match the delivered evidence; fetched origin/main matches current base. Commit/push/PR pending.",
+    "human_acceptance": "NOT_APPLICABLE",
+    "limitations": [
+      "Publication completion will be recorded in a linked correction after remote verification.",
+      "Native/cross-session behavior NOT_RUN; source acceptance is recorded separately."
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy full-phase measurement/metadata captured."
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy full-phase measurement/metadata captured."
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy full-phase measurement/metadata captured."
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy full-phase measurement/metadata captured."
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy full-phase measurement/metadata captured."
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy full-phase measurement/metadata captured."
+    },
+    "client": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy full-phase measurement/metadata captured."
+    },
+    "model": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy full-phase measurement/metadata captured."
+    },
+    "effort": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy full-phase measurement/metadata captured."
+    }
+  },
+  "evidence_refs": [
+    "docs/tasks/KIT-PLANNING-NOTES-2026-11-10.md",
+    "docs/tasks/KIT-PLANNING-NOTES-2026-11-10/validation.json",
+    "docs/engineering/skill-usage/records/KIT-PLANNING-NOTES-2026-11-10/human-acceptance-1.json",
+    "86cc3863598e4d9ab794b11feb559d84e3a46287"
+  ]
+}

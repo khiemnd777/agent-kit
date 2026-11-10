@@ -18,7 +18,7 @@
 
 For each actual task, index its ID, owner, role, branch, base commit, owned files, dependencies and task-record path. Detailed acceptance, evidence and handoff belong in the task record, not a duplicate checklist here.
 
-Agree shared contracts and write ownership before parallel execution. A later task must not silently replace an unfinished task. Planning-only proposals remain in chat until writing them is authorized.
+Agree shared contracts and write ownership before parallel execution. A later task must not silently replace an unfinished task. Planning-only drafts may be saved from task start under the [core documentation permission](../AGENTS.md#planning-only-documentation), with proposals/open points explicitly marked. Saving a draft does not approve implementation; explicit read-only/no-file restrictions still apply.
 
 ## Delivery planning
 
