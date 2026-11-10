@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "event_id": "WHAT-CHAT-2026-11-10/conversation-rule/implementation/1",
+  "event_type": "phase_handoff",
+  "task_id": "WHAT-CHAT-2026-11-10",
+  "scope_id": "conversation-rule",
+  "recorded_at": "2026-11-10T20:27:05.080725+07:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "phase": "implementation",
+  "handoff_index": 1,
+  "classification": {
+    "size": "small",
+    "complexity": "low",
+    "ui": false
+  },
+  "authority": {
+    "source": "Current chat: Khiêm explicitly instructed adding the proposed WHAT conversation rule and updating Agent Kit immediately.",
+    "scope": "Core/workflow/template and supporting manifest/task/state/journal in original kit and Church CMS copy; no application changes, Git publication or deployment."
+  },
+  "skills": [
+    {
+      "skill_id": "documentation-and-adrs",
+      "contribution_summary": "Updated the core conversation reporting convention, synchronized workflow/template and maintained scoped state and verification evidence.",
+      "contribution_percent_estimate": 100,
+      "estimate_source": "delivery_owner_relative_estimate",
+      "source_identity": {
+        "kind": "repository",
+        "path": ".agents/skills/documentation-and-adrs/SKILL.md",
+        "version": null,
+        "sha256": "f3199cfec5d6fdfa6533f180b1e6cbee584cd6175d8eb25c0d186c833120609c",
+        "fingerprint_basis": "Read and applied unchanged repository skill bytes during this task."
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "COMPLETED",
+    "verification_level": "Source/package checks PASS; delivery-owner content review only.",
+    "human_acceptance": "PENDING_REVIEW",
+    "limitations": [
+      "Cross-session Codex/Claude compliance NOT_RUN; instruction source checks do not prove future behavior.",
+      "No commit/push/deploy; no independent reviewer."
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "client": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "model": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "effort": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    }
+  },
+  "evidence_refs": [
+    "AGENTS.md#show-what-in-the-conversation",
+    "docs/team-workflow.md",
+    "docs/agent-coordination-templates.md#conversation-what-table",
+    "docs/skills-manifest.json",
+    "docs/tasks/WHAT-CHAT-2026-11-10.md"
+  ]
+}

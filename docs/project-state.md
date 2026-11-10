@@ -32,3 +32,13 @@ Closure metadata publication authorized by Khiêm on 2026-11-09 after read-only 
 ## Kit maintenance pointer — 2026-11-09
 
 Approved README and repository-description refresh completed locally. README now leads with purpose, included components and quick start; workflow details link to existing guidance. README manifest hash updated. Local checks PASS: 24 README paths/applicable anchors, documented package integrity recipe, and diff whitespace. Description draft: “Shared instructions, technical skills, and optional agents for Codex and Claude Code—with explicit planning, approval, and verification.” GitHub rendering/native behavior NOT_RUN. Khiêm accepted the result and authorized commit/push and GitHub description update in the current chat. Description updated and read back on GitHub; content commit `98f491f` pushed and remote SHA verified; [PR #2](https://github.com/khiemnd777/agent-kit/pull/2) opened against `main`, not merged. Publication completion is recorded in the linked correction event. See the linked human-acceptance and publication records beside the implementation journal. [Implementation journal](engineering/skill-usage/records/README-2026-11-09/implementation-1.json) records scope, authority and limits; adoption values above remain uninitialized. Prior TASK-009 closure edits preserved.
+
+## WHAT conversation rule — 2026-11-10
+
+Khiêm authorized adding the WHAT conversation rule and updating the original Agent Kit immediately. Core/workflow/template updated locally; manifest hashes synchronized. Details and verification limits: [WHAT-CHAT-2026-11-10](tasks/WHAT-CHAT-2026-11-10.md). No application implementation, commit/push or deployment. The original kit's adoption template and Church CMS P0 authority remain unchanged.
+
+Package/source checks PASS; implementation journal saved. Cross-session behavior NOT_RUN; human acceptance pending.
+
+Scoped publication now authorized: WHAT changes and related records on `refactor/what-conversation-table` into `main` via PR. Publication in progress; no merge/deploy. See the task publication section.
+
+Publication VERIFIED: WHAT content commit `b10a2b9` pushed with matching remote SHA; [PR #4](https://github.com/khiemnd777/agent-kit/pull/4) open into `main`, not merged. Publication completion correction linked from the task; receipt metadata published separately. Human acceptance pending; cross-session behavior NOT_RUN.

@@ -13,6 +13,16 @@ Relevant checks / result to return:
 
 A short message can carry this assignment. Include enough detail for material design/data/permission decisions; reference approval of the parent plan before implementation; do not create repeated approvals for covered work. Include task type/risks, ASCII UI preview where applicable and selected skills/reasons in planning. Delegation is optional and children do not delegate.
 
+## Conversation WHAT table
+
+Follow [the core rule](../AGENTS.md#show-what-in-the-conversation) when presenting an implementation plan and the completed-work report. Render the table in the conversation, even if it also exists in a task file. Localize labels/statuses to the conversation language.
+
+| Name | Purpose | Location | Status | Reason if undone/ignored |
+| --- | --- | --- | --- | --- |
+| W01 | Intended outcome | Affected file or component | Actual planning/approval or result status | Required for undone/ignored work; otherwise — |
+
+Reuse item names between plan and result. This template adds no separate tracker or task-file requirement; retain the skills table and next-step options.
+
 ## Project / Task State
 
 Use project-state.md as the single live summary and link detailed task/decision history. The delivery owner proactively updates affected state/task entries within authorized writes. For a real interruption or handoff, keep one concise checkpoint:
