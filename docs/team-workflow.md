@@ -8,6 +8,8 @@ Read the request, relevant decisions and the minimum source/tests. Derive the ou
 
 Every task, even a contained fix, requires planning and approval; a short chat plan suffices for small work and does not require a new task file. Select minimum sufficient skills with brief reasons. For complex tasks, investigate the current system, assess risks and alternatives, discuss a concrete proposal and obtain approval. For any UI task, include an ASCII text mockup for preview/discussion before approval and coding. Combined tasks apply all applicable requirements. Once approved, carry the covered work through without per-file or per-step approvals.
 
+Render WHAT directly in the conversation at plan presentation and completed-work reporting, following [the core rule](../AGENTS.md#show-what-in-the-conversation). A saved task table or file link is not a substitute. Keep the existing skills table and next-step options.
+
 ## Proportionate effort
 
 | Effort | Use when | Useful work |

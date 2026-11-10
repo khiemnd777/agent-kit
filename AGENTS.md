@@ -42,6 +42,26 @@ actual risks. Missing decisions or unsafe dependencies still require
 a pause of affected work; do not manufacture completion with mocks
 or false-success fallbacks.
 
+## Show WHAT in the conversation
+
+Always render a WHAT table directly in the conversation when presenting
+an implementation plan and in the completed-work report, including small
+tasks. A table saved in a file or a link to that file does not replace
+the conversation table. Intermediate progress updates need not repeat it.
+
+Use these columns: Name | Purpose | Location | Status | Reason if undone/ignored.
+Use stable item names within the task. In planning, show the intended work
+and its actual planning/approval status; in the final report, show each
+item's actual result. Explain every undone, blocked, deferred or ignored
+item; use an em dash when no reason applies. Localize the column labels
+and statuses to the conversation language while preserving identifiers.
+
+Keep the table proportional to the task and reuse existing task/state
+records; it adds no separate tracker or mandatory task file. The WHAT
+table complements the skills table and next-step options. A done row
+alone does not establish verified behavior, human acceptance, release
+or permission to execute.
+
 ## Select and report skills
 
 During planning, select the minimum sufficient skills from the task's

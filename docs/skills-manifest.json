@@ -1157,7 +1157,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "4bb7ed85a95947963023bcbe8cc726398726c3ef5907ad16bc0381d0fc49edac",
+      "sha256": "019e09badc3ede8f4612aa5aaec751e12b82491d6fe68371911e2cf28e1a02b0",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1205,7 +1205,7 @@
     },
     {
       "path": "docs/agent-coordination-templates.md",
-      "sha256": "d1653c796b5cc73eea450ee478786fc209a1e5e3afe06b4bf1bbb1e407acdd60",
+      "sha256": "6d3b9b9c114de8f3038c852c16cffbfc80454b2884f30be0b62729de813f7f33",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1269,7 +1269,7 @@
     },
     {
       "path": "docs/team-workflow.md",
-      "sha256": "53721a8a4677f8d01951b12fdc1bd702ad4416100b09c074401478dfcdc0ced7",
+      "sha256": "d5b2355ecc405b4c3e3f10b9f5f66f20093117b00bad4c79387391835b2a3f21",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"

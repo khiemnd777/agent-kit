@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "event_id": "WHAT-CHAT-2026-11-10/publication/implementation/1",
+  "event_type": "phase_handoff",
+  "task_id": "WHAT-CHAT-2026-11-10",
+  "scope_id": "publication",
+  "recorded_at": "2026-11-10T20:31:15.326810+07:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "phase": "implementation",
+  "handoff_index": 1,
+  "classification": {
+    "size": "small",
+    "complexity": "low",
+    "ui": false
+  },
+  "authority": {
+    "source": "Current chat: Khiêm explicitly requested commit/push of the original Agent Kit changes.",
+    "scope": "Publish WHAT changes and supporting records through task branch and PR; no merge/deploy or Church CMS publication."
+  },
+  "skills": [
+    {
+      "skill_id": "git-workflow",
+      "contribution_summary": "Verified scoped diff, clean index and synchronized main/origin/main; preparing task branch, commits, push and PR.",
+      "contribution_percent_estimate": 100,
+      "estimate_source": "delivery_owner_relative_estimate",
+      "source_identity": {
+        "kind": "host_skill",
+        "path": "git-workflow/SKILL.md",
+        "version": null,
+        "sha256": "fae3c6e8c1994066b751a2405c0278e979e0589048d4ced3ae43b324fe9c4f87",
+        "fingerprint_basis": "Read and applied host skill bytes during publication."
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "INCOMPLETE",
+    "verification_level": "Package integrity and diff whitespace PASS; main/origin/main 0/0 after fetch.",
+    "human_acceptance": "PENDING_REVIEW",
+    "limitations": [
+      "Publication in progress; commit/push/PR results not yet recorded.",
+      "Cross-session behavior NOT_RUN; no merge/deploy authorized."
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "client": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "model": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    },
+    "effort": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No trustworthy task-scoped measurement or runtime identity captured."
+    }
+  },
+  "evidence_refs": [
+    "docs/tasks/WHAT-CHAT-2026-11-10.md",
+    "docs/skills-manifest.json"
+  ]
+}
