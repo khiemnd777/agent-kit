@@ -42,3 +42,9 @@ Package/source checks PASS; implementation journal saved. Cross-session behavior
 Scoped publication now authorized: WHAT changes and related records on `refactor/what-conversation-table` into `main` via PR. Publication in progress; no merge/deploy. See the task publication section.
 
 Publication VERIFIED: WHAT content commit `b10a2b9` pushed with matching remote SHA; [PR #4](https://github.com/khiemnd777/agent-kit/pull/4) open into `main`, not merged. Publication completion correction linked from the task; receipt metadata published separately. Human acceptance pending; cross-session behavior NOT_RUN.
+
+## Kit maintenance pointer — visual acceptance handoff, 2026-11-10
+
+[KIT-HANDOFF-2026-11-10](tasks/KIT-HANDOFF-2026-11-10.md) records the approved original-kit update: delivery classification and planning declaration, two visual handoff templates, predefined meaningful packages and explicit user/Product Owner acceptance/continuation stops. Core/workflow/policy and adoption guidance are synchronized. Source/package checks PASS; [journal](engineering/skill-usage/records/KIT-HANDOFF-2026-11-10/implementation-1.json) saved; human acceptance of this original-kit delivery pending. Native/cross-session behavior NOT_RUN. No commit/push/PR/deployment. Fresh adoption values above remain uninitialized; no Church CMS product scope or execution authority is imported.
+
+Handoff publication VERIFIED: content commit `f112ebf473dc996bb57de6b204ce9362eaca2b3e` pushed with matching remote SHA; [PR](https://github.com/khiemnd777/agent-kit/pull/5) open into `main`, not merged. Completion correction linked from the task; receipt metadata published separately. Native/cross-session behavior NOT_RUN; no deployment.

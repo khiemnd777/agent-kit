@@ -1,0 +1,120 @@
+{
+  "checked_at": "2026-11-10T20:54:15.009341+07:00",
+  "task_id": "KIT-HANDOFF-2026-11-10",
+  "base_revision": "1f4a28ed2562b82accf7bb4b0a1df170e9d4de18",
+  "checks": [
+    {
+      "name": "documented_package_integrity",
+      "result": "PASS",
+      "detail": "PASS: inventory hashes, mirror bytes, 17 skills per root; 3 original / 23 adapted upstream files"
+    },
+    {
+      "name": "git_diff_check",
+      "result": "PASS",
+      "detail": "git diff --check on the current approved source changes."
+    },
+    {
+      "name": "mandatory_planning_declaration",
+      "result": "PASS",
+      "detail": "Conversation declaration is required even for small tasks; labels follow the conversation language."
+    },
+    {
+      "name": "classification_order",
+      "result": "PASS",
+      "detail": "Parent roadmap takes priority, then acceptance needs, then a complete standalone assessment."
+    },
+    {
+      "name": "risk_and_size_separate",
+      "result": "PASS",
+      "detail": "Size estimates do not choose delivery type; risk controls and scope-change approval remain separate."
+    },
+    {
+      "name": "classification_examples",
+      "result": "PASS",
+      "detail": "Reviewed four documented examples, including a small parent-roadmap package and a standalone permission fix; not a behavioral test."
+    },
+    {
+      "name": "two_complete_handoff_templates",
+      "result": "PASS",
+      "detail": "Both templates retain required fields and visuals; standalone work omits the roadmap block."
+    },
+    {
+      "name": "package_acceptance_stops",
+      "result": "PASS",
+      "detail": "Explicit acceptance and permission to continue are required at each predefined package; covered repairs do not add approval per file."
+    },
+    {
+      "name": "code_first_within_package",
+      "result": "PASS",
+      "detail": "Code/wiring before tests applies within each approved package."
+    },
+    {
+      "name": "visual_evidence_limits",
+      "result": "PASS",
+      "detail": "Visuals carry snapshot/source/status/limits; unavailable evidence remains explicit."
+    },
+    {
+      "name": "fresh_adoption_values",
+      "result": "PASS",
+      "detail": "All existing adoption table values retain their original uninitialized values; only blank fields/guidance added."
+    },
+    {
+      "name": "maintenance_history_preserved",
+      "result": "PASS",
+      "detail": "Existing kit maintenance history remains intact; new maintenance is appended separately."
+    },
+    {
+      "name": "generic_kit_rules",
+      "result": "PASS",
+      "detail": "Maintained rules/templates use user/Product Owner and do not import Church CMS product roadmap or authority."
+    },
+    {
+      "name": "local_links_and_anchors",
+      "result": "PASS",
+      "detail": {
+        "checked_links": 39,
+        "missing": [],
+        "pending_artifacts": [
+          "docs/engineering/skill-usage/records/KIT-HANDOFF-2026-11-10/implementation-1.json",
+          "docs/tasks/KIT-HANDOFF-2026-11-10/validation.json"
+        ]
+      }
+    },
+    {
+      "name": "new_and_changed_whitespace",
+      "result": "PASS",
+      "detail": "Includes new untracked Markdown files, in addition to git diff --check."
+    },
+    {
+      "name": "git_identity_preserved",
+      "result": "PASS",
+      "detail": "HEAD and branch retained; no Git mutation/publication was performed."
+    },
+    {
+      "name": "journal_and_metadata",
+      "result": "PASS",
+      "detail": "Exclusive schema-v1 journal, actual original-kit skill fingerprint, null unavailable counters, and scoped maintenance metadata saved."
+    }
+  ],
+  "review": "delivery_owner_self_review",
+  "source_sha256": {
+    "AGENTS.md": "6a9a015936d991a36d02cb45f67fe418db0f2a377e20afcaba9ff6dd3a6b2a46",
+    "docs/agent-coordination-templates.md": "7465459a12b2eb71a09eb5544cc9e195d3b17444059a349f81680e9ec648bf8d",
+    "docs/handoff-templates.md": "ffad4fdd19dee59a30a15405ac6c4c4c15be4cf3cdb3b2db3d9c809add4597b0",
+    "docs/project-context.md": "e3fe40a65ba860865c0a42c8c1575c31bfb482dbd89e6d36c93ab35287f8ea11",
+    "docs/project-plan.md": "03a5749f4fe66796ea073e1651c5777db210bdc68b992265ec912a621df07d76",
+    "docs/project-state.md": "bf937ce74ccb5ad2f188bd417de0fef6e60722fa8cb87e028bbed91d7275700d",
+    "docs/skills-manifest.json": "846093c77a71323fa77b68c33d45e146ea65d984380a43b75ff04aa88d11e3b8",
+    "docs/tasks/KIT-HANDOFF-2026-11-10.md": "5143b5ca398fe2be2619353e1145470a888a0000e7c55023c83f0ccd6755eea2",
+    "docs/team-policy.md": "f624908e9a2e902a79f19a3ffe1b86727e290b3ae45f6e0f57680a6900f9c319",
+    "docs/team-workflow.md": "e015eff3cb449dc8bc02c55a8d5e7421f4c1e23faa1cbcdbf33f8b4b0d79f805",
+    "docs/verification-guide.md": "b82d00d277457c05cdfec0fa43560d4373f020b8b67f410d9e8073d59bc672e3"
+  },
+  "diagnostic_notes": [
+    "Initial example-row parser included the Markdown separator row; corrected to inspect only data rows, preserving all four expected example assertions. No source rule changed for that parser correction."
+  ],
+  "limitations": [
+    "Documentation/source evidence only; native and cross-session behavior NOT_RUN.",
+    "No independent review, Git publication or adoption initialization."
+  ]
+}

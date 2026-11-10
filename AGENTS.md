@@ -14,9 +14,18 @@ A small task may use a short chat plan. A request to fix/update
 does not itself replace approval of that plan. Read-only investigation
 may inform planning; wait for approval before file edits or implementation.
 
-After approval, complete the covered work without repeated approval
-per file or step. Material solution/scope changes require an amended
-plan and approval. Historical approvals and status records do not
+At the start of every plan, including small tasks, state the delivery type,
+rationale and parent roadmap directly in chat, using the conversation language.
+Apply the [classification criteria](docs/handoff-templates.md#classification):
+preserve an agreed parent roadmap first; otherwise choose by acceptance needs,
+not file count, lines of code or duration. Risk determines checks separately.
+The user/Product Owner approves the classification with the plan.
+
+After approval, complete the current acceptance package without repeated
+approval per file or step. For roadmap delivery, define meaningful packages
+before implementation; stop at each handoff until the user/Product Owner
+accepts the result and authorizes opening the next package. Material changes
+to the solution/scope require an amended plan and approval. Historical approvals and status records do not
 grant standing authority for another task.
 
 Git publication, deployment, production/real-data operations, paid,
@@ -26,7 +35,7 @@ boundaries. Honor human stops and preserve others' work.
 ## Adapt preparation to the task
 
 - Long tasks: complete all production code files and real wiring
-  in the approved scope before writing/updating unit or other tests,
+  in the approved current package before writing/updating unit or other tests,
   then run those tests. Do not alternate code/test per file/function
   or create artificial intermediate handoffs.
 - Complex tasks: investigate the current system, evaluate risks and
@@ -104,6 +113,16 @@ historical records do not authorize starting or resuming another task.
 This responsibility creates no scheduler, daemon or harness.
 
 ## Finish and hand off
+
+Use the [two handoff templates](docs/handoff-templates.md). Both show an actual
+result image or a source-grounded technical diagram directly in conversation,
+with revision, evidence status and limits, plus outline, acceptance checklist,
+technical evidence, WHAT, skills and next-step options. Roadmap delivery shows
+accepted, awaiting acceptance, next and later package names from the agreed
+plan. One-handoff tasks omit that roadmap block. A small roadmap package keeps
+its overall position and stops. Keep the stable picture in project-context.md,
+detailed intended outcomes in project-plan.md and live status only in
+project-state.md. Missing visuals or required checks remain explicit.
 
 Use existing project tools and checks appropriate to the approved
 scope. During the test phase, repair evidenced defects and rerun
