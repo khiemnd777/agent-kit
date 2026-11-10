@@ -128,8 +128,9 @@ Inspect actual instructions and their callers/entrypoints. Confirm that one owne
 
 Consider these concrete cases without executing a behavioral harness:
 
-- A short fix: present a concise plan and wait for approval, then implement/check without a mandatory task file or repeated approval per file.
-- A long task: finish all approved production files and real wiring before writing/updating and running tests; one checkpoint only for a real interruption/handoff.
+- A short fix: declare delivery type, rationale and parent roadmap in a concise plan and wait for approval, then implement/check without a mandatory task file or repeated approval per file. A small package inside a roadmap retains the parent stops.
+- Classification/handoff: choose by acceptance needs rather than file count or duration; keep risk checks separate. Both handoff types show a real result image or source-grounded diagram with limits; one-handoff work omits the roadmap block.
+- A roadmap task: predefine meaningful acceptance packages; complete code/wiring before tests within each approved package, then hand off and stop for user/Product Owner acceptance and permission to open the next. This is not a per-file checkpoint chain.
 - A complex task: investigate risks/alternatives and discuss a concrete proposal before approval/implementation; use the same code-first test order.
 - A UI task: preview an ASCII mockup before approval/coding; rendered/interaction verification follows completed code/wiring.
 - A combined long/complex/UI task applies all three requirements.

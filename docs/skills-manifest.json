@@ -1157,7 +1157,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "019e09badc3ede8f4612aa5aaec751e12b82491d6fe68371911e2cf28e1a02b0",
+      "sha256": "6a9a015936d991a36d02cb45f67fe418db0f2a377e20afcaba9ff6dd3a6b2a46",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1205,7 +1205,7 @@
     },
     {
       "path": "docs/agent-coordination-templates.md",
-      "sha256": "6d3b9b9c114de8f3038c852c16cffbfc80454b2884f30be0b62729de813f7f33",
+      "sha256": "7465459a12b2eb71a09eb5544cc9e195d3b17444059a349f81680e9ec648bf8d",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1261,7 +1261,7 @@
     },
     {
       "path": "docs/team-policy.md",
-      "sha256": "e1df7312078ee8a5ba72375930086f09fca4739d3a9e134d17db3bc52d77ec71",
+      "sha256": "f624908e9a2e902a79f19a3ffe1b86727e290b3ae45f6e0f57680a6900f9c319",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1269,7 +1269,7 @@
     },
     {
       "path": "docs/team-workflow.md",
-      "sha256": "d5b2355ecc405b4c3e3f10b9f5f66f20093117b00bad4c79387391835b2a3f21",
+      "sha256": "e015eff3cb449dc8bc02c55a8d5e7421f4c1e23faa1cbcdbf33f8b4b0d79f805",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1293,7 +1293,7 @@
     },
     {
       "path": "docs/verification-guide.md",
-      "sha256": "a61d6981892501781517005f3d7b1fdae5f3f3e2075ec543d8b869f48957fe06",
+      "sha256": "b82d00d277457c05cdfec0fa43560d4373f020b8b67f410d9e8073d59bc672e3",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1595,6 +1595,14 @@
       "origin": {
         "source": "agent-kit contributors",
         "license": "MIT"
+      }
+    },
+    {
+      "path": "docs/handoff-templates.md",
+      "sha256": "ffad4fdd19dee59a30a15405ac6c4c4c15be4cf3cdb3b2db3d9c809add4597b0",
+      "origin": {
+        "license": "MIT",
+        "source": "agent-kit contributors"
       }
     }
   ],

@@ -6,9 +6,11 @@ Use the [lean core](../AGENTS.md) for routine work and this detail when delivery
 
 Read the request, relevant decisions and the minimum source/tests. Derive the outcome, scope and observable acceptance. The main session owns delivery. Present a plan and obtain explicit user/Product Owner approval before any implementation or file edits. Planning-only work stays read-only unless saving the artifact is authorized.
 
-Every task, even a contained fix, requires planning and approval; a short chat plan suffices for small work and does not require a new task file. Select minimum sufficient skills with brief reasons. For complex tasks, investigate the current system, assess risks and alternatives, discuss a concrete proposal and obtain approval. For any UI task, include an ASCII text mockup for preview/discussion before approval and coding. Combined tasks apply all applicable requirements. Once approved, carry the covered work through without per-file or per-step approvals.
+Every task, even a contained fix, requires planning and approval; a short chat plan suffices for small work and does not require a new task file. Select minimum sufficient skills with brief reasons. For complex tasks, investigate the current system, assess risks and alternatives, discuss a concrete proposal and obtain approval. For any UI task, include an ASCII text mockup for preview/discussion before approval and coding. Combined tasks apply all applicable requirements. Once approved, carry the current acceptance package through without per-file or per-step approvals. For roadmap delivery, define meaningful packages before implementation and stop at each handoff until the user/Product Owner accepts the result and authorizes opening the next package.
 
 Render WHAT directly in the conversation at plan presentation and completed-work reporting, following [the core rule](../AGENTS.md#show-what-in-the-conversation). A saved task table or file link is not a substitute. Keep the existing skills table and next-step options.
+
+Classify delivery at the start of every plan, including small tasks: state **Delivery type**, **Rationale** and **Parent roadmap** directly in chat, localized to the conversation language. Use the [classification criteria](handoff-templates.md#classification): retain an agreed parent roadmap and stops first; otherwise choose roadmap delivery when separate acceptance rounds are needed, or one handoff when the complete result can be assessed together. File count, lines of code and duration are supporting information only; risk controls are separate. If scope grows materially, present an amended plan/classification before expanding implementation.
 
 ## Proportionate effort
 
@@ -28,7 +30,7 @@ A role is a responsibility, not a required extra agent. The owner can design, im
 
 ## Development and local feedback
 
-For long, complex or UI tasks, complete all approved production code files and real integration before writing/updating unit or other tests, then run them. Do not alternate code/test per file or function or split the work into artificial handoffs. Existing source/tests may be inspected during investigation; an unsafe dependency still blocks affected work. Use existing commands and meaningful tests in the test phase. Cover actual imports, routes, consumers and data paths; an unused API or disconnected UI is incomplete. A regression check should distinguish the reported defect from correct behavior. Do not add tests that merely restate implementation or an unrelated platform for a documentation edit.
+For long, complex or UI tasks, complete all approved production code files and real integration within the current acceptance package before writing/updating unit or other tests, then run them. Do not alternate code/test per file or function or split the work into artificial handoffs. Existing source/tests may be inspected during investigation; an unsafe dependency still blocks affected work. Use existing commands and meaningful tests in the test phase. Cover actual imports, routes, consumers and data paths; an unused API or disconnected UI is incomplete. A regression check should distinguish the reported defect from correct behavior. Do not add tests that merely restate implementation or an unrelated platform for a documentation edit.
 
 Repair defects caused by the change within valid scope. If basic setup blocks progress, diagnose the concrete missing capability and establish only the necessary readiness under existing authority. Do not turn product work into an incidental runner, selector, admission or review system.
 
@@ -83,6 +85,8 @@ Capture outcome/scope/acceptance, done/todo, decisions and latest stop, revision
 Separate parallel ownership and agree contracts at real dependencies. Git is not a live lock or message channel. The assigning owner integrates children; a sent stop is not proof a worker stopped.
 
 ## Handoff and completion
+
+Use the [two handoff templates](handoff-templates.md): roadmap delivery hands off each predefined meaningful package and waits for acceptance and permission to open the next; one-handoff tasks omit the roadmap block. Both show an actual result image or a source-grounded technical diagram directly in chat with revision, evidence status and limits. Retain the outline, observable acceptance checklist, technical evidence, WHAT, skills and next-step options. A missing required visual is disclosed, never replaced with a mockup or generated image as runtime evidence.
 
 Finish when required implementation/callers and scoped acceptance are satisfied, appropriate verification is complete, and no in-scope blocker remains. Optional polish, wider audits or unrelated refactors are separate work.
 
