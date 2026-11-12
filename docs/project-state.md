@@ -90,3 +90,7 @@ Khiêm requested 1.0.0, removal of product preview status and field-tested SME p
 ## Git publication — 2026-11-12
 
 Khiêm explicitly authorized committing all current changes, pushing a task branch and creating a PR into `main`. This supersedes earlier no-publication boundaries for this publication only; no merge, tag or deployment authorized. Current main equals origin/main at 8161bfe. Package integrity, four exporter regression tests, Grok freshness and whitespace checks PASS. Publication is in progress on planned branch `refactor/multi-client-readme-1.0.0`. Runtime/client observations and historical acceptance statuses remain unchanged. [Publication journal](engineering/skill-usage/records/GIT-PUBLISH-2026-11-12/implementation-1.json).
+
+### Publication result
+
+All pre-existing changes committed as `e809f77` and pushed to `refactor/multi-client-readme-1.0.0`. [PR #7](https://github.com/khiemnd777/agent-kit/pull/7) is OPEN into `main`; no merge/tag/release/deploy performed. [Publication result](engineering/skill-usage/records/GIT-PUBLISH-2026-11-12/publication-result-1.json). Next action: review the PR; merging requires separate authorization. This receipt is committed as a follow-up publication record.
