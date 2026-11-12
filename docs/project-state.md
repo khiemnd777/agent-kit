@@ -23,6 +23,16 @@ The single current-state summary for an adopting project; link task records rath
 
 The delivery owner proactively updates this summary and affected tasks within authorized writes after approval/scope changes, meaningful results, blockers/stops and before handoff. Keep stable design in project-context.md, intended outcomes in project-plan.md and history in tasks/decisions. This fresh template grants no authority and is not Agent Kit maintenance status. No scheduler or daemon is implied. Distinguish integrated commits from branch results, and agent checks from human acceptance. Verify approval provenance before continuing from another session.
 
+## Current Agent Kit release — 2026-11-12
+
+- **MERGED:** [PR #7](https://github.com/khiemnd777/agent-kit/pull/7) merged into `main` on 2026-11-12 at 09:20:46 (Asia/Ho_Chi_Minh), producing `be697ecf333a929ca8b8a7aa218db49659d7438d`.
+- **RELEASED:** annotated tag `v1.0.0` points to that same commit. [Agent Kit v1.0.0](https://github.com/khiemnd777/agent-kit/releases/tag/v1.0.0) was published on 2026-11-12 at 09:47:15 (Asia/Ho_Chi_Minh); it is neither a draft nor a prerelease.
+- **Git cleanup:** after PR #7 merged, local `main` was synchronized to the release commit and the merged feature branch was deleted locally and on origin following Khiêm's explicit request.
+- **Evidence and limits:** GitHub PR/Release metadata and the local peeled tag were checked directly. Package integrity, four exporter regression tests and Grok reference freshness passed before publication. Native-client behavior, effective models/permissions, Cursor duplicate-skill resolution, Grok upload/retrieval and exact GitHub rendering remain unverified. Release publication does not establish those behaviors or additional human acceptance; no application deployment was performed.
+- **Authority / next action:** Khiêm explicitly authorized tag and GitHub Release creation. Khiêm subsequently authorized committing this state update and its journal, pushing a documentation branch and creating a PR into `main`; publication is in progress on `refactor/release-state-v1.0.0`. This does not authorize merging that PR or changing the release.
+
+The dated maintenance entries below preserve earlier phase observations and approval boundaries. Their earlier open/pending-publication statements are historical; this section is the current PR #7 / v1.0.0 release status. The adoption template above remains uninitialized.
+
 ## Kit maintenance pointer — 2026-11-06
 
 [TASK-009](tasks/TASK-009.md) records approved DL01–DL04 source-location guidance in debugging. Source/mirror and metadata complete; package and scoped source checks PASS, journal saved. Optional host validator unavailable (missing yaml); native behavior NOT_RUN; DL01–DL04 HUMAN ACCEPTED / TASK-009 CLOSED by Khiêm on 2026-11-06. Scoped content commit 34973ea pushed to origin/main (exit 0; divergence 0/0); receipt metadata published separately. No native pilot or adopter update. Adoption template values above remain uninitialized; this pointer grants no adoption authority.
@@ -91,6 +101,6 @@ Khiêm requested 1.0.0, removal of product preview status and field-tested SME p
 
 Khiêm explicitly authorized committing all current changes, pushing a task branch and creating a PR into `main`. This supersedes earlier no-publication boundaries for this publication only; no merge, tag or deployment authorized. Current main equals origin/main at 8161bfe. Package integrity, four exporter regression tests, Grok freshness and whitespace checks PASS. Publication is in progress on planned branch `refactor/multi-client-readme-1.0.0`. Runtime/client observations and historical acceptance statuses remain unchanged. [Publication journal](engineering/skill-usage/records/GIT-PUBLISH-2026-11-12/implementation-1.json).
 
-### Publication result
+### Publication result — historical pre-merge receipt
 
-All pre-existing changes committed as `e809f77` and pushed to `refactor/multi-client-readme-1.0.0`. [PR #7](https://github.com/khiemnd777/agent-kit/pull/7) is OPEN into `main`; no merge/tag/release/deploy performed. [Publication result](engineering/skill-usage/records/GIT-PUBLISH-2026-11-12/publication-result-1.json). Next action: review the PR; merging requires separate authorization. This receipt is committed as a follow-up publication record.
+All pre-existing changes committed as `e809f77` and pushed to `refactor/multi-client-readme-1.0.0`. At this receipt, [PR #7](https://github.com/khiemnd777/agent-kit/pull/7) was OPEN into `main`; merge/tag/release/deploy had not yet occurred. [Publication result](engineering/skill-usage/records/GIT-PUBLISH-2026-11-12/publication-result-1.json). The next action at that time was PR review. This receipt was committed as a follow-up publication record. The current merge and release result is recorded above.
