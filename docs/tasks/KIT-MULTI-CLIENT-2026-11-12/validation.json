@@ -1,0 +1,40 @@
+{
+  "package_integrity": {
+    "status": "PASS",
+    "entries": 112,
+    "mirror_pairs": 35,
+    "skills_per_root": 17
+  },
+  "adapters": {
+    "status": "PASS",
+    "native_definitions": 12,
+    "role_bodies": 3,
+    "imports": "CLAUDE/GEMINI exact shared import",
+    "yaml_parser": "Ruby/Psych separately PASS for 9 Markdown definitions"
+  },
+  "preservation": {
+    "status": "PASS",
+    "unchanged_protected_files": 78,
+    "baseline": "8161bfe",
+    "upstream_origin": "unchanged"
+  },
+  "markdown_links": {
+    "status": "PASS",
+    "checked": 279,
+    "files": 9,
+    "external_fetch": "not part of this check"
+  },
+  "python_syntax": {
+    "status": "PASS",
+    "files": 2
+  },
+  "export_regressions": {
+    "status": "PASS",
+    "tests": 4,
+    "scope": "temporary local fixtures; stale-source read-only check, link portability, deterministic content/licenses/history exclusion and symlink rejection"
+  },
+  "native_behavior": {
+    "status": "NOT_RUN",
+    "reason": "No client launch, install, account mutation or Grok upload in approved local source/package task."
+  }
+}

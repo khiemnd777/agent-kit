@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "event_id": "README-VISUAL-2026-11-12/copy-buttons/planning/1",
+  "event_type": "phase_handoff",
+  "task_id": "README-VISUAL-2026-11-12",
+  "scope_id": "copy-buttons",
+  "recorded_at": "2026-11-12T01:34:59.073590+00:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "phase": "planning",
+  "handoff_index": 1,
+  "classification": {
+    "delivery_type": "one_handoff",
+    "size": "bounded",
+    "complexity": "documentation composition",
+    "ui_involved": true,
+    "visual_mockup": true,
+    "parent_roadmap": null
+  },
+  "authority": {
+    "source": "User asks whether Copy button can be added; local planning permitted",
+    "authorized_scope": "Read-only UI inspection and plan; implementation awaiting approval",
+    "publication": "NOT_AUTHORIZED"
+  },
+  "skills": [
+    {
+      "skill_id": "frontend-ui-engineering",
+      "contribution_summary": "Scoped two copy controls, exact-text copying, success/failure states, keyboard access and narrow layout",
+      "contribution_percent_estimate": 100,
+      "estimate_source": "agent_self_report",
+      "source_identity": {
+        "kind": "repository",
+        "path": ".agents/skills/frontend-ui-engineering/SKILL.md",
+        "version": null,
+        "sha256": "b5c47fed383892428172bf0b9c1ed1aeab50066ff9421a87a6c344f746386495",
+        "fingerprint_basis": "Current repository bytes read during planning"
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "COMPLETED",
+    "verification_level": "Current preview inspected; official GitHub copy-button source consulted",
+    "human_acceptance": "PENDING_REVIEW",
+    "limitations": [
+      "Local preview implementation awaits UI plan approval"
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "client": null,
+    "model": null,
+    "effort": null,
+    "runtime_identity_missing_reason": "No verified runtime identity captured for this phase"
+  },
+  "evidence_refs": [
+    "docs/tasks/README-VISUAL-2026-11-12.md",
+    "README.md",
+    "https://github.blog/news-insights/product-news/whats-new-from-github-changelog-may-2021-recap/"
+  ]
+}

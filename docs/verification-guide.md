@@ -113,6 +113,14 @@ Also check affected local links/anchors and changed metadata using available too
 
 The manifest contains maintained rules/skills/roles/adapters. Additional split guides retain their original upstream identity in `origin.derived_from` and an explained adaptation record; they do not increase the original import count. Mutable project/task/evidence records are excluded. New maintained sources need an intentional inventory update; hashes are not a security or language audit. Recheck only evidence invalidated by actual later changes.
 
+## Additional client adapters and Grok export
+
+After completing an approved source change, compare the three role identities and bodies across `.codex/agents/`, `.claude/agents/`, `.gemini/agents/` and `.cursor/agents/`. Parse Markdown YAML frontmatter using an existing available parser; confirm only supported fields and the intended inherited model/permission behavior. Verify `GEMINI.md` contains the literal `@AGENTS.md` import. Source equality is not native registration or effective permission proof.
+
+Run `python3 scripts/export_grok.py --check` from the root to compare the generated reference with its actual input snapshot. If stale, inspect the source changes, regenerate with `python3 scripts/export_grok.py`, then recheck. This is a local content export, not a runtime harness or upload. Check embedded licenses, policy/skills and rewritten prose links. Test exporter regressions with `python3 -m unittest discover -s tests -p 'test_export_grok.py'` when changing its behavior; tests use temporary files and no account/API.
+
+Preserve existing Codex/Claude sources and skill mirrors. Check Cursor duplicate-source behavior only in an authorized native session; no static checksum establishes deduplication. Keep Gemini/Cursor discovery/invocation/effective access and Grok attachment/retrieval/role behavior NOT_RUN until actually observed. A local package task does not authorize client installation, account changes or source upload.
+
 ## Evidence levels
 
 - Written: source files exist.

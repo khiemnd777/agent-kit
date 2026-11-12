@@ -6,6 +6,8 @@ Keep Agent Kit portable, concise and honest about evidence. The [lean core](AGEN
 
 Edit canonical skills/references in `.agents/`, then copy affected content byte for byte to `.claude/`. Preserve supported frontmatter, inventory, original upstream pin/origin metadata and license. Record approved local adaptations in [provenance](docs/skills-provenance.md) and the manifest; an upstream upgrade needs its actual reviewed scope.
 
+Gemini CLI and Cursor use `.agents/skills/` directly; do not create extra skill mirrors. Keep all four native adapter sets aligned in role identity and body, using each runtime schema. Regenerate the manual Grok reference with `python3 scripts/export_grok.py` after its sources change, and verify with `--check`. The exporter embeds license notices and source fingerprints, never task approvals or private project state.
+
 Common role behavior is in `docs/roles/`. Native adapters route to it using their existing schemas; do not pin models, add tool/sandbox overrides or change global settings as a side effect. Keep project docs/skills in English; user-facing explanations honor explicit language requests.
 
 Use one checkpoint when useful for continuation or required by the project; give shared summaries one writer when edited. Preserve existing work and historical decisions/reports. Do not infer Git mutations, publication or release from an instruction update.

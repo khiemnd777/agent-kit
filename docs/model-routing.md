@@ -8,6 +8,10 @@ The Codex adapters omit `model` and `model_reasoning_effort`. According to the d
 
 The Claude adapters use `model: inherit` and omit effort. Documented model selection gives an invocation model precedence over frontmatter inheritance; environment or organization policy can also affect the runtime choice. Do not infer an observed model solely from this file.
 
+Gemini CLI and Cursor adapters use `model: inherit`, with no effort, temperature, turn/timeout or background overrides. Gemini omits `tools` and `mcpServers`; Cursor omits `readonly` and `is_background`. This preserves the existing kit intent of inherited runtime controls plus bounded role responsibilities; it does not promise that explorer/reviewer tools are technically read-only. Cursor gives its own `.cursor/agents/` definitions precedence over same-name compatibility agents. Managed policy and installed-version behavior still require observation.
+
+Grok consumer web/app has no model-routing adapter here. The human chooses the model/mode exposed by that client; attached role descriptions are conversational guidance, not separate executions.
+
 Record requested/observed routing evidence only when needed for an adoption check or routing question; ordinary delegation needs no new record or repeated model report. If the runtime does not expose the resolved model or effort, mark it **Unknown**. Parsing configuration does not verify inheritance.
 
 ## Deliberate project customization
@@ -42,3 +46,5 @@ Permission inheritance documentation checked on 2026-10-13; model routing source
 - [Claude permission modes](https://code.claude.com/docs/en/sub-agents#permission-modes)
 
 These describe the intended configuration; verify version-sensitive behavior against the installed runtime when adopting or customizing the kit.
+
+Additional adapter sources reviewed 2026-11-12: [Gemini schema/inheritance](https://geminicli.com/docs/core/subagents/) and [Cursor schema/inheritance/precedence](https://cursor.com/docs/subagents). These do not establish native execution of this kit.

@@ -1,0 +1,34 @@
+[
+  {
+    "view": "desktop",
+    "viewport": 1440,
+    "twoButtons": true,
+    "exactClipboardText": true,
+    "keyboardEnter": true,
+    "successFeedback": true,
+    "narrowTargetsAndReachability": true
+  },
+  {
+    "view": "mobile",
+    "viewport": 390,
+    "twoButtons": true,
+    "exactClipboardText": true,
+    "keyboardEnter": true,
+    "successFeedback": true,
+    "narrowTargetsAndReachability": true
+  },
+  {
+    "view": "dark",
+    "viewport": 1440,
+    "twoButtons": true,
+    "exactClipboardText": true,
+    "keyboardEnter": true,
+    "successFeedback": true,
+    "narrowTargetsAndReachability": true
+  },
+  {
+    "injectedClipboardRejection": true,
+    "honestErrorFeedback": true,
+    "retrySucceeded": true
+  }
+]

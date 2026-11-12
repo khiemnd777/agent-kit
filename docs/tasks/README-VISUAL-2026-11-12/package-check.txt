@@ -1,0 +1,1 @@
+PASS: inventory hashes, mirror bytes, 17 skills per root; 3 original / 23 adapted upstream files

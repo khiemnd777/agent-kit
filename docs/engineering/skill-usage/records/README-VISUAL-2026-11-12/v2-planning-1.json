@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "event_id": "README-VISUAL-2026-11-12/v2-support/planning/1",
+  "event_type": "phase_handoff",
+  "task_id": "README-VISUAL-2026-11-12",
+  "scope_id": "readme-support-v2",
+  "recorded_at": "2026-11-12T01:17:38.429148+00:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "phase": "planning",
+  "handoff_index": 1,
+  "classification": {
+    "delivery_type": "one_handoff",
+    "size": "bounded",
+    "complexity": "documentation composition",
+    "ui_involved": false,
+    "visual_mockup": true,
+    "parent_roadmap": null
+  },
+  "authority": {
+    "source": "User accepted v1 and requested v2 Support; local planning documentation permitted by AGENTS.md",
+    "authorized_scope": "Read-only investigation and bounded local planning/acceptance records",
+    "implementation_approval": "PENDING",
+    "publication": "NOT_AUTHORIZED"
+  },
+  "skills": [
+    {
+      "skill_id": "documentation-and-adrs",
+      "contribution_summary": "Reuse current client documentation for a compact Support presentation; preserve exact client scope and manual Grok limits",
+      "contribution_percent_estimate": 100,
+      "estimate_source": "agent_self_report",
+      "source_identity": {
+        "kind": "repository",
+        "path": ".agents/skills/documentation-and-adrs/SKILL.md",
+        "version": null,
+        "sha256": "b93cb7b25f29c432ee6ba9dff6a78e91ea2fa545ac5aa73d89a7cb983122b80c",
+        "fingerprint_basis": "Read current local skill bytes during this phase"
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "COMPLETED",
+    "verification_level": "Existing README inspected; v2 proposal only",
+    "human_acceptance": "PENDING_REVIEW",
+    "limitations": [
+      "v2 implementation awaits plan approval"
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured phase counter available"
+    },
+    "client": null,
+    "model": null,
+    "effort": null,
+    "runtime_identity_missing_reason": "No verified runtime identity captured for this phase"
+  },
+  "evidence_refs": [
+    "README.md",
+    "docs/tasks/README-VISUAL-2026-11-12.md"
+  ]
+}
