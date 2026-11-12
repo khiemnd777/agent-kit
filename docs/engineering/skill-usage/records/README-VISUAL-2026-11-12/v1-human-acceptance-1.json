@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "event_id": "README-VISUAL-2026-11-12/v1-human-acceptance/1",
+  "event_type": "evaluation",
+  "task_id": "README-VISUAL-2026-11-12",
+  "scope_id": "readme-visual-redesign",
+  "recorded_at": "2026-11-12T01:17:38.429148+00:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "human_feedback",
+  "subject_event_id": "README-VISUAL-2026-11-12/implementation/1",
+  "assessment_source": "human",
+  "review_attempt": 1,
+  "decision": "ACCEPTED",
+  "findings": [],
+  "evidence_refs": [
+    "Current chat: Khiêm stated nghiệm thu v1. mở v2: tôi muốn thêm vào mục Support: Claude, Codex, Gemini, Cursor, Grok.",
+    "docs/tasks/README-VISUAL-2026-11-12.md"
+  ]
+}

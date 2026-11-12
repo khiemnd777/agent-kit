@@ -1,0 +1,1 @@
+PASS: 48 README paths/anchors; approved section order; canonical table fields; illustrative framing; Support/prompts unchanged

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "event_id": "README-VISUAL-2026-11-12/copy-buttons/human-acceptance/1",
+  "event_type": "evaluation",
+  "task_id": "README-VISUAL-2026-11-12",
+  "scope_id": "copy-buttons",
+  "recorded_at": "2026-11-12T01:41:58.668288+00:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "human_feedback",
+  "subject_event_id": "README-VISUAL-2026-11-12/copy-buttons/implementation/1",
+  "assessment_source": "human",
+  "review_attempt": 1,
+  "decision": "ACCEPTED",
+  "findings": [],
+  "evidence_refs": [
+    "Current chat: Khiêm stated Nghiệm thu nút copy.",
+    "docs/tasks/README-VISUAL-2026-11-12.md"
+  ]
+}

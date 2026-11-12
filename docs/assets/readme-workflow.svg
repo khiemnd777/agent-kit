@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="244" viewBox="0 0 1100 244" role="img" aria-labelledby="title desc">
+<title id="title">Agent Kit delivery workflow</title>
+<desc id="desc">Plan, user or Product Owner approval, build the approved scope, verify and repair scoped defects, and hand off results with evidence. Material scope changes require plan approval. Human acceptance is separate from verification.</desc>
+<rect x="1" y="1" width="1098" height="242" rx="16" fill="#ffffff" stroke="#d0d7de"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="24" y="32" fill="#57606a" font-size="12" font-weight="700" letter-spacing="1.5">FROM REQUEST TO REVIEWABLE RESULT</text>
+<rect x="24" y="52" width="196" height="130" rx="10" fill="#eef2ff"/>
+<text x="40" y="80" fill="#4338ca" font-size="12" font-weight="700">01</text>
+<text x="40" y="108" fill="#4338ca" font-size="18" font-weight="700">PLAN</text>
+<text x="40" y="137" fill="#24292f" font-size="12">Investigate the project</text>
+<text x="40" y="156" fill="#57606a" font-size="12">Propose scope and checks</text>
+<path d="M225 116h8m-4-4 4 4-4 4" fill="none" stroke="#57606a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="238" y="52" width="196" height="130" rx="10" fill="#fff7ed"/>
+<text x="254" y="80" fill="#9a3412" font-size="12" font-weight="700">02</text>
+<text x="254" y="108" fill="#9a3412" font-size="18" font-weight="700">APPROVE</text>
+<text x="254" y="137" fill="#24292f" font-size="12">You / Product Owner</text>
+<text x="254" y="156" fill="#57606a" font-size="12">Approve before building</text>
+<path d="M439 116h8m-4-4 4 4-4 4" fill="none" stroke="#57606a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="452" y="52" width="196" height="130" rx="10" fill="#eff6ff"/>
+<text x="468" y="80" fill="#1d4ed8" font-size="12" font-weight="700">03</text>
+<text x="468" y="108" fill="#1d4ed8" font-size="18" font-weight="700">BUILD</text>
+<text x="468" y="137" fill="#24292f" font-size="12">Complete approved work</text>
+<text x="468" y="156" fill="#57606a" font-size="12">Connect the real layers</text>
+<path d="M653 116h8m-4-4 4 4-4 4" fill="none" stroke="#57606a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="666" y="52" width="196" height="130" rx="10" fill="#f0fdfa"/>
+<text x="682" y="80" fill="#0f766e" font-size="12" font-weight="700">04</text>
+<text x="682" y="108" fill="#0f766e" font-size="18" font-weight="700">VERIFY</text>
+<text x="682" y="137" fill="#24292f" font-size="12">Run relevant checks</text>
+<text x="682" y="156" fill="#57606a" font-size="12">Repair scoped defects</text>
+<path d="M867 116h8m-4-4 4 4-4 4" fill="none" stroke="#57606a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="880" y="52" width="196" height="130" rx="10" fill="#f0fdf4"/>
+<text x="896" y="80" fill="#166534" font-size="12" font-weight="700">05</text>
+<text x="896" y="108" fill="#166534" font-size="18" font-weight="700">HAND OFF</text>
+<text x="896" y="137" fill="#24292f" font-size="12">Show results and evidence</text>
+<text x="896" y="156" fill="#57606a" font-size="12">State the remaining limits</text>
+<text x="24" y="216" fill="#57606a" font-size="12">Material scope change? Return to plan approval. Verification does not replace human acceptance.</text>
+</g></svg>

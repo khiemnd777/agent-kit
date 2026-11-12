@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "event_id": "KIT-MULTI-CLIENT-2026-11-12/implementation/1",
+  "event_type": "phase_handoff",
+  "task_id": "KIT-MULTI-CLIENT-2026-11-12",
+  "scope_id": "multi-client-source-support",
+  "recorded_at": "2026-11-12T07:36:52.595415+07:00",
+  "reported_by": "main-session",
+  "source_kind": "agent_self_report",
+  "phase": "implementation",
+  "handoff_index": 1,
+  "classification": {
+    "delivery_type": "one_handoff",
+    "size": "bounded",
+    "complexity": "cross-client-compatibility",
+    "ui": false,
+    "parent_roadmap": null
+  },
+  "authority": {
+    "source": "Khi\u00eam: \u201cDuy\u1ec7t\u201d in current conversation after plan v1 and Gemini CLI clarification",
+    "authorized_scope": "Local adapters, export/guide/bootstrap, affected docs/manifest and relevant checks. No install, account upload, external write, Git publication or deployment."
+  },
+  "skills": [
+    {
+      "skill_id": "documentation-and-adrs",
+      "contribution_summary": "Implement and document shared-source adapters, manual export contract and reproducible refresh/verification.",
+      "contribution_percent_estimate": 60,
+      "estimate_source": "agent_estimate",
+      "source_identity": {
+        "kind": "repository",
+        "path": ".agents/skills/documentation-and-adrs/SKILL.md",
+        "version": null,
+        "sha256": "b93cb7b25f29c432ee6ba9dff6a78e91ea2fa545ac5aa73d89a7cb983122b80c",
+        "fingerprint_basis": "Current applied skill bytes read in this task."
+      }
+    },
+    {
+      "skill_id": "source-driven-development",
+      "contribution_summary": "Verify Gemini/Cursor schema, inheritance/precedence and consumer Grok limits using official documentation.",
+      "contribution_percent_estimate": 20,
+      "estimate_source": "agent_estimate",
+      "source_identity": {
+        "kind": "repository",
+        "path": ".agents/skills/source-driven-development/SKILL.md",
+        "version": null,
+        "sha256": "ea9d93de7dbddafa9c79afe456400c46145e0c6b2361f83aad79137c0a717008",
+        "fingerprint_basis": "Current applied skill bytes read in this task."
+      }
+    },
+    {
+      "skill_id": "code-review-and-quality",
+      "contribution_summary": "Self-review coherent implementation, preserve existing sources, validate adapter parity and exporter regressions.",
+      "contribution_percent_estimate": 20,
+      "estimate_source": "agent_estimate",
+      "source_identity": {
+        "kind": "repository",
+        "path": ".agents/skills/code-review-and-quality/SKILL.md",
+        "version": null,
+        "sha256": "045ed6d37f590d7ad3b2ee47c1e66ada4bbff1e9d5d232c20a4eeaa5694e39f6",
+        "fingerprint_basis": "Current applied skill bytes read in this task."
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "COMPLETED",
+    "verification_level": "SOURCE_PACKAGE_AND_LOCAL_EXPORT_TESTS",
+    "human_acceptance": "PENDING_REVIEW",
+    "limitations": [
+      "Native runtime/discovery/permissions and Cursor duplicate resolution NOT_RUN.",
+      "Grok upload/retrieval/persistence and account size/context acceptance NOT_RUN.",
+      "Self-review only; no independent agent, Git publication or deployment."
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured counters available for this implementation phase."
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured counters available for this implementation phase."
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured counters available for this implementation phase."
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured counters available for this implementation phase."
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured counters available for this implementation phase."
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No measured counters available for this implementation phase."
+    },
+    "client": null,
+    "model": null,
+    "effort": null
+  },
+  "evidence_refs": [
+    "docs/tasks/KIT-MULTI-CLIENT-2026-11-12.md",
+    "docs/tasks/KIT-MULTI-CLIENT-2026-11-12/validation.json",
+    "docs/verification-results.md",
+    "scripts/export_grok.py",
+    "tests/test_export_grok.py"
+  ]
+}

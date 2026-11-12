@@ -1,0 +1,1 @@
+PASS: both ASCII mockups present; UI approval/evidence distinctions preserved; prompts unchanged; 6 tables and 4 code blocks render intact

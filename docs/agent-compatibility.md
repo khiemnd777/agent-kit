@@ -4,13 +4,25 @@
 
 ## Runtime adapters
 
-| Capability | Codex | Claude Code |
-| --- | --- | --- |
-| Shared project instructions | AGENTS.md | CLAUDE.md with literal @AGENTS.md import |
-| Repository skills | .agents/skills | .claude/skills |
-| Native custom agents | .codex/agents/*.toml | .claude/agents/*.md |
-| Default model intent | Omit model and model_reasoning_effort in native definitions | model: inherit; omit effort |
-| Explorer/reviewer responsibilities | No application code changes, implementation or deployment; omit sandbox override | No application code changes, implementation or deployment; omit tools, disallowedTools and permissionMode overrides |
+| Capability | Codex | Claude Code | Gemini CLI | Cursor | Grok web/app |
+| --- | --- | --- | --- | --- | --- |
+| Shared instructions | AGENTS.md | CLAUDE.md imports @AGENTS.md | GEMINI.md imports @AGENTS.md | Root AGENTS.md | Manual reference attachment |
+| Skills | .agents/skills | .claude/skills | .agents/skills | .agents/skills; compatibility discovery also sees .claude/skills | Embedded reference sections, not registered skills |
+| Native custom agents | .codex/agents/*.toml | .claude/agents/*.md | .gemini/agents/*.md | .cursor/agents/*.md | Not supplied; conversational roles only |
+| Model intent | Omit model/effort | model: inherit; omit effort | model: inherit; omit tuning overrides | model: inherit; omit tuning overrides | Human's selection; no routing config |
+| Role/permission intent | Bounded role text; omit sandbox override | Bounded role text; omit tool/permission overrides | Same role text; omit tools/MCP overrides | Same role text; omit readonly/background overrides | No local access or execution inferred from attachment |
+
+### Gemini CLI and Cursor adoption
+
+The three new adapters per client preserve the existing role names, descriptions and instruction bodies. Gemini uses the documented Markdown/YAML custom-agent schema; omitted tool fields inherit parent-session availability according to the documentation. Cursor native `.cursor/agents/` definitions take precedence over same-name Claude/Codex compatibility definitions. Neither configuration establishes effective permissions or actual model identity without observation. No global settings or client feature toggles are shipped; check the installed version if discovery fails.
+
+Gemini discovers `.agents/skills/` as the workspace alias, with precedence over `.gemini/skills/` at the same tier. Cursor documents both `.agents/skills/` and `.claude/skills/` discovery, so this kit's existing Claude mirror may produce same-name candidates. They remain byte-identical; **effective skill source/deduplication is Unknown** until inspected in Cursor. Do not report 34 distinct skills or add another `.cursor/skills/` mirror. Check the selected path, preserve Claude support and report a loading issue rather than changing global config or deleting mirrors.
+
+For Gemini, inspect `/memory show` and `/skills list` in an authorized native check to confirm imported core and canonical skills. For Cursor, inspect the available skills and native roles/effective sources in the actual client. Those commands/UI observations have **NOT_RUN** here; official documentation is authoring evidence only.
+
+### Grok consumer web/app
+
+Use the [manual guide](grok/README.md), [bootstrap](grok/bootstrap.md) and generated [reference](grok/agent-kit-reference.md). The export embeds shared policy, skill/reference content, playbooks and licenses so uploaded prose does not depend on local relative paths. It deliberately excludes maintenance approvals, task records, journals and current state. Its source snapshot hash and read-only freshness check detect stale exports. Local generation never uploads anything. File acceptance, retrieval, custom-instructions UI/persistence and workflow behavior remain **NOT_RUN**. Do not infer local repo access, native skill activation/subagents or shell execution from consumer chat attachments.
 
 The literal import in CLAUDE.md is outside a code block. Claude's current AGENTS.md support has client/version and settings conditions; the import keeps one policy source without copying its body.
 
@@ -30,7 +42,7 @@ Models, tools and context are local to each runtime. Cross-tool continuation use
 
 ## Official sources
 
-Source review date: 2026-10-12; permission/tool inheritance rechecked on 2026-10-13. These references establish authoring mechanisms, not successful execution of this kit.
+Source review date: 2026-10-12; permission/tool inheritance rechecked on 2026-10-13. These references establish authoring mechanisms, not successful execution of this kit. Gemini CLI, Cursor and Grok sources below were reviewed on 2026-11-12.
 
 - [Codex project instructions](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 - [Codex skill discovery](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
@@ -42,3 +54,11 @@ Source review date: 2026-10-12; permission/tool inheritance rechecked on 2026-10
 - [Claude models](https://code.claude.com/docs/en/model-config)
 
 Verify these mechanisms against the client versions under evaluation before claiming compatibility. A two-machine portability claim requires observations on both machines; it is not a prerequisite for a local source change.
+
+- [Gemini context imports](https://geminicli.com/docs/cli/gemini-md/)
+- [Gemini skill discovery](https://geminicli.com/docs/cli/skills/)
+- [Gemini custom agents and schema](https://geminicli.com/docs/core/subagents/)
+- [Cursor project instructions](https://cursor.com/docs/rules)
+- [Cursor skill discovery](https://cursor.com/docs/skills)
+- [Cursor custom agents, precedence and schema](https://cursor.com/docs/subagents)
+- [Grok web/app file uploads](https://docs.x.ai/grok/faq)

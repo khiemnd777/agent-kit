@@ -311,3 +311,9 @@ Scope: approved generalized workflow/journal overlay on `336229d671589508898d39e
 | Human implementation acceptance / merge / release | PENDING_REVIEW / NOT_RUN | Approval covers implementation and branch publication, not implementation acceptance, merge or release |
 
 Existing read-only package recipe, temporary Python structural/link inspections, system Ruby/Psych and Git were used. No new harness, dependency, global configuration, worktree or application change. Detailed scope and publication boundaries: [TASK-008](tasks/TASK-008.md).
+
+## Multi-client source adapters — 2026-11-12
+
+Approved [KIT-MULTI-CLIENT-2026-11-12](tasks/KIT-MULTI-CLIENT-2026-11-12.md), working-tree source on baseline 8161bfe. PASS: published package recipe (112 entries, 35 mirrors, 17 skills/root); matching identities/bodies for three roles in 12 native adapters; Ruby/Psych parses nine YAML frontmatters; TOML parsing; 78 protected core/Codex/Claude/skill/mirror files unchanged; 279 local links/anchors; four exporter regressions, deterministic export/freshness and diff whitespace. Initial exporter test failure on macOS temporary-path ancestry repaired and rerun PASS. Source self-review complete; no independent reviewer invoked. See [validation](tasks/KIT-MULTI-CLIENT-2026-11-12/validation.json) and task/journal for scope and evidence.
+
+Gemini/Cursor native discovery, invocation, effective model/permissions and duplicate skill resolution remain NOT_RUN. Grok web/app upload, retrieval, instruction persistence and two-machine checks remain NOT_RUN. The approximately 324 KB manual reference is locally generated, not uploaded; its source snapshot detects stale inputs. Source completion is not human acceptance or release. No client install, external account write, Git publication or deploy.

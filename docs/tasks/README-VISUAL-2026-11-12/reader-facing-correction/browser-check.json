@@ -1,0 +1,29 @@
+[
+  {
+    "name": "desktop",
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "images": true,
+    "prompts": true,
+    "navigation": true,
+    "tables": 6
+  },
+  {
+    "name": "mobile",
+    "viewport": 390,
+    "documentWidth": 390,
+    "images": true,
+    "prompts": true,
+    "navigation": true,
+    "tables": 6
+  },
+  {
+    "name": "dark",
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "images": true,
+    "prompts": true,
+    "navigation": true,
+    "tables": 6
+  }
+]
