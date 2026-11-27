@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "event_id": "KIT-CODE-PRINCIPLES-2026-11-27/shared-principles/implementation/1",
+  "event_type": "phase_handoff",
+  "task_id": "KIT-CODE-PRINCIPLES-2026-11-27",
+  "scope_id": "shared-principles",
+  "recorded_at": "2026-11-27T21:21:38+07:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "phase": "implementation",
+  "handoff_index": 1,
+  "classification": {
+    "size": "small",
+    "complexity": "low",
+    "ui": false,
+    "delivery_type": "one_handoff",
+    "rationale": "The shared instruction and its generated reference and manifest are assessed together.",
+    "parent_roadmap": null
+  },
+  "authority": {
+    "approval_source": "Khiêm replied “OK” in the current chat to the exact text, placement and synchronization proposal.",
+    "authorized_scope": "Local Agent Kit instructions, Grok reference, two manifest hashes and routine state and journal records. Git publication requires separate authorization."
+  },
+  "skills": [
+    {
+      "skill_id": "documentation-and-adrs",
+      "contribution_summary": "Inserted the approved text in the shared source, regenerated the Grok reference, updated the manifest and verified the exact wording and package integrity.",
+      "contribution_percent_estimate": 100,
+      "estimate_source": "agent_self_report",
+      "source_identity": {
+        "kind": "repository",
+        "path": ".agents/skills/documentation-and-adrs/SKILL.md",
+        "version": null,
+        "sha256": "b93cb7b25f29c432ee6ba9dff6a78e91ea2fa545ac5aa73d89a7cb983122b80c",
+        "fingerprint_basis": "SHA-256 of the repository skill bytes read and applied in this phase."
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "COMPLETED",
+    "verification_level": "Verbatim approved text and scope comparison, Grok freshness, 114 manifest hashes and four exporter tests PASS. Delivery-owner self-review.",
+    "human_acceptance": "PENDING_REVIEW",
+    "limitations": [
+      "Fresh-session agent behavior NOT_RUN.",
+      "Local working-tree handoff based on d59f9d85eef2ed8241bd96f4b435b8772d341f25. No Git publication."
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "client": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "model": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "effort": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    }
+  },
+  "evidence_refs": [
+    "AGENTS.md",
+    "docs/grok/agent-kit-reference.md",
+    "docs/skills-manifest.json",
+    "docs/project-state.md",
+    "tests/test_export_grok.py"
+  ]
+}
