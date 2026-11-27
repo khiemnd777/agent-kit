@@ -22,6 +22,12 @@ preserve an agreed parent roadmap first; otherwise choose by acceptance needs,
 not file count, lines of code or duration. Risk determines checks separately.
 The user/Product Owner approves the classification with the plan.
 
+During planning, use [Ask Me Question](docs/team-workflow.md#ask-me-question)
+when the available sources leave an important choice unresolved, when an
+icebox item cannot be broken into work that can be planned, or when WHAT,
+HOW or WHERE needs user confirmation. Wait for the answer on dependent work,
+continue authorized independent work, and update the plan from the answer.
+
 After approval, complete the current acceptance package without repeated
 approval per file or step. For roadmap delivery, define meaningful packages
 before implementation; stop at each handoff until the user/Product Owner
