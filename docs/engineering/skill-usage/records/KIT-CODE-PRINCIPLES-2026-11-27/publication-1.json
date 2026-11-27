@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "event_id": "KIT-CODE-PRINCIPLES-2026-11-27/publication/implementation/1",
+  "event_type": "phase_handoff",
+  "task_id": "KIT-CODE-PRINCIPLES-2026-11-27",
+  "scope_id": "publication",
+  "recorded_at": "2026-11-27T21:28:51+07:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "agent_self_report",
+  "phase": "implementation",
+  "handoff_index": 1,
+  "classification": {
+    "size": "small",
+    "complexity": "low",
+    "ui": false,
+    "delivery_type": "one_handoff",
+    "parent_roadmap": null
+  },
+  "authority": {
+    "approval_source": "Khiêm requested commit, push and PR to main in the delivery chat.",
+    "authorized_scope": "Publish the verified Agent Kit code principles package on a task branch and open a PR to main. Merge is outside scope."
+  },
+  "skills": [
+    {
+      "skill_id": "git-workflow",
+      "contribution_summary": "Verified the base and staged scope, committed and pushed the task branch, verified the remote content SHA and opened the PR into main.",
+      "contribution_percent_estimate": 100,
+      "estimate_source": "agent_self_report",
+      "source_identity": {
+        "kind": "host_skill",
+        "path": "git-workflow/SKILL.md",
+        "version": null,
+        "sha256": "fae3c6e8c1994066b751a2405c0278e979e0589048d4ced3ae43b324fe9c4f87",
+        "fingerprint_basis": "SHA-256 of the personal skill bytes read and applied during publication."
+      }
+    }
+  ],
+  "outcome": {
+    "delivery_status": "COMPLETED",
+    "verification_level": "Grok freshness, 114 manifest hashes, four exporter tests and diff whitespace PASS. Remote content SHA matched and the GitHub PR creation response confirmed base main and open status.",
+    "human_acceptance": "PENDING_REVIEW",
+    "limitations": [
+      "Agent behavior in a fresh session NOT_RUN."
+    ]
+  },
+  "measurements": {
+    "elapsed_seconds": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "tool_calls": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "cached_input_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "reasoning_output_tokens": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "client": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "model": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    },
+    "effort": {
+      "value": null,
+      "source_ref": null,
+      "missing_reason": "No verified phase measurement or execution metadata recorded."
+    }
+  },
+  "evidence_refs": [
+    "docs/project-state.md",
+    "docs/engineering/skill-usage/records/KIT-CODE-PRINCIPLES-2026-11-27/implementation-1.json",
+    "e44b8e781d4d9a62ea0fa68e43c7dde6e267df47",
+    "https://github.com/khiemnd777/agent-kit/pull/10"
+  ]
+}

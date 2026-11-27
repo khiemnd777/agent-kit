@@ -1157,7 +1157,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "f81f9718f1b1b9395336b05cf2c2b974b0751afa56056ee024c13cd264626336",
+      "sha256": "8c0aa9a9b07bc9077aa3c9ea2ba9eadf409c0aa41654d3f71f7f8bbd963ea83f",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1679,7 +1679,7 @@
     },
     {
       "path": "docs/grok/agent-kit-reference.md",
-      "sha256": "c2924c8a7b631ddb060ef40e98548dcad731c8bdd8af9e05da5973d96672d82a",
+      "sha256": "4616c44989d76914e6d10c45d9a0fad45f45a43c48767f772bfbd9820d233779",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"

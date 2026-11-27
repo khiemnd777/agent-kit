@@ -33,6 +33,12 @@ The delivery owner proactively updates this summary and affected tasks within au
 
 The dated maintenance entries below preserve earlier phase observations and approval boundaries. Their earlier open/pending-publication statements are historical; this section is the current PR #7 / v1.0.0 release status. The adoption template above remains uninitialized.
 
+## Code writing and review principles — 2026-11-27
+
+Khiêm approved the exact wording in chat. The seven principles are in [AGENTS.md](../AGENTS.md#keep-code-changes-simple). The Grok reference was regenerated and the two affected manifest hashes were updated. The approved text matches verbatim, all 114 manifest hashes match, and the four exporter tests pass.
+
+Khiêm authorized the commit, push and PR into `main`. GitHub confirmed content commit `e44b8e7` on the feature branch and [PR #10](https://github.com/khiemnd777/agent-kit/pull/10) is open for review. Human acceptance is pending and agent behavior in a fresh session is NOT_RUN. [Implementation journal](engineering/skill-usage/records/KIT-CODE-PRINCIPLES-2026-11-27/implementation-1.json) · [Publication journal](engineering/skill-usage/records/KIT-CODE-PRINCIPLES-2026-11-27/publication-1.json)
+
 ## Ask Me Question — 2026-11-27
 
 Khiêm approved the shared planning rule for the original kit and the Meeting workspace. The original kit's local source is in [AGENTS.md](../AGENTS.md#planning-approval-and-implementation) and the [workflow guide](team-workflow.md#ask-me-question). Package integrity, Grok freshness, local anchors and diff whitespace checks pass.

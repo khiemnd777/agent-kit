@@ -78,6 +78,29 @@ actual risks. Missing decisions or unsafe dependencies still require
 a pause of affected work; do not manufacture completion with mocks
 or false-success fallbacks.
 
+## Keep code changes simple
+
+Use these checks when writing or reviewing code. Preserve required behavior,
+project conventions, and module boundaries.
+
+1. **Confirm the need.** Tie the change to a requirement, a defect, or a concrete risk.
+2. **Reuse project code.** Use an existing function or module when its contract
+   and ownership fit.
+3. **Check the standard library.** Use a standard API when it provides the
+   required behavior on supported versions.
+4. **Check the platform.** Use a native capability when it can enforce the rule
+   at the right layer.
+5. **Check existing dependencies.** Prefer a suitable API from a dependency
+   already in use before adding a package or writing an equivalent.
+6. **Keep the code direct.** Use one line when the behavior is clear at a glance.
+   Introduce a name or split an expression when it improves readability.
+7. **Write the smallest complete change.** Cover required behavior and relevant
+   failure cases. Verify changed logic with focused tests. Reuse, add, or
+   update tests according to the behavior and risk.
+
+For each actionable review finding, cite the affected code, explain the
+concrete impact, and propose a correction. Treat style preferences as optional.
+
 ## Show WHAT in the conversation
 
 Always render a WHAT table directly in the conversation when presenting
