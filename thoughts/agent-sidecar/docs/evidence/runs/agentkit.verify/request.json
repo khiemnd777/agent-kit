@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "execution_request",
+  "request_id": "req-e0aa19c8e2bd400395969abdffae1f33",
+  "objective": "Local Sidecar interoperability test on supplied source",
+  "capability": {
+    "id": "agentkit.verify",
+    "version": "1.0.0",
+    "digest": "sha256:0aa7784c88deb1c755b950c033c2d0be59e632e2618253e1ef73b6d07d2e1a7f"
+  },
+  "target": {
+    "repository": "/mnt/data/baseline-v2/agent-kit-v2",
+    "snapshot": {
+      "kind": "content_digest",
+      "value": "sha256:8b7191d9939ea1b492d21e4c7b9beae3c1f68c081c9fac7a3395c6d345f50d87"
+    },
+    "environment_digest": "sha256:3ec8d96edd7ea0a654dd385e2a551175e0d46ef0edf1b448b7c68150187c30c0",
+    "policy_digest": "sha256:a2e6bbf88ce4c1fff34c1ba5c2f722172712c8bf367d44bddbb10edc4a5e893e"
+  },
+  "inputs": {},
+  "authorization": {
+    "scope_id": "interop-test",
+    "decision_ref": "test-fixture:explicit-cli-confirmation",
+    "allowed_effects": [
+      "read_source",
+      "write_scratch"
+    ],
+    "allowed_paths": [
+      "source:/",
+      "scratch:/"
+    ],
+    "network_hosts": [],
+    "expires_at": "2026-11-17T05:29:09.035302+00:00"
+  },
+  "checks": [
+    {
+      "id": "sync-assets",
+      "required": true,
+      "criterion": "Canonical skills, client mirrors and adapter sources are synchronized."
+    },
+    {
+      "id": "grok-export",
+      "required": true,
+      "criterion": "The local Grok reference matches its declared source snapshot."
+    },
+    {
+      "id": "package",
+      "required": true,
+      "criterion": "Agent Kit V2 package verifier passes against this exact content snapshot."
+    },
+    {
+      "id": "regression",
+      "required": true,
+      "criterion": "The repository's current regression suite completes successfully."
+    }
+  ],
+  "limits": {
+    "max_duration_seconds": 300,
+    "max_attempts": 1,
+    "max_concurrency": 4,
+    "max_summary_bytes": 4096,
+    "max_evidence_bytes": 2097152
+  }
+}

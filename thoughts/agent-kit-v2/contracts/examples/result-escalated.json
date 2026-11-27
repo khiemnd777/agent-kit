@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "execution_result",
+  "request_id": "req-example-inventory-001",
+  "request_digest": "sha256:d08143972a0bb7310fe499632a74504e9068126aa19eec31ba9b937cb36522d1",
+  "run_id": "example-run-001",
+  "capability": {
+    "id": "repo.inventory",
+    "version": "1.0.0-example",
+    "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "target": {
+    "repository": "example:checkout-app",
+    "snapshot": {
+      "kind": "content_digest",
+      "value": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "environment_digest": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "policy_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
+  "status": "escalated",
+  "summary": "SYNTHETIC EXAMPLE: escalated",
+  "started_at": "2026-11-17T02:00:00Z",
+  "finished_at": "2026-11-17T02:00:01Z",
+  "effects_state": "known",
+  "checks": [
+    {
+      "id": "inventory",
+      "status": "PASS",
+      "detail": "Synthetic example only.",
+      "evidence_ids": [
+        "inventory-report"
+      ]
+    },
+    {
+      "id": "entrypoints",
+      "status": "NOT_RUN",
+      "detail": "Synthetic dependent check did not execute.",
+      "evidence_ids": []
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "inventory-report",
+      "relative_path": "reports/inventory.json",
+      "digest": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "media_type": "application/json",
+      "size_bytes": 512
+    }
+  ],
+  "exceptions": [
+    {
+      "code": "example.escalated",
+      "message": "Synthetic example, not observed evidence.",
+      "next_action": "authorize",
+      "related_check": "entrypoints"
+    }
+  ],
+  "logs_truncated": false,
+  "metrics": {
+    "duration_seconds": 1,
+    "attempts": 1,
+    "usage": {
+      "input_tokens": null,
+      "output_tokens": null,
+      "cache_read_tokens": null,
+      "cache_write_tokens": null,
+      "reasoning_tokens": null,
+      "source": null,
+      "unavailable_reason": "Synthetic example; no run or token measurement occurred."
+    }
+  }
+}

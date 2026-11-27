@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-17",
+  "kit_version": "2.0.0",
+  "baseline_commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+  "python": "3.13.5",
+  "platform": "Linux",
+  "dev_libraries": {
+    "jsonschema": "4.26.0",
+    "PyYAML": "6.0.3"
+  },
+  "unit_tests": {
+    "count": 77,
+    "outcome": "PASS",
+    "observed_elapsed_seconds": 11.281
+  },
+  "package_checks": "PASS",
+  "schemas": 3,
+  "synthetic_contract_examples": 8,
+  "canonical_skills": 18,
+  "native_role_adapter_files": 12,
+  "native_client_behavior": "NOT_RUN",
+  "sidecar_interoperability": "NOT_RUN",
+  "token_latency_benchmark": "NOT_RUN",
+  "review": "Self-review plus local automated checks; no independent human/agent review",
+  "remote_writes": false,
+  "sidecar_runtime_implemented": false,
+  "zip_roundtrip": "PASS",
+  "core_bytes": 5143,
+  "baseline_core_bytes_from_github_metadata": 8762,
+  "size_note": "Source bytes only; not a token or performance measurement",
+  "roundtrip_commands": [
+    {
+      "command": "python3 scripts/sync_assets.py --check",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 scripts/export_grok.py --check",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 scripts/verify_package.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "exit_code": 0
+    }
+  ],
+  "source_file_count": 119,
+  "maintained_file_count": 115,
+  "unit_tests_from_extracted_archive": "PASS — 77 tests"
+}

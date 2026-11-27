@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-17",
+  "baseline": {
+    "repository": "khiemnd777/agent-kit",
+    "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+    "retrieval": "GitHub connector, pinned selected source reads; archive unavailable",
+    "delivery": "curated standalone rebuild, not a full V1 archive"
+  },
+  "transitive_skill_origin": {
+    "repository": "addyosmani/agent-skills",
+    "commit": "1401c8b8030e023baeebb31781a6653fe8e93026",
+    "license": "MIT",
+    "source_of_claim": "inspected V1 docs/skills-provenance.md"
+  },
+  "skills": [
+    {
+      "path": ".agents/skills/api-and-interface-design/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/api-and-interface-design/SKILL.md",
+        "git_blob_sha": "7bd8ea737d77fb3778931361b7a2870e74029bf9"
+      }
+    },
+    {
+      "path": ".agents/skills/code-review-and-quality/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/code-review-and-quality/SKILL.md",
+        "git_blob_sha": "0c35459ed226454d9cf39e3de10ca11cb81e311a"
+      }
+    },
+    {
+      "path": ".agents/skills/code-simplification/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/code-simplification/SKILL.md",
+        "git_blob_sha": "9db7922381f8958889703bc0f51dccb6ee823e44"
+      }
+    },
+    {
+      "path": ".agents/skills/context-engineering/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/context-engineering/SKILL.md",
+        "git_blob_sha": "37dc318f4dd4f3526c9f0657222d1e86d5f6cc42"
+      }
+    },
+    {
+      "path": ".agents/skills/debugging-and-error-recovery/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/debugging-and-error-recovery/SKILL.md",
+        "git_blob_sha": "13eeceafdf8020a08451ac148a4db19989ac3b47"
+      }
+    },
+    {
+      "path": ".agents/skills/documentation-and-adrs/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/documentation-and-adrs/SKILL.md",
+        "git_blob_sha": "633a5f5a6ee6d38450809b026d7d517c2ab57398"
+      }
+    },
+    {
+      "path": ".agents/skills/frontend-ui-engineering/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/frontend-ui-engineering/SKILL.md",
+        "git_blob_sha": "011b47cbc005c4059a8441d8795f9dafd8fc3f4e"
+      }
+    },
+    {
+      "path": ".agents/skills/incremental-implementation/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/incremental-implementation/SKILL.md",
+        "git_blob_sha": "3737abaa803241f2d6103b4ed4eec45fea078aa8"
+      }
+    },
+    {
+      "path": ".agents/skills/observability-and-instrumentation/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/observability-and-instrumentation/SKILL.md",
+        "git_blob_sha": "8489f9ee98f645953115d8693a627884835e1531"
+      }
+    },
+    {
+      "path": ".agents/skills/performance-optimization/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/performance-optimization/SKILL.md",
+        "git_blob_sha": "577e89e0b9f8022aca7a29bfb2129f0ee0e1ec7e"
+      }
+    },
+    {
+      "path": ".agents/skills/planning-and-task-breakdown/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/planning-and-task-breakdown/SKILL.md",
+        "git_blob_sha": "5e675e25e37bf9a7f6c3340c480cfbed63ec66fb"
+      }
+    },
+    {
+      "path": ".agents/skills/security-and-hardening/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/security-and-hardening/SKILL.md",
+        "git_blob_sha": "cc5fea48ce08db901865f95f1a6e36f489bbb15f"
+      }
+    },
+    {
+      "path": ".agents/skills/source-driven-development/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/source-driven-development/SKILL.md",
+        "git_blob_sha": "e4db219d594523c59cb12959baf26ad12dbea5ab"
+      }
+    },
+    {
+      "path": ".agents/skills/spec-driven-development/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/spec-driven-development/SKILL.md",
+        "git_blob_sha": "969273fb8c5ed152cc25db6900d4894ddd755699"
+      }
+    },
+    {
+      "path": ".agents/skills/test-driven-development/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/test-driven-development/SKILL.md",
+        "git_blob_sha": "cd44e1be4d79bd52529b8a7c3a8ae11abd9afbcf"
+      }
+    },
+    {
+      "path": ".agents/skills/technote/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/technote/SKILL.md",
+        "git_blob_sha": "8cd7d8141ea038f4cae360ed2c600f4e8c9623f6"
+      }
+    },
+    {
+      "path": ".agents/skills/using-agent-skills/SKILL.md",
+      "change": "adapted_for_v2",
+      "source": {
+        "repository": "khiemnd777/agent-kit",
+        "commit": "df3b058a52acc9ea10a7556733baae44ac12d1f2",
+        "path": ".agents/skills/using-agent-skills/SKILL.md",
+        "git_blob_sha": "ff96b9257b040b4f124312821d9f24adc881df78"
+      }
+    },
+    {
+      "path": ".agents/skills/execution-delegation/SKILL.md",
+      "change": "new",
+      "source": null
+    }
+  ],
+  "swamp_source_included": false
+}

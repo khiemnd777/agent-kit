@@ -1,0 +1,17 @@
+[
+  {
+    "name": "kit-explorer",
+    "description": "Answer a bounded source/design question with evidence; no application edits or deployment.",
+    "source": "docs/roles/explorer.md"
+  },
+  {
+    "name": "kit-implementer",
+    "description": "Complete an assigned change and relevant checks within ownership and parent permissions.",
+    "source": "docs/roles/implementer.md"
+  },
+  {
+    "name": "kit-reviewer",
+    "description": "Review a coherent change for concrete defects; no application edits or deployment.",
+    "source": "docs/roles/reviewer.md"
+  }
+]

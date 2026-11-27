@@ -1,0 +1,20 @@
+{
+  "format": "sidecar.step-evidence/v1",
+  "step": "sync-assets",
+  "check_status": "PASS",
+  "detail": "Process completed with exit code 0",
+  "attempts": 1,
+  "attempt_records": [
+    {
+      "attempt": 1,
+      "exit_code": 0,
+      "duration_seconds": 0.8941231759999937,
+      "started_at": "2026-11-17T04:59:09.180Z",
+      "finished_at": "2026-11-17T04:59:10.074Z",
+      "interruption": null
+    }
+  ],
+  "payload": null,
+  "logs_truncated": false,
+  "effects_unknown": false
+}

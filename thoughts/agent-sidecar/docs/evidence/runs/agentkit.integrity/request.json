@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "execution_request",
+  "request_id": "req-8fcb2b22b1cd4940a681ccecfab05dbe",
+  "objective": "Local Sidecar interoperability test on supplied source",
+  "capability": {
+    "id": "agentkit.integrity",
+    "version": "1.0.0",
+    "digest": "sha256:126393a95837b143ac355faf0591a283436796227d52a5252f19dce0050acfc1"
+  },
+  "target": {
+    "repository": "/mnt/data/baseline-v2/agent-kit-v2",
+    "snapshot": {
+      "kind": "content_digest",
+      "value": "sha256:8b7191d9939ea1b492d21e4c7b9beae3c1f68c081c9fac7a3395c6d345f50d87"
+    },
+    "environment_digest": "sha256:39154d68b345296794e1dfb3484784e805e5de1a723833c253df28e83cd8aaae",
+    "policy_digest": "sha256:ab4c5875186706b6e8cf1435e705359e34dbd15b9b9619000305c0337d83131b"
+  },
+  "inputs": {},
+  "authorization": {
+    "scope_id": "interop-test",
+    "decision_ref": "test-fixture:explicit-cli-confirmation",
+    "allowed_effects": [
+      "read_source",
+      "write_scratch"
+    ],
+    "allowed_paths": [
+      "source:/",
+      "scratch:/"
+    ],
+    "network_hosts": [],
+    "expires_at": "2026-11-17T05:29:07.081162+00:00"
+  },
+  "checks": [
+    {
+      "id": "manifest",
+      "required": true,
+      "criterion": "All files declared by the Agent Kit V2 package manifest match their hashes."
+    },
+    {
+      "id": "mirrors",
+      "required": true,
+      "criterion": "Canonical and Claude skill file sets and bytes are equal."
+    }
+  ],
+  "limits": {
+    "max_duration_seconds": 300,
+    "max_attempts": 1,
+    "max_concurrency": 4,
+    "max_summary_bytes": 4096,
+    "max_evidence_bytes": 2097152
+  }
+}

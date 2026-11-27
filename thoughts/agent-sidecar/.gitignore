@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+.sidecar/
+.demo/
+.env
+.env.*
+!.env.example

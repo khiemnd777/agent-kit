@@ -1,0 +1,5 @@
+{
+  "name": "sidecar-source-fixture",
+  "private": true,
+  "scripts": {"test": "node --test", "lint": "eslint src"}
+}

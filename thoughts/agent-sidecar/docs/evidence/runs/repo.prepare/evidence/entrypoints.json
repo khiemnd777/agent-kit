@@ -1,0 +1,28 @@
+{
+  "format": "sidecar.step-evidence/v1",
+  "step": "entrypoints",
+  "check_status": "PASS",
+  "detail": "Builtin check passed",
+  "attempts": 1,
+  "attempt_records": [
+    {
+      "executor": "builtin",
+      "duration_seconds": 0.0008767439999246562
+    }
+  ],
+  "payload": {
+    "manifests": [
+      {
+        "source": "package.json",
+        "declared_scripts": {
+          "test": "node --test",
+          "lint": "eslint src"
+        }
+      }
+    ],
+    "commands_executed": false,
+    "note": "Only explicitly declared scripts are reported; commands are never inferred."
+  },
+  "logs_truncated": false,
+  "effects_unknown": false
+}

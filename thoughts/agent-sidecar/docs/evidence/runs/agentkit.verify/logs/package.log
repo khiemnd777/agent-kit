@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "source/package checks only",
+  "checks": {
+    "inventory": [],
+    "mirrors_and_adapters": [],
+    "source_formats_and_licenses": [],
+    "local_links": [],
+    "draft_contracts": [],
+    "manual_export": []
+  },
+  "native_clients": "NOT_RUN",
+  "sidecar_interoperability": "NOT_RUN",
+  "token_benchmark": "NOT_RUN"
+}

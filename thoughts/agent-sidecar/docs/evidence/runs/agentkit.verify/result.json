@@ -1,0 +1,137 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "execution_result",
+  "request_id": "req-e0aa19c8e2bd400395969abdffae1f33",
+  "request_digest": "sha256:20cf0bbcb890603af651e45bd95f8339608af1da3699c6404b4e11ec3ed5192f",
+  "run_id": "run-46971be4ed8a431fac7cf9dd64db87cd",
+  "capability": {
+    "id": "agentkit.verify",
+    "version": "1.0.0",
+    "digest": "sha256:0aa7784c88deb1c755b950c033c2d0be59e632e2618253e1ef73b6d07d2e1a7f"
+  },
+  "target": {
+    "repository": "/mnt/data/baseline-v2/agent-kit-v2",
+    "snapshot": {
+      "kind": "content_digest",
+      "value": "sha256:8b7191d9939ea1b492d21e4c7b9beae3c1f68c081c9fac7a3395c6d345f50d87"
+    },
+    "environment_digest": "sha256:3ec8d96edd7ea0a654dd385e2a551175e0d46ef0edf1b448b7c68150187c30c0",
+    "policy_digest": "sha256:a2e6bbf88ce4c1fff34c1ba5c2f722172712c8bf367d44bddbb10edc4a5e893e"
+  },
+  "status": "succeeded",
+  "summary": "SUCCEEDED: 4 PASS, 0 FAIL, 0 NOT_RUN, 0 SKIPPED. Evidence is execution evidence, not human acceptance.",
+  "started_at": "2026-11-17T04:59:09.147Z",
+  "finished_at": "2026-11-17T04:59:25.472Z",
+  "effects_state": "known",
+  "checks": [
+    {
+      "id": "sync-assets",
+      "status": "PASS",
+      "detail": "Process completed with exit code 0",
+      "evidence_ids": [
+        "sync-assets.log",
+        "sync-assets.receipt"
+      ]
+    },
+    {
+      "id": "grok-export",
+      "status": "PASS",
+      "detail": "Process completed with exit code 0",
+      "evidence_ids": [
+        "grok-export.log",
+        "grok-export.receipt"
+      ]
+    },
+    {
+      "id": "package",
+      "status": "PASS",
+      "detail": "Process completed with exit code 0",
+      "evidence_ids": [
+        "package.log",
+        "package.receipt"
+      ]
+    },
+    {
+      "id": "regression",
+      "status": "PASS",
+      "detail": "Process completed with exit code 0",
+      "evidence_ids": [
+        "regression.log",
+        "regression.receipt"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "sync-assets.log",
+      "relative_path": "logs/sync-assets.log",
+      "digest": "sha256:52cb81ad192266fbd8108dab7a3c7622d3adc2c007c86f9477f896024cce8110",
+      "media_type": "application/octet-stream",
+      "size_bytes": 70
+    },
+    {
+      "id": "sync-assets.receipt",
+      "relative_path": "evidence/sync-assets.json",
+      "digest": "sha256:982ce7d14a68ce945ca41f74b7c2305f0d56d3f3a4c2d7e0ad7969ae8143d734",
+      "media_type": "application/json",
+      "size_bytes": 487
+    },
+    {
+      "id": "grok-export.log",
+      "relative_path": "logs/grok-export.log",
+      "digest": "sha256:73b2cafed33178b6e33016eb72f7061ee3d249d3e664b1bade1060ad2559233c",
+      "media_type": "application/octet-stream",
+      "size_bytes": 72
+    },
+    {
+      "id": "grok-export.receipt",
+      "relative_path": "evidence/grok-export.json",
+      "digest": "sha256:2d68e3b5a66d284f0c232b857951a9547d9c9640eceaacacf7a421c4c4ddc58d",
+      "media_type": "application/json",
+      "size_bytes": 487
+    },
+    {
+      "id": "package.log",
+      "relative_path": "logs/package.log",
+      "digest": "sha256:02782a48edb5f804779b57cdc5211885e87eae71a6ec9fb550503856f18ad982",
+      "media_type": "application/octet-stream",
+      "size_bytes": 353
+    },
+    {
+      "id": "package.receipt",
+      "relative_path": "evidence/package.json",
+      "digest": "sha256:d6fafd0df9e587275f0c02d238d366d4b5a95a48cb4ea9177ddb8ffc667d1ec1",
+      "media_type": "application/json",
+      "size_bytes": 482
+    },
+    {
+      "id": "regression.log",
+      "relative_path": "logs/regression.log",
+      "digest": "sha256:17d1d4809bdbd1add961ea28317cc20b13408697544c8865e70959208ce2bbab",
+      "media_type": "application/octet-stream",
+      "size_bytes": 9805
+    },
+    {
+      "id": "regression.receipt",
+      "relative_path": "evidence/regression.json",
+      "digest": "sha256:81ca897c4cb06f1bb75c12b303cf51d917f8f34491ab04cbb15d292e6d67bf61",
+      "media_type": "application/json",
+      "size_bytes": 486
+    }
+  ],
+  "exceptions": [],
+  "logs_truncated": false,
+  "metrics": {
+    "duration_seconds": 16.32549982899991,
+    "attempts": 1,
+    "usage": {
+      "input_tokens": null,
+      "output_tokens": null,
+      "cache_read_tokens": null,
+      "cache_write_tokens": null,
+      "reasoning_tokens": null,
+      "source": null,
+      "unavailable_reason": "External subprocess token usage is not instrumented"
+    }
+  }
+}

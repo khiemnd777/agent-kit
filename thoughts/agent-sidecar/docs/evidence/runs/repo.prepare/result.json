@@ -1,0 +1,75 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "execution_result",
+  "request_id": "req-9ec9f39b0352413b953a805759985981",
+  "request_digest": "sha256:c2da1086b0d11b258501fa0e4ae80c2366a8d8aa778972f1407bdf104941a599",
+  "run_id": "run-215fb808481b4447b880d444f8404d36",
+  "capability": {
+    "id": "repo.prepare",
+    "version": "1.0.0",
+    "digest": "sha256:445135154556f78c51ae78ea14f9f6a067d7ae6decaf9631992926fdc2426b62"
+  },
+  "target": {
+    "repository": "/mnt/data/agent-sidecar/examples/demo-project",
+    "snapshot": {
+      "kind": "content_digest",
+      "value": "sha256:15838cbe4dab1107ad6f6455567d6b81d8f4326131c076833ab5be531e9b09d2"
+    },
+    "environment_digest": "sha256:39154d68b345296794e1dfb3484784e805e5de1a723833c253df28e83cd8aaae",
+    "policy_digest": "sha256:ab5f3fab84ea84ed4d40cd2662971fb1d454b79b6b6266ab7ef381703a306b23"
+  },
+  "status": "succeeded",
+  "summary": "SUCCEEDED: 2 PASS, 0 FAIL, 0 NOT_RUN, 0 SKIPPED. Evidence is execution evidence, not human acceptance.",
+  "started_at": "2026-11-17T04:59:04.852Z",
+  "finished_at": "2026-11-17T04:59:04.866Z",
+  "effects_state": "known",
+  "checks": [
+    {
+      "id": "inventory",
+      "status": "PASS",
+      "detail": "Builtin check passed",
+      "evidence_ids": [
+        "inventory.receipt"
+      ]
+    },
+    {
+      "id": "entrypoints",
+      "status": "PASS",
+      "detail": "Builtin check passed",
+      "evidence_ids": [
+        "entrypoints.receipt"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "inventory.receipt",
+      "relative_path": "evidence/inventory.json",
+      "digest": "sha256:30aead852928020cf8ae90c8047b17ce82c2a9a8d85815387a504b46440d6677",
+      "media_type": "application/json",
+      "size_bytes": 754
+    },
+    {
+      "id": "entrypoints.receipt",
+      "relative_path": "evidence/entrypoints.json",
+      "digest": "sha256:2aeafc3f945989acb3476402d81d57e6e3093581a48bb9307aaa29ffa2ceee26",
+      "media_type": "application/json",
+      "size_bytes": 641
+    }
+  ],
+  "exceptions": [],
+  "logs_truncated": false,
+  "metrics": {
+    "duration_seconds": 0.013879049000024679,
+    "attempts": 1,
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0,
+      "source": "Sidecar builtins only; no model API or subprocess invocation",
+      "unavailable_reason": null
+    }
+  }
+}

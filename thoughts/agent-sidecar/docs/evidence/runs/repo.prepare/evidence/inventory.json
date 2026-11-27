@@ -1,0 +1,32 @@
+{
+  "format": "sidecar.step-evidence/v1",
+  "step": "inventory",
+  "check_status": "PASS",
+  "detail": "Builtin check passed",
+  "attempts": 1,
+  "attempt_records": [
+    {
+      "executor": "builtin",
+      "duration_seconds": 0.0019499039999573142
+    }
+  ],
+  "payload": {
+    "files": [
+      {
+        "path": "package.json",
+        "size_bytes": 118,
+        "digest": "sha256:1f5c3c915e9c57301b10233ae89b804906b8ed783ff43cbea14ba403fb63260e"
+      },
+      {
+        "path": "src/checkout.js",
+        "size_bytes": 169,
+        "digest": "sha256:a221e367904ceeb76095ce61c7d4ffadcdd5ed9d6edadd6d2ed4720bf3c11fff"
+      }
+    ],
+    "missing": [],
+    "count": 2,
+    "byte_count": 287
+  },
+  "logs_truncated": false,
+  "effects_unknown": false
+}

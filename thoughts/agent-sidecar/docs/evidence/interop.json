@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "schema_bytes": {
+    "capability.schema.json": {
+      "sidecar_sha256": "c73148ae5b9f37dbe232d2aa4f9211562dc39096e3e8299c6da7c19042264492",
+      "agentkit_sha256": "c73148ae5b9f37dbe232d2aa4f9211562dc39096e3e8299c6da7c19042264492",
+      "equal": true
+    },
+    "execution-request.schema.json": {
+      "sidecar_sha256": "0d2bce290b6865abc847e9f946bdb33eb3191fbaeab26289b4bf45a83ed19243",
+      "agentkit_sha256": "0d2bce290b6865abc847e9f946bdb33eb3191fbaeab26289b4bf45a83ed19243",
+      "equal": true
+    },
+    "execution-result.schema.json": {
+      "sidecar_sha256": "d9efedd2f8538d404b8d39ece4e9e0df27eb9ac83476b129775d0ddfb63a5b14",
+      "agentkit_sha256": "d9efedd2f8538d404b8d39ece4e9e0df27eb9ac83476b129775d0ddfb63a5b14",
+      "equal": true
+    }
+  },
+  "agentkit_source_unchanged": true,
+  "runs": [
+    {
+      "workflow": "repo.prepare",
+      "status": "succeeded",
+      "run_id": "run-215fb808481b4447b880d444f8404d36",
+      "original_v2_validator_exit": 0,
+      "original_v2_validator": "{\n  \"valid\": true,\n  \"scope\": \"offline document consistency only\",\n  \"execution_performed\": false,\n  \"authority_verified\": false,\n  \"errors\": []\n}",
+      "baseline_regression_tests_observed": null,
+      "checks": [
+        {
+          "id": "inventory",
+          "status": "PASS",
+          "detail": "Builtin check passed",
+          "evidence_ids": [
+            "inventory.receipt"
+          ]
+        },
+        {
+          "id": "entrypoints",
+          "status": "PASS",
+          "detail": "Builtin check passed",
+          "evidence_ids": [
+            "entrypoints.receipt"
+          ]
+        }
+      ],
+      "duration_seconds": 0.013879049000024679
+    },
+    {
+      "workflow": "agentkit.integrity",
+      "status": "succeeded",
+      "run_id": "run-55de176a3b53477aa05a22bc3c9b1244",
+      "original_v2_validator_exit": 0,
+      "original_v2_validator": "{\n  \"valid\": true,\n  \"scope\": \"offline document consistency only\",\n  \"execution_performed\": false,\n  \"authority_verified\": false,\n  \"errors\": []\n}",
+      "baseline_regression_tests_observed": null,
+      "checks": [
+        {
+          "id": "manifest",
+          "status": "PASS",
+          "detail": "Builtin check passed",
+          "evidence_ids": [
+            "manifest.receipt"
+          ]
+        },
+        {
+          "id": "mirrors",
+          "status": "PASS",
+          "detail": "Builtin check passed",
+          "evidence_ids": [
+            "mirrors.receipt"
+          ]
+        }
+      ],
+      "duration_seconds": 0.0833521560000463
+    },
+    {
+      "workflow": "agentkit.verify",
+      "status": "succeeded",
+      "run_id": "run-46971be4ed8a431fac7cf9dd64db87cd",
+      "original_v2_validator_exit": 0,
+      "original_v2_validator": "{\n  \"valid\": true,\n  \"scope\": \"offline document consistency only\",\n  \"execution_performed\": false,\n  \"authority_verified\": false,\n  \"errors\": []\n}",
+      "baseline_regression_tests_observed": 77,
+      "checks": [
+        {
+          "id": "sync-assets",
+          "status": "PASS",
+          "detail": "Process completed with exit code 0",
+          "evidence_ids": [
+            "sync-assets.log",
+            "sync-assets.receipt"
+          ]
+        },
+        {
+          "id": "grok-export",
+          "status": "PASS",
+          "detail": "Process completed with exit code 0",
+          "evidence_ids": [
+            "grok-export.log",
+            "grok-export.receipt"
+          ]
+        },
+        {
+          "id": "package",
+          "status": "PASS",
+          "detail": "Process completed with exit code 0",
+          "evidence_ids": [
+            "package.log",
+            "package.receipt"
+          ]
+        },
+        {
+          "id": "regression",
+          "status": "PASS",
+          "detail": "Process completed with exit code 0",
+          "evidence_ids": [
+            "regression.log",
+            "regression.receipt"
+          ]
+        }
+      ],
+      "duration_seconds": 16.32549982899991
+    }
+  ],
+  "scope": "Actual local execution plus original V2 document validator, not a native coding-client integration",
+  "native_clients": "NOT_RUN",
+  "token_savings": "NOT_MEASURED"
+}

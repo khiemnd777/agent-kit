@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-execution-sidecar"
+version = "0.1.0"
+description = "Independent, bounded execution for Agent Kit V2"
+requires-python = ">=3.11"
+dependencies = ["jsonschema==4.26.0", "PyYAML==6.0.3"]
+license = {text = "MIT"}
+
+[project.scripts]
+sidecar = "agent_sidecar.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+agent_sidecar = ["contracts/*.json"]

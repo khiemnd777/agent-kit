@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "capability_descriptor",
+  "capability": {
+    "id": "agentkit.integrity",
+    "version": "1.0.0",
+    "digest": "sha256:126393a95837b143ac355faf0591a283436796227d52a5252f19dce0050acfc1"
+  },
+  "contract_version": "0.1.0",
+  "description": "Check Agent Kit V2 declared file hashes and skill mirrors without executing repository code. Not the full kit verification suite.",
+  "lifecycle": "reviewed",
+  "effects": [
+    "read_source",
+    "write_scratch"
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {},
+    "additionalProperties": false
+  },
+  "output_schema": "execution-result.schema.json",
+  "replay_policy": "safe_read_only",
+  "review_ref": "source-review:agent-sidecar-0.1.0/builtin-integrity"
+}

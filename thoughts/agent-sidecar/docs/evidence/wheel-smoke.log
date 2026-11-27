@@ -1,0 +1,48 @@
+{
+  "capabilities": [
+    {
+      "capability": {
+        "id": "agentkit.integrity",
+        "version": "1.0.0",
+        "digest": "sha256:126393a95837b143ac355faf0591a283436796227d52a5252f19dce0050acfc1"
+      },
+      "description": "Check Agent Kit V2 declared file hashes and skill mirrors without executing repository code. Not the full kit verification suite.",
+      "lifecycle": "reviewed",
+      "process_execution": false,
+      "checks": [
+        "manifest",
+        "mirrors"
+      ]
+    },
+    {
+      "capability": {
+        "id": "agentkit.verify",
+        "version": "1.0.0",
+        "digest": "sha256:0aa7784c88deb1c755b950c033c2d0be59e632e2618253e1ef73b6d07d2e1a7f"
+      },
+      "description": "Run the four Agent Kit V2 maintenance commands in separate private copies. Requires reviewed source, pinned Python, installed dependencies and explicit trusted-process permission.",
+      "lifecycle": "reviewed",
+      "process_execution": true,
+      "checks": [
+        "sync-assets",
+        "grok-export",
+        "package",
+        "regression"
+      ]
+    },
+    {
+      "capability": {
+        "id": "repo.prepare",
+        "version": "1.0.0",
+        "digest": "sha256:445135154556f78c51ae78ea14f9f6a067d7ae6decaf9631992926fdc2426b62"
+      },
+      "description": "Inventory a fixed source snapshot and extract declared entrypoints before investigation or implementation. Never runs repository code.",
+      "lifecycle": "reviewed",
+      "process_execution": false,
+      "checks": [
+        "inventory",
+        "entrypoints"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "execution_request",
+  "request_id": "req-9ec9f39b0352413b953a805759985981",
+  "objective": "Local Sidecar interoperability test on supplied source",
+  "capability": {
+    "id": "repo.prepare",
+    "version": "1.0.0",
+    "digest": "sha256:445135154556f78c51ae78ea14f9f6a067d7ae6decaf9631992926fdc2426b62"
+  },
+  "target": {
+    "repository": "/mnt/data/agent-sidecar/examples/demo-project",
+    "snapshot": {
+      "kind": "content_digest",
+      "value": "sha256:15838cbe4dab1107ad6f6455567d6b81d8f4326131c076833ab5be531e9b09d2"
+    },
+    "environment_digest": "sha256:39154d68b345296794e1dfb3484784e805e5de1a723833c253df28e83cd8aaae",
+    "policy_digest": "sha256:ab5f3fab84ea84ed4d40cd2662971fb1d454b79b6b6266ab7ef381703a306b23"
+  },
+  "inputs": {
+    "include": [
+      "package.json",
+      "src"
+    ]
+  },
+  "authorization": {
+    "scope_id": "interop-test",
+    "decision_ref": "test-fixture:explicit-cli-confirmation",
+    "allowed_effects": [
+      "read_source",
+      "write_scratch"
+    ],
+    "allowed_paths": [
+      "source:/",
+      "scratch:/"
+    ],
+    "network_hosts": [],
+    "expires_at": "2026-11-17T05:29:04.749210+00:00"
+  },
+  "checks": [
+    {
+      "id": "inventory",
+      "required": true,
+      "criterion": "Every included path is accounted for in the fixed snapshot."
+    },
+    {
+      "id": "entrypoints",
+      "required": true,
+      "criterion": "Entrypoints are reported from supported source manifests without executing or inventing commands."
+    }
+  ],
+  "limits": {
+    "max_duration_seconds": 300,
+    "max_attempts": 1,
+    "max_concurrency": 4,
+    "max_summary_bytes": 4096,
+    "max_evidence_bytes": 2097152
+  }
+}

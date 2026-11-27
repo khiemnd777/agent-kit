@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "execution_request",
+  "request_id": "req-example-inventory-001",
+  "objective": "Inventory the fixed source snapshot and report its declared test entrypoints.",
+  "capability": {
+    "id": "repo.inventory",
+    "version": "1.0.0-example",
+    "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "target": {
+    "repository": "example:checkout-app",
+    "snapshot": {
+      "kind": "content_digest",
+      "value": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "environment_digest": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "policy_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
+  "inputs": {
+    "include": [
+      "package.json",
+      "src",
+      "tests"
+    ]
+  },
+  "authorization": {
+    "scope_id": "example-inventory-only",
+    "decision_ref": "example://not-a-real-approval",
+    "allowed_effects": [
+      "read_source",
+      "write_scratch"
+    ],
+    "allowed_paths": [
+      "source:/",
+      "scratch:/inventory"
+    ],
+    "network_hosts": [],
+    "expires_at": "2030-01-01T00:00:00Z"
+  },
+  "checks": [
+    {
+      "id": "inventory",
+      "required": true,
+      "criterion": "Every requested path is accounted for."
+    },
+    {
+      "id": "entrypoints",
+      "required": true,
+      "criterion": "Test commands are reported from source, not guessed."
+    }
+  ],
+  "limits": {
+    "max_duration_seconds": 120,
+    "max_attempts": 1,
+    "max_concurrency": 2,
+    "max_summary_bytes": 4096,
+    "max_evidence_bytes": 1048576
+  }
+}

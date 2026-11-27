@@ -1,0 +1,20 @@
+{
+  "format": "sidecar.step-evidence/v1",
+  "step": "manifest",
+  "check_status": "PASS",
+  "detail": "Builtin check passed",
+  "attempts": 1,
+  "attempt_records": [
+    {
+      "executor": "builtin",
+      "duration_seconds": 0.06128174099990247
+    }
+  ],
+  "payload": {
+    "checked": 115,
+    "mismatches": [],
+    "scope": "Declared file hashes only; not acceptance, full verification or authentication"
+  },
+  "logs_truncated": false,
+  "effects_unknown": false
+}

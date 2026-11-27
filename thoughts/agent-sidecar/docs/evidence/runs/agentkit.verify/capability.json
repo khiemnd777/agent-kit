@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "capability_descriptor",
+  "capability": {
+    "id": "agentkit.verify",
+    "version": "1.0.0",
+    "digest": "sha256:0aa7784c88deb1c755b950c033c2d0be59e632e2618253e1ef73b6d07d2e1a7f"
+  },
+  "contract_version": "0.1.0",
+  "description": "Run the four Agent Kit V2 maintenance commands in separate private copies. Requires reviewed source, pinned Python, installed dependencies and explicit trusted-process permission.",
+  "lifecycle": "reviewed",
+  "effects": [
+    "read_source",
+    "write_scratch"
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {},
+    "additionalProperties": false
+  },
+  "output_schema": "execution-result.schema.json",
+  "replay_policy": "never",
+  "review_ref": "source-review:agent-sidecar-0.1.0/agentkit-v2-command-profile"
+}

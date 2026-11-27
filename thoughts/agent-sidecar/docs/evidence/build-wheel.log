@@ -1,0 +1,10 @@
+WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Processing /mnt/data/agent-sidecar
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: agent-execution-sidecar
+  Building wheel for agent-execution-sidecar (pyproject.toml): started
+  Building wheel for agent-execution-sidecar (pyproject.toml): finished with status 'done'
+  Created wheel for agent-execution-sidecar: filename=agent_execution_sidecar-0.1.0-py3-none-any.whl size=36476 sha256=ce3c24c89eecc59219a78a58ac09f2eb8530f25e89b08434426e1684200163e6
+  Stored in directory: /tmp/pip-ephem-wheel-cache-couzhf2b/wheels/fd/a9/78/fe69b651c50f0dc420961761ce6ca96e2e4153ef803c1cdc67
+Successfully built agent-execution-sidecar

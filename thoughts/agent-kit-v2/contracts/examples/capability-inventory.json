@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "capability_descriptor",
+  "capability": {
+    "id": "repo.inventory",
+    "version": "1.0.0-example",
+    "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "contract_version": "0.1.0",
+  "description": "SYNTHETIC future repository inventory capability; no implementation bundled.",
+  "lifecycle": "draft",
+  "effects": [
+    "read_source",
+    "write_scratch"
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "include": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "minItems": 1,
+        "maxItems": 64,
+        "uniqueItems": true
+      }
+    },
+    "required": [
+      "include"
+    ],
+    "additionalProperties": false
+  },
+  "output_schema": "execution-result.schema.json",
+  "replay_policy": "safe_read_only",
+  "review_ref": null
+}

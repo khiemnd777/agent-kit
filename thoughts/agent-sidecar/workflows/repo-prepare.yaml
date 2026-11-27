@@ -1,0 +1,33 @@
+format: sidecar.workflow/v1
+id: repo.prepare
+version: 1.0.0
+description: Inventory a fixed source snapshot and extract declared entrypoints before investigation or implementation. Never runs repository code.
+lifecycle: reviewed
+review_ref: source-review:agent-sidecar-0.1.0/builtin-read-only
+# A release review record does not authorize use on the caller's repositories.
+effects: [read_source, write_scratch]
+replay_policy: safe_read_only
+input_schema:
+  type: object
+  properties:
+    include:
+      type: array
+      items: {type: string, minLength: 1, maxLength: 256}
+      minItems: 1
+      maxItems: 64
+      uniqueItems: true
+  required: [include]
+  additionalProperties: false
+steps:
+  - id: inventory
+    executor: builtin
+    operation: inventory
+    needs: []
+    criterion: Every included path is accounted for in the fixed snapshot.
+    timeout_seconds: 30
+  - id: entrypoints
+    executor: builtin
+    operation: entrypoints
+    needs: []
+    criterion: Entrypoints are reported from supported source manifests without executing or inventing commands.
+    timeout_seconds: 30

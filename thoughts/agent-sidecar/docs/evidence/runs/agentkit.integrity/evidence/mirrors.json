@@ -1,0 +1,20 @@
+{
+  "format": "sidecar.step-evidence/v1",
+  "step": "mirrors",
+  "check_status": "PASS",
+  "detail": "Builtin check passed",
+  "attempts": 1,
+  "attempt_records": [
+    {
+      "executor": "builtin",
+      "duration_seconds": 0.05140438900002664
+    }
+  ],
+  "payload": {
+    "files_compared": 18,
+    "mismatches": [],
+    "scope": "Byte equality only, not native skill discovery"
+  },
+  "logs_truncated": false,
+  "effects_unknown": false
+}

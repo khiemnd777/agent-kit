@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "capability_descriptor",
+  "capability": {
+    "id": "repo.prepare",
+    "version": "1.0.0",
+    "digest": "sha256:445135154556f78c51ae78ea14f9f6a067d7ae6decaf9631992926fdc2426b62"
+  },
+  "contract_version": "0.1.0",
+  "description": "Inventory a fixed source snapshot and extract declared entrypoints before investigation or implementation. Never runs repository code.",
+  "lifecycle": "reviewed",
+  "effects": [
+    "read_source",
+    "write_scratch"
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "include": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "minItems": 1,
+        "maxItems": 64,
+        "uniqueItems": true
+      }
+    },
+    "required": [
+      "include"
+    ],
+    "additionalProperties": false
+  },
+  "output_schema": "execution-result.schema.json",
+  "replay_policy": "safe_read_only",
+  "review_ref": "source-review:agent-sidecar-0.1.0/builtin-read-only"
+}

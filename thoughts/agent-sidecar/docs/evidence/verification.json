@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "tests": 105,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 35.8502543489999,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "dependencies": {
+    "jsonschema": "4.26.0",
+    "PyYAML": "6.0.3"
+  },
+  "scope": "Local Python unit, CLI, filesystem and POSIX process tests; includes synthetic probes",
+  "native_coding_client_tests": "NOT_RUN",
+  "token_benchmark": "NOT_RUN"
+}

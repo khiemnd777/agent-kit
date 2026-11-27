@@ -1,0 +1,37 @@
+format: sidecar.workflow/v1
+id: agentkit.verify
+version: 1.0.0
+description: Run the four Agent Kit V2 maintenance commands in separate private copies. Requires reviewed source, pinned Python, installed dependencies and explicit trusted-process permission.
+lifecycle: reviewed
+review_ref: source-review:agent-sidecar-0.1.0/agentkit-v2-command-profile
+effects: [read_source, write_scratch]
+replay_policy: never
+input_schema:
+  type: object
+  properties: {}
+  additionalProperties: false
+steps:
+  - id: sync-assets
+    executor: process
+    argv: [python3, scripts/sync_assets.py, --check]
+    needs: []
+    criterion: Canonical skills, client mirrors and adapter sources are synchronized.
+    timeout_seconds: 60
+  - id: grok-export
+    executor: process
+    argv: [python3, scripts/export_grok.py, --check]
+    needs: []
+    criterion: The local Grok reference matches its declared source snapshot.
+    timeout_seconds: 60
+  - id: package
+    executor: process
+    argv: [python3, scripts/verify_package.py]
+    needs: [sync-assets, grok-export]
+    criterion: Agent Kit V2 package verifier passes against this exact content snapshot.
+    timeout_seconds: 120
+  - id: regression
+    executor: process
+    argv: [python3, -m, unittest, discover, -s, tests, -v]
+    needs: [package]
+    criterion: The repository's current regression suite completes successfully.
+    timeout_seconds: 120

@@ -1,0 +1,12 @@
+# Local state and credentials; do not hide deliverable evidence.
+.DS_Store
+.env
+.env.*
+!.env.example
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/agent-memory-local/
+__pycache__/
+*.py[cod]
+.venv/
+.kit-work/

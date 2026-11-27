@@ -1,0 +1,105 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "kind": {
+      "const": "capability_descriptor"
+    },
+    "capability": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9._-]{0,63}$"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "contract_version": {
+      "const": "0.1.0"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048
+    },
+    "lifecycle": {
+      "enum": [
+        "draft",
+        "reviewed"
+      ]
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "read_source",
+          "write_scratch",
+          "write_source",
+          "network"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 4,
+      "uniqueItems": true
+    },
+    "input_schema": {
+      "type": "object"
+    },
+    "output_schema": {
+      "const": "execution-result.schema.json"
+    },
+    "replay_policy": {
+      "enum": [
+        "never",
+        "safe_read_only",
+        "requires_reconciliation"
+      ]
+    },
+    "review_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "capability",
+    "contract_version",
+    "description",
+    "lifecycle",
+    "effects",
+    "input_schema",
+    "output_schema",
+    "replay_policy",
+    "review_ref"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Kit draft capability descriptor 0.1.0",
+  "description": "A declaration is not an installed executor, trust proof, permission or registry."
+}
