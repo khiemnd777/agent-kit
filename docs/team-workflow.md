@@ -12,6 +12,18 @@ Render WHAT directly in the conversation at plan presentation and completed-work
 
 Classify delivery at the start of every plan, including small tasks: state **Delivery type**, **Rationale** and **Parent roadmap** directly in chat, localized to the conversation language. Use the [classification criteria](handoff-templates.md#classification): retain an agreed parent roadmap and stops first; otherwise choose roadmap delivery when separate acceptance rounds are needed, or one handoff when the complete result can be assessed together. File count, lines of code and duration are supporting information only; risk controls are separate. If scope grows materially, present an amended plan/classification before expanding implementation.
 
+### Ask Me Question
+
+Read the request, recorded decisions and relevant sources first. Use Ask Me Question in these three cases.
+
+1. **Several viable directions.** Ask when the options differ materially and the evidence does not support a choice. For example, when acceptable wait time is unknown, ask whether a request should return the result inline or return a job ID for background processing. Inline processing keeps the flow simple but makes the user wait. Background processing lets the user leave but needs status and retry handling.
+2. **An icebox item cannot be broken into work that can be planned.** Identify the missing information and propose a first verifiable slice if the evidence supports one. For example, if a report has a sample data source but no defined audience, ask who needs it and what decision it supports. Propose a one-period sample once that decision is known, then check that the intended reader can make the decision from the sample.
+3. **WHAT, HOW or WHERE needs confirmation.** Confirm WHAT for the outcome or acceptance criteria, HOW for the approach, and WHERE for the repository, module or environment affected. For example, ask whether a shared rule belongs in the adopting workspace, the original Agent Kit, or both.
+
+State the decision in each question. When there are real options, give their trade-offs and a recommendation if the evidence supports one. If only one fact is missing, ask directly. Use the client's question form when available, or ask in chat. Resolve details supported by the sources, such as a file location when the owning module is already clear.
+
+Continue authorized independent work while waiting. When the answer arrives, record it in the plan and revise the affected work. Submit the updated plan for approval before implementation under the [core rule](../AGENTS.md#planning-approval-and-implementation).
+
 ## Proportionate effort
 
 | Effort | Use when | Useful work |

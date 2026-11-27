@@ -1157,7 +1157,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "3ac50d3e933326683b95c1c2a37e0bd5252e2a657658721492c845c93cffff8e",
+      "sha256": "f81f9718f1b1b9395336b05cf2c2b974b0751afa56056ee024c13cd264626336",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1269,7 +1269,7 @@
     },
     {
       "path": "docs/team-workflow.md",
-      "sha256": "e12bd7ebb8106984cbcd7df3ff7d0c90e59df38cd06410ffda8c7ed9c40e4afa",
+      "sha256": "4eff068b74581fe9fe248ebf18ea889233d84694b2950fcf24579b869b1ddc2e",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"
@@ -1679,7 +1679,7 @@
     },
     {
       "path": "docs/grok/agent-kit-reference.md",
-      "sha256": "dadc4bac88c282a4a2050003f687229a5611d1cc03665f06f4b97ded6e905e92",
+      "sha256": "c2924c8a7b631ddb060ef40e98548dcad731c8bdd8af9e05da5973d96672d82a",
       "origin": {
         "license": "MIT",
         "source": "agent-kit contributors"

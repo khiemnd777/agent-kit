@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "event_id": "ASK-ME-QUESTION-2026-11-27/planning-rule/human-acceptance/1",
+  "event_type": "evaluation",
+  "task_id": "ASK-ME-QUESTION-2026-11-27",
+  "scope_id": "planning-rule",
+  "recorded_at": "2026-11-27T15:08:21+07:00",
+  "reported_by": "delivery_owner",
+  "source_kind": "human_feedback",
+  "subject_event_id": "ASK-ME-QUESTION-2026-11-27/planning-rule/implementation/1",
+  "assessment_source": "human",
+  "review_attempt": 1,
+  "decision": "ACCEPTED",
+  "findings": [],
+  "evidence_refs": [
+    "docs/project-state.md#ask-me-question--2026-11-27"
+  ],
+  "approval_source": "Khiêm replied “Nghiệm thu” to the original Agent Kit local handoff on 2026-11-27."
+}
