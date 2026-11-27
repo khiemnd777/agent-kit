@@ -37,7 +37,7 @@ The dated maintenance entries below preserve earlier phase observations and appr
 
 Khiêm approved the exact wording in chat. The seven principles are in [AGENTS.md](../AGENTS.md#keep-code-changes-simple). The Grok reference was regenerated and the two affected manifest hashes were updated. The approved text matches verbatim, all 114 manifest hashes match, and the four exporter tests pass.
 
-Local source is complete. Human acceptance is pending and agent behavior in a fresh session is NOT_RUN. Git publication requires separate authorization. Next action is Khiêm's review of this local handoff. [Implementation journal](engineering/skill-usage/records/KIT-CODE-PRINCIPLES-2026-11-27/implementation-1.json)
+Khiêm authorized the commit, push and PR into `main`. GitHub confirmed content commit `e44b8e7` on the feature branch and [PR #10](https://github.com/khiemnd777/agent-kit/pull/10) is open for review. Human acceptance is pending and agent behavior in a fresh session is NOT_RUN. [Implementation journal](engineering/skill-usage/records/KIT-CODE-PRINCIPLES-2026-11-27/implementation-1.json) · [Publication journal](engineering/skill-usage/records/KIT-CODE-PRINCIPLES-2026-11-27/publication-1.json)
 
 ## Ask Me Question — 2026-11-27
 
